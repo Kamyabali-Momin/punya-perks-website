@@ -219,37 +219,45 @@ export const SecurityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Privacy Built Into Every Step (Split Section) */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#E8DCC9]">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+      {/* Privacy Built Into Every Step (Split Section) with Luxury Dark Gold Background matching Reference Design */}
+      <section
+        className="relative w-full py-16 sm:py-24 bg-[#1F0E05] text-white border-b border-[#3E2413] bg-cover bg-center overflow-hidden font-body"
+        style={{
+          backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
+        }}
+      >
+        {/* Subtle dark gradient overlay on the left to ensure crisp text contrast over the banner */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent pointer-events-none" />
+
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
-            <div className="lg:col-span-6 space-y-6">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A]">
+            <div className="lg:col-span-6 space-y-5">
+              <div className="text-xs font-mono font-bold uppercase tracking-[0.2em] text-[#E59846]">
                 PRIVACY & DATA RESIDENCY
               </div>
-              <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#1C1610] leading-tight">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-white leading-tight tracking-tight">
                 Privacy built into every point accrual and redemption
               </h2>
-              <p className="font-body text-sm sm:text-base text-neutral-600 leading-relaxed">
+              <p className="font-body text-xs sm:text-sm text-white/80 leading-relaxed max-w-xl">
                 Members trust your brand with their personal purchase habits. We provide end-to-end cryptographic safeguards that guarantee member privacy without compromising real-time POS responsiveness.
               </p>
 
-              <ul className="space-y-3.5 pt-2">
+              <ul className="space-y-3 pt-2">
                 {privacyFeatures.map((feat, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2Icon className="w-5 h-5 text-[#B5651A] shrink-0 mt-0.5" />
-                    <span className="font-body text-xs sm:text-sm text-neutral-700 leading-relaxed font-medium">
+                    <CheckCircle2Icon className="w-4 h-4 text-[#E59846] shrink-0 mt-0.5" />
+                    <span className="font-body text-xs text-white/90 leading-relaxed font-normal">
                       {feat}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="pt-4">
+              <div className="pt-3">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#D9822B] hover:text-[#B5651A] transition-colors"
+                  className="inline-flex items-center gap-2 text-xs sm:text-sm font-semibold text-[#E59846] hover:text-[#f8b46d] transition-colors"
                 >
                   <span>Request our DPDP & Data Retention Guide</span>
                   <span>→</span>
@@ -259,32 +267,32 @@ export const SecurityPage: React.FC = () => {
 
             {/* Right Regional Matrix Card */}
             <div className="lg:col-span-6">
-              <div className="rounded-3xl bg-[#FAF4EC] p-6 sm:p-8 border border-[#E8DCC9] shadow-sm">
-                <div className="flex items-center justify-between pb-4 border-b border-[#E8DCC9] mb-5">
+              <div className="rounded-3xl bg-white p-6 sm:p-8 border border-white/20 shadow-2xl text-[#17140F]">
+                <div className="flex items-center justify-between pb-4 border-b border-[#EBDFC6] mb-5">
                   <div className="flex items-center gap-2">
                     <GlobeIcon className="w-5 h-5 text-[#B5651A]" />
-                    <span className="font-display font-bold text-lg text-[#1C1610]">
+                    <span className="font-display font-bold text-lg text-[#17140F]">
                       Regional Data Sovereignty
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono font-bold uppercase text-[#B5651A] bg-[#FEF0E1] px-2.5 py-0.5 rounded-full border border-[#F3D7BD]">
+                  <span className="text-[10px] font-mono font-bold uppercase text-[#B5651A] bg-[#FEF0E1] px-2.5 py-0.5 rounded-full border border-[#F3D7BD]">
                     Active Clusters
                   </span>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3.5">
                   {regionalMatrix.map((item, idx) => (
-                    <div key={idx} className="p-4 rounded-2xl bg-white border border-[#E8DCC9] space-y-1">
+                    <div key={idx} className="p-3.5 rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-1">
                       <div className="flex items-center justify-between">
-                        <span className="font-display font-bold text-sm text-[#1C1610]">{item.region}</span>
+                        <span className="font-display font-bold text-sm text-[#17140F]">{item.region}</span>
                         <span className="text-[10px] font-mono font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
                           {item.status}
                         </span>
                       </div>
-                      <div className="text-xs font-body text-neutral-600">
-                        <strong className="text-neutral-800">Framework:</strong> {item.framework}
+                      <div className="text-xs font-body text-[#5B534C]">
+                        <strong className="text-[#17140F]">Framework:</strong> {item.framework}
                       </div>
-                      <div className="text-[11px] font-mono text-neutral-500">
+                      <div className="text-[11px] font-mono text-[#847C75]">
                         Cluster: {item.datacenter}
                       </div>
                     </div>

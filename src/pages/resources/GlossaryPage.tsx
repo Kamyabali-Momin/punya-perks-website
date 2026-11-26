@@ -561,35 +561,45 @@ export const GlossaryPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Community Question / Feedback Banner */}
-      <section className="py-16 bg-[#F3EBDD] border-t border-[#E8DCC9]">
-        <div className="max-w-4xl mx-auto px-4 text-center space-y-5">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-xs font-bold text-[#B5651A] border border-[#E8DCC9] shadow-xs">
-            <HelpCircleIcon className="w-3.5 h-3.5 text-[#D9822B]" />
-            <span>Have a loyalty term or compliance nuance we should cover?</span>
-          </div>
+      {/* Community Question / Feedback Banner matching reference design with Luxury Dark Gold Background */}
+      <section
+        className="relative w-full py-16 sm:py-24 bg-[#1F0E05] text-white border-b border-[#3E2413] bg-cover bg-center overflow-hidden font-body"
+        style={{
+          backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
+        }}
+      >
+        {/* Subtle dark gradient overlay on the left to ensure crisp text contrast over the banner */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent pointer-events-none" />
 
-          <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#1C1610]">
-            Engineered for high-trust enterprise loyalty & accounting
-          </h2>
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
+          <div className="max-w-2xl space-y-5 text-left">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-xs font-semibold text-[#17140F] border border-white/40 shadow-xs">
+              <HelpCircleIcon className="w-3.5 h-3.5 text-[#B5651A]" />
+              <span>Have a loyalty term or compliance nuance we should cover?</span>
+            </div>
 
-          <p className="font-body text-sm sm:text-base text-neutral-600 max-w-xl mx-auto leading-relaxed">
-            Explore how Punya Perks applies these financial standards in live retail and fintech production environments with sub-120ms response and zero ledger drift.
-          </p>
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-[1.2]">
+              Engineered for high-trust enterprise loyalty & accounting
+            </h2>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
-            <Link
-              to="/contact"
-              className="px-6 py-3 rounded-2xl bg-[#D9822B] hover:bg-[#B5651A] text-white font-bold text-xs transition-all shadow-sm hover:shadow-md"
-            >
-              Schedule platform walkthrough
-            </Link>
-            <Link
-              to="/platform/security"
-              className="px-6 py-3 rounded-2xl bg-white hover:bg-[#FAF4EC] text-[#1C1610] font-bold text-xs border border-[#E8DCC9] transition-all shadow-xs"
-            >
-              Explore Security & Compliance
-            </Link>
+            <p className="font-body text-xs sm:text-sm text-white/80 leading-relaxed max-w-xl">
+              Explore how Punya Perks applies these financial standards in live retail and fintech production environments with sub-120ms response and zero ledger drift.
+            </p>
+
+            <div className="flex flex-wrap items-center gap-3 pt-3">
+              <Link
+                to="/contact"
+                className="px-6 py-3 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-medium text-xs sm:text-sm transition-all shadow-md cursor-pointer"
+              >
+                Schedule platform walkthrough
+              </Link>
+              <Link
+                to="/platform/security"
+                className="px-6 py-3 rounded-full bg-white hover:bg-neutral-100 text-[#17140F] font-medium text-xs sm:text-sm transition-all shadow-xs cursor-pointer"
+              >
+                Explore Security & Compliance
+              </Link>
+            </div>
           </div>
         </div>
       </section>

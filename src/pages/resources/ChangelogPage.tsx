@@ -35,22 +35,34 @@ export const ChangelogPage: React.FC = () => {
         breadcrumbs={[{ label: 'Resources', href: '/resources' }, { label: 'Changelog' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
-        <div className="max-w-[900px] mx-auto px-4 sm:px-6 md:px-8 space-y-10">
-          {releases.map((rel) => (
-            <div key={rel.version} className="rounded-[28px] bg-white p-8 sm:p-10 border border-[#E8DCC9] shadow-sm space-y-4">
-              <div className="flex items-center justify-between pb-3 border-b border-[#E8DCC9]">
-                <span className="font-mono text-sm font-bold text-[#D9822B]">{rel.version}</span>
-                <span className="text-xs text-[#1F1A17]/60 font-mono">{rel.date}</span>
+      <section className="py-16 sm:py-24 bg-[#FAF7F2] border-b border-[#EBDFC6] font-body">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+          {/* 2-Column Side-by-Side Responsive Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            {releases.map((rel) => (
+              <div
+                key={rel.version}
+                className="rounded-3xl bg-white p-7 sm:p-9 border border-[#EBDFC6] shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+              >
+                <div className="space-y-4">
+                  <div className="flex items-center justify-between pb-3.5 border-b border-[#EBDFC6]">
+                    <span className="font-mono text-sm font-bold text-[#B5651A] bg-[#FEF0E1] px-3 py-0.5 rounded-full border border-[#F3D7BD]">
+                      {rel.version}
+                    </span>
+                    <span className="text-xs text-[#847C75] font-mono">{rel.date}</span>
+                  </div>
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-[#17140F] leading-snug">
+                    {rel.title}
+                  </h3>
+                  <ul className="space-y-2.5 text-xs sm:text-sm text-[#5B534C] list-disc pl-5 leading-relaxed pt-1">
+                    {rel.changes.map((c, i) => (
+                      <li key={i}>{c}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <h3 className="font-display font-bold text-xl text-[#1F1A17]">{rel.title}</h3>
-              <ul className="space-y-2 text-xs sm:text-sm text-[#1F1A17]/75 list-disc pl-5">
-                {rel.changes.map((c, i) => (
-                  <li key={i}>{c}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 

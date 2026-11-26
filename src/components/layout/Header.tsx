@@ -494,7 +494,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                       {activePillarData.featuredCallout.description}
                     </p>
                   </div>
-                  <div className="relative z-10 mt-6 pt-4 border-t border-[#EBDFC6]">
+                  <div className="relative z-10 mt-6">
                     <a
                       href={activePillarData.featuredCallout.href}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"

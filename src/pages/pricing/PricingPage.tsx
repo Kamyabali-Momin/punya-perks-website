@@ -282,16 +282,21 @@ export const PricingPage: React.FC = () => {
       </section>
 
       {/* 3 Pricing Cards */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#EBDFC6] font-body">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+      <section
+        className="relative w-full py-16 sm:py-24 bg-[#1F0E05] bg-cover bg-center overflow-hidden border-b border-[#3E2413] font-body"
+        style={{
+          backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
+        }}
+      >
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
             {plans.map((p) => (
               <div
                 key={p.name}
                 className={`rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all relative ${
                   p.featured
-                    ? 'bg-gradient-to-b from-[#FFFDF9] to-[#FAF5ED] border-2 border-[#B5651A] shadow-xl'
-                    : 'bg-white border border-[#EBDFC6] shadow-xs hover:shadow-md'
+                    ? 'bg-[#FFFDF9] border-2 border-[#B5651A] shadow-2xl'
+                    : 'bg-white border border-[#EBDFC6] shadow-xl hover:shadow-2xl'
                 }`}
               >
                 {p.featured && (
