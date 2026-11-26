@@ -74,59 +74,43 @@ export const AboutPage: React.FC = () => {
   const teamMembers = [
     {
       name: 'Keyur Mehta',
-      role: 'Managing Director & Founder',
-      bio: 'Guiding enterprise vision, governance, and ethical customer loyalty architectures for multi-brand retail conglomerates.',
-      initials: 'KM',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
+      role: 'Managing Director',
+      image: '/images/team/keyur-mehta.jpg',
     },
     {
       name: 'Dishant Mehta',
       role: 'Chief Technology Officer',
-      bio: 'Architect of Punya Perks append-only ledger, sub-120ms POS syncing engine, and high-concurrency event pipelines.',
-      initials: 'DM',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
+      image: '/images/team/dishant-mehta.jpg',
     },
     {
       name: 'Zil Mehta',
       role: 'Sr. Project Manager',
-      bio: 'Leading software delivery sprints, agile governance, and enterprise deployment frameworks across retail pods.',
-      initials: 'ZM',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
+      image: '/images/team/zil-mehta.jpg',
     },
     {
       name: 'Sohail Khan',
-      role: 'Head of Strategy & Growth',
-      bio: 'Scaling reseller partnerships, global MSP programs, and commercial expansion across India, Middle East, and APAC.',
-      initials: 'SK',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
+      role: 'Head of Strategy and Growth',
+      image: '/images/team/sohail-khan.jpg',
     },
     {
       name: 'Anshika Mishra',
       role: 'Project Manager',
-      bio: 'Managing cross-functional engineering pods, quality metrics, merchant onboarding, and production release cycles.',
-      initials: 'AM',
-      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
+      image: '/images/team/anshika-mishra.jpg',
     },
     {
       name: 'Shivani Mehta',
       role: 'Technical Project Manager',
-      bio: 'Overseeing ERP/POS connectors, webhook architectures, developer API tooling, and client implementation pipelines.',
-      initials: 'SM',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
+      image: '/images/team/shivani-mehta.jpg',
     },
     {
       name: 'Himali Jaiswal',
       role: 'Lead – Account Management',
-      bio: 'Championing client retention, merchant rollout success, volume expansion, and strict operational SLA assurance.',
-      initials: 'HJ',
-      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80',
+      image: '/images/team/himali-jaiswal.jpg',
     },
     {
       name: 'Shashi Gupta',
       role: 'Human Resource Manager',
-      bio: 'Nurturing our distributed engineering culture, leadership talent acquisition, and global operational compliance.',
-      initials: 'SG',
-      image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80',
+      image: '/images/team/shashi-gupta.jpg',
     },
   ];
 
@@ -293,19 +277,13 @@ export const AboutPage: React.FC = () => {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs border border-[#EBDFC6] text-[10px] font-mono font-medium text-[#847C75] shadow-xs">
-                    Punya Perks
-                  </div>
                 </div>
                 <div className="mt-3.5">
                   <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug">
                     {member.name}
                   </h3>
-                  <p className="text-xs sm:text-[13px] text-[#B5651A] mt-0.5 font-medium">
+                  <p className="text-xs sm:text-sm text-[#5B534C] mt-1">
                     {member.role}
-                  </p>
-                  <p className="text-xs text-[#5B534C] mt-2 leading-relaxed">
-                    {member.bio}
                   </p>
                 </div>
               </div>
