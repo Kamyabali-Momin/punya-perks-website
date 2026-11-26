@@ -236,21 +236,25 @@ export const HelpCenterPage: React.FC = () => {
               )}
 
               {/* Developer Documentation Callout */}
-              <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-[#17140F] to-[#2B231D] text-white flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                <div>
-                  <div className="font-mono text-xs font-semibold text-[#D9822B] uppercase tracking-wider mb-1">
+              <div className="relative overflow-hidden mt-8 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] border border-[#3E2C20] shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+                <div className="absolute top-0 right-1/3 w-48 h-48 bg-[#B5651A]/15 rounded-full blur-2xl pointer-events-none" />
+                <div className="relative z-10">
+                  <div className="font-mono text-xs font-semibold text-[#D9822B] uppercase tracking-wider mb-1.5">
                     API & Webhook Docs
                   </div>
-                  <h3 className="font-display font-bold text-lg">Looking for REST APIs & SDKs?</h3>
-                  <p className="text-xs text-white/75 mt-1 max-w-lg">
+                  <h3 className="font-display font-bold text-lg sm:text-xl text-[#FAF3E8] tracking-tight">
+                    Looking for REST APIs & SDKs?
+                  </h3>
+                  <p className="text-xs sm:text-sm text-[#D5C7B7] mt-1.5 max-w-lg leading-relaxed font-body">
                     Access our interactive Postman collection, OpenAPI 3.1 specifications, rate limit policies, and webhook verification code samples.
                   </p>
                 </div>
                 <a
                   href="/developers"
-                  className="px-5 py-2.5 rounded-full bg-[#B5651A] hover:bg-[#D9822B] text-white text-xs font-semibold transition-all shrink-0 inline-flex items-center gap-2"
+                  className="relative z-10 px-5 py-2.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white text-xs font-semibold transition-all shrink-0 inline-flex items-center gap-2 shadow-sm hover:scale-105 cursor-pointer font-body"
                 >
-                  Visit Developer Portal <ArrowRight className="w-3.5 h-3.5" />
+                  <span>Visit Developer Portal</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
             </div>
