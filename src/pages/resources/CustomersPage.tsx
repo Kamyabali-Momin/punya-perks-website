@@ -152,7 +152,7 @@ export const CustomersPage: React.FC = () => {
           backgroundColor: "#FAF3E8",
         }}
       >
-        <div className="relative mx-auto max-w-7xl px-6">
+        <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
           {/* Breadcrumb matching Sqalible */}
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-1.5 text-xs text-[#847C75] font-body">
@@ -248,7 +248,7 @@ export const CustomersPage: React.FC = () => {
 
       {/* Main Content Section matching Sqalible structure */}
       <section className="bg-white py-10 md:py-14" aria-label="Enterprise Customer Case Studies">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
           {/* Search & Filter Header matching Sqalible */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10">
             {/* Search Input */}
@@ -432,7 +432,7 @@ export const CustomersPage: React.FC = () => {
 
       {/* Bottom CTA Section matching Sqalible `be` component */}
       <section className="bg-white pt-6 pb-14 md:pt-8 md:pb-16" aria-labelledby="page-cta-title">
-        <div className="mx-auto max-w-7xl px-6">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="flex flex-col items-start justify-between gap-8 rounded-none bg-[#B5651A] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-md text-white">
             <div className="flex-1">
               <p className="text-xs font-mono font-bold uppercase tracking-wider text-[#FEF0E1]">

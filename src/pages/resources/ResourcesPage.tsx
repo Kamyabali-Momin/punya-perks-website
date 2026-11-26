@@ -306,7 +306,8 @@ export const ResourcesPage: React.FC = () => {
       </section>
 
       {/* 2. Highlights / Recent Blog Posts Section (Deskmerit 12-Col Grid) */}
-      <section className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-body">
+      <section className="w-full py-16 sm:py-20 border-b border-[#EBDFC6] bg-white font-body">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         <div className="mb-10">
           <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-1">
             HIGHLIGHTS
@@ -481,6 +482,7 @@ export const ResourcesPage: React.FC = () => {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </section>
 

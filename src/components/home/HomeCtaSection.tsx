@@ -4,7 +4,7 @@ import { ArrowRightIcon } from 'lucide-react';
 export const HomeCtaSection: React.FC = () => {
   return (
     <section className="w-full bg-[#FFFDF9] py-16 sm:py-20 lg:py-24 font-body" id="closing-cta">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Banner with 3D studio background matching user reference image */}
         <div
           className="rounded-[24px] bg-cover bg-center sm:bg-right p-8 sm:p-12 lg:p-16 text-white shadow-xl relative overflow-hidden min-h-[300px] sm:min-h-[340px] flex items-center border border-[#B5651A]/30"

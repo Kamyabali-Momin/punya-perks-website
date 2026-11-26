@@ -37,7 +37,7 @@ export default {
         },
       },
       fontFamily: {
-        display: ["var(--pp-font-display)", "Newsreader", "Georgia", "serif"],
+        display: ["var(--pp-font-display)", "Newsreader", "DM Serif Display", "Georgia", "serif"],
         body: ["var(--pp-font-body)", "Manrope", "system-ui", "sans-serif"],
         mono: ["JetBrains Mono", "ui-monospace", "monospace"],
       },

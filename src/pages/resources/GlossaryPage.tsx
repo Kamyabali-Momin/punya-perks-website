@@ -349,7 +349,7 @@ export const GlossaryPage: React.FC = () => {
 
       {/* Sticky Alphabet Filter Bar */}
       <section className="bg-white border-b border-[#E8DCC9] sticky top-16 sm:top-20 z-30 shadow-xs">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 py-3">
           <div className="flex items-center justify-center gap-1 overflow-x-auto pb-1 scrollbar-none">
             <button
               type="button"
@@ -389,7 +389,7 @@ export const GlossaryPage: React.FC = () => {
 
       {/* Glossary Terms Grid Section */}
       <section className="py-12 lg:py-16 bg-[#FAF4EC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           {/* Header Row */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
             <div>

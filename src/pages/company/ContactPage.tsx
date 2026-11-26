@@ -86,7 +86,7 @@ export const ContactPage: React.FC = () => {
           backgroundColor: "#FAF3E8",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           {/* Breadcrumb Navigation */}
           <div className="text-xs text-[#847C75] font-medium flex items-center gap-2 mb-6">
             <Link to="/" className="hover:text-[#B5651A] transition-colors">
@@ -305,7 +305,8 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* 2. Direct Locations / Regional Hubs Section (Deskmerit Direct Locations Pattern) */}
-      <section className="py-16 lg:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 font-body">
+      <section className="w-full py-16 lg:py-24 border-b border-[#EBDFC6] bg-white font-body">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A]">
             DIRECT LOCATIONS
@@ -350,6 +351,7 @@ export const ContactPage: React.FC = () => {
               </div>
             </div>
           ))}
+        </div>
         </div>
       </section>
 

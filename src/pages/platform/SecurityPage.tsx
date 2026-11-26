@@ -147,7 +147,7 @@ export const SecurityPage: React.FC = () => {
           backgroundColor: "#FAF3E8",
         }}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             {/* Breadcrumb */}
             <nav aria-label="Breadcrumb" className="text-xs font-semibold flex items-center justify-center gap-2 mb-6 text-[#847C75]">
@@ -211,7 +211,7 @@ export const SecurityPage: React.FC = () => {
 
       {/* Security Pillars: How We Protect Data */}
       <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#E8DCC9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
               SECURITY ARCHITECTURE
@@ -252,7 +252,7 @@ export const SecurityPage: React.FC = () => {
 
       {/* Privacy Built Into Every Step (Split Section) */}
       <section className="py-16 sm:py-24 bg-white border-b border-[#E8DCC9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Content */}
             <div className="lg:col-span-6 space-y-6">
@@ -329,7 +329,7 @@ export const SecurityPage: React.FC = () => {
 
       {/* Responsible AI & Algorithmic Governance */}
       <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#E8DCC9]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
               RESPONSIBLE AI & ALGORITHMIC GOVERNANCE
