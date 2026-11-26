@@ -146,8 +146,8 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         imageAlt="Punya Perks Developer Console"
       />
 
-      {/* Tabs Navigation (Deskmerit Style) */}
-      <section className="bg-white border-b border-[#EBDFC6] sticky top-16 z-20 font-body">
+      {/* Tabs Navigation (Deskmerit Style - Static, not sticky) */}
+      <section className="bg-white border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar">
             {[

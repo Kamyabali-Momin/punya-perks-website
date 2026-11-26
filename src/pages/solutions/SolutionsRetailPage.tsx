@@ -46,18 +46,28 @@ export const SolutionsRetailPage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="rounded-[28px] bg-[#D9822B] text-white p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="space-y-3 max-w-xl">
-              <span className="font-mono text-xs font-bold text-[#C9A15B] uppercase tracking-wider">PROVEN RETAIL METRIC</span>
-              <h3 className="font-display font-extrabold text-3xl sm:text-4xl">+34% Repeat Purchase Lift</h3>
-              <p className="text-sm text-white/80 leading-relaxed">
+          <div className="rounded-[28px] bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] text-white p-8 sm:p-12 lg:p-16 flex flex-col md:flex-row items-center justify-between gap-8 shadow-xl border border-[#3E2C20] relative overflow-hidden">
+            {/* Ambient Warm Glow */}
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 w-80 h-80 bg-[#B5651A]/20 rounded-full blur-3xl pointer-events-none" />
+
+            <div className="space-y-3 max-w-xl relative z-10">
+              <span className="font-mono text-[11px] font-bold text-[#D9822B] uppercase tracking-[0.16em] inline-block px-3 py-1 rounded-full bg-[#B5651A]/15 border border-[#B5651A]/30">
+                PROVEN RETAIL METRIC
+              </span>
+              <h3 className="font-display font-semibold text-3xl sm:text-4xl text-[#FAF3E8] tracking-tight leading-[1.15]">
+                +34% Repeat Purchase Lift
+              </h3>
+              <p className="text-sm sm:text-base text-[#EBDFC6]/85 leading-relaxed font-body">
                 National fashion retailer unified 140 physical outlets with their e-commerce storefront in four weeks.
               </p>
             </div>
-            <a href="/customers/retail-national" className="px-6 py-3 rounded-full bg-white text-[#D9822B] font-display font-semibold text-xs sm:text-sm shadow-sm hover:bg-[#F3EBDD] shrink-0">
-              Read Customer Case Study
+            <a
+              href="/customers/retail-national"
+              className="relative z-10 px-7 py-3.5 rounded-full bg-[#B5651A] hover:bg-[#D9822B] text-white font-body font-semibold text-xs sm:text-sm shadow-md transition-all shrink-0 cursor-pointer"
+            >
+              Read Customer Case Study →
             </a>
           </div>
         </div>

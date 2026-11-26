@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { PageCta } from '../../components/common/PageCta';
+import { InternalPageFaq } from '../../components/common/InternalPageFaq';
 import { 
   ShieldCheckIcon, 
   LockIcon, 
@@ -367,67 +368,16 @@ export const SecurityPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Security FAQ Section */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#E8DCC9]">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
-              FREQUENTLY ASKED QUESTIONS
-            </div>
-            <h2 className="font-display text-3xl sm:text-4xl font-extrabold text-[#1C1610]">
-              Security & Compliance Inquiries
-            </h2>
-            <p className="font-body text-sm text-neutral-600 mt-2">
-              Straightforward answers to the most common questions raised during enterprise vendor assessments.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            {SECURITY_FAQS.map((faq, idx) => {
-              const isOpen = openFaq === idx;
-              return (
-                <div
-                  key={idx}
-                  className="rounded-2xl border border-[#E8DCC9] bg-[#FAF4EC]/40 overflow-hidden transition-all"
-                >
-                  <button
-                    type="button"
-                    onClick={() => setOpenFaq(isOpen ? null : idx)}
-                    className="w-full p-5 sm:p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-base sm:text-lg text-[#1C1610] hover:text-[#D9822B] transition-colors cursor-pointer"
-                  >
-                    <span>{faq.question}</span>
-                    <ChevronDownIcon className={`w-5 h-5 text-[#B5651A] shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
-                  </button>
-
-                  {isOpen && (
-                    <div className="px-5 pb-5 sm:px-6 sm:pb-6 text-xs sm:text-sm font-body text-neutral-600 leading-relaxed border-t border-[#E8DCC9]/60 pt-4">
-                      {faq.answer}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-          </div>
-
-          {/* Security Questionnaire Banner */}
-          <div className="mt-12 p-6 rounded-3xl bg-[#FEF0E1]/70 border border-[#F3D7BD] flex flex-col sm:flex-row items-center justify-between gap-6">
-            <div className="space-y-1 text-center sm:text-left">
-              <h4 className="font-display font-bold text-base text-[#1C1610]">
-                Need us to complete your vendor security questionnaire?
-              </h4>
-              <p className="font-body text-xs text-neutral-600">
-                Send your SIG, CAIQ, or custom questionnaire to our security review team. Average turnaround is 2 business days.
-              </p>
-            </div>
-            <a
-              href="mailto:security@punyaperks.com"
-              className="px-5 py-2.5 rounded-xl bg-[#D9822B] hover:bg-[#B5651A] text-white font-bold text-xs shrink-0 transition-all shadow-sm"
-            >
-              Email Questionnaire
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* Security FAQ Section using Punya Perks Standard FAQ Component */}
+      <InternalPageFaq
+        title="Security & Compliance Inquiries"
+        eyebrow="FREQUENTLY ASKED QUESTIONS"
+        faqs={SECURITY_FAQS.map(f => ({ q: f.question, a: f.answer }))}
+        helpTitle="Need an enterprise compliance questionnaire completed?"
+        helpDescription="Send your SIG, CAIQ, or custom enterprise vendor security assessment. Average turnaround is 2 business days."
+        helpButtonText="Email Security Team"
+        helpButtonHref="mailto:security@punyaperks.com"
+      />
 
       <PageCta />
     </MainLayout>

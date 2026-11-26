@@ -289,7 +289,7 @@ export const CustomersPage: React.FC = () => {
 
           {/* Featured Case Study Card (matching Sqalible featured layout) */}
           {selectedTag === 'All' && !searchTerm.trim() && (
-            <div className="mb-14 overflow-hidden rounded-none border border-neutral-300 hover:border-neutral-500 bg-white text-neutral-900 shadow-xs transition-colors grid md:grid-cols-12 items-stretch md:h-[440px]">
+            <div className="mb-14 overflow-hidden rounded-3xl border border-[#EBDFC6] hover:border-[#B5651A] bg-white text-neutral-900 shadow-sm hover:shadow-md transition-all grid md:grid-cols-12 items-stretch md:h-[440px]">
               {/* Left Column (7 cols) */}
               <div className="p-8 md:p-10 lg:p-12 md:col-span-7 flex flex-col justify-between h-full">
                 <div>
@@ -323,7 +323,7 @@ export const CustomersPage: React.FC = () => {
               </div>
 
               {/* Right Image Column (5 cols) */}
-              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-neutral-100">
+              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-neutral-100 rounded-b-3xl md:rounded-b-none md:rounded-r-3xl">
                 <img
                   src={FEATURED_STORY.image}
                   alt={FEATURED_STORY.title}
@@ -335,7 +335,7 @@ export const CustomersPage: React.FC = () => {
 
           {/* Cards Grid matching Sqalible Lg cards */}
           {filteredStories.length === 0 ? (
-            <div className="rounded-none border border-neutral-200 bg-neutral-50 p-12 text-center">
+            <div className="rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED] p-12 text-center">
               <p className="text-sm sm:text-base text-neutral-600 font-body">
                 No case studies found matching “{searchTerm}”.
               </p>
@@ -355,12 +355,12 @@ export const CustomersPage: React.FC = () => {
               {filteredStories.map((item, idx) => (
                 <article
                   key={idx}
-                  className="group flex h-full flex-col justify-between rounded-none border border-neutral-200 bg-white p-5 sm:p-6 shadow-xs hover:border-[#D9822B]/50 hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                  className="group flex h-full flex-col justify-between rounded-2xl border border-[#EBDFC6] bg-white p-5 sm:p-6 shadow-xs hover:border-[#B5651A] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex flex-col h-full justify-between">
                     <div>
                       {/* Image Box */}
-                      <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-none bg-neutral-100 mb-4">
+                      <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-xl bg-neutral-100 mb-4">
                         <img
                           src={item.image}
                           alt={item.title}
@@ -430,32 +430,34 @@ export const CustomersPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Bottom CTA Section matching Sqalible `be` component */}
+      {/* Bottom CTA Section */}
       <section className="bg-white pt-6 pb-14 md:pt-8 md:pb-16" aria-labelledby="page-cta-title">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="flex flex-col items-start justify-between gap-8 rounded-none bg-[#B5651A] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-md text-white">
-            <div className="flex-1">
-              <p className="text-xs font-mono font-bold uppercase tracking-wider text-[#FEF0E1]">
+          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-xl border border-[#3E2C20] text-white flex flex-col items-start justify-between gap-8">
+            {/* Ambient warm amber glow */}
+            <div className="absolute top-0 right-1/4 h-64 w-64 rounded-full bg-[#B5651A]/20 blur-3xl pointer-events-none" />
+            <div className="relative z-10 flex-1">
+              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-wider text-[#D9822B] bg-[#2E1F14] px-3 py-1 rounded-full border border-[#543820] mb-3">
                 Get Started
-              </p>
-              <h2 id="page-cta-title" className="mt-2 text-2xl sm:text-3xl font-extrabold text-white font-display">
+              </span>
+              <h2 id="page-cta-title" className="text-2xl sm:text-3xl font-extrabold text-[#FAF3E8] font-display">
                 Ready to modernize your enterprise loyalty operations?
               </h2>
-              <p className="mt-2 text-sm text-neutral-200 max-w-xl font-body">
+              <p className="mt-2 text-sm text-[#D5C7B7] max-w-xl font-body">
                 Join forward-thinking retailers and fintech leaders running on Punya Perks' append-only ledger architecture.
               </p>
             </div>
 
-            <div className="flex shrink-0 flex-wrap items-center gap-3">
+            <div className="relative z-10 flex shrink-0 flex-wrap items-center gap-3">
               <Link
                 to="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-white px-7 text-xs font-bold text-[#1C1610] shadow-sm hover:scale-105 transition-all"
+                className="inline-flex h-12 items-center justify-center rounded-full bg-[#B5651A] hover:bg-[#9a5413] px-7 text-xs font-bold text-white shadow-md hover:scale-105 transition-all"
               >
                 Start free trial
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/60 px-6 text-xs font-semibold text-white transition-all hover:bg-white/10 hover:border-white"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-[#543820] bg-white/5 hover:bg-white/10 px-6 text-xs font-semibold text-[#FAF3E8] transition-all hover:border-[#D9822B]"
               >
                 Book a demo
               </Link>
