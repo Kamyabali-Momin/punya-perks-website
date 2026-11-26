@@ -52,17 +52,17 @@ export const navigationData: NavPillar[] = [
             href: "/product/redeem",
             description: "Vouchers, merchandise, cash-out, donations, partner currencies.",
           },
-        ],
-      },
-      {
-        categoryTitle: "Experience & Trust",
-        items: [
           {
             title: "Tiers & Member App",
             href: "/product/member-app",
             description: "White-label native apps, tier ladders, and Apple Wallet passes.",
             badge: "Popular",
           },
+        ],
+      },
+      {
+        categoryTitle: "Experience & Trust",
+        items: [
           {
             title: "Analytics, CDP & AI",
             href: "/product/analytics",

@@ -155,7 +155,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
             }}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 py-8 grid grid-cols-12 gap-8 items-start">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 py-8 grid grid-cols-12 gap-8 items-stretch">
               {/* Category Area: Full-width or with Featured Callout Card */}
               <div
                 className={
@@ -332,7 +332,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               {/* Featured Callout Card */}
               {activePillarData.featuredCallout && (
                 <div
-                  className="col-span-4 rounded-3xl p-6 sm:p-7 border border-[#EBDFC6] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-bottom bg-no-repeat group"
+                  className="col-span-4 rounded-3xl p-6 sm:p-8 border border-[#EBDFC6] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-bottom bg-no-repeat group h-full min-h-full"
                   style={{
                     backgroundImage: "url('/images/inner-hero-bg.jpg')",
                     backgroundColor: "#FAF3E8",
@@ -342,10 +342,10 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                     <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block">
                       {activePillarData.featuredCallout.eyebrow}
                     </span>
-                    <h3 className="font-display font-bold text-xl text-[#17140F] mt-2 group-hover:text-[#B5651A] transition-colors">
+                    <h3 className="font-display font-bold text-xl sm:text-2xl text-[#17140F] mt-2 group-hover:text-[#B5651A] transition-colors leading-snug">
                       {activePillarData.featuredCallout.title}
                     </h3>
-                    <p className="text-xs text-[#5B534C] mt-2 leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#5B534C] mt-2.5 leading-relaxed">
                       {activePillarData.featuredCallout.description}
                     </p>
                   </div>
