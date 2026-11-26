@@ -60,10 +60,9 @@ export const RoiEstimatorSection: React.FC = () => {
 
   return (
     <section
-      className="relative w-full bg-[#FAF3E8] bg-cover bg-center bg-no-repeat border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#FFF9F2] bg-cover bg-center overflow-hidden border-b border-[#EBDFC6] font-body"
       style={{
-        backgroundImage: "url('/images/inner-hero-bg.jpg')",
-        backgroundColor: "#FAF3E8",
+        backgroundImage: "url('/images/roi-banner-bg.jpg')",
       }}
       id="roi-estimate"
     >
@@ -86,7 +85,7 @@ export const RoiEstimatorSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-[1440px] mx-auto">
           
           {/* Left Vertical Industry Card (3 Cols) */}
-          <div className="lg:col-span-3 rounded-[28px] sm:rounded-[32px] bg-white border border-[#EFE5D8]/90 shadow-sm p-5 sm:p-6 flex flex-col justify-between">
+          <div className="lg:col-span-3 rounded-[28px] sm:rounded-[32px] bg-white border border-[#EBDFC6] shadow-lg hover:shadow-xl p-5 sm:p-6 flex flex-col justify-between transition-all duration-300">
             {/* Industry Selector List */}
             <div className="space-y-2">
               {Object.keys(industryPresets).map((ind) => {
@@ -119,7 +118,7 @@ export const RoiEstimatorSection: React.FC = () => {
           </div>
 
           {/* Right Main Calculator Card (9 Cols) */}
-          <div className="lg:col-span-9 rounded-[28px] sm:rounded-[32px] bg-white border border-[#EFE5D8]/90 shadow-sm p-6 sm:p-8">
+          <div className="lg:col-span-9 rounded-[28px] sm:rounded-[32px] bg-white border border-[#EBDFC6] shadow-lg hover:shadow-xl p-6 sm:p-8 transition-all duration-300">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch h-full">
               
               {/* Left Sub-Column: 3 Sliders (7 Cols) */}
