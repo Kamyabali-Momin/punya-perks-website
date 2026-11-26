@@ -5,7 +5,7 @@ export const HowItWorksSection: React.FC = () => {
     {
       step: '01',
       title: 'Provision',
-      description: 'Tenant, region, currency, plan and mechanisms set up by Kombee; your admins get SSO and roles.',
+      description: 'Tenant, region, currency, plan and mechanisms set up by Punya Perks; your admins get SSO and roles.',
       image: '/images/workflow/step-provision.jpg',
     },
     {

@@ -297,7 +297,7 @@ export const HelpCenterPage: React.FC = () => {
                   </div>
                   <div className="flex items-center justify-between py-1">
                     <span className="text-[#8C827A]">Direct Support</span>
-                    <span className="font-semibold text-[#17140F]">support@kombee.com</span>
+                    <span className="font-semibold text-[#17140F]">support@punyaperks.com</span>
                   </div>
                 </div>
 

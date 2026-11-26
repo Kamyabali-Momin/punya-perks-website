@@ -8,7 +8,7 @@ export const PrivacyPolicyPage: React.FC = () => {
       <PageHeader
         eyebrow="LEGAL · LAST UPDATED NOVEMBER 2026"
         title="Privacy policy"
-        description="How Punya Perks and Kombee Technologies collect, use and protect personal data, with regional notices for India, Australia, New Zealand, the UAE and the EU."
+        description="How Punya Perks collects, uses and protects personal data, with regional notices for India, Australia, New Zealand, the UAE and the EU."
         breadcrumbs={[{ label: 'Legal' }, { label: 'Privacy Policy' }]}
         primaryCtaText=""
         secondaryCtaText=""
@@ -19,7 +19,7 @@ export const PrivacyPolicyPage: React.FC = () => {
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 md:px-8 space-y-8 text-sm sm:text-base leading-relaxed">
           <h2 className="font-display font-bold text-2xl text-[#1F1A17]">1. Who We Are</h2>
           <p>
-            Punya Perks is operated by Kombee Technologies, registered with operations across India, the United Arab Emirates, Australia, and New Zealand. When our platform processes loyalty data on behalf of a tenant, we act as a Data Processor / Data Fiduciary partner.
+            Punya Perks is an enterprise loyalty platform registered with operations across India, the United Arab Emirates, Australia, and New Zealand. When our platform processes loyalty data on behalf of a tenant, we act as a Data Processor / Data Fiduciary partner.
           </p>
 
           <h2 className="font-display font-bold text-2xl text-[#1F1A17]">2. What Data We Process</h2>

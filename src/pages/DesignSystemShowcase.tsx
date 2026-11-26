@@ -296,7 +296,7 @@ export const DesignSystemShowcase: React.FC = () => {
           <Eyebrow badge="Content Blocks">Bento Architecture</Eyebrow>
           <Heading level="h2">Modular Bento Tiles & Feature Cards</Heading>
           <Text className="mt-2 mb-8">
-            28px bento cards mapped directly to Kombee Sanity block schemas.
+            28px bento cards mapped directly to Punya Perks Sanity block schemas.
           </Text>
 
           {/* Bento Grid */}

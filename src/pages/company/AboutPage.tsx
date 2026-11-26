@@ -136,8 +136,8 @@ export const AboutPage: React.FC = () => {
       a: 'Punya Perks was founded on the conviction that retail and banking enterprises deserve modern, auditable loyalty software without brittle legacy monoliths or vendor lock-in. We build high-trust loyalty infrastructure that operates on immutable append-only ledgers.',
     },
     {
-      q: 'What is the relationship between Punya Perks and Kombee Technologies?',
-      a: 'Punya Perks is engineered and operated by Kombee Technologies, an established digital product engineering company. After delivering transaction clearing engines and custom loyalty ledgers for major international retailers across APAC, we productized this technology into the Punya Perks platform.',
+      q: 'What is the architectural vision behind Punya Perks?',
+      a: 'Punya Perks is engineered as an enterprise-grade digital loyalty operating system. After delivering transaction clearing engines and custom loyalty ledgers for major international retailers across APAC, we productized this technology into the dedicated Punya Perks platform.',
     },
     {
       q: 'Where is our customer data and transaction history stored?',
@@ -182,7 +182,7 @@ export const AboutPage: React.FC = () => {
                 <span className="text-[#B5651A] italic">and fair to both sides.</span>
               </h1>
               <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-xl mb-8">
-                Punya Perks is engineered by Kombee Technologies, serving multi-brand retail conglomerates, banking institutions, and e-commerce leaders globally with append-only ledger precision.
+                Punya Perks is engineered with append-only ledger precision, serving multi-brand retail conglomerates, banking institutions, and e-commerce leaders globally.
               </p>
 
               {/* Action Buttons */}
@@ -294,7 +294,7 @@ export const AboutPage: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs border border-[#EBDFC6] text-[10px] font-mono font-medium text-[#847C75] shadow-xs">
-                    Kombee Tech
+                    Punya Perks
                   </div>
                 </div>
                 <div className="mt-3.5">

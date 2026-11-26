@@ -13,7 +13,7 @@ export interface ColorToken {
 export const brandTokens = {
   identity: {
     name: "Punya Perks",
-    parent: "Kombee Technologies",
+    parent: "Punya Perks Enterprise",
     tagline: "Loyalty that pays for itself.",
     subheadline: "Launch points, tiers, offers and a white-label member app in weeks. One platform for retailers, banks and enterprises, with the compliance each market demands.",
     targetMarkets: ["India", "Australia", "New Zealand", "Middle East", "United States"],

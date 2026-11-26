@@ -11,7 +11,7 @@ export const RecentBlogPostsSection: React.FC = () => {
     href: '/resources/ux-review-presentations',
     author: {
       name: 'Aryan Kantharia',
-      role: 'lead UI/UX Designer at Kombee',
+      role: 'Lead UI/UX Designer at Punya Perks',
       avatar: '/images/blog/author-aryan.jpg',
     },
   };
@@ -26,7 +26,7 @@ export const RecentBlogPostsSection: React.FC = () => {
       href: '/resources/migrating-to-linear-101',
       author: {
         name: 'Aryan Kantharia',
-        role: 'lead UI/UX Designer at Kombee',
+        role: 'Lead UI/UX Designer at Punya Perks',
         avatar: '/images/blog/author-aryan.jpg',
       },
     },
@@ -39,7 +39,7 @@ export const RecentBlogPostsSection: React.FC = () => {
       href: '/resources/building-your-api-stack',
       author: {
         name: 'Aryan Kantharia',
-        role: 'lead UI/UX Designer at Kombee',
+        role: 'Lead UI/UX Designer at Punya Perks',
         avatar: '/images/blog/author-aryan.jpg',
       },
     },

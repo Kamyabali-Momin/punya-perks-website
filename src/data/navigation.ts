@@ -276,12 +276,12 @@ export const navigationData: NavPillar[] = [
     href: "/about",
     categories: [
       {
-        categoryTitle: "About Kombee",
+        categoryTitle: "Company Overview",
         items: [
           {
             title: "About Punya Perks",
             href: "/about",
-            description: "Our mission, leadership team, and parent company Kombee Technologies.",
+            description: "Our mission, leadership team, and enterprise loyalty operating system.",
           },
           {
             title: "Partner Program",
@@ -307,7 +307,7 @@ export const navigationData: NavPillar[] = [
       },
     ],
     featuredCallout: {
-      eyebrow: "About Kombee Tech",
+      eyebrow: "About Punya Perks",
       title: "High-Trust Software",
       description: "Learn about our founding mission, append-only ledger architecture, and global engineering team.",
       href: "/about",
@@ -369,8 +369,8 @@ export const footerColumns = [
 ];
 
 export const regionalOffices = [
-  { city: "Surat & Mumbai", country: "India", address: "Kombee Tech Hub, Surat / BKC, Mumbai", phone: "+91 261 [Number]" },
+  { city: "Surat & Mumbai", country: "India", address: "Punya Perks Tech Hub, Surat / BKC, Mumbai", phone: "+91 261 [Number]" },
   { city: "Dubai", country: "United Arab Emirates", address: "DIFC Innovation One, Dubai", phone: "+971 4 [Number]" },
   { city: "Melbourne", country: "Australia", address: "Collins St, Melbourne VIC 3000", phone: "+61 3 [Number]" },
-  { city: "Delaware", country: "United States", address: "Kombee Technologies Inc, Wilmington, DE", phone: "+1 [Number]" },
+  { city: "Delaware", country: "United States", address: "Punya Perks Technologies Inc, Wilmington, DE", phone: "+1 [Number]" },
 ];

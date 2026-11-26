@@ -126,7 +126,7 @@ export const Footer: React.FC = () => {
               </span>
             </a>
             <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed max-w-sm">
-              Loyalty programme software for retailers, banks, hospitality groups and coalitions in India, Australia and New Zealand. Built and operated by Kombee Technologies.
+              Loyalty programme software for retailers, banks, hospitality groups and coalitions in India, Australia and New Zealand. Built and operated by Punya Perks Platform.
             </p>
 
             {/* Newsletter Subscription field */}
@@ -227,7 +227,7 @@ export const Footer: React.FC = () => {
         {/* Bottom Legal & Localization Bar matching Option C */}
         <div className="pt-8 border-t border-[#E8DCC9] flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#5B534C]">
           <div>
-            © 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland
+            © 2026 Punya Perks · Enterprise Loyalty Platform · Surat · Dubai · Melbourne · Auckland
           </div>
 
           <div className="flex flex-wrap items-center gap-6">
