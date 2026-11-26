@@ -73,7 +73,6 @@ export const homeData = {
     title: "Earn, redeem, engage, operate.",
     description:
       "Every mechanism your programme needs is built in and governed by one ledger, so finance, marketing and engineering see the same number. Retail wants omnichannel earning; banks need cash-convertible points with KYC; hospitality runs on visits. Choose the playbook, keep the platform.",
-    mockupImage: "/images/platform-portal-tablet.png",
     playbooks: [
       {
         id: "retail",
