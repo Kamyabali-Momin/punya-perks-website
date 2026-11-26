@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { MainLayout } from '../../components/layout/MainLayout';
+import { PageHeader } from '../../components/layout/PageHeader';
 import { PageCta } from '../../components/common/PageCta';
 import { InternalPageFaq } from '../../components/common/InternalPageFaq';
 import { 
@@ -141,74 +142,41 @@ export const SecurityPage: React.FC = () => {
   return (
     <MainLayout>
       {/* Hero Section */}
-      <section
-        className="relative w-full border-b border-[#EBDFC6] pt-14 pb-20 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden text-[#17140F]"
-        style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: "#FAF3E8",
-        }}
+      <PageHeader
+        eyebrow="ENTERPRISE SECURITY & DATA PRIVACY"
+        title="Bank-grade security for regulated loyalty ledgers"
+        description="Loyalty programs handle sensitive member identifiers and legal financial liabilities. We protect your balance sheet with append-only cryptographic ledgers, AES-256 KMS encryption, and sovereign data residency."
+        breadcrumbs={[
+          { label: 'Platform', href: '/platform' },
+          { label: 'Security & Compliance' }
+        ]}
+        primaryCtaText="Request Security Report"
+        primaryCtaHref="/contact"
+        secondaryCtaText="Contact Security Team"
+        secondaryCtaHref="/contact"
+        image="/images/platform-portal-tablet.png"
+        imageAlt="Punya Perks Security & Compliance Architecture Console"
       >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
-          <div className="max-w-3xl mx-auto text-center">
-            {/* Breadcrumb */}
-            <nav aria-label="Breadcrumb" className="text-xs font-semibold flex items-center justify-center gap-2 mb-6 text-[#847C75]">
-              <Link to="/" className="hover:text-[#B5651A] transition-colors">Home</Link>
-              <span className="text-[#847C75]/60">/</span>
-              <Link to="/platform" className="hover:text-[#B5651A] transition-colors">Platform</Link>
-              <span className="text-[#847C75]/60">/</span>
-              <span className="text-[#17140F] font-bold">Security & Compliance</span>
-            </nav>
-
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FEF0E1] border border-[#F3D7BD] text-xs font-mono font-bold text-[#B5651A] mb-4">
-              <ShieldCheckIcon className="w-3.5 h-3.5 text-[#B5651A]" />
-              ENTERPRISE SECURITY & DATA PRIVACY
-            </div>
-
-            <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#17140F] tracking-tight mb-6 leading-tight">
-              Bank-grade security for regulated loyalty ledgers
-            </h1>
-
-            <p className="font-body text-base sm:text-lg text-[#5B534C] max-w-2xl mx-auto mb-8 leading-relaxed">
-              Loyalty programs handle sensitive member identifiers and legal financial liabilities. We protect your balance sheet with append-only cryptographic ledgers, AES-256 KMS encryption, and sovereign data residency.
-            </p>
-
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link
-                to="/contact"
-                className="px-6 py-3.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-bold text-xs sm:text-sm transition-all shadow-sm hover:shadow"
-              >
-                Request Security Whitepaper & SOC 2 Report
-              </Link>
-              <a
-                href="mailto:security@punyaperks.com"
-                className="px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#17140F] font-bold text-xs sm:text-sm border border-[#EBDFC6] transition-all shadow-xs"
-              >
-                Contact Security Team
-              </a>
-            </div>
+        {/* Trust Highlights Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl">
+          <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
+            <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">SOC 2</div>
+            <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">Type II Readiness</div>
           </div>
-
-          {/* Trust Highlights Grid */}
-          <div className="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
-              <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">SOC 2</div>
-              <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">Type II Readiness</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
-              <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">AES-256</div>
-              <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">KMS Isolated Keys</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
-              <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">DPDP '23</div>
-              <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">India Sovereign Data</div>
-            </div>
-            <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
-              <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">99.99%</div>
-              <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">Availability SLA</div>
-            </div>
+          <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
+            <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">AES-256</div>
+            <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">KMS Isolated Keys</div>
+          </div>
+          <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
+            <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">DPDP '23</div>
+            <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">India Sovereign Data</div>
+          </div>
+          <div className="p-4 rounded-2xl bg-white/90 border border-[#EBDFC6] text-center shadow-xs">
+            <div className="font-display font-extrabold text-2xl text-[#B5651A] mb-1">99.99%</div>
+            <div className="text-[11px] font-mono font-semibold text-[#847C75] uppercase tracking-wider">Availability SLA</div>
           </div>
         </div>
-      </section>
+      </PageHeader>
 
       {/* Security Pillars: How We Protect Data */}
       <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#E8DCC9]">
