@@ -112,15 +112,15 @@ export const HeroSection: React.FC = () => {
 
           {/* Center Column (6 cols / 560px): Mockup container with user provided luxury golden background */}
           <div
-            className="md:col-span-6 border border-[#B5651A]/60 rounded-[16px] overflow-hidden shadow-md md:h-[416px] flex items-center justify-center relative bg-cover bg-center group"
+            className="md:col-span-6 border border-[#B5651A]/60 rounded-[16px] overflow-hidden shadow-md md:h-[416px] flex items-center justify-center relative bg-cover bg-center"
             style={{
               backgroundImage: "url('/images/mockup-bg.jpg')",
             }}
           >
             <img
-              src={hero.image || "/images/hero-tablet-mockup.png"}
+              src="/images/hero-phones-figma.png"
               alt="Punya Perks Member Experience"
-              className="w-full h-full object-contain p-2 sm:p-3 transition-transform duration-500 group-hover:scale-105 drop-shadow-2xl"
+              className="w-full h-full object-cover object-top scale-100 drop-shadow-2xl"
               loading="eager"
             />
           </div>
