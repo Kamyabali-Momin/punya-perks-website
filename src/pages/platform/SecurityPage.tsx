@@ -154,8 +154,8 @@ export const SecurityPage: React.FC = () => {
         primaryCtaHref="/contact"
         secondaryCtaText="Contact Security Team"
         secondaryCtaHref="/contact"
-        image="/images/platform-portal-tablet.png"
-        imageAlt="Punya Perks Security & Compliance Architecture Console"
+        image="/images/products/user-web-home.png"
+        imageAlt="Punya Perks Security & Compliance Member Portal"
       >
         {/* Trust Highlights Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl">

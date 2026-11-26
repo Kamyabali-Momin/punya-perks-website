@@ -1,10 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { PageHeader } from '../../components/layout/PageHeader';
 import { PageCta } from '../../components/common/PageCta';
-import { SmartphoneIcon, GlobeIcon, WalletIcon, SparklesIcon } from 'lucide-react';
+
+type AppScreen = 'home' | 'redeem' | 'offers';
+
+const APP_SCREENS: Record<AppScreen, { label: string; src: string; caption: string }> = {
+  home: {
+    label: 'Member Home',
+    src: '/images/products/kombee-app-home.png',
+    caption: 'Live available, pending & expiring points with dynamic Gold tier guilloche card.',
+  },
+  redeem: {
+    label: 'Redeem Catalog',
+    src: '/images/products/kombee-app-redeem.png',
+    caption: 'Bank/UPI cash-out, charity donations, partner transfers & digital gift vouchers.',
+  },
+  offers: {
+    label: 'Campaigns & Offers',
+    src: '/images/products/kombee-app-offers.png',
+    caption: 'Real-time multiplier campaigns and tier fast-track challenges.',
+  },
+};
 
 export const ProductMemberAppPage: React.FC = () => {
+  const [screen, setScreen] = useState<AppScreen>('home');
+  const activeScreen = APP_SCREENS[screen];
+
   return (
     <MainLayout>
       <PageHeader
@@ -12,6 +34,8 @@ export const ProductMemberAppPage: React.FC = () => {
         title="A member app that changes with the member."
         description="Silver, Gold, Platinum, or your own ladder. The app adapts its accent to the tier, shows available, pending and reserved balances honestly, and runs in English, Hindi and Arabic with right-to-left layout."
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Tiers & Member App' }]}
+        image="/images/products/user-web-home.png"
+        imageAlt="Kombee User Side Web Member Portal"
       />
 
       <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
@@ -28,6 +52,30 @@ export const ProductMemberAppPage: React.FC = () => {
                 Publish native apps on the App Store and Google Play under your corporate developer accounts. Full brand theming, custom iconography, and automatic Apple Wallet / Google Wallet pass generation.
               </p>
 
+              {/* Interactive App Screen Switcher */}
+              <div className="space-y-3 pt-1">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#847C75] block">
+                  PREVIEW ACTUAL KOMBEE LOYALTY APP SCREENS
+                </span>
+                <div className="flex flex-wrap gap-2">
+                  {(Object.keys(APP_SCREENS) as AppScreen[]).map((key) => (
+                    <button
+                      key={key}
+                      type="button"
+                      onClick={() => setScreen(key)}
+                      className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                        screen === key
+                          ? 'bg-[#B5651A] text-white shadow-sm'
+                          : 'bg-white text-[#1F1A17] border border-[#EBDFC6] hover:border-[#B5651A]/40'
+                      }`}
+                    >
+                      {APP_SCREENS[key].label}
+                    </button>
+                  ))}
+                </div>
+                <p className="text-xs text-[#5B534C]">{activeScreen.caption}</p>
+              </div>
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 bg-white rounded-[20px] border border-[#EBDFC6]">
                   <div className="font-display font-bold text-sm text-[#1F1A17]">Dynamic Tier Themes</div>
@@ -41,25 +89,14 @@ export const ProductMemberAppPage: React.FC = () => {
             </div>
 
             <div className="lg:col-span-6 flex justify-center">
-              {/* Smartphone Frame */}
-              <div className="w-[300px] rounded-[44px] bg-[#1F1A17] p-4 shadow-2xl border-4 border-[#EBDFC6]">
-                <div className="rounded-[36px] bg-white p-5 space-y-4">
-                  <div className="flex justify-between items-center text-xs">
-                    <span className="font-display font-bold text-[#1F1A17]">Aryan Verma</span>
-                    <span className="font-mono text-[10px] bg-[#C9A15B]/20 text-[#97732E] px-2 py-0.5 rounded-full font-bold">★ GOLD</span>
-                  </div>
-                  <div className="p-4 rounded-[20px] bg-[#D9822B] text-white">
-                    <span className="text-[10px] text-white/70 block uppercase">AVAILABLE POINTS</span>
-                    <span className="font-display font-extrabold text-3xl">3,850</span>
-                    <span className="text-[10px] text-white/80 block mt-1">≈ ₹962 · 300 pending</span>
-                  </div>
-                  <div className="space-y-2">
-                    <div className="text-xs font-bold text-[#1F1A17]">Recent Perks</div>
-                    <div className="p-3 bg-[#FAF5ED] rounded-[14px] text-xs flex justify-between">
-                      <span>Store Visit Multiplier</span>
-                      <span className="font-bold text-[#B5651A]">+61 pts</span>
-                    </div>
-                  </div>
+              {/* Actual Kombee Loyalty App Smartphone Frame */}
+              <div className="w-[290px] sm:w-[310px] rounded-[42px] bg-[#1F1A17] p-3 shadow-2xl border-4 border-[#EBDFC6]">
+                <div className="rounded-[32px] overflow-hidden bg-white">
+                  <img
+                    src={activeScreen.src}
+                    alt={`Kombee Loyalty App — ${activeScreen.label}`}
+                    className="w-full h-auto object-cover object-top"
+                  />
                 </div>
               </div>
             </div>

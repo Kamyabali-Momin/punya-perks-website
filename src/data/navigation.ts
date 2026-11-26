@@ -236,14 +236,29 @@ export const navigationData: NavPillar[] = [
             description: "Central library of loyalty benchmarks, playbooks, and guides.",
           },
           {
+            title: "Loyalty Blog",
+            href: "/blog",
+            description: "Product updates, compliance breakdowns, and engineering notes.",
+          },
+          {
             title: "Customer Success Stories",
             href: "/customers",
             description: "Real enterprise programmes and verified metrics from the field.",
           },
           {
-            title: "Loyalty Blog",
-            href: "/blog",
-            description: "Product updates, compliance breakdowns, and engineering notes.",
+            title: "Guides & Reports",
+            href: "/guides",
+            description: "Downloadable playbooks, 2026 benchmarks, and platform comparisons.",
+          },
+          {
+            title: "Webinars & Events",
+            href: "/events",
+            description: "Upcoming live sessions, executive roundtables, and replays.",
+          },
+          {
+            title: "Help Centre",
+            href: "/help",
+            description: "Knowledge base, quick-start guides, troubleshooting, and ticket submission.",
           },
           {
             title: "Platform Changelog",
@@ -254,11 +269,6 @@ export const navigationData: NavPillar[] = [
             title: "Loyalty Glossary",
             href: "/glossary",
             description: "Clear definitions for breakage, escheatment, tier multipliers, and lots.",
-          },
-          {
-            title: "Help Centre",
-            href: "/help",
-            description: "Knowledge base, quick-start guides, troubleshooting, and ticket submission.",
           },
         ],
       },

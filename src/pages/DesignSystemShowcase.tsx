@@ -152,7 +152,7 @@ export const DesignSystemShowcase: React.FC = () => {
           <Eyebrow badge="Typography">Type System</Eyebrow>
           <Heading level="h2">Scale & Text Hierarchy</Heading>
           <Text className="mt-2 mb-8">
-            Adaptive font family: Sora (Option B) / Newsreader (Option A) / DM Serif (Option C) with Inter body.
+            Adaptive font family: Sora (Option B) / Newsreader (Option A) / DM Serif (Option C) with Plus Jakarta Sans body.
           </Text>
 
           <div className="space-y-6 bg-white p-6 sm:p-8 rounded-pp-lg border border-pp-border-subtle shadow-pp-sm">

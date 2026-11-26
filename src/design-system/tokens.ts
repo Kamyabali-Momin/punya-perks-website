@@ -18,7 +18,7 @@ export const brandTokens = {
     subheadline: "Launch points, tiers, offers and a white-label member app in weeks. One platform for retailers, banks and enterprises, with the compliance each market demands.",
     targetMarkets: ["India", "Australia", "New Zealand", "Middle East", "United States"],
     theme: "Option A — Marigold (Warm Editorial)",
-    typography: "Newsreader & Manrope",
+    typography: "Newsreader & Plus Jakarta Sans",
   },
   colors: {
     ground: "var(--pp-ground)",
@@ -65,9 +65,9 @@ export const brandTokens = {
     pill: "var(--pp-radius-pill)",
   },
   breakpoints: {
-    mobile: "390px",
-    tablet: "834px",
-    laptop: "1280px",
-    desktop: "1440px",
+    mobile: "640px",
+    tablet: "768px",
+    laptop: "1024px",
+    desktop: "1280px",
   },
 };

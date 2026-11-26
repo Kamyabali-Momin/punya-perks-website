@@ -184,7 +184,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
           </a>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8" aria-label="Main Navigation">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8" aria-label="Main Navigation">
             {navigationData.map((pillar) => {
               const isOpen = activeMenu === pillar.title;
               return (
@@ -196,7 +196,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                 >
                   <a
                     href={pillar.href}
-                    className={`inline-flex items-center text-sm font-medium font-body transition-colors py-1 cursor-pointer ${
+                    className={`inline-flex items-center text-sm font-medium font-body whitespace-nowrap transition-colors py-1 cursor-pointer ${
                       isOpen
                         ? 'text-[#B5651A] font-semibold'
                         : 'text-[#17140F] hover:text-[#B5651A]'
@@ -210,10 +210,10 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
           </nav>
 
           {/* Right Action Utilities & CTAs */}
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="hidden lg:flex items-center gap-4 xl:gap-5 shrink-0">
             <a
               href="/start"
-              className="text-sm font-medium text-[#17140F] hover:text-[#B5651A] transition-colors"
+              className="text-sm font-medium text-[#17140F] hover:text-[#B5651A] transition-colors whitespace-nowrap"
             >
               Sign in
             </a>
@@ -222,7 +222,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               href="/demo"
               variant="primary"
               size="md"
-              className="rounded-full px-5 py-2.5 font-semibold shadow-xs bg-[#B5651A] hover:bg-[#9a5413] text-white transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              className="rounded-full px-5 py-2.5 font-semibold shadow-xs bg-[#B5651A] hover:bg-[#9a5413] text-white transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap"
             >
               Request a demo
             </Button>
@@ -241,7 +241,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
         {/* Desktop Mega-Menu Overlay Container */}
         {activeMenu && activePillarData && (
           <div
-            className="absolute top-full left-0 w-full bg-white border-b border-[#EBDFC6] shadow-xl transition-all animate-in fade-in slide-in-from-top-1 duration-200 z-50 font-body"
+            className="absolute top-full left-0 w-full bg-white border-b border-[#EBDFC6] shadow-xl transition-all animate-in fade-in slide-in-from-top-1 duration-200 z-50 font-body max-h-[82vh] overflow-y-auto"
             onMouseEnter={() => {
               if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
             }}

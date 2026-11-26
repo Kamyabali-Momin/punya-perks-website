@@ -38,6 +38,8 @@ import { PricingComparePage } from './pages/pricing/PricingComparePage';
 
 // Resources Pages
 import { ResourcesPage } from './pages/resources/ResourcesPage';
+import { BlogPage } from './pages/resources/BlogPage';
+import { WebinarsEventsPage } from './pages/resources/WebinarsEventsPage';
 import { ComplianceArticlePage } from './pages/resources/ComplianceArticlePage';
 import { CustomersPage } from './pages/resources/CustomersPage';
 import { RetailCaseStudyPage } from './pages/resources/RetailCaseStudyPage';
@@ -112,14 +114,18 @@ export const App: React.FC = () => {
         <Route path="/resources/guides" element={<ResourcesPage />} />
         <Route path="/resources/hub" element={<ResourcesPage />} />
         <Route path="/resources/india-compliance-checklist" element={<ComplianceArticlePage />} />
+        <Route path="/resources/:slug" element={<BlogPage />} />
         <Route path="/customers" element={<CustomersPage />} />
         <Route path="/customers/retail-national" element={<RetailCaseStudyPage />} />
         <Route path="/changelog" element={<ChangelogPage />} />
         <Route path="/glossary" element={<GlossaryPage />} />
         <Route path="/help" element={<HelpCenterPage />} />
-        <Route path="/blog" element={<ResourcesPage />} />
+        <Route path="/blog" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPage />} />
         <Route path="/guides" element={<ResourcesPage />} />
-        <Route path="/events" element={<ResourcesPage />} />
+        <Route path="/benchmarks" element={<ResourcesPage />} />
+        <Route path="/comparisons" element={<ResourcesPage />} />
+        <Route path="/events" element={<WebinarsEventsPage />} />
 
         {/* Company */}
         <Route path="/about" element={<AboutPage />} />

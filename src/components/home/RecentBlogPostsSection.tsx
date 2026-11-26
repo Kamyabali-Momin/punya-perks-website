@@ -137,9 +137,9 @@ export const RecentBlogPostsSection: React.FC = () => {
                 href={post.href}
                 className="group rounded-[20px] bg-white p-5 sm:p-6 border border-[#EBDFC6] shadow-xs hover:shadow-md hover:border-[#B5651A]/40 transition-all duration-300 flex-1 flex flex-col justify-between"
               >
-                <div className="flex gap-4 sm:gap-5 items-start mb-4">
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-start mb-4 min-w-0">
                   {/* Thumbnail Image */}
-                  <div className="w-28 h-24 sm:w-36 sm:h-28 lg:w-36 lg:h-28 rounded-[14px] overflow-hidden bg-[#F4ECDC] shrink-0">
+                  <div className="w-full h-44 sm:w-36 sm:h-28 rounded-[14px] overflow-hidden bg-[#F4ECDC] shrink-0">
                     <img
                       src={post.image}
                       alt={post.title}

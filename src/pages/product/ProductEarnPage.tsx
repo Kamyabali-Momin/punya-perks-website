@@ -21,6 +21,8 @@ export const ProductEarnPage: React.FC = () => {
         title="Every earning mechanism, one rule builder."
         description="Purchases in store and online, referrals, card-linked offers, receipt scans, birthdays, surveys and challenges. Tier multipliers, category caps and campaign bonuses stack in a defined order and are versioned at transaction time."
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Earn & Rules Engine' }]}
+        image="/images/products/user-web-earn.png"
+        imageAlt="Kombee User Side Web — Ways to Earn"
       />
 
       <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
@@ -52,19 +54,56 @@ export const ProductEarnPage: React.FC = () => {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="rounded-[24px] bg-[#17140F] text-white p-6 sm:p-8 font-mono text-xs space-y-4 shadow-xl border border-white/10">
-                <div className="flex items-center justify-between pb-3 border-b border-white/10 text-[11px] text-white/60">
-                  <span>rule_evaluation_engine.ts</span>
-                  <span className="text-emerald-400">● EXEC_OK (84ms)</span>
+              <div className="rounded-[24px] bg-[#17140F] text-white overflow-hidden shadow-2xl border border-[#3E2C20]">
+                {/* IDE Window Title Bar */}
+                <div className="px-5 py-3.5 bg-[#1F1A17] border-b border-white/10 flex items-center justify-between gap-3">
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F56]/80" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80" />
+                      <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80" />
+                    </div>
+                    <span className="font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-xs text-white/75 truncate">
+                      rule_evaluation_engine.ts
+                    </span>
+                  </div>
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-[11px] font-semibold shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    EXEC_OK · 84ms
+                  </span>
                 </div>
-                <div className="text-[#E59846] font-bold">// Evaluation sequence for POS basket #TXN-9182</div>
-                <div className="space-y-1 text-white/80">
-                  <div>1. gross_basket: ₹4,850.00</div>
-                  <div>2. excluded_tax (GST 18%): -₹738.00</div>
-                  <div>3. eligible_base_spend: ₹4,112.00</div>
-                  <div>4. tier_multiplier (GOLD): 1.5x</div>
-                  <div>5. active_flash_campaign: +20 bonus pts</div>
-                  <div className="pt-2 text-emerald-300 font-bold">→ points_issued: 82 pts (Ledger Entry #L-48190)</div>
+
+                {/* Code Body */}
+                <div className="p-5 sm:p-7 font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-xs sm:text-[13px] space-y-4">
+                  <div className="text-[#E59846] font-semibold">
+                    // Evaluation sequence for POS basket #TXN-9182
+                  </div>
+                  <div className="space-y-2 text-white/85 leading-relaxed">
+                    <div className="flex gap-3">
+                      <span className="text-white/30 select-none">01</span>
+                      <span>gross_basket: <span className="text-[#F3E5CF] font-semibold">₹4,850.00</span></span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-white/30 select-none">02</span>
+                      <span>excluded_tax (GST 18%): <span className="text-rose-300">-₹738.00</span></span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-white/30 select-none">03</span>
+                      <span>eligible_base_spend: <span className="text-[#F3E5CF] font-semibold">₹4,112.00</span></span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-white/30 select-none">04</span>
+                      <span>tier_multiplier (GOLD): <span className="text-[#E59846] font-semibold">1.5x</span></span>
+                    </div>
+                    <div className="flex gap-3">
+                      <span className="text-white/30 select-none">05</span>
+                      <span>active_flash_campaign: <span className="text-amber-300">+20 bonus pts</span></span>
+                    </div>
+                  </div>
+                  <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-emerald-300 font-semibold">
+                    <span>→ points_issued: 82 pts</span>
+                    <span className="text-[11px] text-white/55">Ledger Entry #L-48190 · Rule v4.2</span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -142,8 +142,8 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         primaryCtaHref="/start"
         secondaryCtaText="View API reference"
         secondaryCtaHref="/start"
-        image="/images/platform-portal-tablet.png"
-        imageAlt="Punya Perks Developer Console"
+        image="/images/products/user-web-earn.png"
+        imageAlt="Punya Perks Developer & Member API Portal"
       />
 
       {/* Tabs Navigation (Deskmerit Style - Static, not sticky) */}

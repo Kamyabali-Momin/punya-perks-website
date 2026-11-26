@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLocation, Link } from 'react-router-dom';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { PageCta } from '../../components/common/PageCta';
@@ -44,17 +44,46 @@ interface ResourceItem {
 
 export const ResourcesPage: React.FC = () => {
   const { pathname } = useLocation();
-  const [selectedTag, setSelectedTag] = useState<string>('All');
+  const isGuidesRoute = pathname.includes('/guides');
+  const isBenchmarksRoute = pathname.includes('/benchmarks');
+  const isComparisonsRoute = pathname.includes('/comparisons');
+
+  const getInitialTag = () => {
+    if (isBenchmarksRoute) return 'Benchmarks';
+    if (isComparisonsRoute) return 'Comparisons';
+    if (isGuidesRoute) return 'Guide';
+    return 'All';
+  };
+
+  const [selectedTag, setSelectedTag] = useState<string>(getInitialTag);
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [activeItem, setActiveItem] = useState<ResourceItem | null>(null);
   const [downloadSuccess, setDownloadSuccess] = useState<boolean>(false);
+  const [gateName, setGateName] = useState<string>('');
+  const [gateEmail, setGateEmail] = useState<string>('');
 
-  const isGuidesRoute = pathname.includes('/guides');
+  useEffect(() => {
+    setSelectedTag(getInitialTag());
+  }, [pathname]);
 
-  const pageMeta = isGuidesRoute
+  const pageMeta = isBenchmarksRoute
+    ? {
+        pretitle: 'RESEARCH & BENCHMARKS',
+        title: 'Loyalty Benchmarks 2026',
+        description:
+          'Verified retention rates, burn velocity, POS latency, and breakage reserve benchmarks across India, Australia, and New Zealand.',
+      }
+    : isComparisonsRoute
+    ? {
+        pretitle: 'PLATFORM COMPARISONS',
+        title: 'Architecture & Vendor Comparisons',
+        description:
+          'Technical evaluations and zero-downtime cutover playbooks comparing Punya Perks with Capillary, Xoxoday, and EasyRewardz.',
+      }
+    : isGuidesRoute
     ? {
         pretitle: 'LEARN & IMPLEMENT',
-        title: 'Guides & eBooks',
+        title: 'Guides & Reports',
         description:
           'In-depth operational playbooks, ledger architecture whitepapers, and compliance roadmaps for retail and fintech leaders.',
       }
@@ -62,7 +91,7 @@ export const ResourcesPage: React.FC = () => {
         pretitle: 'RESOURCES & KNOWLEDGE HUB',
         title: 'Enterprise Loyalty Knowledge, Playbooks & Tools',
         description:
-          'In-depth playbooks, regulatory compliance frameworks, retail benchmarks, and architectural blueprints for high-velocity customer loyalty programs.',
+          'Central entry to all loyalty blogs, case studies, guides, 2026 benchmarks, webinars, release notes, and developer docs.',
       };
 
   const featuredResource: ResourceItem = {
@@ -129,7 +158,7 @@ export const ResourcesPage: React.FC = () => {
     },
     {
       id: 'architecture-deep-dive-comparison',
-      tag: 'Architecture',
+      tag: 'Comparisons',
       title: 'Punya Perks vs Capillary, Xoxoday & EasyRewardz: Architecture Deep Dive',
       text: 'An objective architectural breakdown comparing legacy centralized database schemas against append-only cryptographic transaction ledgers with sub-120ms POS syncing.',
       meta: '28 pages · Architecture Brief',
@@ -283,7 +312,7 @@ export const ResourcesPage: React.FC = () => {
       title: 'Interactive Loyalty Breakage & Liability Reserve Estimator',
       text: 'Financial modeling workbook for CFOs and loyalty leaders to forecast unredeemed points liability, breakage curve amortization, and balance sheet tax optimization.',
       meta: 'Interactive Workbook & Model',
-      image: '/images/platform-console-mockup.png',
+      image: '/images/products/user-web-home.png',
       downloadText: 'Access Free Estimator',
       actionLabel: 'Access Tool',
       author: {
@@ -309,11 +338,11 @@ export const ResourcesPage: React.FC = () => {
     },
     {
       id: 'legacy-cutover-checklist',
-      tag: 'Migration',
+      tag: 'Comparisons',
       title: 'Legacy Platform Cutover Checklist: Capillary, Xoxoday & EasyRewardz',
       text: 'Data validation protocols, historical point balance playback, dry-run reconciliations, and staff training SOPs for a flawless zero-discrepancy cutover.',
       meta: '16 pages · Migration Toolkit',
-      image: '/images/casestudy-console-mockup.png',
+      image: '/images/products/user-web-campaigns.png',
       downloadText: 'Download Migration Kit',
       actionLabel: 'Read Checklist',
       author: {
@@ -384,7 +413,13 @@ export const ResourcesPage: React.FC = () => {
             </Link>
             <ChevronRight size={12} className="text-[#B5651A]/60" />
             <span className="text-[#B5651A] font-bold">
-              {isGuidesRoute ? 'Guides & Playbooks' : 'Knowledge Hub'}
+              {isBenchmarksRoute
+                ? 'Benchmarks'
+                : isComparisonsRoute
+                ? 'Comparisons'
+                : isGuidesRoute
+                ? 'Guides & Reports'
+                : 'Knowledge Hub'}
             </span>
           </nav>
 
@@ -406,6 +441,35 @@ export const ResourcesPage: React.FC = () => {
       {/* 2. Main Content Area */}
       <section className="w-full py-12 sm:py-16 bg-white font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+          {/* Explore by Resource Type (Sitemap Hub Directory) */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2.5 mb-8">
+            {[
+              { label: 'Blog', href: '/blog' },
+              { label: 'Case Studies', href: '/customers' },
+              { label: 'Guides', href: '/guides' },
+              { label: 'Benchmarks', href: '/benchmarks' },
+              { label: 'Comparisons', href: '/comparisons' },
+              { label: 'Webinars', href: '/events' },
+              { label: 'Changelog', href: '/changelog' },
+              { label: 'Glossary', href: '/glossary' },
+            ].map((hubLink) => {
+              const active = pathname === hubLink.href;
+              return (
+                <Link
+                  key={hubLink.href}
+                  to={hubLink.href}
+                  className={`px-3 py-2.5 rounded-xl border text-center text-xs font-semibold transition-all ${
+                    active
+                      ? 'bg-[#B5651A] text-white border-[#B5651A] shadow-xs'
+                      : 'bg-[#FAF5ED]/70 text-[#17140F] border-[#EBDFC6] hover:border-[#B5651A]/50 hover:bg-[#FAF5ED]'
+                  }`}
+                >
+                  {hubLink.label}
+                </Link>
+              );
+            })}
+          </div>
+
           {/* Search Bar & Tag Filter Controls */}
           <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EBDFC6]">
             {/* Search Input */}
@@ -700,15 +764,33 @@ export const ResourcesPage: React.FC = () => {
 
               {/* Right Column: Actions & Highlights */}
               <div className="lg:col-span-4 space-y-6">
-                {/* Download PDF Box */}
-                <div className="p-6 rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-4">
-                  <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A]">
+                {/* Download PDF Box (Gated with Name + Email per Sitemap) */}
+                <div className="p-6 rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-3.5">
+                  <div className="flex items-center gap-2 text-xs font-body font-bold uppercase tracking-wider text-[#B5651A]">
                     <FileText size={16} />
                     <span>Resource Asset</span>
                   </div>
                   <p className="text-xs text-[#5B534C] leading-relaxed">
                     Download the complete publication including diagrams, code samples, and regulatory checklists.
                   </p>
+                  {!downloadSuccess && (
+                    <div className="space-y-2">
+                      <input
+                        type="text"
+                        value={gateName}
+                        onChange={(e) => setGateName(e.target.value)}
+                        placeholder="Your full name"
+                        className="w-full h-9 px-3 rounded-lg bg-white border border-[#EBDFC6] text-xs outline-none focus:border-[#B5651A]"
+                      />
+                      <input
+                        type="email"
+                        value={gateEmail}
+                        onChange={(e) => setGateEmail(e.target.value)}
+                        placeholder="Work email"
+                        className="w-full h-9 px-3 rounded-lg bg-white border border-[#EBDFC6] text-xs outline-none focus:border-[#B5651A]"
+                      />
+                    </div>
+                  )}
                   <button
                     type="button"
                     onClick={handleDownload}
@@ -721,7 +803,7 @@ export const ResourcesPage: React.FC = () => {
                     {downloadSuccess ? (
                       <>
                         <Check size={16} />
-                        <span>Downloaded PDF</span>
+                        <span>Sent to {gateEmail || 'your inbox'}</span>
                       </>
                     ) : (
                       <>

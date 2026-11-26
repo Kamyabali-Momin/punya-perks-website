@@ -324,7 +324,7 @@ export const ProductOverviewPage: React.FC = () => {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="p-4 rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6]">
                     <div className="text-[10px] font-mono text-[#847C75] uppercase">EARN RULES</div>
                     <div className="font-display font-extrabold text-xl sm:text-2xl text-[#17140F] mt-1">Multipliers & Tiers</div>

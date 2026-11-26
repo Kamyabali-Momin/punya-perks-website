@@ -60,10 +60,10 @@ export const TestimonialsSection: React.FC = () => {
         {/* 2 Cards Layout matching user reference image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* Left Card (7 cols on lg, 8 cols on xl): Operator Testimonial */}
-          <div className="lg:col-span-7 xl:col-span-8 rounded-[24px] bg-[#FAF5ED] p-6 sm:p-7 md:p-8 border border-[#EBDFC6] shadow-xs flex flex-col justify-between reveal-on-scroll">
-            <div className="flex flex-col sm:flex-row gap-6 sm:gap-7 items-start sm:items-stretch">
+          <div className="lg:col-span-7 xl:col-span-8 min-w-0 rounded-[24px] bg-[#FAF5ED] p-6 sm:p-7 md:p-8 border border-[#EBDFC6] shadow-xs flex flex-col justify-between reveal-on-scroll">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-7 items-start sm:items-stretch min-w-0">
               {/* Operator Photo */}
-              <div className="w-full sm:w-[210px] md:w-[230px] aspect-[4/5] sm:aspect-auto rounded-[16px] overflow-hidden bg-[#533923] shrink-0 shadow-xs">
+              <div className="w-full sm:w-[200px] md:w-[220px] aspect-[4/4] sm:aspect-auto rounded-[16px] overflow-hidden bg-[#533923] shrink-0 shadow-xs">
                 <img
                   src={current.image}
                   alt={current.name}
@@ -132,7 +132,7 @@ export const TestimonialsSection: React.FC = () => {
           {/* Right Card (5 cols on lg, 4 cols on xl): AI Strategy CTA Card */}
           <a
             href="/contact"
-            className="lg:col-span-5 xl:col-span-4 rounded-[24px] relative overflow-hidden shadow-xs border border-[#EBDFC6] block group cursor-pointer bg-cover bg-center min-h-[340px] hover:scale-[1.01] transition-all duration-300 reveal-on-scroll delay-100"
+            className="lg:col-span-5 xl:col-span-4 rounded-[24px] relative overflow-hidden shadow-xs border border-[#EBDFC6] block group cursor-pointer bg-cover bg-center min-h-[260px] sm:min-h-[320px] lg:min-h-[340px] hover:scale-[1.01] transition-all duration-300 reveal-on-scroll delay-100"
             style={{
               backgroundImage: "url('/images/testimonials/ai-card-full.jpg')",
               backgroundColor: '#24130A',

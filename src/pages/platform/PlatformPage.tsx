@@ -68,8 +68,8 @@ export const PlatformPage: React.FC = () => {
         primaryCtaHref="/platform/security"
         secondaryCtaText="Talk to an architect"
         secondaryCtaHref="/demo"
-        image="/images/platform-portal-tablet.png"
-        imageAlt="Punya Perks Architecture Console"
+        image="/images/products/user-web-home.png"
+        imageAlt="Punya Perks Architecture & Member Portal"
       />
 
       {/* 4 Architectural Cards */}

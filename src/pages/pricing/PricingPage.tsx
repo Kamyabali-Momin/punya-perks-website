@@ -180,8 +180,8 @@ export const PricingPage: React.FC = () => {
         primaryCtaHref="#comparison-matrix"
         secondaryCtaText="Talk to sales"
         secondaryCtaHref="/contact"
-        image="/images/platform-portal-tablet.png"
-        imageAlt="Punya Perks Pricing & Ledger Overview"
+        image="/images/products/user-web-redeem.png"
+        imageAlt="Punya Perks Pricing & Rewards Portal Overview"
       />
 
       {/* Currency Switcher & Billing Interval */}

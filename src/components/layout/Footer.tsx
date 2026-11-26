@@ -33,9 +33,12 @@ export const Footer: React.FC = () => {
   ];
 
   const resourcesLinks = [
-    { label: 'Guides', href: '/resources' },
-    { label: 'Benchmarks', href: '/resources' },
-    { label: 'Comparisons', href: '/resources' },
+    { label: 'Resources hub', href: '/resources' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Guides & reports', href: '/guides' },
+    { label: 'Benchmarks', href: '/benchmarks' },
+    { label: 'Comparisons', href: '/comparisons' },
+    { label: 'Webinars & events', href: '/events' },
     { label: 'Customer stories', href: '/customers' },
     { label: 'Changelog', href: '/changelog' },
     { label: 'Glossary', href: '/glossary' },

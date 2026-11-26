@@ -19,6 +19,8 @@ export const ProductRedeemPage: React.FC = () => {
         title="Points that buy what members actually want."
         description="Vouchers, merchandise, cash-out to bank or UPI, donations, partner currencies, experiences, and paid tiers. Real-time quote reservation ensures liability stays balanced."
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Redeem & Catalog' }]}
+        image="/images/products/user-web-redeem.png"
+        imageAlt="Kombee User Side Web — Redeem Rewards Catalog"
       />
 
       <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">

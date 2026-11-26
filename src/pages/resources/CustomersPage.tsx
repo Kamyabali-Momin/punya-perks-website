@@ -289,9 +289,9 @@ export const CustomersPage: React.FC = () => {
 
           {/* Featured Case Study Card (matching Sqalible featured layout) */}
           {selectedTag === 'All' && !searchTerm.trim() && (
-            <div className="mb-14 overflow-hidden rounded-3xl border border-[#EBDFC6] hover:border-[#B5651A] bg-white text-neutral-900 shadow-sm hover:shadow-md transition-all grid md:grid-cols-12 items-stretch md:h-[440px]">
+            <div className="mb-14 overflow-hidden rounded-3xl border border-[#EBDFC6] hover:border-[#B5651A] bg-white text-neutral-900 shadow-sm hover:shadow-md transition-all grid lg:grid-cols-12 items-stretch lg:min-h-[420px]">
               {/* Left Column (7 cols) */}
-              <div className="p-8 md:p-10 lg:p-12 md:col-span-7 flex flex-col justify-between h-full">
+              <div className="p-6 sm:p-8 lg:p-12 lg:col-span-7 flex flex-col justify-between h-full">
                 <div>
                   <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FEF0E1] border border-[#F3D7BD] px-3.5 py-1 text-xs font-semibold text-[#B5651A] mb-4">
                     <SparklesIcon size={13} />
@@ -323,7 +323,7 @@ export const CustomersPage: React.FC = () => {
               </div>
 
               {/* Right Image Column (5 cols) */}
-              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-neutral-100 rounded-b-3xl md:rounded-b-none md:rounded-r-3xl">
+              <div className="lg:col-span-5 h-64 lg:h-auto lg:min-h-[420px] relative overflow-hidden bg-neutral-100 rounded-b-3xl lg:rounded-b-none lg:rounded-r-3xl">
                 <img
                   src={FEATURED_STORY.image}
                   alt={FEATURED_STORY.title}

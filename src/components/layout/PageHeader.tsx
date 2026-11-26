@@ -29,7 +29,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
   secondaryCtaText = 'Start in sandbox',
   secondaryCtaHref = '/start',
   microcopy = 'Free sandbox, no credit card. Pricing in INR, AUD and NZD.',
-  image = '/images/platform-portal-tablet.png',
+  image = '/images/products/user-web-home.png',
   imageAlt,
   aside,
   children,
@@ -38,7 +38,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
   return (
     <section
-      className="relative w-full border-b border-[#EBDFC6] pt-10 pb-16 sm:pt-14 sm:pb-20 lg:pt-16 lg:pb-24 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden"
+      className="relative w-full border-b border-[#EBDFC6] pt-8 pb-12 sm:pt-12 sm:pb-16 lg:pt-16 lg:pb-20 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden"
       style={{
         backgroundImage: "url('/images/inner-hero-bg.jpg')",
         backgroundColor: "#FAF3E8",
@@ -109,7 +109,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
             </div>
 
             {microcopy && (
-              <p className="text-xs text-[#847C75] pt-1 font-body animate-fade-in-up delay-350">
+              <p className="text-xs text-[#5B534C] pt-1 font-body animate-fade-in-up delay-350 inline-block bg-[#FAF3E8]/80 backdrop-blur-[2px] px-3 py-1 rounded-full border border-[#EBDFC6]/60">
                 {microcopy}
               </p>
             )}

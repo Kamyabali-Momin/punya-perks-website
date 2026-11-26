@@ -51,7 +51,7 @@ export const HomeFaqSection: React.FC = () => {
           {/* Left Dark Card - Matches exact height of the FAQ list */}
           <div className="lg:col-span-4 flex flex-col h-full reveal-on-scroll">
             <div
-              className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#B5651A]/40 h-full min-h-[380px]"
+              className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#B5651A]/40 h-full min-h-[280px] lg:min-h-[380px]"
               style={{
                 backgroundImage: "url('/images/faq-card-bg.jpg')",
                 backgroundColor: "#17120D",
@@ -83,7 +83,7 @@ export const HomeFaqSection: React.FC = () => {
               {/* Bottom Contact Button */}
               <div className="pt-8">
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-[#17140F] font-body font-medium text-xs sm:text-sm hover:bg-[#F4ECDC] transition-all shadow-md group"
                 >
                   <span>Contact</span>

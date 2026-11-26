@@ -110,7 +110,7 @@ export const CareersPage: React.FC = () => {
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-row items-center gap-3 sm:gap-4 pt-1">
+              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
                 <a
                   href="#open-positions"
                   className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
@@ -131,9 +131,9 @@ export const CareersPage: React.FC = () => {
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
               <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#EBDFC6] aspect-[16/10] sm:aspect-[4/3] group bg-[#FAF5ED] w-full max-w-full">
                 <img
-                  src="/images/platform-portal-tablet.png"
-                  alt="Punya Perks Collaborative Engineering Pods"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  src="/images/products/user-web-campaigns.png"
+                  alt="Punya Perks Collaborative Product Experience"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono flex items-center justify-between">

@@ -21,18 +21,19 @@ export const AnnouncementBar: React.FC<AnnouncementBarProps> = ({
   if (!isVisible) return null;
 
   return (
-    <div className="bg-pp-primary text-white text-xs py-2 px-4 relative z-50 border-b border-pp-primary-dark/40 font-body">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-2.5 mx-auto text-center truncate">
+    <div className="bg-pp-primary text-white text-xs py-2 relative z-50 border-b border-pp-primary-dark/40 font-body">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 flex items-center justify-between gap-2 sm:gap-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 mx-auto text-center min-w-0">
           <span className="inline-flex items-center gap-1 font-semibold bg-white/15 text-white px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wider shrink-0">
             <SparklesIcon size={11} className="text-pp-accent-soft" />
             {badge}
           </span>
-          <span className="font-normal truncate">{message}</span>
+          <span className="font-normal hidden sm:inline">{message}</span>
+          <span className="font-normal sm:hidden">Live across India, ANZ &amp; UAE.</span>
           {linkHref && (
             <a
               href={linkHref}
-              className="inline-flex items-center gap-1 font-semibold underline underline-offset-2 hover:text-pp-accent-soft transition-colors shrink-0"
+              className="inline-flex items-center gap-1 font-semibold underline underline-offset-2 hover:text-pp-accent-soft transition-colors shrink-0 whitespace-nowrap"
             >
               {linkText}
               <ArrowRightIcon size={12} />

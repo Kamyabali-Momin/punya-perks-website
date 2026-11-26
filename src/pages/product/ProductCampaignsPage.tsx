@@ -21,6 +21,8 @@ export const ProductCampaignsPage: React.FC = () => {
         title="Target, launch and measure in an afternoon."
         description="Six-step visual builder for targeted promotions, automated lifecycle triggers, and holdout groups for true incrementality measurement."
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Campaigns & Offers' }]}
+        image="/images/products/user-web-campaigns.png"
+        imageAlt="Kombee User Side Web — Campaigns & Offers"
       />
 
       <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">

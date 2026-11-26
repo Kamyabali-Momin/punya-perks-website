@@ -6,11 +6,11 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': '390px',   // Mobile
-      'md': '834px',   // Tablet
-      'lg': '1280px',  // Laptop
-      'xl': '1440px',  // Desktop
-      '2xl': '1600px', // Large screens
+      'sm': '640px',   // Large mobile / Landscape
+      'md': '768px',   // Tablet
+      'lg': '1024px',  // Laptop
+      'xl': '1280px',  // Desktop
+      '2xl': '1440px', // Large desktop
     },
     extend: {
       colors: {
@@ -38,8 +38,9 @@ export default {
       },
       fontFamily: {
         display: ["var(--pp-font-display)", "Newsreader", "DM Serif Display", "Georgia", "serif"],
-        body: ["var(--pp-font-body)", "Manrope", "system-ui", "sans-serif"],
-        mono: ["JetBrains Mono", "ui-monospace", "monospace"],
+        sans: ["var(--pp-font-body)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        body: ["var(--pp-font-body)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
+        mono: ["var(--pp-font-body)", "Plus Jakarta Sans", "system-ui", "sans-serif"],
       },
       borderRadius: {
         'pp-sm': "var(--pp-radius-sm)",

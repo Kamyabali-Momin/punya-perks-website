@@ -5,6 +5,11 @@ import {
   Repeat,
   ArrowRight,
   Sparkles,
+  ShoppingBag,
+  Landmark,
+  UtensilsCrossed,
+  ShoppingCart,
+  Network,
 } from 'lucide-react';
 
 export const RoiEstimatorSection: React.FC = () => {
@@ -15,13 +20,13 @@ export const RoiEstimatorSection: React.FC = () => {
 
   const industryPresets: Record<
     string,
-    { label: string; members: number; aov: number; ordersPerYear: number; liftRate: number }
+    { label: string; members: number; aov: number; ordersPerYear: number; liftRate: number; icon: React.ElementType }
   > = {
-    Retail: { label: 'Retail', members: 250000, aov: 1800, ordersPerYear: 3.2, liftRate: 0.045 },
-    Banking: { label: 'Banking', members: 600000, aov: 4500, ordersPerYear: 6.8, liftRate: 0.052 },
-    Hospitality: { label: 'Hospitality', members: 150000, aov: 2400, ordersPerYear: 5.6, liftRate: 0.048 },
-    'E commerce': { label: 'E commerce', members: 400000, aov: 1600, ordersPerYear: 4.2, liftRate: 0.05 },
-    Coalition: { label: 'Coalition', members: 900000, aov: 3200, ordersPerYear: 6.0, liftRate: 0.055 },
+    Retail: { label: 'Retail', members: 250000, aov: 1800, ordersPerYear: 3.2, liftRate: 0.045, icon: ShoppingBag },
+    Banking: { label: 'Banking', members: 600000, aov: 4500, ordersPerYear: 6.8, liftRate: 0.052, icon: Landmark },
+    Hospitality: { label: 'Hospitality', members: 150000, aov: 2400, ordersPerYear: 5.6, liftRate: 0.048, icon: UtensilsCrossed },
+    'E commerce': { label: 'E commerce', members: 400000, aov: 1600, ordersPerYear: 4.2, liftRate: 0.05, icon: ShoppingCart },
+    Coalition: { label: 'Coalition', members: 900000, aov: 3200, ordersPerYear: 6.0, liftRate: 0.055, icon: Network },
   };
 
   const handleIndustryChange = (ind: string) => {
@@ -70,7 +75,7 @@ export const RoiEstimatorSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 reveal-on-scroll">
-          <span className="font-serif text-[11px] font-bold text-[#B5651A] tracking-[0.25em] uppercase block mb-3">
+          <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
             ROI ESTIMATE
           </span>
           <h2 className="font-display font-medium text-3xl sm:text-4xl lg:text-[46px] text-[#17140F] tracking-tight leading-[1.15] mb-3.5">
@@ -85,36 +90,66 @@ export const RoiEstimatorSection: React.FC = () => {
         {/* 2-Card Layout matching Reference Design */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-[1440px] mx-auto reveal-on-scroll delay-100">
           
-          {/* Left Vertical Industry Card (3 Cols) */}
-          <div className="lg:col-span-3 rounded-[28px] sm:rounded-[32px] bg-white border border-[#EFE5D8]/90 shadow-sm p-5 sm:p-6 flex flex-col justify-between">
-            {/* Industry Selector List */}
-            <div className="space-y-2">
-              {Object.keys(industryPresets).map((ind) => {
-                const isActive = industry === ind;
-                return (
-                  <button
-                    key={ind}
-                    type="button"
-                    onClick={() => handleIndustryChange(ind)}
-                    className={`w-full py-2.5 px-4 text-sm font-display transition-all cursor-pointer rounded-xl text-left select-none ${
-                      isActive
-                        ? 'border border-[#C26D1E] text-[#B5651A] bg-white shadow-xs font-semibold'
-                        : 'text-[#17140F] hover:text-[#B5651A] hover:bg-[#FAF5EE] bg-transparent border border-transparent font-medium'
-                    }`}
-                  >
-                    {ind}
-                  </button>
-                );
-              })}
+          {/* Left Vertical Industry Card (3 Cols on lg, compact pill grid on mobile/tablet) */}
+          <div className="lg:col-span-3 rounded-[24px] sm:rounded-[32px] bg-white border border-[#EFE5D8]/90 shadow-sm p-4 sm:p-5 flex flex-col justify-between">
+            <div>
+              <span className="block font-body text-[10px] font-bold text-[#847C75] tracking-[0.16em] uppercase mb-3 px-1">
+                INDUSTRY PRESET
+              </span>
+
+              {/* Industry Selector List */}
+              <div className="flex flex-wrap gap-2 lg:flex-col lg:space-y-1.5 lg:gap-0">
+                {Object.keys(industryPresets).map((ind) => {
+                  const isActive = industry === ind;
+                  const item = industryPresets[ind];
+                  const Icon = item.icon;
+                  return (
+                    <button
+                      key={ind}
+                      type="button"
+                      onClick={() => handleIndustryChange(ind)}
+                      className={`py-2 px-3 lg:w-full lg:py-2.5 lg:px-3.5 transition-all cursor-pointer rounded-xl text-left select-none flex items-center gap-2.5 ${
+                        isActive
+                          ? 'border border-[#C26D1E] text-[#B5651A] bg-[#FEF0E1]/70 shadow-2xs'
+                          : 'text-[#17140F] hover:text-[#B5651A] hover:bg-[#FAF5EE] bg-[#FAF5EE]/60 lg:bg-transparent border border-transparent'
+                      }`}
+                    >
+                      <span
+                        className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
+                          isActive
+                            ? 'bg-[#B5651A] text-white'
+                            : 'bg-[#FAF5EE] text-[#847C75] border border-[#EFE3D5]'
+                        }`}
+                      >
+                        <Icon size={14} />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-xs sm:text-sm font-display font-semibold leading-tight">
+                          {ind}
+                        </span>
+                        <span className="hidden lg:block text-[11px] font-body text-[#847C75] mt-0.5">
+                          ₹{item.aov.toLocaleString('en-IN')} AOV · +{Math.round(item.liftRate * 1000) / 10}% lift
+                        </span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
             </div>
 
-            {/* Bottom 3D Graphic (Shopping Bag + Rewards) */}
-            <div className="pt-8 pb-2 flex justify-center items-end">
+            {/* Bottom Benchmark Visual Card (Desktop sidebar) */}
+            <div className="hidden lg:flex flex-col items-center text-center mt-4 p-4 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5]">
               <img
                 src="/images/scale-bag-transparent.png"
                 alt="Loyalty Rewards Graphic"
-                className="w-36 sm:w-40 h-auto object-contain select-none pointer-events-none drop-shadow-md"
+                className="w-28 h-auto object-contain select-none pointer-events-none drop-shadow-sm mb-2"
               />
+              <span className="text-[10px] font-body font-bold uppercase tracking-[0.14em] text-[#B5651A]">
+                {industry} Benchmark
+              </span>
+              <p className="text-[11px] text-[#5B534C] leading-snug mt-1">
+                Preloaded with +{Math.round(preset.liftRate * 1000) / 10}% repeat lift &amp; {preset.ordersPerYear}x annual frequency.
+              </p>
             </div>
           </div>
 
@@ -126,7 +161,7 @@ export const RoiEstimatorSection: React.FC = () => {
               <div className="lg:col-span-7 flex flex-col justify-between space-y-4">
                 {/* Lever 1: Active Members */}
                 <div className="p-4 sm:p-5 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5] flex flex-col justify-between">
-                  <div className="flex items-start justify-between gap-4 mb-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center text-[#B5651A] shrink-0">
                         <Users size={16} />
@@ -164,7 +199,7 @@ export const RoiEstimatorSection: React.FC = () => {
 
                 {/* Lever 2: Average Order (AOV) */}
                 <div className="p-4 sm:p-5 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5] flex flex-col justify-between">
-                  <div className="flex items-start justify-between gap-4 mb-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center text-[#B5651A] shrink-0 font-bold">
                         <IndianRupee size={16} />
@@ -202,7 +237,7 @@ export const RoiEstimatorSection: React.FC = () => {
 
                 {/* Lever 3: Annual Frequency */}
                 <div className="p-4 sm:p-5 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5] flex flex-col justify-between">
-                  <div className="flex items-start justify-between gap-4 mb-2">
+                  <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
                       <div className="w-9 h-9 rounded-xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center text-[#B5651A] shrink-0">
                         <Repeat size={16} />

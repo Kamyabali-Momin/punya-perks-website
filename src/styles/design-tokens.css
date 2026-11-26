@@ -55,7 +55,7 @@
   
   /* Typography Families */
   --pp-font-display: 'Newsreader', Georgia, serif;
-  --pp-font-body: 'Manrope', system-ui, sans-serif;
+  --pp-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
 /* ==========================================================================
@@ -117,5 +117,5 @@
   
   --pp-radius-bento: 28px;
   --pp-font-display: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
-  --pp-font-body: 'Inter', system-ui, sans-serif;
+  --pp-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
 }
