@@ -430,42 +430,6 @@ export const CustomersPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Bottom CTA Section */}
-      <section className="bg-white pt-6 pb-14 md:pt-8 md:pb-16" aria-labelledby="page-cta-title">
-        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-xl border border-[#3E2C20] text-white flex flex-col items-start justify-between gap-8">
-            {/* Ambient warm amber glow */}
-            <div className="absolute top-0 right-1/4 h-64 w-64 rounded-full bg-[#B5651A]/20 blur-3xl pointer-events-none" />
-            <div className="relative z-10 flex-1">
-              <span className="inline-block text-[11px] font-mono font-semibold uppercase tracking-wider text-[#D9822B] bg-[#2E1F14] px-3 py-1 rounded-full border border-[#543820] mb-3">
-                Get Started
-              </span>
-              <h2 id="page-cta-title" className="text-2xl sm:text-3xl font-extrabold text-[#FAF3E8] font-display">
-                Ready to modernize your enterprise loyalty operations?
-              </h2>
-              <p className="mt-2 text-sm text-[#D5C7B7] max-w-xl font-body">
-                Join forward-thinking retailers and fintech leaders running on Punya Perks' append-only ledger architecture.
-              </p>
-            </div>
-
-            <div className="relative z-10 flex shrink-0 flex-wrap items-center gap-3">
-              <Link
-                to="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-[#B5651A] hover:bg-[#9a5413] px-7 text-xs font-bold text-white shadow-md hover:scale-105 transition-all"
-              >
-                Start free trial
-              </Link>
-              <Link
-                to="/contact"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-[#543820] bg-white/5 hover:bg-white/10 px-6 text-xs font-semibold text-[#FAF3E8] transition-all hover:border-[#D9822B]"
-              >
-                Book a demo
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Standard global footer CTA */}
       <PageCta />
     </MainLayout>
