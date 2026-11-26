@@ -261,6 +261,13 @@ export const navigationData: NavPillar[] = [
         ],
       },
     ],
+    featuredCallout: {
+      eyebrow: "Enterprise Case Studies",
+      title: "Proven Loyalty Lift",
+      description: "Explore verified customer stories, implementation guides, and regional regulatory playbooks.",
+      href: "/customers",
+      linkText: "View Customer Stories →",
+    },
   },
   {
     title: "Company",
@@ -297,6 +304,13 @@ export const navigationData: NavPillar[] = [
         ],
       },
     ],
+    featuredCallout: {
+      eyebrow: "About Kombee Tech",
+      title: "High-Trust Software",
+      description: "Learn about our founding mission, append-only ledger architecture, and global engineering team.",
+      href: "/about",
+      linkText: "Read Company Story →",
+    },
   },
 ];
 

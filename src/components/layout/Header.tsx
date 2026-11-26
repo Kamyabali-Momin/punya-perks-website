@@ -226,7 +226,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                       ))}
                     </div>
                   </div>
-                ) : /* 3. RESOURCES: 5 items arranged horizontally in 3 and 2 line (grid-cols-3) */
+                ) : /* 3. RESOURCES: 6 items arranged in 2 columns (3x2 grid) */
                 activePillarData.title === 'Resources' ? (
                   <div className="space-y-4">
                     {activePillarData.categories[0]?.categoryTitle && (
@@ -234,7 +234,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="grid grid-cols-2 gap-4">
                       {activePillarData.categories[0].items.map((item) => (
                         <a
                           key={item.href}
@@ -258,7 +258,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                       ))}
                     </div>
                   </div>
-                ) : /* 4. COMPANY: 5 items arranged horizontally in 3 and 2 line (grid-cols-3) */
+                ) : /* 4. COMPANY: 5 items arranged in 2 columns */
                 activePillarData.title === 'Company' ? (
                   <div className="space-y-4">
                     {activePillarData.categories[0]?.categoryTitle && (
@@ -266,7 +266,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
-                    <div className="grid grid-cols-3 gap-5">
+                    <div className="grid grid-cols-2 gap-4">
                       {activePillarData.categories[0].items.map((item) => (
                         <a
                           key={item.href}
@@ -291,39 +291,38 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                     </div>
                   </div>
                 ) : (
-                  /* 5. MULTI-CATEGORY (PRODUCT & SOLUTIONS): 2-Column Category Grid */
-                  <div className="grid grid-cols-2 gap-8">
+                  /* 5. MULTI-CATEGORY (PRODUCT & SOLUTIONS): 2-Column Category Grid with Cards */
+                  <div className="grid grid-cols-2 gap-6">
                     {activePillarData.categories.map((cat, idx) => (
-                      <div key={idx} className="space-y-4">
+                      <div key={idx} className="space-y-3">
                         {cat.categoryTitle && (
                           <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] border-b border-[#EBDFC6] pb-2 font-body">
                             {cat.categoryTitle}
                           </h4>
                         )}
-                        <ul className="space-y-2">
+                        <div className="space-y-2.5">
                           {cat.items.map((item) => (
-                            <li key={item.href}>
-                              <a
-                                href={item.href}
-                                className="group block p-2.5 rounded-xl hover:bg-[#FAF5ED] transition-colors"
-                              >
-                                <div className="flex items-center gap-2">
-                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
-                                    {item.title}
+                            <a
+                              key={item.href}
+                              href={item.href}
+                              className="group block p-3 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                            >
+                              <div className="flex items-center gap-2">
+                                <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                  {item.title}
+                                </span>
+                                {item.badge && (
+                                  <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                    {item.badge}
                                   </span>
-                                  {item.badge && (
-                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
-                                      {item.badge}
-                                    </span>
-                                  )}
-                                </div>
-                                <p className="text-xs text-[#5B534C] mt-1 leading-normal line-clamp-2">
-                                  {item.description}
-                                </p>
-                              </a>
-                            </li>
+                                )}
+                              </div>
+                              <p className="text-xs text-[#5B534C] mt-1 leading-normal line-clamp-2">
+                                {item.description}
+                              </p>
+                            </a>
                           ))}
-                        </ul>
+                        </div>
                       </div>
                     ))}
                   </div>
