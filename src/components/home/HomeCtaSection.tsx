@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import { ArrowRightIcon } from 'lucide-react';
 
 export const HomeCtaSection: React.FC = () => {

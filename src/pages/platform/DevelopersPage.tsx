@@ -142,7 +142,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         primaryCtaHref="/start"
         secondaryCtaText="View API reference"
         secondaryCtaHref="/start"
-        image="/images/platform-console-mockup.png"
+        image="/images/platform-portal-tablet.png"
         imageAlt="Punya Perks Developer Console"
       />
 
