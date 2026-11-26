@@ -1,9 +1,96 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { ChevronDownIcon, MenuIcon, XIcon, GlobeIcon, ArrowRightIcon } from 'lucide-react';
+import {
+  ChevronDownIcon,
+  MenuIcon,
+  XIcon,
+  GlobeIcon,
+  ArrowRightIcon,
+  ZapIcon,
+  GiftIcon,
+  MegaphoneIcon,
+  ShieldCheckIcon,
+  SmartphoneIcon,
+  BarChart3Icon,
+  MessageSquareIcon,
+  BlocksIcon,
+  ShoppingBagIcon,
+  Building2Icon,
+  CoffeeIcon,
+  ShoppingCartIcon,
+  NetworkIcon,
+  ServerIcon,
+  Code2Icon,
+  SparklesIcon,
+  CreditCardIcon,
+  BookOpenIcon,
+  UsersIcon,
+  FileTextIcon,
+  HistoryIcon,
+  BookmarkCheckIcon,
+  HelpCircleIcon,
+  InfoIcon,
+  HandshakeIcon,
+  BriefcaseIcon,
+  HeadphonesIcon,
+  CompassIcon,
+  LayersIcon,
+} from 'lucide-react';
 import { navigationData, NavPillar } from '../../data/navigation';
 import { Button } from '../common/Button';
 import { Badge } from '../common/Badge';
 import { MobileNav } from './MobileNav';
+
+// Helper to resolve an icon for any mega menu item by its href or title
+const getMenuItemIcon = (href: string, title: string): React.ElementType => {
+  const h = href.toLowerCase();
+  const t = title.toLowerCase();
+
+  // Product items
+  if (h === '/product' || t.includes('overview')) return CompassIcon;
+  if (h.includes('/earn') || t.includes('earn')) return ZapIcon;
+  if (h.includes('/campaigns') || t.includes('campaign')) return MegaphoneIcon;
+  if (h.includes('/redeem') || t.includes('redemption')) return GiftIcon;
+  if (h.includes('/member-app') || t.includes('member app') || t.includes('tiers')) return SmartphoneIcon;
+  if (h.includes('/analytics') || t.includes('analytics')) return BarChart3Icon;
+  if (h.includes('/trust') || t.includes('fraud') || t.includes('trust')) return ShieldCheckIcon;
+  if (h.includes('/whatsapp') || t.includes('whatsapp')) return MessageSquareIcon;
+  if (h.includes('/integrations') || h.includes('/connectors') || t.includes('integration') || t.includes('connector')) return BlocksIcon;
+
+  // Solutions items
+  if (h.includes('/solutions/retail') || t.includes('retail')) return ShoppingBagIcon;
+  if (h.includes('/solutions/banking') || t.includes('bank') || t.includes('fintech')) return CreditCardIcon;
+  if (h.includes('/solutions/hospitality') || t.includes('hospitality') || t.includes('qsr')) return CoffeeIcon;
+  if (h.includes('/solutions/ecommerce') || t.includes('e-commerce') || t.includes('d2c')) return ShoppingCartIcon;
+  if (h.includes('/solutions/enterprise') || t.includes('coalition') || t.includes('enterprise')) return NetworkIcon;
+  if (h.includes('/india') || t.includes('india')) return GlobeIcon;
+  if (t.includes('australia') || t.includes('new zealand')) return GlobeIcon;
+
+  // Platform items
+  if (h === '/platform' || t.includes('architecture')) return ServerIcon;
+  if (h.includes('/security') || t.includes('security')) return ShieldCheckIcon;
+  if (h.includes('/developers') || t.includes('developer') || t.includes('api')) return Code2Icon;
+
+  // Pricing items
+  if (h === '/pricing' || t.includes('plans')) return SparklesIcon;
+  if (h.includes('/compare') || t.includes('comparison')) return LayersIcon;
+
+  // Resources items
+  if (h === '/resources' || t.includes('hub')) return BookOpenIcon;
+  if (h.includes('/customers') || t.includes('customer') || t.includes('stories')) return UsersIcon;
+  if (h.includes('/blog') || t.includes('blog')) return FileTextIcon;
+  if (h.includes('/changelog') || t.includes('changelog')) return HistoryIcon;
+  if (h.includes('/glossary') || t.includes('glossary')) return BookmarkCheckIcon;
+  if (h.includes('/help') || t.includes('help')) return HelpCircleIcon;
+
+  // Company items
+  if (h.includes('/about') || t.includes('about')) return InfoIcon;
+  if (h.includes('/partners') || t.includes('partner')) return HandshakeIcon;
+  if (h.includes('/careers') || t.includes('career')) return BriefcaseIcon;
+  if (h.includes('/contact') || t.includes('contact')) return HeadphonesIcon;
+  if (h.includes('/trust-centre') || t.includes('trust centre')) return ShieldCheckIcon;
+
+  return SparklesIcon;
+};
 
 export interface HeaderProps {
   currentTheme?: string;
@@ -171,27 +258,38 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                       </h4>
                     )}
                     <div className="grid grid-cols-2 gap-4">
-                      {activePillarData.categories[0].items.map((item) => (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className="group block p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
-                        >
-                          <div className="flex items-center gap-2">
-                            <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
-                              {item.title}
-                            </span>
-                            {item.badge && (
-                              <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed">
-                            {item.description}
-                          </p>
-                        </a>
-                      ))}
+                      {activePillarData.categories[0].items.map((item) => {
+                        const ItemIcon = getMenuItemIcon(item.href, item.title);
+                        return (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                          >
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                              <ItemIcon className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                    {item.title}
+                                  </span>
+                                  {item.badge && (
+                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                      {item.badge}
+                                    </span>
+                                  )}
+                                </div>
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                              </div>
+                              <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed">
+                                {item.description}
+                              </p>
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : /* 2. PRICING: 2 items arranged horizontally side-by-side */
@@ -202,28 +300,39 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
-                    <div className="grid grid-cols-2 gap-5">
-                      {activePillarData.categories[0].items.map((item) => (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className="group block p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
-                        >
-                          <div className="flex items-center gap-2">
-                            <span className="font-display text-base font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
-                              {item.title}
-                            </span>
-                            {item.badge && (
-                              <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed">
-                            {item.description}
-                          </p>
-                        </a>
-                      ))}
+                    <div className="grid grid-cols-2 gap-4">
+                      {activePillarData.categories[0].items.map((item) => {
+                        const ItemIcon = getMenuItemIcon(item.href, item.title);
+                        return (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                          >
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                              <ItemIcon className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                    {item.title}
+                                  </span>
+                                  {item.badge && (
+                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                      {item.badge}
+                                    </span>
+                                  )}
+                                </div>
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                              </div>
+                              <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed">
+                                {item.description}
+                              </p>
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : /* 3. RESOURCES: 6 items arranged in 2 columns (3x2 grid) */
@@ -235,27 +344,38 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                       </h4>
                     )}
                     <div className="grid grid-cols-2 gap-4">
-                      {activePillarData.categories[0].items.map((item) => (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className="group block p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
-                        >
-                          <div className="flex items-center gap-2">
-                            <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
-                              {item.title}
-                            </span>
-                            {item.badge && (
-                              <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed line-clamp-2">
-                            {item.description}
-                          </p>
-                        </a>
-                      ))}
+                      {activePillarData.categories[0].items.map((item) => {
+                        const ItemIcon = getMenuItemIcon(item.href, item.title);
+                        return (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                          >
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                              <ItemIcon className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                    {item.title}
+                                  </span>
+                                  {item.badge && (
+                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                      {item.badge}
+                                    </span>
+                                  )}
+                                </div>
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                              </div>
+                              <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed line-clamp-2">
+                                {item.description}
+                              </p>
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : /* 4. COMPANY: 5 items arranged in 2 columns */
@@ -267,27 +387,38 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                       </h4>
                     )}
                     <div className="grid grid-cols-2 gap-4">
-                      {activePillarData.categories[0].items.map((item) => (
-                        <a
-                          key={item.href}
-                          href={item.href}
-                          className="group block p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
-                        >
-                          <div className="flex items-center gap-2">
-                            <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
-                              {item.title}
-                            </span>
-                            {item.badge && (
-                              <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
-                          <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed line-clamp-2">
-                            {item.description}
-                          </p>
-                        </a>
-                      ))}
+                      {activePillarData.categories[0].items.map((item) => {
+                        const ItemIcon = getMenuItemIcon(item.href, item.title);
+                        return (
+                          <a
+                            key={item.href}
+                            href={item.href}
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                          >
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                              <ItemIcon className="w-5 h-5" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between gap-2">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                    {item.title}
+                                  </span>
+                                  {item.badge && (
+                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                      {item.badge}
+                                    </span>
+                                  )}
+                                </div>
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                              </div>
+                              <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed line-clamp-2">
+                                {item.description}
+                              </p>
+                            </div>
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 ) : (
@@ -301,27 +432,38 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                           </h4>
                         )}
                         <div className="space-y-2.5">
-                          {cat.items.map((item) => (
-                            <a
-                              key={item.href}
-                              href={item.href}
-                              className="group block p-3 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
-                            >
-                              <div className="flex items-center gap-2">
-                                <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
-                                  {item.title}
-                                </span>
-                                {item.badge && (
-                                  <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
-                                    {item.badge}
-                                  </span>
-                                )}
-                              </div>
-                              <p className="text-xs text-[#5B534C] mt-1 leading-normal line-clamp-2">
-                                {item.description}
-                              </p>
-                            </a>
-                          ))}
+                          {cat.items.map((item) => {
+                            const ItemIcon = getMenuItemIcon(item.href, item.title);
+                            return (
+                              <a
+                                key={item.href}
+                                href={item.href}
+                                className="group flex items-start gap-3 p-3.5 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                              >
+                                <div className="w-9 h-9 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs mt-0.5">
+                                  <ItemIcon className="w-4.5 h-4.5" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="flex items-center justify-between gap-2">
+                                    <div className="flex items-center gap-2">
+                                      <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                        {item.title}
+                                      </span>
+                                      {item.badge && (
+                                        <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                          {item.badge}
+                                        </span>
+                                      )}
+                                    </div>
+                                    <ArrowRightIcon className="w-3.5 h-3.5 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                                  </div>
+                                  <p className="text-xs text-[#5B534C] mt-1 leading-normal line-clamp-2">
+                                    {item.description}
+                                  </p>
+                                </div>
+                              </a>
+                            );
+                          })}
                         </div>
                       </div>
                     ))}

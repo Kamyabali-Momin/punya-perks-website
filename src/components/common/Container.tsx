@@ -14,7 +14,7 @@ export const Container: React.FC<ContainerProps> = ({
   const sizeClasses = {
     narrow: 'max-w-4xl',
     default: 'max-w-[1440px]',
-    wide: 'max-w-pp-container',
+    wide: 'max-w-[1440px]',
   };
 
   return (

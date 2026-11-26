@@ -31,7 +31,8 @@ interface FeatureItem {
   title: string;
   href: string;
   desc: string;
-  icon: React.ElementType;
+  icon?: React.ElementType;
+  image?: string;
   badge?: string;
 }
 
@@ -72,26 +73,25 @@ export const ProductOverviewPage: React.FC = () => {
           title: 'Dynamic Multiplier Engine',
           href: '/product/earn',
           desc: 'SKU-level margins, category exclusions, and time-window point multipliers configured without code.',
-          icon: ZapIcon,
-          badge: 'Flagship'
+          image: '/images/modules/sec1-card1.jpg',
         },
         {
           title: 'Rolling Tier Ladders',
           href: '/product/earn',
           desc: 'Automated 12-month rolling spend qualifications with soft downgrades and grace periods.',
-          icon: AwardIcon
+          image: '/images/modules/sec1-card2.jpg',
         },
         {
           title: 'Card-Linked & POS Tracking',
           href: '/product/earn',
           desc: 'Earn points directly at card swipe or POS cash counters with zero cashier friction.',
-          icon: CreditCardIcon
+          image: '/images/modules/sec1-card3.jpg',
         },
         {
           title: 'Gamified Challenges & Streaks',
           href: '/product/campaigns',
           desc: 'Engage frequent shoppers with visit milestones, seasonal quests, and personalized referral loops.',
-          icon: LayersIcon
+          image: '/images/modules/sec1-card4.jpg',
         }
       ]
     },
@@ -128,20 +128,19 @@ export const ProductOverviewPage: React.FC = () => {
           title: 'Visual 6-Step Campaign Wizard',
           href: '/product/campaigns',
           desc: 'Configure triggers, audience segments, budget quotas, and expiration rules in under 10 minutes.',
-          icon: MegaphoneIcon,
-          badge: 'No-Code'
+          image: '/images/modules/campaign-wizard-icon.png',
         },
         {
           title: 'RFM Predictive Micro-Segments',
           href: '/product/analytics',
           desc: 'Dynamic customer clusters based on recency, frequency, and monetary spend percentiles.',
-          icon: UsersIcon
+          image: '/images/modules/rfm-segments-icon.png',
         },
         {
           title: 'Incrementality & Holdout Testing',
           href: '/product/analytics',
           desc: 'Automatic 5% holdout control groups so finance can isolate true incremental revenue lift.',
-          icon: BarChart3Icon
+          image: '/images/modules/holdout-testing-icon.png',
         }
       ]
     },
@@ -153,20 +152,19 @@ export const ProductOverviewPage: React.FC = () => {
           title: 'Append-Only Double-Entry Journal',
           href: '/product/trust',
           desc: 'Cryptographically sealed ledger. Transactions can never be edited or deleted, ensuring zero drift.',
-          icon: ShieldCheckIcon,
-          badge: 'Audit Ready'
+          image: '/images/modules/sec4-card1.jpg',
         },
         {
           title: 'Maker-Checker Authorizations',
           href: '/product/trust',
           desc: 'Mandatory dual-operator sign-off on manual adjustments exceeding pre-set financial thresholds.',
-          icon: CpuIcon
+          image: '/images/modules/sec4-card2.jpg',
         },
         {
           title: 'Actuarial Breakage Forecasting',
           href: '/product/analytics',
           desc: 'Ind AS 115 and IFRS 15 compliant schedules that calculate deferred liabilities to the penny.',
-          icon: PercentIcon
+          image: '/images/modules/sec4-card3.jpg',
         }
       ]
     },
@@ -178,26 +176,25 @@ export const ProductOverviewPage: React.FC = () => {
           title: 'Omnichannel POS Connectors',
           href: '/product/integrations',
           desc: 'Native plugins for Pine Labs, Posist, Shopify Plus, Magento, SAP, and custom store registers.',
-          icon: StoreIcon,
-          badge: '50+ Certified'
+          image: '/images/modules/sec5-pos-hq.png',
         },
         {
           title: 'WhatsApp Conversational Loyalty',
           href: '/product/whatsapp',
           desc: 'Turnkey WhatsApp flow for zero-download registration, balance lookups, and OTP redemptions.',
-          icon: MessageSquareIcon
+          image: '/images/modules/sec5-whatsapp-hq.png',
         },
         {
-          title: 'White-Label Member Apps',
+          title: 'White Label Member Apps',
           href: '/product/member-app',
           desc: 'Tier-adaptive native iOS and Android apps with Apple Wallet and Google Pay pass integration.',
-          icon: SmartphoneIcon
+          image: '/images/modules/sec5-app-hq.png',
         },
         {
           title: 'Developer REST APIs & Webhooks',
           href: '/platform/developers',
           desc: 'Sub-120ms p99 latency SLA with granular API keys, sandbox environments, and webhooks.',
-          icon: BlocksIcon
+          image: '/images/modules/sec5-api-hq.png',
         }
       ]
     }
@@ -363,95 +360,259 @@ export const ProductOverviewPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Feature Groups Accordion Sections (1440px Container) */}
-      <section className="bg-white py-16 sm:py-20 border-b border-[#E8DCC9]">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 divide-y divide-[#E8DCC9]">
-          {featureGroups.map((group) => {
-            const isOpen = !!openGroups[group.num];
-            const isFourGrid = group.items.length === 4;
+      {/* Feature Groups Layout styled according to Reference */}
+      <div className="w-full bg-white">
+        {featureGroups.map((group) => {
+          const isSec1 = group.num === '01';
+          const isSec2 = group.num === '02';
+          const isSec3 = group.num === '03';
+          const isSec4 = group.num === '04';
 
+          if (isSec3) {
             return (
-              <div key={group.num} className="py-8 sm:py-10 first:pt-0 last:pb-0 transition-all">
-                {/* Accordion Question Header */}
-                <button
-                  type="button"
-                  onClick={() => toggleGroup(group.num)}
-                  className="w-full flex items-center justify-between text-left group/btn cursor-pointer py-2"
-                  aria-expanded={isOpen}
-                >
-                  <div className="flex items-center gap-3.5 sm:gap-4">
-                    <span className="font-mono text-xs font-bold text-[#B5651A] bg-[#FEF0E1] px-2.5 py-1 rounded-full border border-[#F3D7BD]">
-                      SECTION {group.num}
+              <section
+                key={group.num}
+                className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#1F0E05] text-white overflow-hidden bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
+                }}
+              >
+                {/* Subtle dark gradient overlay for optimal text contrast */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-black/60 pointer-events-none" />
+
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
+                  {/* Centered Heading */}
+                  <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+                    <span className="font-mono text-[11px] font-bold text-[#E59846] tracking-[0.2em] uppercase block mb-3">
+                      SECTION 03
                     </span>
-                    <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#1C1610] group-hover/btn:text-[#D9822B] transition-colors tracking-tight">
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-[38px] font-bold text-white tracking-tight leading-tight">
                       {group.question}
                     </h2>
                   </div>
 
-                  <div className="w-10 h-10 rounded-full bg-white border border-[#E8DCC9] flex items-center justify-center text-neutral-600 group-hover/btn:border-[#D9822B] group-hover/btn:text-[#D9822B] group-hover/btn:bg-[#FEF0E1]/40 transition-all shrink-0">
-                    {isOpen ? (
-                      <MinusIcon className="w-4 h-4 stroke-[2.5]" />
-                    ) : (
-                      <PlusIcon className="w-4 h-4 stroke-[2.5]" />
-                    )}
-                  </div>
-                </button>
+                  {/* 3 White Curved Feature Cards with Icons */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mx-auto">
+                    {group.items.map((item) => (
+                      <Link
+                        key={item.title}
+                        to={item.href}
+                        className="group bg-white rounded-3xl p-6 sm:p-7 shadow-xl hover:shadow-2xl transition-all duration-300 flex flex-col justify-between text-[#17140F] border border-white/20 hover:-translate-y-1"
+                      >
+                        <div>
+                          {/* 3D Illustration / Graphic */}
+                          <div className="h-16 flex items-center mb-4">
+                            {item.image ? (
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                className="h-14 w-auto object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+                              />
+                            ) : null}
+                          </div>
 
-                {/* Collapsible Cards Grid */}
-                {isOpen && (
-                  <div
-                    className={`pt-8 animate-fade-in ${
-                      isFourGrid
-                        ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'
-                        : 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'
-                    }`}
-                  >
+                          <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors mb-2 leading-snug">
+                            {item.title}
+                          </h3>
+
+                          <p className="font-body text-xs sm:text-sm text-[#5B534C] leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+
+                        <div className="mt-6 pt-3 flex items-center text-[11px] font-bold tracking-wider uppercase text-[#B5651A] group-hover:text-[#9a5413] transition-colors">
+                          <span>EXPLORE DETAILS &gt;</span>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            );
+          }
+
+          if (isSec2) {
+            return (
+              <section
+                key={group.num}
+                className="w-full py-16 sm:py-20 lg:py-24 bg-white border-b border-[#EBDFC6]"
+              >
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+                  {/* Centered Heading */}
+                  <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+                    <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
+                      SECTION 02
+                    </span>
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#17140F] tracking-tight leading-tight">
+                      {group.question}
+                    </h2>
+                  </div>
+
+                  {/* 3 Clean Rounded White Cards with Outline */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mx-auto">
                     {group.items.map((item) => {
-                      const IconComp = item.icon;
+                      const IconComp = item.icon || GiftIcon;
                       return (
                         <Link
                           key={item.title}
                           to={item.href}
-                          className="group p-6 sm:p-7 rounded-3xl bg-[#FAF4EC] border border-[#E8DCC9] hover:border-[#D9822B] hover:bg-white transition-all hover:shadow-[0_8px_24px_rgba(28,22,16,0.06)] flex flex-col justify-between"
+                          className="group bg-white rounded-3xl p-6 sm:p-7 border border-[#EBDFC6] hover:border-[#B5651A] transition-all duration-300 flex flex-col justify-between shadow-2xs hover:shadow-md"
                         >
                           <div>
-                            {/* Icon & Badge Row */}
-                            <div className="flex items-center justify-between mb-4">
-                              <div className="w-11 h-11 rounded-2xl bg-white border border-[#E8DCC9] text-[#1C1610] group-hover:bg-[#D9822B] group-hover:border-[#D9822B] group-hover:text-white flex items-center justify-center transition-all duration-200 shadow-xs">
-                                <IconComp className="w-5 h-5 transition-colors" />
-                              </div>
-
-                              {item.badge && (
-                                <span className="text-[10px] font-mono font-bold px-2.5 py-0.5 rounded-full bg-white text-[#B5651A] border border-[#F3D7BD] group-hover:bg-[#FEF0E1] transition-colors shadow-2xs">
-                                  {item.badge}
-                                </span>
-                              )}
+                            {/* Icon Top Left */}
+                            <div className="w-10 h-10 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6] flex items-center justify-center text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors mb-5">
+                              <IconComp className="w-5 h-5" />
                             </div>
 
-                            <h3 className="font-display font-bold text-lg text-[#1C1610] group-hover:text-[#D9822B] transition-colors mb-2 leading-snug">
+                            <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors mb-2.5 leading-snug">
                               {item.title}
                             </h3>
 
-                            <p className="font-body text-xs sm:text-sm text-neutral-600 leading-relaxed">
+                            <p className="font-body text-xs sm:text-sm text-[#5B534C] leading-relaxed">
                               {item.desc}
                             </p>
                           </div>
 
-                          {/* Bottom Row */}
-                          <div className="mt-6 pt-3 border-t border-[#E8DCC9] flex items-center justify-between text-xs font-semibold text-[#1C1610] group-hover:text-[#D9822B] transition-colors">
-                            <span>Explore details</span>
-                            <ArrowRightIcon className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                          <div className="mt-6 pt-3 flex items-center justify-between text-xs text-[#847C75] group-hover:text-[#B5651A] transition-colors border-t border-[#FAF5ED]">
+                            <span className="font-medium text-[11px]">Explore details</span>
+                            <ArrowRightIcon className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                           </div>
                         </Link>
                       );
                     })}
                   </div>
-                )}
-              </div>
+                </div>
+              </section>
             );
-          })}
-        </div>
-      </section>
+          }
+
+          if (isSec1 || isSec4) {
+            const isFourCol = isSec1;
+            return (
+              <section
+                key={group.num}
+                className="w-full py-16 sm:py-20 lg:py-24 bg-[#FCF8F2] border-b border-[#EBDFC6]"
+              >
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+                  {/* Centered Heading */}
+                  <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+                    <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
+                      SECTION {group.num}
+                    </span>
+                    <h2 className="font-display text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#17140F] tracking-tight leading-tight">
+                      {group.question}
+                    </h2>
+                  </div>
+
+                  {/* Cards Grid with Warm Beige Background and Top Image Thumbnail */}
+                  <div
+                    className={`grid grid-cols-1 ${
+                      isFourCol
+                        ? 'sm:grid-cols-2 lg:grid-cols-4 gap-6'
+                        : 'md:grid-cols-3 gap-6 w-full mx-auto'
+                    }`}
+                  >
+                    {group.items.map((item) => (
+                      <Link
+                        key={item.title}
+                        to={item.href}
+                        className="group bg-[#F7EFE4] rounded-3xl p-4.5 sm:p-5 border border-[#EBDFC6] hover:border-[#B5651A]/60 hover:bg-[#FAF4EB] transition-all duration-300 flex flex-col justify-between shadow-2xs hover:shadow-sm"
+                      >
+                        <div>
+                          {/* Top Embedded Photo Thumbnail */}
+                          {item.image && (
+                            <div className="w-full h-36 rounded-2xl overflow-hidden bg-neutral-900 border border-[#EBDFC6]/80 mb-4 shadow-2xs">
+                              <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                              />
+                            </div>
+                          )}
+
+                          <h3 className="font-display font-bold text-base text-[#17140F] group-hover:text-[#B5651A] transition-colors mb-2 leading-snug">
+                            {item.title}
+                          </h3>
+
+                          <p className="font-body text-xs text-[#5B534C] leading-relaxed">
+                            {item.desc}
+                          </p>
+                        </div>
+
+                        {/* Trailing Link */}
+                        <div className="mt-5 pt-3 border-t border-[#EBDFC6]/60 flex items-center justify-between">
+                          <span className="text-[11px] font-bold tracking-wider uppercase text-[#B5651A] group-hover:text-[#9a5413] transition-colors">
+                            {isSec1 ? 'EXPLORE DETAILS >' : 'Explore details'}
+                          </span>
+                          {!isSec1 && (
+                            <ArrowRightIcon className="w-3.5 h-3.5 text-[#847C75] group-hover:text-[#B5651A] group-hover:translate-x-1 transition-all" />
+                          )}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            );
+          }
+
+          // Section 05: Warm wave banner background with 4 cards and bottom-right 3D badge icons
+          return (
+            <section
+              key={group.num}
+              className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#FFF8EE] border-b border-[#EBDFC6] bg-cover bg-center overflow-hidden"
+              style={{
+                backgroundImage: "url('/images/modules/sec5-banner-bg.jpg')",
+              }}
+            >
+              <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
+                <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">
+                  <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
+                    SECTION {group.num}
+                  </span>
+                  <h2 className="font-display text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#17140F] tracking-tight leading-tight">
+                    {group.question}
+                  </h2>
+                </div>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {group.items.map((item) => (
+                    <Link
+                      key={item.title}
+                      to={item.href}
+                      className="group bg-white rounded-[26px] p-6 sm:p-7 border border-[#EBDFC6] hover:border-[#B5651A] transition-all duration-300 flex flex-col justify-between shadow-xs hover:shadow-lg relative overflow-hidden"
+                    >
+                      <div>
+                        <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors mb-2.5 leading-snug">
+                          {item.title}
+                        </h3>
+                        <p className="font-body text-xs text-[#5B534C] leading-relaxed">
+                          {item.desc}
+                        </p>
+                      </div>
+
+                      <div className="mt-6 pt-3 border-t border-[#FAF5ED] flex items-end justify-between gap-2">
+                        <span className="text-[11px] font-bold tracking-wider uppercase text-[#B5651A] group-hover:text-[#9a5413] transition-colors pb-1">
+                          EXPLORE DETAILS &gt;
+                        </span>
+                        {item.image && (
+                          <div className="w-20 h-20 -mr-1 -mb-1 flex items-end justify-end shrink-0">
+                            <img
+                              src={item.image}
+                              alt={item.title}
+                              className="max-h-20 w-auto max-w-[85px] object-contain drop-shadow-md group-hover:scale-105 transition-transform"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </section>
+          );
+        })}
+      </div>
 
       {/* Feature Availability by Plan Matrix (1440px Container) */}
       <section className="bg-[#FAF4EC] py-16 sm:py-24 border-b border-[#E8DCC9]">

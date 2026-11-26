@@ -20,8 +20,8 @@ export interface InternalPageFaqProps {
 }
 
 export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
-  title = 'Frequently asked architecture & rollout questions',
-  eyebrow = 'FAQ',
+  title,
+  eyebrow,
   faqs = [
     {
       q: 'What is loyalty program software?',
@@ -59,9 +59,9 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
   return (
     <section className={className} aria-labelledby="internal-faq-title">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-        {/* Section Heading */}
+        {/* Optional Section Heading if explicitly provided */}
         {(title || eyebrow) && (
-          <div className="text-center mb-12 sm:mb-16">
+          <div className="text-center mb-10 sm:mb-14">
             {eyebrow && (
               <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
                 {eyebrow}
@@ -78,12 +78,12 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
           </div>
         )}
 
-        {/* 2-Column Equal Height Layout matching Punya Perks Standard Structure */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
-          {/* Left Dark Card with signature faq-card-bg.jpg */}
-          <div className="lg:col-span-4 flex flex-col h-full">
+        {/* 2-Column Exact Structure Matching Reference Image */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          {/* Left Dark Card with signature brown ambient glow */}
+          <div className="lg:col-span-4 w-full">
             <div
-              className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#B5651A]/40 h-full min-h-[380px]"
+              className="rounded-3xl overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#3E2413]/40 min-h-[380px]"
               style={{
                 backgroundImage: "url('/images/faq-card-bg.jpg')",
                 backgroundColor: '#17120D',
@@ -112,7 +112,7 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
                 </p>
               </div>
 
-              {/* Bottom Contact Button */}
+              {/* Bottom Contact Button with Arrow */}
               <div className="pt-8">
                 <a
                   href={helpButtonHref}
@@ -128,15 +128,15 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
             </div>
           </div>
 
-          {/* Right Column: Accordion Rows with Smooth Collapse */}
-          <div className="lg:col-span-8 flex flex-col justify-between divide-y divide-[#EBDFC6] border-y border-[#EBDFC6] h-full">
+          {/* Right Column: Clean Accordion Rows with Border Dividers */}
+          <div className="lg:col-span-8 flex flex-col divide-y divide-[#EBDFC6] border-y border-[#EBDFC6]">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               const question = faq.q || faq.question || '';
               const answer = faq.a || faq.answer || '';
 
               return (
-                <div key={idx} className="py-5 sm:py-5.5 transition-colors">
+                <div key={idx} className="py-5 sm:py-6 transition-colors">
                   <button
                     type="button"
                     onClick={() => toggle(idx)}
