@@ -59,8 +59,15 @@ export const RoiEstimatorSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-[#FAF5ED] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="roi-estimate">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+    <section
+      className="relative w-full bg-[#FAF3E8] bg-cover bg-center bg-no-repeat border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body overflow-hidden"
+      style={{
+        backgroundImage: "url('/images/inner-hero-bg.jpg')",
+        backgroundColor: "#FAF3E8",
+      }}
+      id="roi-estimate"
+    >
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
           <span className="font-serif text-[11px] font-bold text-[#B5651A] tracking-[0.25em] uppercase block mb-3">
