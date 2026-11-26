@@ -65,7 +65,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
         {/* 2-Column Split Hero Layout (Deskmerit Structure) */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Hero Content */}
-          <div className={hasVisual ? "lg:col-span-7 space-y-5" : "lg:col-span-9 space-y-5"}>
+          <div className={hasVisual ? "lg:col-span-6 space-y-5" : "lg:col-span-9 space-y-5"}>
             {/* Eyebrow */}
             <div className="flex items-center gap-3">
               <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase">
@@ -117,7 +117,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
           {/* Right Column: Hero Device Mockup / Aside */}
           {hasVisual && (
-            <div className="lg:col-span-5 relative w-full flex justify-center lg:justify-end">
+            <div className="lg:col-span-6 relative w-full flex justify-center lg:justify-end">
               {aside ? (
                 aside
               ) : image ? (
