@@ -57,7 +57,7 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
   };
 
   return (
-    <section className={className} aria-labelledby="internal-faq-title">
+    <section className={`${className} reveal-on-scroll`} aria-labelledby="internal-faq-title">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Optional Section Heading if explicitly provided */}
         {(title || eyebrow) && (

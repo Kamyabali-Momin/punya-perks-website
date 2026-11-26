@@ -174,7 +174,7 @@ export const IntegrationsSection: React.FC = () => {
 
   return (
     <section className="w-full bg-[#1F1A17] border-b border-[#2E241E] py-16 sm:py-20 font-body overflow-hidden" id="integrations">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center mb-10 sm:mb-12">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center mb-10 sm:mb-12 reveal-on-scroll">
         <span className="font-mono text-[11px] sm:text-xs font-bold text-[#C4681A] tracking-[0.2em] uppercase block mb-2.5">
           POWERED BY
         </span>

@@ -43,7 +43,7 @@ export const SectionWrapper: React.FC<SectionWrapperProps> = ({
   return (
     <section
       id={id}
-      className={`relative w-full ${backgroundClasses[background]} ${spacingClasses[spacing]} ${borderTopClass} ${borderBottomClass} ${className}`}
+      className={`relative w-full reveal-on-scroll ${backgroundClasses[background]} ${spacingClasses[spacing]} ${borderTopClass} ${borderBottomClass} ${className}`}
     >
       <Container className={containerClassName}>
         {children}

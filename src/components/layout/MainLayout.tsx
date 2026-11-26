@@ -48,13 +48,32 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       }
     );
 
-    // Auto-discover reveal elements
-    const elements = document.querySelectorAll(
-      '.reveal-on-scroll, [data-reveal]'
-    );
-    elements.forEach((el) => observer.observe(el));
+    const setupObserver = () => {
+      // 1. Explicit reveal elements
+      document.querySelectorAll('.reveal-on-scroll, [data-reveal]').forEach((el) => {
+        observer.observe(el);
+      });
+
+      // 2. Automatically enhance all major content sections across all 42 pages
+      document.querySelectorAll('main section:not(.no-reveal)').forEach((sec) => {
+        if (
+          !sec.classList.contains('reveal-on-scroll') &&
+          !sec.classList.contains('is-revealed') &&
+          !sec.querySelector('.reveal-on-scroll') &&
+          !sec.querySelector('.animate-fade-in-up')
+        ) {
+          sec.classList.add('reveal-on-scroll');
+          observer.observe(sec);
+        }
+      });
+    };
+
+    // Immediate registration and short delay for dynamically rendered route DOM
+    setupObserver();
+    const timer = setTimeout(setupObserver, 80);
 
     return () => {
+      clearTimeout(timer);
       observer.disconnect();
     };
   }, [location.pathname]);

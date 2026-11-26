@@ -49,7 +49,7 @@ export const RecentBlogPostsSection: React.FC = () => {
     <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="blogs">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12 reveal-on-scroll">
           <div>
             <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
               BLOGS
@@ -69,7 +69,7 @@ export const RecentBlogPostsSection: React.FC = () => {
         </div>
 
         {/* 2-Column Responsive Layout - Equal Height on LG */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 reveal-on-scroll delay-100">
           {/* Left Column: Big Featured Card (7 cols) */}
           <div className="lg:col-span-7 flex flex-col">
             <a
