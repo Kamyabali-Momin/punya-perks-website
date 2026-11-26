@@ -1,0 +1,57 @@
+Punya Perks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+C H A N G E L O G
+What shipped, by version.
+Release notes for the platform, APIs and member app. Subscribe
+by RSS or email.
+Subscribe
+V1.0
+[date]
+General availability
+Earn, redeem, campaigns, tiers, member app, consent centre, connectors, developer portal.
+V0.9
+[date]
+Release candidate
+Checkout quote-then-commit, lot allocation disclosure, re-consent flow.
+V0.8
+[date]
+Beta
+Rule builder preview against history; WhatsApp enrolment.
+Follow Punya Perks for loyalty benchmarks and product updates
+Punya Perks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ

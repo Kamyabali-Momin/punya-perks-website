@@ -1,0 +1,88 @@
+punyaperks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+P L AT F O R M
+Multi-tenant by design.
+Dedicated when you
+need it.
+Schema-per-tenant isolation on shared infrastructure for most
+programmes; a dedicated database cell for banks. Region
+cells in India, UAE, Australia and the US.
+Read the architecture note Talk to an architect
+A R C H I T E C T U R E
+Eight parts, one ledger at the centre.
+Edge & API gateway
+Rate limits per tenant and per agent;
+OAuth and API keys; idempotent
+writes.
+Loyalty core
+Modular monolith: ledger, rules,
+campaigns, catalog, tiers, members.
+Events & jobs
+Durable queues, workflows with
+retries, replayable webhooks.
+Data
+PostgreSQL per tenant schema or
+dedicated DB; analytics store; search;
+object storage.
+Intelligence
+Fraud signals, personalisation and
+recommendations as separate
+services.
+Observability
+Tracing, audit ledger, reconciliation
+jobs, status page.
+Residency
+Region cells; data classes mapped;
+transfers recorded.
+Tenancy tiers
+Standard shared cell; Bank tier
+dedicated database and keys.
+S C A L E  A N D  S E R V I C E  L E V E L S
+Published, not promised.
+M E AS U R E STA N DA R D B A N K  T I E R
+Availability target 99.9% 99.95%
+Checkout quote latency (p95) < 2 s < 2 s
+Transaction ingestion Real time + batch Real time + batch
+RPO / RTO 1 h / 4 h 15 min / 1 h
+Isolation Schema per tenant Dedicated database and keys
+Residency Region cell Region cell + in-country backups
+Follow Punya Perks for loyalty benchmarks and product updates
+punyaperks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ
+Get the architecture note and security brief.
+Written for CTOs and architects; shared under NDA on request. Request the documents

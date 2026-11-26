@@ -1,0 +1,34 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" rx="14" fill="#FAF3E8"/>
+  <rect x="1" y="1" width="398" height="198" rx="13" stroke="#EBDFC6" stroke-width="2"/>
+  
+  <circle cx="200" cy="100" r="80" fill="#B5651A" fill-opacity="0.08"/>
+
+  <!-- Left: Immutable Ledger Block -->
+  <g transform="translate(45, 45)">
+    <rect width="145" height="110" rx="12" fill="#17140F" stroke="#EBDFC6" stroke-width="1.5"/>
+    <text x="14" y="24" font-family="Courier, monospace" font-size="8" font-weight="700" fill="#059669">● LEDGER BLOCK #84920</text>
+    <rect x="14" y="34" width="117" height="1" fill="#FFFFFF" fill-opacity="0.15"/>
+    <text x="14" y="52" font-family="Courier, monospace" font-size="8" fill="#FFFFFF" fill-opacity="0.8">SHA-256: 7f8c9a2e...</text>
+    <text x="14" y="68" font-family="Courier, monospace" font-size="8" fill="#FFFFFF" fill-opacity="0.8">Status: RECONCILED</text>
+    <rect x="14" y="80" width="117" height="18" rx="4" fill="#B5651A"/>
+    <text x="72" y="93" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">0% DISCREPANCY</text>
+  </g>
+
+  <!-- Right: Compliance Center Badge -->
+  <g transform="translate(210, 45)">
+    <rect width="145" height="110" rx="12" fill="#FFFFFF" stroke="#EBDFC6" stroke-width="1.5"/>
+    <rect x="14" y="16" width="66" height="14" rx="4" fill="#EFF6FF"/>
+    <text x="20" y="27" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800" fill="#1D4ED8">COMPLIANCE</text>
+    <text x="14" y="52" font-family="DM Serif Display, serif" font-size="14" font-weight="700" fill="#17140F">DPDP &amp; Privacy</text>
+    
+    <g transform="translate(14, 62)">
+      <rect width="117" height="18" rx="4" fill="#F4ECDC"/>
+      <text x="10" y="13" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="700" fill="#5B534C">✓ DLT WhatsApp Sync</text>
+    </g>
+    <g transform="translate(14, 84)">
+      <rect width="117" height="18" rx="4" fill="#F4ECDC"/>
+      <text x="10" y="13" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="700" fill="#5B534C">✓ Maker-Checker Audit</text>
+    </g>
+  </g>
+</svg>

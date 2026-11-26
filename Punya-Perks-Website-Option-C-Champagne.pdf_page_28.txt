@@ -1,0 +1,102 @@
+Punya Perks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+G U I D E  ·  I N D I A  ·  8  M I N  R E A D
+The loyalty programme
+compliance checklist for
+India
+What a retailer or bank must have in place before issuing cash-
+convertible points: DPDP consent, TRAI DLT templates, RBI PPI
+boundaries and unclaimed-balance handling.
+Download the PDF
+Who this applies to
+Any programme enrolling Indian residents, whether the operator is in India or abroad.
+Obligations scale with what the points can become.
+Consent under DPDP
+Consent must be specific, informed and withdrawable. Capture it per purpose with a
+version and timestamp, and re-capture on material change. [Expand with counsel-
+reviewed text.]
+SMS and WhatsApp templates
+Promotional SMS requires DLT entity, header and template registration; WhatsApp
+templates are categorised as marketing, utility or authentication. Quiet hours apply to
+promotional traffic.
+When points become money
+Cash-convertible points bring payout-partner, KYC and escheatment considerations.
+Keep cash redemption off by default and gate it per tenant.
+Record keeping
+Ledger entries, consent versions and KYC status references should be retained per the
+schedule your DPO sets; the platform minimums cannot be relaxed by a tenant.
+Checklist
+Consent purposes defined and versioned
+DLT entity and templates registered
+WhatsApp templates categorised
+Cash redemption gated and partner contracted
+Retention schedule approved by DPO
+DSR workflow tested end to end
+I N  T H I S  G U I D E
+Who this applies to
+Consent under DPDP
+SMS and WhatsApp templates
+When points become money
+Record keeping
+Checklist
+Related reading View all →
+GUIDE
+INDIA · 8 MIN
+The loyalty compliance checklist for
+India: DPDP, TRAI DLT, RBI
+What a retailer or bank must have in place before issuing
+cash-convertible points.
+BENCHMARK
+ANZ · 6 MIN
+Loyalty benchmarks 2026: Australia and
+New Zealand retail
+Enrolment, active rate, redemption rate and breakage
+across [N] programmes.
+COMPARISON
+INDIA · 10 MIN
+Punya Perks vs Capillary, Xoxoday and
+EasyRewardz
+An honest feature and pricing comparison for Indian
+enterprises.
+Follow Punya Perks for loyalty benchmarks and product updates
+Punya Perks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ
+Not sure which plan or template fits?
+A solutions engineer who has launched programmes in your market will
+tell you in 30 minutes.
+Talk to an expert

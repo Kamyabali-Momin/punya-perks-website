@@ -1,0 +1,28 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" rx="14" fill="#FAF3E8"/>
+  <rect x="1" y="1" width="398" height="198" rx="13" stroke="#EBDFC6" stroke-width="2"/>
+  
+  <circle cx="200" cy="100" r="80" fill="#B5651A" fill-opacity="0.08"/>
+
+  <!-- Voucher Card (Left) -->
+  <g transform="translate(45, 45)">
+    <rect width="145" height="110" rx="12" fill="#17140F" stroke="#B5651A" stroke-width="1.5"/>
+    <text x="14" y="26" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800" fill="#E0AE7B" letter-spacing="1">GIFT VOUCHER</text>
+    <text x="14" y="58" font-family="DM Serif Display, serif" font-size="22" font-weight="700" fill="#FFFDF9">₹500 OFF</text>
+    <rect x="14" y="72" width="117" height="1" fill="#E0AE7B" fill-opacity="0.3"/>
+    <text x="14" y="92" font-family="Courier, monospace" font-size="9" fill="#FFFDF9" fill-opacity="0.8">500 PTS BURN</text>
+    <!-- Circle cutouts on sides -->
+    <circle cx="0" cy="55" r="7" fill="#FAF3E8"/>
+    <circle cx="145" cy="55" r="7" fill="#FAF3E8"/>
+  </g>
+
+  <!-- Instant UPI Cash-out (Right) -->
+  <g transform="translate(210, 45)">
+    <rect width="145" height="110" rx="12" fill="#FFFFFF" stroke="#EBDFC6" stroke-width="1.5"/>
+    <rect x="14" y="16" width="60" height="14" rx="4" fill="#FEF3C7"/>
+    <text x="20" y="27" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800" fill="#B45309">UPI CASH-OUT</text>
+    <text x="14" y="58" font-family="DM Serif Display, serif" font-size="20" font-weight="700" fill="#17140F">₹1,000.00</text>
+    <rect x="14" y="74" width="117" height="20" rx="6" fill="#047857"/>
+    <text x="72" y="88" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#FFFFFF" text-anchor="middle">INSTANT PAY</text>
+  </g>
+</svg>

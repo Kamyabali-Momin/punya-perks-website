@@ -1,0 +1,37 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" rx="14" fill="#FAF3E8"/>
+  <rect x="1" y="1" width="398" height="198" rx="13" stroke="#EBDFC6" stroke-width="2"/>
+  
+  <!-- Subtle background glow -->
+  <circle cx="200" cy="100" r="80" fill="#B5651A" fill-opacity="0.08"/>
+  
+  <!-- Flow connection line -->
+  <path d="M70 100 H330" stroke="#EBDFC6" stroke-width="2" stroke-dasharray="4 4"/>
+  
+  <!-- Left Box: POS Transaction -->
+  <g transform="translate(40, 50)">
+    <rect width="105" height="100" rx="10" fill="#FFFFFF" stroke="#EBDFC6" stroke-width="1.5"/>
+    <rect x="12" y="14" width="36" height="8" rx="4" fill="#E8DCC9"/>
+    <rect x="12" y="28" width="80" height="12" rx="4" fill="#FAF3E8"/>
+    <text x="16" y="37" font-family="Plus Jakarta Sans, sans-serif" font-size="9" font-weight="700" fill="#B5651A">POS SPEND</text>
+    <text x="12" y="65" font-family="DM Serif Display, serif" font-size="16" font-weight="600" fill="#17140F">₹4,850</text>
+    <text x="12" y="82" font-family="Plus Jakarta Sans, sans-serif" font-size="8" fill="#5B534C">Flagship Store</text>
+  </g>
+
+  <!-- Center Rule Multiplier Badge -->
+  <g transform="translate(160, 68)">
+    <rect width="80" height="64" rx="12" fill="#B5651A" stroke="#9A5413" stroke-width="1.5"/>
+    <text x="40" y="28" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">GOLD TIER</text>
+    <text x="40" y="50" font-family="DM Serif Display, serif" font-size="20" font-weight="700" fill="#FFFDF9" text-anchor="middle">1.5×</text>
+  </g>
+
+  <!-- Right Box: Points Earned -->
+  <g transform="translate(255, 50)">
+    <rect width="105" height="100" rx="10" fill="#FFFFFF" stroke="#EBDFC6" stroke-width="1.5"/>
+    <rect x="12" y="14" width="45" height="8" rx="4" fill="#E8DCC9"/>
+    <rect x="12" y="28" width="80" height="12" rx="4" fill="#ECFDF5"/>
+    <text x="16" y="37" font-family="Plus Jakarta Sans, sans-serif" font-size="8.5" font-weight="700" fill="#047857">EARNED</text>
+    <text x="12" y="65" font-family="DM Serif Display, serif" font-size="18" font-weight="700" fill="#047857">+72 pts</text>
+    <text x="12" y="82" font-family="Plus Jakarta Sans, sans-serif" font-size="8" fill="#5B534C">Instant Ledger Sync</text>
+  </g>
+</svg>

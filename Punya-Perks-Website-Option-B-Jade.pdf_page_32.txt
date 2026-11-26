@@ -1,0 +1,66 @@
+punyaperks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+G L O S S A R Y
+Loyalty terms, defined
+plainly.
+The vocabulary used across the product, the docs and our
+guides.
+Suggest a term
+Breakage
+Points that expire or are never redeemed; a liability release for finance.
+Earn
+Any event that credits points to a member.
+Burn
+Redemption of points for a reward.
+Escheatment
+Unclaimed-property rules that may apply to cash-convertible balances.
+Lot
+A batch of points with a common expiry date.
+Maker-checker
+A control where the person who initiates a change cannot approve it.
+Pending points
+Earned points held until a return window passes.
+Tier
+A status level with its own multipliers and perks.
+Quote-then-commit
+A checkout pattern that holds points for a timed quote before confirming.
+DSR
+Data-subject request: access, correction, erasure or opt-out.
+Follow Punya Perks for loyalty benchmarks and product updates
+punyaperks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ

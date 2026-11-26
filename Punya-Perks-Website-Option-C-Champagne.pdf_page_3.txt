@@ -1,0 +1,77 @@
+Punya Perks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+O P T I O N  C  ·  C H A M P A G N E  ·  L U X U R Y
+Design system
+Shared across every page in this option. Colours, type, buttons and the block
+anatomy that maps onto kombee.com’s Sanity components.
+Ground
+#FFFDF9
+Panel
+#F4ECDC
+Deep panel
+#EBDFC6
+Ink
+#17140F
+Primary
+#6E1E2B
+Primary dark
+#4F1420
+Primary soft
+#F6E6E8
+Accent
+#C9A15B
+Accent soft
+#F8F0DF
+Gold (shared with apps)
+#C9A15B
+T Y P O G R A P H Y
+Aa Loyalty that
+pays.
+DM Serif Display · display, 400 weight, tight leading
+Body copy: Plus Jakarta Sans 16–19 px, 1.6 line height, #5A5248 on
+#FFFDF9.
+E Y E B R O W  L A B E L  ·  1 2  P X  ·  0 . 1 6  E M  T R A C K I N G
+B U T T O N S  &  C H I P S
+Primary Ink Ghost Light
+CHIP Tag
+C A R D
+Card title
+Radius 8 px, double-rule panel.
+Follow Punya Perks for loyalty benchmarks and product updates
+Punya Perks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ

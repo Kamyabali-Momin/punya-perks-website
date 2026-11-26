@@ -1,0 +1,115 @@
+Punya Perks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+S O L U T I O N S  ·  B A N K S  &  F I N T E C H
+Card-linked loyalty
+with cash-convertible
+points.
+Issuer-grade controls: KYC-gated cash-out, SSO, data
+residency, maker-checker on every payout, and a ledger your
+auditors can verify.
+Request a demo Start in sandbox
+P R O B L E M S  W E  S O L V E
+What banks & fintech teams bring to the
+first call.
+P R O B L E M
+Points that convert to cash need
+regulatory structure
+O U T C O M E
+Licensed payout partners, KYC vendors, per-
+region limits and escheatment flags.
+P R O B L E M
+Core-banking integration is slow
+O U T C O M E
+Signed webhooks and batch ingestion with
+idempotency and late-event windows.
+P R O B L E M
+Fraud teams need evidence
+O U T C O M E
+Cases with signals, timelines and outcomes;
+maker-checker on adjustments.
+M E C H A N I S M S  F O R  B A N K S  &  F I N T E C H
+Templates you switch on, not projects you
+fund.
+BIN-range card multipliers Cash-out to bank or UPI Tier by spend or balance
+SSO via bank identity Merchant-funded offers Partner currency conversion
+Statement-ready liability reports Dedicated database tier Residency per country
+C O M P L I A N C E  N O T E Cash redemption is off by default and contract-gated. The bank is the account holder with its licensed payout
+partner; Punya Perks issues instructions and never holds funds. RBI PPI and KYC directions, PDPL, APRA and NZ FMA
+guidance are mapped in the trust centre.
+C U S T O M E R  S T O R Y
+A programme like yours, already
+running. View all stories
+BANKING · UAE
+A regional bank
+[metric] Read the story
+W H A T  O P E R A T O R S  S A Y
+Teams that stopped reconciling
+spreadsheets.
+“
+We launched three campaigns in
+the first fortnight. The previous
+platform took three weeks per
+campaign.
+[Name]
+Head of Loyalty, national fashion retailer, India
+“
+The ledger is the first one our
+internal audit team signed off
+without exceptions.
+[Name]
+Programme Director, regional bank, UAE
+“
+Our franchisees get store-level
+rules and we keep brand defaults.
+That alone saved the rollout.
+[Name]
+Marketing Director, café chain, Australia
+F A Q
+Questions from banks & fintech teams
+How long does a banks & fintech programme take to launch? +
+Can we keep our existing points balances? +
+What does it cost? +
+Follow Punya Perks for loyalty benchmarks and product updates
+Punya Perks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ
+Card-linked earning with cash-out, SSO and a dedicated database cell.
+[HEADLINE RESULT]
+Not sure which plan or template fits?
+A solutions engineer who has launched programmes in your market will
+tell you in 30 minutes.
+Talk to an expert

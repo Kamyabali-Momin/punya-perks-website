@@ -1,0 +1,84 @@
+Punya Perks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+D E V E L O P E R S
+An API your team
+will enjoy.
+OpenAPI 3.1 reference, sandbox tenants with synthetic
+members, SDKs for JavaScript, PHP and Python, store plugins,
+signed replayable webhooks and a 90-day deprecation policy.
+Open the docs Create a sandbox
+POST /v1/transactions
+Authorization: Bearer <tenant-api-key>
+Idempotency-Key: nr-8841-2207
+{
+  "event_type": "transaction.created",
+  "member": { "mobile": "+919876543210" },
+  "source": { "channel": "pos", "store_id": "ANDHERI-04" },
+  "occurred_at": "2026-11-19T10:32:00+05:30",
+  "currency": "INR",
+  "eligible_amount": 16650.00
+}
+→ 202 { "ledger_entry": "LE-9F2A", "status": "Pending", "points": 250 }
+A P I  F A M I L I E S
+Nine families, one key.
+Ledger
+Balances by state, lots, history, adjustments with
+maker-checker.
+Members
+Enrol, identify, consent, preferences, tiers.
+Rules
+Versioned rules, preview against history.
+Campaigns & Offers
+Create, target, launch, measure.
+Redemption & Checkout
+Quote, commit, lifecycle, fulfilment callbacks.
+Events & Webhooks
+points.earned, redemption.status.changed,
+tier.changed; HMAC-signed, replayable.
+Agent Gateway
+Member-scoped tokens and separate rate buckets for
+AI agents.
+Connectors
+Activate, test, monitor.
+Reporting
+Exports, liability, reconciliation.
+Follow Punya Perks for loyalty benchmarks and product updates
+Punya Perks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+Spin up a sandbox tenant in two minutes.
+Synthetic members, recorded vendor responses, replayable webhooks.
+Create a sandbox

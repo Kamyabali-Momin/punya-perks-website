@@ -1,0 +1,35 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" rx="14" fill="#FAF3E8"/>
+  <rect x="1" y="1" width="398" height="198" rx="13" stroke="#EBDFC6" stroke-width="2"/>
+  
+  <circle cx="200" cy="100" r="80" fill="#B5651A" fill-opacity="0.08"/>
+
+  <!-- Campaign Builder Card -->
+  <g transform="translate(40, 42)">
+    <rect width="320" height="116" rx="12" fill="#FFFFFF" stroke="#EBDFC6" stroke-width="1.5"/>
+    
+    <!-- Header -->
+    <rect x="14" y="14" width="80" height="14" rx="4" fill="#FFF7ED"/>
+    <text x="20" y="24" font-family="Plus Jakarta Sans, sans-serif" font-size="8" font-weight="800" fill="#EA580C">ACTIVE CAMPAIGN</text>
+    <text x="14" y="48" font-family="DM Serif Display, serif" font-size="16" font-weight="700" fill="#17140F">Diwali 2x Points Acceleration</text>
+    
+    <!-- Mini Metric Pills -->
+    <g transform="translate(14, 60)">
+      <rect width="88" height="42" rx="8" fill="#F4ECDC"/>
+      <text x="10" y="16" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="700" fill="#5B534C">TARGET</text>
+      <text x="10" y="32" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="800" fill="#17140F">VIP Members</text>
+    </g>
+
+    <g transform="translate(112, 60)">
+      <rect width="88" height="42" rx="8" fill="#F4ECDC"/>
+      <text x="10" y="16" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="700" fill="#5B534C">A/B HOLDOUT</text>
+      <text x="10" y="32" font-family="Plus Jakarta Sans, sans-serif" font-size="10" font-weight="800" fill="#17140F">10% Control</text>
+    </g>
+
+    <g transform="translate(210, 60)">
+      <rect width="96" height="42" rx="8" fill="#ECFDF5"/>
+      <text x="10" y="16" font-family="Plus Jakarta Sans, sans-serif" font-size="7.5" font-weight="700" fill="#047857">MEASURED LIFT</text>
+      <text x="10" y="32" font-family="DM Serif Display, serif" font-size="13" font-weight="700" fill="#047857">+28.4% Lift</text>
+    </g>
+  </g>
+</svg>

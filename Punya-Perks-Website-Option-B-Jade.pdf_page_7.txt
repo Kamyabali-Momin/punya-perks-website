@@ -1,0 +1,138 @@
+punyaperks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+P R O D U C T
+Four pillars. One
+ledger.
+Earn, redeem, engage and operate from a single platform.
+Every point is written once to an append-only ledger and read
+by every module, so nothing drifts.
+Request a demo Start in sandbox
+Earn & rules engine
+Mechanisms, multipliers, caps and a rule
+builder with versioned rules.
+Learn more →
+Redemption & catalog
+Quote-then-commit checkout, lot allocation,
+fulfilment partners, cash-out.
+Learn more →
+Campaigns & offers
+Six-step builder, targeting, lifecycle states,
+combining rules.
+Learn more →
+Tiers & member app
+Tier ladder, perks, white-label app and web,
+wallet passes.
+Learn more →
+Analytics, CDP &
+personalisation
+Dashboards, segments, recommendations,
+exports to your BI.
+Learn more →
+Fraud, trust & compliance
+Anomaly detection, maker-checker, audit
+ledger, consent, DSRs.
+Learn more →
+WhatsApp & conversational
+Enrol, check balance, activate offers and
+redeem inside WhatsApp.
+Learn more →
+Integrations
+POS, e-commerce, payments, KYC, messaging,
+BI connectors.
+Learn more →
+Two admin consoles
+Super Admin for the platform operator; Tenant
+Admin for each brand.
+Learn more →
+H O W  I T  F I T S  T O G E T H E R
+Transactions in, loyalty out.
+01 Ingest
+Plugin, signed webhook
+or scheduled batch.
+Idempotent, timezone-
+aware, line-item aware.
+02 Decide
+Rules evaluate eligibility,
+multipliers, caps and
+campaigns, versioned at
+transaction time.
+03 Record
+Append-only hash-
+chained ledger: available,
+pending, reserved and
+expiring balances.
+04 Act
+Member app, WhatsApp,
+webhooks, reconciliation
+and dashboards read the
+same ledger.
+A D M I N I S T R AT I O N
+Two consoles, one truth.
+Super Admin runs the platform: tenants, plans, connectors, billing,
+security, data privacy centre. Tenant Admin runs the programme:
+rules, campaigns, catalog, tiers, theming, consent, fraud. Every
+change is maker-checker where money moves.
+W H AT  O P E R AT O R S  S AY
+Teams that stopped reconciling
+spreadsheets.
+“
+We launched three campaigns
+in the first fortnight. The
+previous platform took three
+weeks per campaign.
+[Name]
+Head of Loyalty, national fashion retailer, India
+“
+The ledger is the first one our
+internal audit team signed off
+without exceptions.
+[Name]
+Programme Director, regional bank, UAE
+“
+Our franchisees get store-
+level rules and we keep brand
+defaults. That alone saved the
+rollout.
+[Name]
+Marketing Director, café chain, Australia
+Follow Punya Perks for loyalty benchmarks and product updates
+punyaperks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ
+Walk through the product with a solutions
+engineer.
+45 minutes, your industry, your questions. Request a demo

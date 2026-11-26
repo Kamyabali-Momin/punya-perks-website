@@ -1,0 +1,136 @@
+[P] Kombee Loyalty Platform — Public Website Sitemap
+[P] Nov 20, 2026 · @Keyur Mehta
+[P] The public website sells the Kombee Loyalty Platform to retailers, banks and enterprises across India, the Middle East, ANZ and the US: 7 primary sections, 38 pages, 3 conversion flows, 9 templates. Product name is a placeholder until the brand decision is made.
+[P] Site structure at a glance
+[P] public website sitemap · 7 sections, 45 pages
+[P] Read left to right: Home routes to seven sections; each chip is one page from the inventory below. Utility and legal pages sit in the footer only.
+[P] Page inventory
+[P] 38 pages across 7 primary sections, plus 7 utility/legal pages (listed later). Priority P1 = launch, P2 = within 60 days, P3 = later. Audience: Buyer (CMO, loyalty head, bank product owner), Tech (CTO, architect, developer), Member (end customer who lands from a tenant programme).
+[TABLE START]
+Section | Page | URL | Purpose | Audience | Priority | Primary CTA
+Home | Home | / | Position the platform; route each audience in one scroll | All | P1 | Request a demo
+Product | Product overview | /product | One page tour of the 4 pillars: Earn, Burn, Engage, Operate | Buyer | P1 | Request a demo
+Product | Earn & rules engine | /product/earn | Purchase, referral, card-linked, receipt, tier multipliers; rule builder | Buyer, Tech | P1 | See it live
+Product | Campaigns & offers | /product/campaigns | Campaign builder, offers, targeting, lifecycle, A/B | Buyer | P1 | Request a demo
+Product | Redemption & catalog | /product/redeem | Vouchers, merchandise, cash-out, donations, partner currencies, checkout quote/commit | Buyer | P1 | Request a demo
+Product | Tiers & member experience | /product/member-app | Tier ladder, perks, white-label member app and web, wallet pass | Buyer | P1 | View app demo
+Product | Analytics, CDP & personalization | /product/analytics | Dashboards, segments, personalization engine, recommendations | Buyer | P2 | Request a demo
+Product | Fraud, trust & compliance | /product/trust | Anomaly detection, maker-checker, audit ledger, consent, DSR | Buyer, Tech | P1 | Read the security brief
+Product | WhatsApp & conversational | /product/whatsapp | Enrolment, balance, offers and redemption inside WhatsApp | Buyer | P2 | Try on WhatsApp
+Product | Integrations | /product/integrations | Connector marketplace: POS, e-commerce, payments, KYC, messaging | Tech | P1 | Browse connectors
+Solutions | Retail & fashion | /solutions/retail | Omnichannel retail programme; store + online | Buyer | P1 | Request a demo
+Solutions | Banks & fintech | /solutions/banking | Card-linked, cash-convertible points, KYC, SSO, residency | Buyer, Tech | P1 | Talk to an expert
+Solutions | Hospitality & QSR | /solutions/hospitality | Visit-based earning, stamps, experiences | Buyer | P2 | Request a demo
+Solutions | E-commerce & D2C | /solutions/ecommerce | Shopify, Magento, WooCommerce plugins; referral; reviews | Buyer | P2 | Install the plugin
+Solutions | Coalition & enterprise | /solutions/enterprise | Multi-brand, multi-country, partner currency exchange | Buyer | P2 | Talk to an expert
+Platform | Architecture & multi-tenancy | /platform | Tenant isolation, data residency, scale numbers, SLAs | Tech | P1 | Read the architecture note
+Platform | Security & compliance | /platform/security | Certifications roadmap, encryption, access control, audit | Tech | P1 | Download the security brief
+Platform | Developers | /platform/developers | API overview, SDKs, webhooks, sandbox, link to docs portal | Tech | P1 | Open the docs
+Platform | Connector marketplace | /platform/connectors | Filterable list of all connectors with activation model | Tech | P2 | Request a connector
+Pricing | Pricing | /pricing | Plans, what is metered, add-ons, regions | Buyer | P1 | Start in sandbox
+Pricing | Compare plans | /pricing/compare | Full feature matrix by plan | Buyer | P2 | Talk to sales
+Resources | Resources hub | /resources | Entry to all content types | All | P1 | —
+Resources | Blog | /blog | Articles, product updates | All | P1 | Subscribe
+Resources | Case studies | /customers | Customer stories with metrics | Buyer | P1 | Request a demo
+Resources | Guides & reports | /guides | Gated e-books, loyalty benchmarks | Buyer | P2 | Download
+Resources | Webinars & events | /events | Upcoming and on-demand | Buyer | P3 | Register
+Resources | Help centre | /help | Links to the support knowledge base (external app) | Member, Tech | P2 | Search help
+Resources | Changelog | /changelog | Release notes by version | Tech | P2 | Subscribe
+Resources | Glossary | /glossary | Loyalty terms (earn, burn, breakage, escheatment, tier) | All | P3 | —
+Company | About | /about | Kombee story, leadership, offices (India, UAE, AU, US) | All | P1 | Careers
+Company | Partners | /partners | Agencies, SIs, technology partners; apply | Buyer, Tech | P2 | Become a partner
+Company | Careers | /careers | Open roles | All | P3 | Apply
+Company | Press & news | /press | Releases, media kit | All | P3 | Media kit
+Company | Contact | /contact | Regional offices, support vs sales routing | All | P1 | Send message
+Conversion | Request a demo | /demo | Lead form with qualification | Buyer | P1 | Book a slot
+Conversion | Start in sandbox | /start | Self-serve sandbox tenant sign-up | Tech | P1 | Create sandbox
+Conversion | Partner application | /partners/apply | Partner form | Buyer, Tech | P2 | Submit
+[TABLE END]
+[P] Utility pages (sign-in, status, legal, 404) are in the Footer section below.
+[P] Page-by-page content outline
+[P] Each row lists the sections in scroll order. Designers lay out the P1 pages first; P2/P3 pages reuse the templates named in the next section.
+[TABLE START]
+Page | Sections in scroll order | Template
+Home | 1. Hero: one-line promise + sub-line + demo and sandbox CTAs + product screenshot (member app over admin console). 2. Logo strip (customers / partners). 3. Four pillars (Earn, Burn, Engage, Operate) with icon, two lines, link. 4. “Built for” audience switcher: Retail / Banks / Hospitality / E-commerce cards. 5. Member experience showcase: three phone screens, tier switch. 6. Numbers strip (tenants, members, transactions, regions). 7. Trust band: security, residency, certifications roadmap. 8. Integrations marquee. 9. Case study feature. 10. Final CTA band | Home
+Product overview | Hero with product screenshot · pillar tabs (Earn / Burn / Engage / Operate) each with 3 feature bullets + screenshot · “How it fits together” architecture diagram · admin console tour (Super Admin vs Tenant Admin) · CTA | Feature overview
+Earn & rules engine | Hero · earn mechanisms grid (purchase, referral, card-linked, receipt scan, birthday, surveys, challenges) · rule builder screenshot with annotations · ledger & reconciliation explainer · FAQ · CTA | Feature page
+Campaigns & offers | Hero · 6-step builder walk-through · targeting & segments · offer types grid · lifecycle states illustration · results dashboard screenshot · FAQ · CTA | Feature page
+Redemption & catalog | Hero · reward types grid (voucher, merchandise, cash-out, donation, partner currency, experiences, tier upgrade) · checkout quote/commit flow · fulfilment partners · cash-out compliance call-out · FAQ · CTA | Feature page
+Tiers & member experience | Hero with three tier-themed phones · tier ladder & perks · member app feature list (balance states, history, claims, offers, referral, leaderboard, wallet pass) · white-label theming (tiers 1–3) · languages & RTL · accessibility · CTA: interactive app demo | Feature page + demo embed
+Analytics, CDP & personalization | Hero · dashboard screenshots · segment builder · personalization engine explainer · exports & BI connectors · CTA | Feature page
+Fraud, trust & compliance | Hero · detection domains · maker-checker & audit ledger · consent & privacy centre · data residency map · certifications roadmap · CTA: security brief | Feature page
+WhatsApp & conversational | Hero with chat mock · journeys (enrol, balance, offers, redeem) · template compliance · CTA: try on WhatsApp | Feature page
+Integrations | Hero · category filter (POS, e-commerce, payments, KYC, messaging, BI) · connector cards with Self-serve / Assisted badge · “Request a connector” · developer CTA | Directory
+Solutions (each) | Hero with industry image · 3 problems → 3 outcomes · relevant mechanisms · industry-specific compliance note · case study · integrations used · CTA | Solution page
+Platform / Architecture | Hero · architecture diagram · tenancy models (schema-per-tenant, dedicated DB) · residency regions · scale & SLA table · CTA | Technical page
+Security & compliance | Hero · controls grid · certifications & roadmap · data handling (encryption, retention, DSR) · responsible disclosure · downloads | Technical page
+Developers | Hero with code sample · API families (Ledger, Members, Rules, Campaigns, Redemption, Checkout, Events, Webhooks, Agent) · SDKs & plugins · sandbox CTA · link to docs portal | Technical page
+Pricing | Hero · 3 plan cards with monthly/annual toggle and region currency · what is metered · add-ons · FAQ · CTA | Pricing
+Case studies | Hub: filter by industry/region, cards with headline metric · Story: hero metric, challenge, solution, results, quote, modules used | Hub + Article
+Blog / Guides / Changelog | Hub list with filters · Article with sidebar TOC, author, related | Hub + Article
+About | Hero · mission · leadership grid · offices map (India, UAE, Australia, US) · timeline · careers CTA | Company
+Contact | Routing cards (Sales / Support / Partners / Press) · form · offices | Form
+Demo / Start / Partner apply | Two-column: value bullets left, form right · success state · calendar embed (demo) | Form
+[TABLE END]
+[P] Templates and reusable components
+[P] 9 page templates cover all 45 pages; design each once at desktop (1440), tablet (834) and mobile (390).
+[TABLE START]
+Template | Used by | Must include
+Home | / | Hero with product visual, logo strip, pillar grid, audience switcher, phone showcase, numbers strip, trust band, CTA band
+Feature overview | /product | Tabbed pillar sections, architecture diagram slot
+Feature page | 8 product pages | Hero, mechanism/feature grid, annotated screenshot, explainer diagram slot, FAQ accordion, CTA band
+Solution page | 5 solutions | Industry hero, problem→outcome trio, mechanism chips, compliance note, case-study card, CTA
+Technical page | /platform, /platform/security, /platform/developers | Dense two-column layout, code block, spec tables, download cards
+Directory | /product/integrations, /platform/connectors | Filter bar, card grid, badge (Self-serve / Assisted), request form
+Pricing | /pricing, /pricing/compare | Plan cards with toggle, feature matrix table with sticky header
+Hub + Article | Blog, case studies, guides, events, changelog, glossary | Filterable card grid; article with TOC sidebar, author, related, gated download variant
+Form | /demo, /start, /contact, /partners/apply | Two-column value + form, inline validation, success state, calendar embed
+[TABLE END]
+[P] Global components: header with mega-menu (Product, Solutions, Platform, Pricing, Resources, Company) + Sign in + Request demo; region/language selector (EN, AR with RTL, HI); footer (sitemap columns, offices, legal, social, status); cookie consent banner; announcement bar; CTA band; logo strip; testimonial/quote card; metric tile; FAQ accordion; screenshot frame (browser and phone); badge set (Self-serve, Assisted, New, Release 2); breadcrumb; pagination; 404 and empty states.
+[P] Visual direction follows the member-app Crisp system (Document 12 v4): white canvas, grey surfaces, Plus Jakarta Sans display with Inter body, ink primary buttons as pills, gold used only as accent; product screenshots come from the Super Admin, Tenant Admin and member-app prototypes.
+[P] Conversion flows
+[P] Three flows carry every CTA on the site; each needs its screens designed, including error and success states.
+[P] Request a demo (/demo)
+[P] Form: name, work email, company, role, industry, country, member base size, message; consent checkbox.
+[P] Qualification step (shown after submit): preferred modules, timeline, current programme (none / in-house / vendor).
+[P] Calendar embed to pick a slot; confirmation screen with what to expect; email confirmation.
+[P] Start in sandbox (/start)
+[P] Account: work email, password or Google/Microsoft sign-in.
+[P] Verify email (code screen).
+[P] Create sandbox tenant: company, region (India / UAE / Australia / US), currency, industry template.
+[P] Landing in the Tenant Admin sandbox with synthetic members and a guided checklist; upgrade path to a paid plan.
+[P] Partner application (/partners/apply)
+[P] Partner type (agency, SI, technology, referral); company, region, contact.
+[P] Confirmation with next steps and partner-kit download.
+[P] Secondary conversions: newsletter subscribe (footer and blog), gated guide download (name + email), “Request a connector” (integrations), “Try on WhatsApp” (deep link with QR on desktop).
+[P] Footer, utility and legal pages
+[TABLE START]
+Page | URL | Note
+Sign in | /sign-in | Routes to the admin console (app subdomain); member sign-in belongs to each tenant’s own domain, not this site
+System status | /status | External status page, opens in new tab
+Trust centre | /trust | Security brief, DPA, sub-processor list, certifications; can merge with /platform/security at launch
+Privacy policy | /privacy | Regional notices: DPDP (India), PDPL (UAE/KSA), Privacy Act (AU), state laws (US), GDPR
+Terms of service | /terms | Platform terms; tenant programme terms live inside each tenant’s app
+Cookie policy | /cookies | Paired with the consent banner
+404 / search | /404, /search | Branded 404 with search and top links
+[TABLE END]
+[P] Footer columns: Product (9 links) · Solutions (5) · Platform (4) · Resources (8) · Company (5) · Legal (4) · Offices (Surat/Mumbai, Dubai, Melbourne, US) · Newsletter field · Social · Language/region selector · “Powered by Kombee”.
+[P] Design brief and open decisions
+[P] Brief for designers
+[P] Tone: confident, precise, enterprise-credible; short headlines (max 8 words), one idea per section.
+[P] Visual system: Crisp (white canvas, grey surfaces, ink pills, gold accent, Plus Jakarta Sans + Inter); product UI shown in real screenshots with light device frames, never abstract illustration alone.
+[P] Every page has one primary CTA; demo for buyers, sandbox for developers.
+[P] Accessibility WCAG 2.2 AA; RTL layout for Arabic; locale-aware numbers and currency on Pricing.
+[P] Performance budget: hero visible under 2.5 s on 4G; no autoplay video on mobile.
+[P] Deliver desktop 1440, tablet 834, mobile 390 for each template; component library in the same Figma file as the app designs.
+[P] Open decisions
+[TABLE START]
+# | Decision | Owner | Blocks
+1 | Product brand name (currently “Kombee Loyalty Platform” placeholder) | CEO | Logo, domain, every page title
+2 | Public pricing vs “talk to sales”; plan names and metering | CEO, Sales | /pricing, /pricing/compare
+3 | Launch regions and currencies shown (INR, AED, AUD, USD) | Commercial | Pricing, Contact, footer
+4 | Which certifications can be claimed at launch vs “in progress” | Compliance | Trust band, /platform/security
+5 | Sandbox open to all vs invite-only at launch | Product | /start flow
+6 | Launch customers permitted for logos and case studies | Sales | Home, /customers
+7 | Docs portal: subdomain (docs.) vs section of this site | Engineering | /platform/developers
+[TABLE END]

@@ -1,0 +1,71 @@
+punyaperks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+O P T I O N  B  ·  J A D E
+Kombee.com block reuse map
+Every Punya Perks page is composed from the Sanity block types already live on
+kombee.com. The theme, type and imagery change; the schemas, queries and most
+React components do not. Estimated reuse: 80–85% of components, 100% of
+schemas.
+KO M B E E .C O M  B LO C K  ( SA N I T Y  T Y P E ) U S E D  O N  P U N YA  P E R KS  AS C H A N G E
+heroVideo (video + overlay + CTA) Home hero Video slot keeps the schema; media is the member-app reel, no
+gradient overlay
+featuredLogos Customer logo strip Same marquee component; logos swapped
+introBlock (eyebrow, H2, text, image) “One platform, four jobs”, every “In practice”
+section
+Unchanged schema; image field holds product screenshots
+serviceCards (icon, H3, line, link) Modules, feature pages, partner types Grid of 3/4/6; carousel optional
+statsLogos (4 counters + client
+marquee)
+By the numbers, About, Case study Counters wired to CMS numbers
+caseStudies (header + feature) Customer stories feature Feature block now carries a metric field
+numberedList 01–06 How it works, How it fits together Same ordered-list block
+buildCta (text + image + button) “See this module with your rules” Unchanged
+recommendationWidget (2 questions) Programme finder Third select added: market
+testimonials What operators say Same carousel; cards shown static here
+calculatorCta + tags ROI estimate Form fields replace service chips; chips kept as industry tags
+blogCards (3) Latest from the loyalty desk, Resources Unchanged; category + read-time in meta
+partnerLogos marquee Integration partners Rendered as tags for legibility; marquee still valid
+faqBanner (promo + CTA) Every pageʼs closing banner Unchanged; FAQ accordion added above it from the /faqs block
+socialLinks Follow strip Unchanged
+footer (blurb + columns) Footer Four columns + newsletter field
+contactForm, jobList, teamGrid,
+legalBody
+Contact, Careers, About, Privacy Existing page-level blocks reused as-is
+Follow Punya Perks for loyalty benchmarks and product updates
+punyaperks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ

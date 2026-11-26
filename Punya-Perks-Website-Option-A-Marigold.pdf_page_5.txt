@@ -1,0 +1,227 @@
+Punya Perks Product Solutions Platform Pricing Resources Company Sign in Request a demo
+L O YA LT Y  P R O G R A M M E  S O F T WA R E  ·  I N D I A  ·  A U S T R A L I A  ·  N E W  Z E A L A N D
+Loyalty that
+pays for itself.
+Launch points, tiers, offers and a white-label member app in
+weeks. One platform for retailers, banks and enterprises, with
+the compliance each market demands.
+Request a demo Start in sandbox
+Free sandbox, no credit card. Pricing in INR, AUD and NZD.
+P R O G R A M M E S  R U N  O N  P U N YA
+P E R K S [Customer logo 1] [Customer logo 2] [Customer logo 3] [Customer logo 4] [Customer logo 5]
+O N E  P L A T F O R M ,  F O U R  J O B S
+Earn, redeem, engage, operate.
+Every mechanism your programme needs is built in and governed by
+one ledger, so finance, marketing and engineering see the same
+number. Retail wants omnichannel earning; banks need cash-
+convertible points with KYC; hospitality runs on visits. Choose the
+playbook, keep the platform.
+Retail Banks Hospitality E-commerce Coalition
+M O D U L E S
+Everything a programme needs, nothing
+bolted on.
+01
+Earn & rules
+Purchases, referrals, card-linked offers,
+receipt scans, birthdays, challenges.
+Tier multipliers and a visual rule builder.
+Learn more →
+02
+Redeem & catalog
+Vouchers, merchandise, cash-out to
+bank or UPI, donations, partner
+currencies, experiences, paid tiers.
+Learn more →
+03
+Campaigns & offers
+Six-step builder, segments, combining
+rules, quotas and lift measurement with
+holdouts.
+Learn more →
+04
+Trust & compliance
+Append-only ledger, maker-checker,
+fraud detection, consent centre and
+data-subject requests.
+Learn more →
+B Y  T H E  N U M B E R S
+Built for scale, measured in the open.
+4
+data-residency regions: India,
+UAE, Australia, US
+9
+API families with sandbox and
+webhooks
+3
+transaction ingestion paths:
+plugin, webhook, batch
+<2s
+checkout quote on cached
+catalog
+[Client logo 1] [Client logo 2] [Client logo 3] [Client logo 4] [Client logo 5] [Client logo 6] [Client logo 7]
+C U S T O M E R  S T O R I E S
+Programmes that moved the numbers. View all stories
+RETAIL · INDIA
+A national fashion retailer unified
+store and online loyalty
+Separate POS and e-commerce programmes became one ledger with a
+tier-adaptive app and WhatsApp enrolment; campaigns now launch in an
+afternoon.
+[metric]
+REPEAT PURCHASE LIFT
+Read the story
+H O W  I T  W O R K S
+Live in four weeks, not four quarters.
+01 Provision
+Tenant, region, currency, plan and mechanisms set up by Kombee; your
+admins get SSO and roles.
+02 Configure
+Earn rules, tiers, catalog and consent clauses built from industry
+templates; theme applied to the member app.
+03 Connect
+POS, e-commerce, payments, KYC and messaging connectors activated;
+transaction feed verified against the ledger.
+04 Launch
+Pilot store or segment, reconciliation signed off by finance, then full
+launch with campaigns ready.
+P R O G R A M M E  F I N D E R
+Find your programme
+template in seconds.
+Two answers and we show the mechanisms, compliance notes and a
+launch plan for your industry and market.
+WHAT IS YOUR INDUSTRY?
+Retail & fashion
+WHAT DO YOU WANT TO IMPROVE?
+Repeat purchase
+MARKET
+India
+Show my template
+W H A T  O P E R A T O R S  S A Y
+Teams that stopped reconciling
+spreadsheets.
+“
+We launched three campaigns in the first
+fortnight. The previous platform took
+three weeks per campaign.
+[Name]
+Head of Loyalty, national fashion retailer, India
+“
+The ledger is the first one our internal
+audit team signed off without exceptions.
+[Name]
+Programme Director, regional bank, UAE
+“
+Our franchisees get store-level rules and
+we keep brand defaults. That alone saved
+the rollout.
+[Name]
+Marketing Director, café chain, Australia
+R O I  E S T I M A T E
+What would a 4-point lift in
+repeat purchase be worth?
+Enter members, average order and frequency; the estimator returns incremental
+revenue, points liability and the plan that fits.
+Retail Banking Hospitality E-commerce Coalition
+Migration from another vendor
+ACTIVE MEMBERS
+250,000
+AVERAGE ORDER
+₹  1,800
+ORDERS / YEAR
+3.2
+Incremental revenue (est.) ₹  [value]
+Get my estimate
+B Y  M A R K E T
+Three markets. Three rulebooks. One
+platform.
+I N D I A
+DPDP, DLT, UPI
+Versioned consent under the DPDP Act, TRAI DLT
+templates for SMS, WhatsApp-first enrolment, UPI cash-
+out through licensed partners, India data-residency cell.
+Loyalty software for India →
+A U S T R A L I A
+Privacy Act, Spam Act, AUD
+Australian Privacy Principles, Spam Act consent for
+promotional messages, state unclaimed-money rules for
+cash-convertible points, AUD pricing, Sydney region cell.
+Loyalty software for Australia →
+N E W  Z E A L A N D
+Privacy Act 2020, NZD
+Privacy Act 2020 notices, Unsolicited Electronic
+Messages Act compliance, Shopify and POS connectors
+common in NZ retail, NZD pricing.
+Loyalty software for New Zealand →
+Latest from the loyalty desk View all →
+GUIDE
+INDIA · 8 MIN
+The loyalty compliance checklist for India:
+DPDP, TRAI DLT, RBI
+What a retailer or bank must have in place before issuing
+cash-convertible points.
+BENCHMARK
+ANZ · 6 MIN
+Loyalty benchmarks 2026: Australia and
+New Zealand retail
+Enrolment, active rate, redemption rate and breakage across
+[N] programmes.
+COMPARISON
+INDIA · 10 MIN
+Punya Perks vs Capillary, Xoxoday and
+EasyRewardz
+An honest feature and pricing comparison for Indian
+enterprises.
+I N T E G R A T I O N  P A R T N E R S
+Shopify Magento WooCommerce Razorpay Stripe Pine Labs Square Lightspeed Twilio WhatsApp Business
+DigiLocker Xero Salesforce Segment + 40 more
+F A Q
+Questions buyers ask first
+What is loyalty program software? +
+How is Punya Perks different from Capillary, Xoxoday or EasyRewardz? +
+Can I run one programme across India, Australia and New Zealand? +
+How long does implementation take? +
+Is there a free trial? +
+Follow Punya Perks for loyalty benchmarks and product updates
+Punya Perks
+Loyalty programme software for retailers,
+banks, hospitality groups and coalitions in
+India, Australia and New Zealand. Built and
+operated by Kombee Technologies.
+Work email Subscribe
+PRODUCT
+Earn & rules
+Campaigns & offers
+Redemption
+Tiers & member app
+Analytics & CDP
+Trust & compliance
+WhatsApp
+Integrations
+SOLUTIONS
+Retail & fashion
+Banks & fintech
+Hospitality & QSR
+E-commerce & D2C
+Coalition & enterprise
+India · Australia · NZ
+RESOURCES
+Guides
+Benchmarks
+Comparisons
+Customer stories
+Changelog
+Glossary
+Developers
+COMPANY
+About
+Partners
+Careers
+Contact
+Trust centre
+Privacy
+© 2026 Punya Perks · A Kombee Technologies product · Surat · Dubai · Melbourne · Auckland Privacy Terms Cookies Security English · िहंदी  · اﻟﻌﺮﺑﻴﺔ
+Watch the 90-second reel
+Not sure which plan or template fits?
+A solutions engineer who has launched programmes in your market will
+tell you in 30 minutes.
+Talk to an expert
