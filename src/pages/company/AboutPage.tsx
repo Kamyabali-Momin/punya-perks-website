@@ -77,48 +77,56 @@ export const AboutPage: React.FC = () => {
       role: 'Managing Director & Founder',
       bio: 'Guiding enterprise vision, governance, and ethical customer loyalty architectures for multi-brand retail conglomerates.',
       initials: 'KM',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Dishant Mehta',
       role: 'Chief Technology Officer',
       bio: 'Architect of Punya Perks append-only ledger, sub-120ms POS syncing engine, and high-concurrency event pipelines.',
       initials: 'DM',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Zil Mehta',
       role: 'Sr. Project Manager',
       bio: 'Leading software delivery sprints, agile governance, and enterprise deployment frameworks across retail pods.',
       initials: 'ZM',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Sohail Khan',
       role: 'Head of Strategy & Growth',
       bio: 'Scaling reseller partnerships, global MSP programs, and commercial expansion across India, Middle East, and APAC.',
       initials: 'SK',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Anshika Mishra',
       role: 'Project Manager',
       bio: 'Managing cross-functional engineering pods, quality metrics, merchant onboarding, and production release cycles.',
       initials: 'AM',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Shivani Mehta',
       role: 'Technical Project Manager',
       bio: 'Overseeing ERP/POS connectors, webhook architectures, developer API tooling, and client implementation pipelines.',
       initials: 'SM',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Himali Jaiswal',
       role: 'Lead – Account Management',
       bio: 'Championing client retention, merchant rollout success, volume expansion, and strict operational SLA assurance.',
       initials: 'HJ',
+      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=600&q=80',
     },
     {
       name: 'Shashi Gupta',
       role: 'Human Resource Manager',
       bio: 'Nurturing our distributed engineering culture, leadership talent acquisition, and global operational compliance.',
       initials: 'SG',
+      image: 'https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=600&q=80',
     },
   ];
 
@@ -278,11 +286,14 @@ export const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {teamMembers.map((member) => (
               <div key={member.name} className="group flex flex-col">
-                <div className="w-full aspect-square rounded-2xl overflow-hidden bg-white border border-[#EBDFC6] group-hover:border-[#B5651A] group-hover:shadow-md transition-all duration-300 relative flex items-center justify-center">
-                  <div className="w-20 h-20 rounded-2xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center font-display font-medium text-2xl text-[#B5651A] shadow-inner group-hover:scale-105 transition-transform duration-300">
-                    {member.initials}
-                  </div>
-                  <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-[#FAF5ED] border border-[#EBDFC6] text-[10px] font-mono text-[#847C75]">
+                <div className="w-full aspect-square rounded-2xl overflow-hidden bg-[#FAF5ED] border border-[#EBDFC6] group-hover:border-[#B5651A] group-hover:shadow-md transition-all duration-300 relative">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-3 right-3 px-2 py-0.5 rounded-md bg-white/90 backdrop-blur-xs border border-[#EBDFC6] text-[10px] font-mono font-medium text-[#847C75] shadow-xs">
                     Kombee Tech
                   </div>
                 </div>
