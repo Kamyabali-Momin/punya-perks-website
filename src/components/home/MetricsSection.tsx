@@ -26,7 +26,7 @@ export const MetricsSection: React.FC = () => {
         {/* Split Row: Left Headline + Center 3D Bag Graphic + Right 2x2 Stat Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Column: Eyebrow + Headline */}
-          <div className="lg:col-span-4 space-y-4">
+          <div className="lg:col-span-4 space-y-4 reveal-on-scroll">
             <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block">
               BY THE NUMBERS
             </span>
@@ -36,7 +36,7 @@ export const MetricsSection: React.FC = () => {
           </div>
 
           {/* Center Column: 3D Shopping Bag with Loyalty Card Graphic */}
-          <div className="lg:col-span-3 flex justify-center items-center">
+          <div className="lg:col-span-3 flex justify-center items-center reveal-on-scroll delay-150">
             <div className="relative w-full max-w-[240px] sm:max-w-[270px] mx-auto flex items-center justify-center">
               <img
                 src="/images/scale-bag-transparent.png"
@@ -52,7 +52,9 @@ export const MetricsSection: React.FC = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#EBDFC6] hover:border-[#B5651A]/60 p-5 sm:p-6 text-center flex flex-col items-center justify-center min-h-[130px] bg-white shadow-xs hover:shadow-md transition-all duration-300 group"
+                className={`rounded-2xl border border-[#EBDFC6] hover:border-[#B5651A]/60 p-5 sm:p-6 text-center flex flex-col items-center justify-center min-h-[130px] bg-white shadow-xs hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
+                  idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : idx === 3 ? 'delay-300' : ''
+                }`}
               >
                 <div className="font-display font-normal text-4xl sm:text-5xl text-[#B5651A] group-hover:scale-105 transition-transform duration-300 tracking-tight leading-none">
                   {stat.value}

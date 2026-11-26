@@ -6,7 +6,7 @@ export const CaseStudySection: React.FC = () => {
     <section className="w-full bg-[#FDF8F2] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="customer-stories">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header with View all stories link */}
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-10 sm:mb-12 reveal-on-scroll">
           <div>
             <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
               CUSTOMER STORIES
@@ -26,7 +26,7 @@ export const CaseStudySection: React.FC = () => {
 
         {/* Main Story Card with Wavy Marigold Banner BG */}
         <div
-          className="rounded-[28px] border border-[#EBDFC6] p-6 sm:p-10 lg:p-12 shadow-sm overflow-hidden relative bg-cover bg-center"
+          className="rounded-[28px] border border-[#EBDFC6] p-6 sm:p-10 lg:p-12 shadow-sm overflow-hidden relative bg-cover bg-center reveal-on-scroll delay-100"
           style={{
             backgroundImage: "url('/images/case-study-banner-bg.jpg')",
             backgroundColor: '#FAF5EE',

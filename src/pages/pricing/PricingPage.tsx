@@ -290,10 +290,12 @@ export const PricingPage: React.FC = () => {
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-            {plans.map((p) => (
+            {plans.map((p, idx) => (
               <div
                 key={p.name}
-                className={`rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all relative ${
+                className={`rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all relative reveal-on-scroll ${
+                  idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : ''
+                } ${
                   p.featured
                     ? 'bg-[#FFFDF9] border-2 border-[#B5651A] shadow-2xl'
                     : 'bg-white border border-[#EBDFC6] shadow-xl hover:shadow-2xl'

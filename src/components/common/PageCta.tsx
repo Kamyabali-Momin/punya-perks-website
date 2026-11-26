@@ -25,7 +25,7 @@ export const PageCta: React.FC<PageCtaProps> = ({
   return (
     <section className={className} aria-labelledby="page-cta-title">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-        <div className="flex flex-col items-start justify-between gap-8 rounded-[24px] bg-gradient-to-r from-[#1F0E05] via-[#2B160C] to-[#1F0E05] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-xl border border-[#3E2C20] relative overflow-hidden">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-[24px] bg-gradient-to-r from-[#1F0E05] via-[#2B160C] to-[#1F0E05] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-xl border border-[#3E2C20] relative overflow-hidden reveal-on-scroll">
           {/* Subtle Ambient Marigold Glow & Geometry Watermark */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-15 pointer-events-none">
             <svg width="360" height="360" viewBox="0 0 64 64" fill="none">

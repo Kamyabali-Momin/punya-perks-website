@@ -37,7 +37,7 @@ export const ModulesGridSection: React.FC = () => {
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-on-scroll">
           <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
             MODULES
           </span>
@@ -49,10 +49,12 @@ export const ModulesGridSection: React.FC = () => {
 
         {/* 4 Cards Grid with 3D Icons directly from Figma */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {modules.map((mod) => (
+          {modules.map((mod, idx) => (
             <div
               key={mod.title}
-              className="rounded-[20px] bg-white p-6 sm:p-7 border border-[#D07237] shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between relative group min-h-[300px]"
+              className={`rounded-[20px] bg-white p-6 sm:p-7 border border-[#EBDFC6] hover:border-[#B5651A]/60 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between relative group min-h-[300px] reveal-on-scroll ${
+                idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : idx === 3 ? 'delay-300' : ''
+              }`}
             >
               <div>
                 <h3 className="font-display font-normal text-xl sm:text-[22px] text-[#17140F] leading-[1.3] mb-3">

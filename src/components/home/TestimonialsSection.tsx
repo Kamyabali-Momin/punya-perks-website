@@ -48,7 +48,7 @@ export const TestimonialsSection: React.FC = () => {
     <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="testimonials">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-on-scroll">
           <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
             WHAT OPERATORS SAY
           </span>
@@ -60,7 +60,7 @@ export const TestimonialsSection: React.FC = () => {
         {/* 2 Cards Layout matching user reference image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* Left Card (7 cols on lg, 8 cols on xl): Operator Testimonial */}
-          <div className="lg:col-span-7 xl:col-span-8 rounded-[24px] bg-[#FAF5ED] p-6 sm:p-7 md:p-8 border border-[#D07237]/60 shadow-xs flex flex-col justify-between">
+          <div className="lg:col-span-7 xl:col-span-8 rounded-[24px] bg-[#FAF5ED] p-6 sm:p-7 md:p-8 border border-[#EBDFC6] shadow-xs flex flex-col justify-between reveal-on-scroll">
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-7 items-start sm:items-stretch">
               {/* Operator Photo */}
               <div className="w-full sm:w-[210px] md:w-[230px] aspect-[4/5] sm:aspect-auto rounded-[16px] overflow-hidden bg-[#533923] shrink-0 shadow-xs">
@@ -132,7 +132,7 @@ export const TestimonialsSection: React.FC = () => {
           {/* Right Card (5 cols on lg, 4 cols on xl): AI Strategy CTA Card */}
           <a
             href="/contact"
-            className="lg:col-span-5 xl:col-span-4 rounded-[24px] relative overflow-hidden shadow-xs border border-[#D07237]/60 block group cursor-pointer bg-cover bg-center min-h-[340px] hover:scale-[1.01] transition-transform duration-300"
+            className="lg:col-span-5 xl:col-span-4 rounded-[24px] relative overflow-hidden shadow-xs border border-[#EBDFC6] block group cursor-pointer bg-cover bg-center min-h-[340px] hover:scale-[1.01] transition-all duration-300 reveal-on-scroll delay-100"
             style={{
               backgroundImage: "url('/images/testimonials/ai-card-full.jpg')",
               backgroundColor: '#24130A',

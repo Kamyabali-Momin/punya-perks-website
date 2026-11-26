@@ -32,7 +32,7 @@ export const HowItWorksSection: React.FC = () => {
     <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-14 sm:py-16 lg:py-20 font-body" id="how-it-works">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 reveal-on-scroll">
           <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
             HOW IT WORKS
           </span>
@@ -46,10 +46,12 @@ export const HowItWorksSection: React.FC = () => {
 
         {/* 4 Cards Grid - Compact, natural, human design with reduced padding */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-          {steps.map((item) => (
+          {steps.map((item, idx) => (
             <div
               key={item.title}
-              className="rounded-[20px] bg-[#FEF0E1] p-4 sm:p-5 flex flex-col border border-[#F6DECA] hover:border-[#B5651A]/40 hover:shadow-md transition-all duration-300 group"
+              className={`rounded-[20px] bg-[#FEF0E1] p-4 sm:p-5 flex flex-col border border-[#F6DECA] hover:border-[#B5651A]/40 hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
+                idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : idx === 3 ? 'delay-300' : ''
+              }`}
             >
               {/* Clean Image without fake floating AI badges */}
               <div className="w-full h-[150px] sm:h-[160px] rounded-[14px] overflow-hidden bg-[#F4ECDC] mb-4 relative">

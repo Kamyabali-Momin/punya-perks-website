@@ -67,7 +67,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
           {/* Left Column: Hero Content */}
           <div className={hasVisual ? "lg:col-span-6 space-y-5" : "lg:col-span-9 space-y-5"}>
             {/* Eyebrow */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-3 animate-fade-in-up">
               <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase">
                 {eyebrow}
               </span>
@@ -79,17 +79,17 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
             </div>
 
             {/* Display Heading: DM Serif Display */}
-            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] text-[#17140F] tracking-tight leading-[1.14]">
+            <h1 className="font-display text-3xl sm:text-4xl lg:text-[46px] text-[#17140F] tracking-tight leading-[1.14] animate-fade-in-up delay-100">
               {title}
             </h1>
 
             {/* Subtitle with high readability */}
-            <p className="text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-2xl font-body">
+            <p className="text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-2xl font-body animate-fade-in-up delay-200">
               {description}
             </p>
 
             {/* Dual Pill CTA Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-wrap items-center gap-3 sm:gap-4 animate-fade-in-up delay-300">
               {primaryCtaText && (
                 <a
                   href={primaryCtaHref}
@@ -109,7 +109,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
             </div>
 
             {microcopy && (
-              <p className="text-xs text-[#847C75] pt-1 font-body">
+              <p className="text-xs text-[#847C75] pt-1 font-body animate-fade-in-up delay-350">
                 {microcopy}
               </p>
             )}
@@ -117,7 +117,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 
           {/* Right Column: Hero Device Mockup / Aside */}
           {hasVisual && (
-            <div className="lg:col-span-6 relative w-full flex justify-center lg:justify-end">
+            <div className="lg:col-span-6 relative w-full flex justify-center lg:justify-end animate-fade-in delay-200">
               {aside ? (
                 aside
               ) : image ? (

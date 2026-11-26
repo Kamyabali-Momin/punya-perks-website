@@ -69,7 +69,7 @@ export const RoiEstimatorSection: React.FC = () => {
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 reveal-on-scroll">
           <span className="font-serif text-[11px] font-bold text-[#B5651A] tracking-[0.25em] uppercase block mb-3">
             ROI ESTIMATE
           </span>
@@ -83,7 +83,7 @@ export const RoiEstimatorSection: React.FC = () => {
         </div>
 
         {/* 2-Card Layout matching Reference Design */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch max-w-[1440px] mx-auto reveal-on-scroll delay-100">
           
           {/* Left Vertical Industry Card (3 Cols) */}
           <div className="lg:col-span-3 rounded-[28px] sm:rounded-[32px] bg-white border border-[#EFE5D8]/90 shadow-sm p-5 sm:p-6 flex flex-col justify-between">

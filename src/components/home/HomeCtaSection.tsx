@@ -7,7 +7,7 @@ export const HomeCtaSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Banner with 3D studio background matching user reference image */}
         <div
-          className="rounded-[24px] bg-cover bg-center sm:bg-right p-8 sm:p-12 lg:p-16 text-white shadow-xl relative overflow-hidden min-h-[300px] sm:min-h-[340px] flex items-center border border-[#B5651A]/30"
+          className="rounded-[24px] bg-cover bg-center sm:bg-right p-8 sm:p-12 lg:p-16 text-white shadow-xl relative overflow-hidden min-h-[300px] sm:min-h-[340px] flex items-center border border-[#B5651A]/30 reveal-on-scroll"
           style={{
             backgroundImage: "url('/images/cta-banner-bg.jpg')",
             backgroundColor: "#2B160C",

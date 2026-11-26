@@ -109,7 +109,7 @@ export const ProgrammeFinderSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Narrative Column */}
-          <div className="lg:col-span-6 space-y-4">
+          <div className="lg:col-span-6 space-y-4 reveal-on-scroll">
             <span className="font-mono text-[11px] font-bold text-[#E59846] tracking-[0.2em] uppercase block">
               PROGRAMME FINDER
             </span>
@@ -125,7 +125,7 @@ export const ProgrammeFinderSection: React.FC = () => {
           </div>
 
           {/* Right Form Card matching user reference image */}
-          <div className="lg:col-span-6 flex justify-center lg:justify-end">
+          <div className="lg:col-span-6 flex justify-center lg:justify-end reveal-on-scroll delay-100">
             <div className="w-full max-w-[480px] rounded-[28px] bg-white text-[#17140F] p-6 sm:p-8 shadow-2xl border border-white/20 space-y-4">
               {/* Field 1: Industry */}
               <div>

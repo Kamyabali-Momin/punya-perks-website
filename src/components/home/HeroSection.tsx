@@ -17,23 +17,23 @@ export const HeroSection: React.FC = () => {
         {/* 1. Centered Hero Narrative - Figma Node 5737:4712 */}
         <div className="text-center max-w-3xl mx-auto space-y-3 sm:space-y-4">
           {/* Eyebrow Label: Plus Jakarta Sans 12px, 700, 0.16em tracking, #B5651A */}
-          <div className="font-body text-[11px] sm:text-xs font-bold text-[#B5651A] tracking-[0.16em] uppercase">
+          <div className="font-body text-[11px] sm:text-xs font-bold text-[#B5651A] tracking-[0.16em] uppercase animate-fade-in-up">
             {hero.eyebrow}
           </div>
 
           {/* Headline 1: DM Serif Display, 66px, line-height 1.06, tracking -2.5%, italic accent */}
-          <h1 className="font-display font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-[66px] text-[#17140F] tracking-[-0.025em] leading-[1.06]">
+          <h1 className="font-display font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-[66px] text-[#17140F] tracking-[-0.025em] leading-[1.06] animate-fade-in-up delay-100">
             Loyalty that <br className="hidden sm:inline" />
             <span className="italic text-[#B5651A]">pays for itself.</span>
           </h1>
 
           {/* Subheadline Paragraph: Plus Jakarta Sans, 17-18px, #0A0908 */}
-          <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-2xl mx-auto">
+          <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-2xl mx-auto animate-fade-in-up delay-200">
             {hero.description}
           </p>
 
           {/* Dual Pill Buttons - Figma Node 5737:4719 */}
-          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5 animate-fade-in-up delay-300">
             <Button
               href={hero.primaryCta.href}
               variant="primary"
@@ -53,13 +53,13 @@ export const HeroSection: React.FC = () => {
           </div>
 
           {/* Microcopy: 12px, #847C75 */}
-          <p className="text-xs text-[#847C75] pt-1">
+          <p className="text-xs text-[#847C75] pt-1 animate-fade-in-up delay-350">
             {hero.microcopy}
           </p>
         </div>
 
         {/* 2. 5-Tile Bento Grid Showcase - Figma Node 5737:4729 (max width: 1152px, height: 416px) */}
-        <div className="mt-10 sm:mt-12 max-w-[1152px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
+        <div className="mt-10 sm:mt-12 max-w-[1152px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch reveal-on-scroll delay-200">
           {/* Left Column (3 cols / 280px): Live Ledger + Launch */}
           <div className="md:col-span-3 flex flex-col justify-between gap-5 md:h-[416px]">
             {/* Tile 1: Live Ledger (Figma Node 5737:4731 - height 211px) */}

@@ -97,4 +97,86 @@
   .animate-marquee-reverse:hover {
     animation-play-state: paused;
   }
+
+  /* ==========================================================================
+     Smooth Premium Entrance & Scroll-Triggered Reveal Animations
+     ========================================================================== */
+
+  /* Bottom-to-top text reveal / fade-in-up keyframe */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 650ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 500ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  /* Scroll-triggered reveal */
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 650ms cubic-bezier(0.16, 1, 0.3, 1),
+                transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+  }
+
+  .reveal-on-scroll.is-revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Stagger delays */
+  .delay-75 { transition-delay: 75ms; animation-delay: 75ms; }
+  .delay-100 { transition-delay: 100ms; animation-delay: 100ms; }
+  .delay-150 { transition-delay: 150ms; animation-delay: 150ms; }
+  .delay-200 { transition-delay: 200ms; animation-delay: 200ms; }
+  .delay-250 { transition-delay: 250ms; animation-delay: 250ms; }
+  .delay-300 { transition-delay: 300ms; animation-delay: 300ms; }
+  .delay-350 { transition-delay: 350ms; animation-delay: 350ms; }
+  .delay-400 { transition-delay: 400ms; animation-delay: 400ms; }
+  .delay-500 { transition-delay: 500ms; animation-delay: 500ms; }
+  .delay-600 { transition-delay: 600ms; animation-delay: 600ms; }
+
+  /* Reduced motion accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .animate-fade-in-up,
+    .animate-fade-in,
+    .animate-marquee,
+    .animate-marquee-reverse {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
 }

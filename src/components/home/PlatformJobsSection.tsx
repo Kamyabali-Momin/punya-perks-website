@@ -16,7 +16,7 @@ export const PlatformJobsSection: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           {/* Left Column: Copy & 5 Pill Tabs */}
-          <div className="lg:col-span-5 space-y-6">
+          <div className="lg:col-span-5 space-y-6 reveal-on-scroll">
             <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block">
               ONE PLATFORM, FOUR JOBS
             </span>
@@ -49,7 +49,7 @@ export const PlatformJobsSection: React.FC = () => {
           </div>
 
           {/* Right Column: Tablet Device Mockup matching user reference */}
-          <div className="lg:col-span-7 flex items-center justify-center relative">
+          <div className="lg:col-span-7 flex items-center justify-center relative reveal-on-scroll delay-150">
             <div className="w-full relative group">
               <img
                 src="/images/platform-portal-tablet.png"

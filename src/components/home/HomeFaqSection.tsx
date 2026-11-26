@@ -37,7 +37,7 @@ export const HomeFaqSection: React.FC = () => {
     <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="faq">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-16">
+        <div className="text-center mb-12 sm:mb-16 reveal-on-scroll">
           <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
             FAQ
           </span>
@@ -49,7 +49,7 @@ export const HomeFaqSection: React.FC = () => {
         {/* 2-Column Equal Height Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Left Dark Card - Matches exact height of the FAQ list */}
-          <div className="lg:col-span-4 flex flex-col h-full">
+          <div className="lg:col-span-4 flex flex-col h-full reveal-on-scroll">
             <div
               className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#B5651A]/40 h-full min-h-[380px]"
               style={{
@@ -94,7 +94,7 @@ export const HomeFaqSection: React.FC = () => {
           </div>
 
           {/* Right Column: Accordion Rows with Smooth Collapse */}
-          <div className="lg:col-span-8 flex flex-col justify-between divide-y divide-[#EBDFC6] border-y border-[#EBDFC6] h-full">
+          <div className="lg:col-span-8 flex flex-col justify-between divide-y divide-[#EBDFC6] border-y border-[#EBDFC6] h-full reveal-on-scroll delay-100">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
