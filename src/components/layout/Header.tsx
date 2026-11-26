@@ -332,19 +332,25 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
 
               {/* Featured Callout Card */}
               {activePillarData.featuredCallout && (
-                <div className="col-span-4 bg-[#FAF5ED] rounded-3xl p-6 sm:p-7 border border-[#EBDFC6] flex flex-col justify-between shadow-xs">
-                  <div>
+                <div
+                  className="col-span-4 rounded-3xl p-6 sm:p-7 border border-[#EBDFC6] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-bottom bg-no-repeat group"
+                  style={{
+                    backgroundImage: "url('/images/inner-hero-bg.jpg')",
+                    backgroundColor: "#FAF3E8",
+                  }}
+                >
+                  <div className="relative z-10">
                     <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block">
                       {activePillarData.featuredCallout.eyebrow}
                     </span>
-                    <h3 className="font-display font-bold text-xl text-[#17140F] mt-2">
+                    <h3 className="font-display font-bold text-xl text-[#17140F] mt-2 group-hover:text-[#B5651A] transition-colors">
                       {activePillarData.featuredCallout.title}
                     </h3>
                     <p className="text-xs text-[#5B534C] mt-2 leading-relaxed">
                       {activePillarData.featuredCallout.description}
                     </p>
                   </div>
-                  <div className="mt-6 pt-4 border-t border-[#EBDFC6]">
+                  <div className="relative z-10 mt-6 pt-4 border-t border-[#EBDFC6]">
                     <a
                       href={activePillarData.featuredCallout.href}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"
