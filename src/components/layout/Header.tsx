@@ -332,12 +332,15 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               {/* Featured Callout Card */}
               {activePillarData.featuredCallout && (
                 <div
-                  className="col-span-4 rounded-3xl p-6 sm:p-8 border border-[#EBDFC6] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-bottom bg-no-repeat group h-full min-h-full"
+                  className="col-span-4 rounded-3xl p-6 sm:p-8 border border-[#EBDFC6] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-no-repeat group h-full min-h-full"
                   style={{
-                    backgroundImage: "url('/images/inner-hero-bg.jpg')",
+                    backgroundImage: `url('${activePillarData.featuredCallout.bgImage || '/images/inner-hero-bg.jpg'}')`,
                     backgroundColor: "#FAF3E8",
+                    backgroundPosition: activePillarData.featuredCallout.bgImage ? "center" : "top right",
                   }}
                 >
+                  {/* Subtle warm amber ambient glow to ensure rich depth */}
+                  <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#B5651A]/15 rounded-full blur-2xl pointer-events-none" />
                   <div className="relative z-10">
                     <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block">
                       {activePillarData.featuredCallout.eyebrow}

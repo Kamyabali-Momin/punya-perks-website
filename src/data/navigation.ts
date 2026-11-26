@@ -21,6 +21,7 @@ export interface NavPillar {
     description: string;
     href: string;
     linkText: string;
+    bgImage?: string;
   };
 }
 
@@ -122,16 +123,16 @@ export const navigationData: NavPillar[] = [
             href: "/solutions/ecommerce",
             description: "Shopify, Magento, WooCommerce plugins; referral loops.",
           },
+        ],
+      },
+      {
+        categoryTitle: "Regional & Enterprise",
+        items: [
           {
             title: "Coalition & Enterprise",
             href: "/solutions/enterprise",
             description: "Multi-brand, multi-region partner currency exchange networks.",
           },
-        ],
-      },
-      {
-        categoryTitle: "Regional Editions",
-        items: [
           {
             title: "India Market Edition",
             href: "/india",
@@ -152,6 +153,7 @@ export const navigationData: NavPillar[] = [
       description: "How a national fashion retailer unified store and online loyalty in 4 weeks.",
       href: "/customers",
       linkText: "Read Case Study →",
+      bgImage: "/images/case-study-banner-bg.jpg",
     },
   },
   {
