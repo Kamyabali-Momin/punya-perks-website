@@ -17,15 +17,15 @@ export const StartSandboxPage: React.FC = () => {
         microcopy=""
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 md:px-8">
-          <div className="bg-white p-8 sm:p-10 rounded-[28px] border border-[#E8DCC9] shadow-sm">
+          <div className="bg-white p-8 sm:p-10 rounded-[28px] border border-[#EBDFC6] shadow-sm">
             {provisioned ? (
               <div className="text-center py-8 space-y-4">
                 <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center font-bold text-xl">✓</div>
                 <h4 className="font-display font-bold text-2xl text-[#1F1A17]">Sandbox Ready!</h4>
                 <p className="text-sm text-[#1F1A17]/70">We have provisioned your tenant console and API keys. Check your inbox to begin.</p>
-                <div className="pt-2 font-mono text-xs bg-[#F3EBDD] p-3 rounded-[12px] text-[#D9822B]">
+                <div className="pt-2 font-mono text-xs bg-[#FAF5ED] p-3 rounded-[12px] text-[#B5651A]">
                   Tenant Endpoint: https://sandbox-ap-south-1.punyaperks.com/v1
                 </div>
               </div>
@@ -33,15 +33,15 @@ export const StartSandboxPage: React.FC = () => {
               <form onSubmit={(e) => { e.preventDefault(); setProvisioned(true); }} className="space-y-4">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#1F1A17]/70 mb-1">Work Email</label>
-                  <input type="email" required placeholder="developer@brand.com" className="w-full rounded-[14px] bg-[#F3EBDD] border border-[#E8DCC9] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#D9822B]" />
+                  <input type="email" required placeholder="developer@brand.com" className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#EBDFC6] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#B5651A]" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#1F1A17]/70 mb-1">Company / Brand Name</label>
-                  <input required placeholder="Nova Brands" className="w-full rounded-[14px] bg-[#F3EBDD] border border-[#E8DCC9] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#D9822B]" />
+                  <input required placeholder="Nova Brands" className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#EBDFC6] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#B5651A]" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#1F1A17]/70 mb-1">Primary Market Region</label>
-                  <select className="w-full rounded-[14px] bg-[#F3EBDD] border border-[#E8DCC9] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#D9822B]">
+                  <select className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#EBDFC6] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#B5651A]">
                     <option>India (ap-south-1) · INR</option>
                     <option>Australia (ap-southeast-2) · AUD</option>
                     <option>New Zealand · NZD</option>

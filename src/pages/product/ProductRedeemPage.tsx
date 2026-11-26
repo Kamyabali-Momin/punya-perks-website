@@ -21,13 +21,13 @@ export const ProductRedeemPage: React.FC = () => {
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Redeem & Catalog' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-mono text-[11px] font-bold text-[#D9822B] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
               REDEMPTION CHANNELS
             </span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#17140F]">
               Fulfill Across Every Desire
             </h2>
           </div>
@@ -36,13 +36,13 @@ export const ProductRedeemPage: React.FC = () => {
             {options.map((opt) => {
               const Icon = opt.icon;
               return (
-                <div key={opt.title} className="rounded-[28px] bg-white p-8 border border-[#E8DCC9] shadow-sm flex flex-col justify-between">
+                <div key={opt.title} className="rounded-3xl bg-white p-7 sm:p-8 border border-[#EBDFC6] shadow-xs hover:shadow-md hover:border-[#B5651A]/40 transition-all duration-300 flex flex-col justify-between group">
                   <div>
-                    <div className="w-12 h-12 rounded-[16px] bg-[#F3EBDD] text-[#D9822B] flex items-center justify-center mb-6">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FAF5ED] text-[#B5651A] border border-[#EBDFC6] flex items-center justify-center mb-6 group-hover:bg-[#B5651A] group-hover:text-white transition-colors">
                       <Icon size={24} />
                     </div>
-                    <h3 className="font-display font-bold text-xl text-[#1F1A17] mb-3">{opt.title}</h3>
-                    <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{opt.desc}</p>
+                    <h3 className="font-display font-bold text-xl text-[#17140F] mb-3 group-hover:text-[#B5651A] transition-colors">{opt.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{opt.desc}</p>
                   </div>
                 </div>
               );

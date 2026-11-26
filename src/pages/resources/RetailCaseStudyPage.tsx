@@ -14,20 +14,20 @@ export const RetailCaseStudyPage: React.FC = () => {
         breadcrumbs={[{ label: 'Customers', href: '/customers' }, { label: 'Retail Case Study' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E8DCC9] font-body text-[#1F1A17]">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body text-[#1F1A17]">
         <div className="max-w-[1000px] mx-auto px-4 sm:px-6 md:px-8 space-y-12">
           {/* Key Metrics Banner */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8 rounded-[28px] bg-[#F3EBDD] border border-[#E8DCC9]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 p-8 rounded-[28px] bg-[#FAF5ED] border border-[#EBDFC6]">
             <div className="text-center">
-              <div className="font-display font-extrabold text-4xl text-[#D9822B]">+34%</div>
+              <div className="font-display font-extrabold text-4xl text-[#B5651A]">+34%</div>
               <div className="font-mono text-xs font-bold uppercase text-[#1F1A17]/70 mt-1">Repeat Purchase Lift</div>
             </div>
             <div className="text-center">
-              <div className="font-display font-extrabold text-4xl text-[#D9822B]">140 Stores</div>
+              <div className="font-display font-extrabold text-4xl text-[#B5651A]">140 Stores</div>
               <div className="font-mono text-xs font-bold uppercase text-[#1F1A17]/70 mt-1">Unified POS Counters</div>
             </div>
             <div className="text-center">
-              <div className="font-display font-extrabold text-4xl text-[#D9822B]">4 Weeks</div>
+              <div className="font-display font-extrabold text-4xl text-[#B5651A]">4 Weeks</div>
               <div className="font-mono text-xs font-bold uppercase text-[#1F1A17]/70 mt-1">Total Time to Launch</div>
             </div>
           </div>

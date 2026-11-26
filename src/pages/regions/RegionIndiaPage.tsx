@@ -23,10 +23,10 @@ export const RegionIndiaPage: React.FC = () => {
         breadcrumbs={[{ label: 'Regions' }, { label: 'India' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           <div className="max-w-2xl">
-            <span className="font-mono text-[11px] font-bold text-[#D9822B] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
               REGULATORY COMPLIANCE
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
@@ -36,8 +36,8 @@ export const RegionIndiaPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {compliancePoints.map((item, idx) => (
-              <div key={idx} className="rounded-[28px] bg-white p-8 border border-[#E8DCC9] shadow-sm space-y-3">
-                <div className="w-8 h-8 rounded-full bg-[#D9822B]/10 text-[#D9822B] flex items-center justify-center font-bold font-mono text-xs">
+              <div key={idx} className="rounded-[28px] bg-white p-8 border border-[#EBDFC6] shadow-sm space-y-3">
+                <div className="w-8 h-8 rounded-full bg-[#D9822B]/10 text-[#B5651A] flex items-center justify-center font-bold font-mono text-xs">
                   0{idx + 1}
                 </div>
                 <h3 className="font-display font-bold text-lg text-[#1F1A17]">{item.title}</h3>

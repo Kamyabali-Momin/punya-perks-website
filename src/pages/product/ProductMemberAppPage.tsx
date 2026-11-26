@@ -14,11 +14,11 @@ export const ProductMemberAppPage: React.FC = () => {
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Tiers & Member App' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="font-mono text-[11px] font-bold text-[#D9822B] tracking-[0.2em] uppercase block">
+              <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block">
                 WHITE-LABEL EXCELLENCE
               </span>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
@@ -29,11 +29,11 @@ export const ProductMemberAppPage: React.FC = () => {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 bg-white rounded-[20px] border border-[#E8DCC9]">
+                <div className="p-4 bg-white rounded-[20px] border border-[#EBDFC6]">
                   <div className="font-display font-bold text-sm text-[#1F1A17]">Dynamic Tier Themes</div>
                   <div className="text-xs text-[#1F1A17]/70 mt-1">App UI transforms in real-time as members advance tiers.</div>
                 </div>
-                <div className="p-4 bg-white rounded-[20px] border border-[#E8DCC9]">
+                <div className="p-4 bg-white rounded-[20px] border border-[#EBDFC6]">
                   <div className="font-display font-bold text-sm text-[#1F1A17]">Multilingual by Default</div>
                   <div className="text-xs text-[#1F1A17]/70 mt-1">English, Hindi, and full Arabic RTL typography out of the box.</div>
                 </div>
@@ -42,7 +42,7 @@ export const ProductMemberAppPage: React.FC = () => {
 
             <div className="lg:col-span-6 flex justify-center">
               {/* Smartphone Frame */}
-              <div className="w-[300px] rounded-[44px] bg-[#1F1A17] p-4 shadow-2xl border-4 border-[#E8DCC9]">
+              <div className="w-[300px] rounded-[44px] bg-[#1F1A17] p-4 shadow-2xl border-4 border-[#EBDFC6]">
                 <div className="rounded-[36px] bg-white p-5 space-y-4">
                   <div className="flex justify-between items-center text-xs">
                     <span className="font-display font-bold text-[#1F1A17]">Aryan Verma</span>
@@ -55,9 +55,9 @@ export const ProductMemberAppPage: React.FC = () => {
                   </div>
                   <div className="space-y-2">
                     <div className="text-xs font-bold text-[#1F1A17]">Recent Perks</div>
-                    <div className="p-3 bg-[#F3EBDD] rounded-[14px] text-xs flex justify-between">
+                    <div className="p-3 bg-[#FAF5ED] rounded-[14px] text-xs flex justify-between">
                       <span>Store Visit Multiplier</span>
-                      <span className="font-bold text-[#D9822B]">+61 pts</span>
+                      <span className="font-bold text-[#B5651A]">+61 pts</span>
                     </div>
                   </div>
                 </div>

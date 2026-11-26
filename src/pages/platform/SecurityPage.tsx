@@ -179,7 +179,7 @@ export const SecurityPage: React.FC = () => {
       </PageHeader>
 
       {/* Security Pillars: How We Protect Data */}
-      <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
@@ -199,7 +199,7 @@ export const SecurityPage: React.FC = () => {
               return (
                 <div 
                   key={idx}
-                  className="rounded-3xl bg-white p-8 border border-[#E8DCC9] shadow-[0_2px_12px_rgba(28,22,16,0.04)] hover:shadow-[0_8px_24px_rgba(28,22,16,0.08)] hover:border-[#D9822B]/50 transition-all flex flex-col justify-between"
+                  className="rounded-3xl bg-white p-8 border border-[#EBDFC6] shadow-[0_2px_12px_rgba(28,22,16,0.04)] hover:shadow-[0_8px_24px_rgba(28,22,16,0.08)] hover:border-[#B5651A]/50 transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-2xl bg-[#FEF0E1] border border-[#F3D7BD] flex items-center justify-center text-[#B5651A] mb-5">
@@ -305,7 +305,7 @@ export const SecurityPage: React.FC = () => {
       </section>
 
       {/* Responsible AI & Algorithmic Governance */}
-      <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-24 bg-[#FAF4EC] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
@@ -323,7 +323,7 @@ export const SecurityPage: React.FC = () => {
             {responsibleAi.map((item, idx) => (
               <div 
                 key={idx}
-                className="rounded-3xl bg-white p-7 sm:p-8 border border-[#E8DCC9] shadow-[0_2px_12px_rgba(28,22,16,0.04)]"
+                className="rounded-3xl bg-white p-7 sm:p-8 border border-[#EBDFC6] shadow-[0_2px_12px_rgba(28,22,16,0.04)]"
               >
                 <div className="w-10 h-10 rounded-xl bg-[#FEF0E1] border border-[#F3D7BD] flex items-center justify-center text-[#B5651A] mb-4">
                   <CpuIcon size={20} />
@@ -339,7 +339,7 @@ export const SecurityPage: React.FC = () => {
           </div>
 
           <p className="text-center text-xs text-neutral-500 mt-8 font-body">
-            Read our <Link to="/legal/privacy" className="text-[#D9822B] hover:underline font-bold">Privacy Policy</Link> or contact <a href="mailto:security@punyaperks.com" className="text-[#D9822B] hover:underline font-bold">security@punyaperks.com</a> to request custom security attestations.
+            Read our <Link to="/legal/privacy" className="text-[#B5651A] hover:underline font-bold">Privacy Policy</Link> or contact <a href="mailto:security@punyaperks.com" className="text-[#B5651A] hover:underline font-bold">security@punyaperks.com</a> to request custom security attestations.
           </p>
         </div>
       </section>

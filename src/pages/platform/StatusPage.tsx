@@ -169,19 +169,19 @@ export const StatusPage: React.FC = () => {
 
           {/* Quick Stats Grid */}
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E8DCC9] text-center">
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EBDFC6] text-center">
               <div className="text-2xl sm:text-3xl font-display font-bold text-[#17140F]">99.994%</div>
               <div className="text-xs text-[#8C827A] font-medium mt-1">90-Day Global Uptime</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E8DCC9] text-center">
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EBDFC6] text-center">
               <div className="text-2xl sm:text-3xl font-display font-bold text-[#17140F]">42ms</div>
               <div className="text-xs text-[#8C827A] font-medium mt-1">Average P95 Latency</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E8DCC9] text-center">
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EBDFC6] text-center">
               <div className="text-2xl sm:text-3xl font-display font-bold text-[#17140F]">0</div>
               <div className="text-xs text-[#8C827A] font-medium mt-1">Active P1 Incidents</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E8DCC9] text-center">
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EBDFC6] text-center">
               <div className="text-2xl sm:text-3xl font-display font-bold text-[#17140F]">4 Regions</div>
               <div className="text-xs text-[#8C827A] font-medium mt-1">Data Sovereignty</div>
             </div>
@@ -200,14 +200,14 @@ export const StatusPage: React.FC = () => {
                 <h2 className="font-display font-bold text-2xl text-[#17140F]">Regional Cloud Clusters</h2>
                 <p className="text-xs sm:text-sm text-[#5B534C] mt-0.5">Sovereign multi-tenant data pods with local failovers.</p>
               </div>
-              <span className="font-mono text-xs text-[#8C827A] bg-white px-3 py-1.5 rounded-full border border-[#E8DCC9] self-start sm:self-auto">
+              <span className="font-mono text-xs text-[#8C827A] bg-white px-3 py-1.5 rounded-full border border-[#EBDFC6] self-start sm:self-auto">
                 Auto-refreshed every 60s
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {clusters.map((c) => (
-                <div key={c.code} className="bg-white p-5 rounded-2xl border border-[#E8DCC9] shadow-xs space-y-3">
+                <div key={c.code} className="bg-white p-5 rounded-2xl border border-[#EBDFC6] shadow-xs space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="text-xs font-mono text-[#8C827A] uppercase">{c.code}</span>
                     <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold">
@@ -235,13 +235,13 @@ export const StatusPage: React.FC = () => {
               <p className="text-xs sm:text-sm text-[#5B534C] mt-0.5">Continuous health telemetry for transactional workflows.</p>
             </div>
 
-            <div className="bg-white rounded-2xl border border-[#E8DCC9] divide-y divide-[#FAF3E8] overflow-hidden shadow-xs">
+            <div className="bg-white rounded-2xl border border-[#EBDFC6] divide-y divide-[#FAF3E8] overflow-hidden shadow-xs">
               {services.map((svc) => {
                 const Icon = svc.icon;
                 return (
                   <div key={svc.name} className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#FAF7F2]/40 transition-colors">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-[#FAF3E8] border border-[#E8DCC9] flex items-center justify-center text-[#B5651A] shrink-0 mt-0.5">
+                      <div className="w-10 h-10 rounded-xl bg-[#FAF3E8] border border-[#EBDFC6] flex items-center justify-center text-[#B5651A] shrink-0 mt-0.5">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
@@ -275,7 +275,7 @@ export const StatusPage: React.FC = () => {
 
             <div className="space-y-3">
               {pastIncidents.map((inc, i) => (
-                <div key={i} className="bg-white p-5 rounded-xl border border-[#E8DCC9] shadow-xs space-y-2">
+                <div key={i} className="bg-white p-5 rounded-xl border border-[#EBDFC6] shadow-xs space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
                     <span className="font-mono text-[#8C827A]">{inc.date}</span>
                     <span className="inline-flex items-center gap-1 text-emerald-700 font-bold">
@@ -315,7 +315,7 @@ export const StatusPage: React.FC = () => {
                     value={subscribedEmail}
                     onChange={(e) => setSubscribedEmail(e.target.value)}
                     placeholder="Enter engineering email..."
-                    className="px-4 py-2.5 rounded-full bg-white border border-[#E8DCC9] text-xs sm:text-sm text-[#17140F] outline-none focus:border-[#B5651A]"
+                    className="px-4 py-2.5 rounded-full bg-white border border-[#EBDFC6] text-xs sm:text-sm text-[#17140F] outline-none focus:border-[#B5651A]"
                   />
                   <button
                     type="submit"

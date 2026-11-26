@@ -290,7 +290,7 @@ export const RoiEstimatorSection: React.FC = () => {
                   <div className="relative z-10 pt-5 mt-5 border-t border-white/10">
                     <a
                       href="/demo"
-                      className="w-full py-3.5 px-4 rounded-[12px] bg-[#B5651A] hover:bg-[#9a5413] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 group cursor-pointer"
+                      className="w-full py-3.5 px-6 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group cursor-pointer"
                     >
                       <span>Get Detailed Financial Model</span>
                       <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />

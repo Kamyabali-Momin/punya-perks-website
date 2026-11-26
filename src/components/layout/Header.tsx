@@ -156,15 +156,15 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
         ref={navRef}
         className={`sticky top-0 z-50 w-full transition-all duration-200 ${
           scrolled
-            ? 'bg-[#FBF7F0]/95 backdrop-blur-md shadow-md border-b border-[#E8DCC9] py-2.5'
-            : 'bg-[#FBF7F0] border-b border-[#E8DCC9] py-3.5'
+            ? 'bg-[#FBF7F0]/95 backdrop-blur-md shadow-md border-b border-[#EBDFC6] py-2.5'
+            : 'bg-[#FBF7F0] border-b border-[#EBDFC6] py-3.5'
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 flex items-center justify-between">
           {/* Brand Logo - Marigold floret + Punya Perks */}
           <a href="/" className="flex items-center gap-2.5 shrink-0 group">
             <svg
-              className="w-7 h-7 text-[#D9822B] shrink-0"
+              className="w-7 h-7 text-[#B5651A] shrink-0 transition-transform group-hover:scale-105"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -179,7 +179,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               <ellipse cx="6.34" cy="17.66" rx="2.2" ry="3.2" transform="rotate(45 6.34 17.66)" />
             </svg>
             <span className="font-display text-2xl tracking-tight text-[#1F1A17]">
-              Punya <span className="italic text-[#D9822B]">Perks</span>
+              Punya <span className="italic text-[#B5651A]">Perks</span>
             </span>
           </a>
 
@@ -218,7 +218,12 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               Sign in
             </a>
 
-            <Button href="/demo" variant="primary" size="md" className="rounded-full px-5 py-2.5 font-semibold shadow-sm">
+            <Button
+              href="/demo"
+              variant="primary"
+              size="md"
+              className="rounded-full px-5 py-2.5 font-semibold shadow-xs bg-[#B5651A] hover:bg-[#9a5413] text-white transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+            >
               Request a demo
             </Button>
           </div>

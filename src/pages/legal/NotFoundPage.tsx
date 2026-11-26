@@ -47,7 +47,7 @@ export const NotFoundPage: React.FC = () => {
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#E8DCC9] shadow-xs mb-4">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#EBDFC6] shadow-xs mb-4">
             <ShieldAlert className="w-4 h-4 text-[#B5651A]" />
             <span className="font-mono text-xs font-bold text-[#B5651A] tracking-[0.2em] uppercase">
               Error 404 · Page Not Found
@@ -71,7 +71,7 @@ export const NotFoundPage: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search across all 44 pages (e.g. pricing, whatsapp, help)..."
-                className="w-full pl-12 pr-4 py-3.5 rounded-full bg-white border-2 border-[#E8DCC9] text-sm sm:text-base text-[#17140F] placeholder-[#8C827A] outline-none shadow-md focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all"
+                className="w-full pl-12 pr-4 py-3.5 rounded-full bg-white border-2 border-[#EBDFC6] text-sm sm:text-base text-[#17140F] placeholder-[#8C827A] outline-none shadow-md focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all"
               />
               {searchQuery && (
                 <button
@@ -106,7 +106,7 @@ export const NotFoundPage: React.FC = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="p-5 rounded-2xl bg-white border border-[#E8DCC9] hover:border-[#B5651A] hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-white border border-[#EBDFC6] hover:border-[#B5651A] hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
@@ -130,7 +130,7 @@ export const NotFoundPage: React.FC = () => {
           </div>
 
           {filteredLinks.length === 0 && (
-            <div className="p-12 text-center bg-white rounded-2xl border border-[#E8DCC9]">
+            <div className="p-12 text-center bg-white rounded-2xl border border-[#EBDFC6]">
               <HelpCircle className="w-10 h-10 text-[#8C827A] mx-auto mb-3" />
               <p className="text-base font-bold text-[#17140F]">No pages found matching "{searchQuery}"</p>
               <p className="text-xs text-[#5B534C] mt-1">Try checking your spelling or visit our homepage.</p>

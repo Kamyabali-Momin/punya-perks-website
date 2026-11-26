@@ -93,7 +93,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
               {primaryCtaText && (
                 <a
                   href={primaryCtaHref}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-body font-medium text-xs sm:text-sm transition-all shadow-sm cursor-pointer"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-sm hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
                 >
                   <span>{primaryCtaText}</span>
                 </a>
@@ -101,7 +101,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
               {secondaryCtaText && (
                 <a
                   href={secondaryCtaHref}
-                  className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white/80 hover:bg-white text-[#17140F] border border-[#17140F]/15 font-body font-medium text-xs sm:text-sm transition-all shadow-xs cursor-pointer"
+                  className="inline-flex items-center justify-center px-7 py-3.5 rounded-full bg-white hover:bg-[#FAF5ED] text-[#17140F] border border-[#EBDFC6] font-body font-semibold text-xs sm:text-sm transition-all shadow-2xs hover:border-[#B5651A]/40 cursor-pointer"
                 >
                   <span>{secondaryCtaText}</span>
                 </a>

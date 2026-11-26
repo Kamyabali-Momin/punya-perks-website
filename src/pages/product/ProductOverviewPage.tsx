@@ -615,17 +615,17 @@ export const ProductOverviewPage: React.FC = () => {
       </div>
 
       {/* Feature Availability by Plan Matrix (1440px Container) */}
-      <section className="bg-[#FAF4EC] py-16 sm:py-24 border-b border-[#E8DCC9]">
+      <section className="bg-[#FAF5ED] py-16 sm:py-24 border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="bg-white rounded-[28px] p-8 sm:p-12 border border-[#E8DCC9] shadow-sm">
+          <div className="bg-white rounded-3xl p-8 sm:p-12 border border-[#EBDFC6] shadow-sm">
             <div className="mb-8">
               <span className="font-mono text-xs font-bold uppercase tracking-wider text-[#B5651A] block mb-2">
                 DEPLOYMENT TIERS
               </span>
-              <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#1C1610] mb-2">
+              <h2 className="font-display text-2xl sm:text-3xl font-extrabold text-[#17140F] mb-2">
                 Feature Availability by Architecture Tier
               </h2>
-              <p className="font-body text-sm text-neutral-600 max-w-2xl leading-relaxed">
+              <p className="font-body text-sm text-[#5B534C] max-w-2xl leading-relaxed">
                 Choose the architecture tier that matches your transacting member volume. Every tier includes our non-negotiable double-entry ledger guarantee.
               </p>
             </div>
@@ -633,18 +633,18 @@ export const ProductOverviewPage: React.FC = () => {
             <div className="overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm font-body">
                 <thead>
-                  <tr className="border-b border-[#E8DCC9] text-neutral-500 font-mono text-[11px] uppercase tracking-wider">
-                    <th className="py-3.5 pr-4 font-bold text-neutral-800">Capability</th>
-                    <th className="py-3.5 px-3 font-bold text-neutral-700 text-center">Starter</th>
-                    <th className="py-3.5 px-3 font-bold text-[#D9822B] text-center bg-[#FEF0E1]/40 rounded-t-xl">Growth</th>
-                    <th className="py-3.5 px-3 font-bold text-neutral-800 text-center">Enterprise</th>
-                    <th className="py-3.5 px-3 font-bold text-neutral-800 text-center">Coalition</th>
+                  <tr className="border-b border-[#EBDFC6] text-[#847C75] font-mono text-[11px] uppercase tracking-wider">
+                    <th className="py-3.5 pr-4 font-bold text-[#17140F]">Capability</th>
+                    <th className="py-3.5 px-3 font-bold text-[#5B534C] text-center">Starter</th>
+                    <th className="py-3.5 px-3 font-bold text-[#B5651A] text-center bg-[#FBE9D6]/40 rounded-t-xl">Growth</th>
+                    <th className="py-3.5 px-3 font-bold text-[#17140F] text-center">Enterprise</th>
+                    <th className="py-3.5 px-3 font-bold text-[#17140F] text-center">Coalition</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#E8DCC9]/60 text-[#1C1610]">
+                <tbody className="divide-y divide-[#EBDFC6]/60 text-[#17140F]">
                   {planComparison.map((row, idx) => (
-                    <tr key={idx} className="hover:bg-[#FAF4EC]/40 transition-colors">
-                      <td className="py-4 pr-4 font-medium text-neutral-800">
+                    <tr key={idx} className="hover:bg-[#FAF5ED]/50 transition-colors">
+                      <td className="py-4 pr-4 font-medium text-[#17140F]">
                         {row.feature}
                       </td>
                       <td className="py-4 px-3 text-center">
@@ -654,7 +654,7 @@ export const ProductOverviewPage: React.FC = () => {
                           <XIcon className="w-4 h-4 text-neutral-300 mx-auto" />
                         )}
                       </td>
-                      <td className="py-4 px-3 text-center bg-[#FEF0E1]/40 font-semibold">
+                      <td className="py-4 px-3 text-center bg-[#FBE9D6]/20 font-semibold">
                         {row.growth ? (
                           <CheckIcon className="w-4 h-4 text-emerald-600 mx-auto" />
                         ) : (
@@ -681,11 +681,11 @@ export const ProductOverviewPage: React.FC = () => {
               </table>
             </div>
 
-            <div className="mt-8 pt-6 border-t border-[#E8DCC9] flex flex-wrap items-center justify-between gap-4 text-xs text-neutral-500 font-body">
+            <div className="mt-8 pt-6 border-t border-[#EBDFC6] flex flex-wrap items-center justify-between gap-4 text-xs text-neutral-500 font-body">
               <span>Need custom POS concurrency limits or specialized data isolation enclaves?</span>
               <Link
                 to="/contact"
-                className="font-bold text-[#D9822B] hover:text-[#B5651A] inline-flex items-center gap-1"
+                className="font-bold text-[#B5651A] hover:text-[#B5651A] inline-flex items-center gap-1"
               >
                 <span>Talk to our enterprise solution architects</span>
                 <span>→</span>

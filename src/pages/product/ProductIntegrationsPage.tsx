@@ -33,18 +33,18 @@ export const ProductIntegrationsPage: React.FC = () => {
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Integrations' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           {categories.map((cat) => (
             <div key={cat.name} className="space-y-4">
-              <h3 className="font-display font-bold text-xl text-[#1F1A17] border-b border-[#E8DCC9] pb-2">
+              <h3 className="font-display font-bold text-xl text-[#1F1A17] border-b border-[#EBDFC6] pb-2">
                 {cat.name}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
                 {cat.partners.map((p) => (
                   <div
                     key={p}
-                    className="p-4 rounded-[16px] bg-white border border-[#E8DCC9] text-center font-display font-semibold text-xs sm:text-sm text-[#1F1A17] shadow-2xs hover:border-[#D9822B]/50 transition-colors"
+                    className="p-4 rounded-[16px] bg-white border border-[#EBDFC6] text-center font-display font-semibold text-xs sm:text-sm text-[#1F1A17] shadow-2xs hover:border-[#B5651A]/50 transition-colors"
                   >
                     {p}
                   </div>

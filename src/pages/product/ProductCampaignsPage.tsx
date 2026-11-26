@@ -23,10 +23,10 @@ export const ProductCampaignsPage: React.FC = () => {
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'Campaigns & Offers' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-mono text-[11px] font-bold text-[#D9822B] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
               SIX-STEP WORKFLOW
             </span>
             <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
@@ -36,9 +36,9 @@ export const ProductCampaignsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((s) => (
-              <div key={s.num} className="rounded-[28px] bg-white p-8 border border-[#E8DCC9] shadow-sm flex flex-col justify-between">
+              <div key={s.num} className="rounded-[28px] bg-white p-8 border border-[#EBDFC6] shadow-sm flex flex-col justify-between">
                 <div>
-                  <span className="font-display font-extrabold text-3xl text-[#D9822B] block mb-3">{s.num}</span>
+                  <span className="font-display font-extrabold text-3xl text-[#B5651A] block mb-3">{s.num}</span>
                   <h3 className="font-display font-bold text-xl text-[#1F1A17] mb-2">{s.title}</h3>
                   <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{s.desc}</p>
                 </div>
@@ -56,7 +56,7 @@ export const ProductCampaignsPage: React.FC = () => {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#D9822B]/15 rounded-full blur-2xl pointer-events-none" />
 
             <div className="lg:col-span-7 space-y-4 relative z-10">
-              <span className="font-mono text-[11px] font-bold text-[#D9822B] uppercase tracking-[0.16em] inline-block px-3 py-1 rounded-full bg-[#B5651A]/15 border border-[#B5651A]/30">
+              <span className="font-mono text-[11px] font-bold text-[#B5651A] uppercase tracking-[0.16em] inline-block px-3 py-1 rounded-full bg-[#B5651A]/15 border border-[#B5651A]/30">
                 SCIENTIFIC HOLDOUT TESTING
               </span>
               <h3 className="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#FAF3E8] tracking-tight leading-[1.15]">
@@ -80,7 +80,7 @@ export const ProductCampaignsPage: React.FC = () => {
                 <span>Control Group Spend:</span>
                 <span className="text-white/60 font-medium">₹1,410 AOV</span>
               </div>
-              <div className="pt-2 flex justify-between items-center text-sm font-display font-bold text-[#D9822B]">
+              <div className="pt-2 flex justify-between items-center text-sm font-display font-bold text-[#B5651A]">
                 <span>Net Incremental Lift:</span>
                 <span className="text-base text-[#52C485] font-mono font-bold">+30.5% Lift</span>
               </div>

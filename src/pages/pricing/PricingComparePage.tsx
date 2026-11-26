@@ -28,16 +28,16 @@ export const PricingComparePage: React.FC = () => {
         breadcrumbs={[{ label: 'Pricing', href: '/pricing' }, { label: 'Compare Plans' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="rounded-[28px] bg-white border border-[#E8DCC9] shadow-sm overflow-hidden">
+          <div className="rounded-[28px] bg-white border border-[#EBDFC6] shadow-sm overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full text-left border-collapse text-xs sm:text-sm">
                 <thead>
-                  <tr className="bg-[#F3EBDD] border-b border-[#E8DCC9]">
+                  <tr className="bg-[#FAF5ED] border-b border-[#EBDFC6]">
                     <th className="p-4 sm:p-6 font-display font-bold text-[#1F1A17]">Capability</th>
                     <th className="p-4 sm:p-6 font-display font-bold text-[#1F1A17] text-center w-40">Launch</th>
-                    <th className="p-4 sm:p-6 font-display font-bold text-[#D9822B] text-center w-48 bg-[#D9822B]/5">Growth</th>
+                    <th className="p-4 sm:p-6 font-display font-bold text-[#B5651A] text-center w-48 bg-[#D9822B]/5">Growth</th>
                     <th className="p-4 sm:p-6 font-display font-bold text-[#1F1A17] text-center w-48">Enterprise</th>
                   </tr>
                 </thead>
@@ -47,21 +47,21 @@ export const PricingComparePage: React.FC = () => {
                       <td className="p-4 sm:p-5 font-medium text-[#1F1A17]">{r.feature}</td>
                       <td className="p-4 sm:p-5 text-center text-[#1F1A17]/80">
                         {typeof r.launch === 'boolean' ? (
-                          r.launch ? <CheckIcon className="inline text-[#D9822B]" size={18} /> : <MinusIcon className="inline text-[#1F1A17]/30" size={18} />
+                          r.launch ? <CheckIcon className="inline text-[#B5651A]" size={18} /> : <MinusIcon className="inline text-[#1F1A17]/30" size={18} />
                         ) : (
                           r.launch
                         )}
                       </td>
-                      <td className="p-4 sm:p-5 text-center font-semibold text-[#D9822B] bg-[#D9822B]/5">
+                      <td className="p-4 sm:p-5 text-center font-semibold text-[#B5651A] bg-[#D9822B]/5">
                         {typeof r.growth === 'boolean' ? (
-                          r.growth ? <CheckIcon className="inline text-[#D9822B]" size={18} /> : <MinusIcon className="inline text-[#1F1A17]/30" size={18} />
+                          r.growth ? <CheckIcon className="inline text-[#B5651A]" size={18} /> : <MinusIcon className="inline text-[#1F1A17]/30" size={18} />
                         ) : (
                           r.growth
                         )}
                       </td>
                       <td className="p-4 sm:p-5 text-center font-semibold text-[#1F1A17]">
                         {typeof r.enterprise === 'boolean' ? (
-                          r.enterprise ? <CheckIcon className="inline text-[#D9822B]" size={18} /> : <MinusIcon className="inline text-[#1F1A17]/30" size={18} />
+                          r.enterprise ? <CheckIcon className="inline text-[#B5651A]" size={18} /> : <MinusIcon className="inline text-[#1F1A17]/30" size={18} />
                         ) : (
                           r.enterprise
                         )}

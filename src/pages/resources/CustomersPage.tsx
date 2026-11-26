@@ -259,7 +259,7 @@ export const CustomersPage: React.FC = () => {
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search case studies..."
-                className="w-full h-11 rounded-full border border-neutral-300 bg-white pl-11 pr-4 text-xs sm:text-sm text-neutral-900 placeholder:text-neutral-400 outline-none focus:border-[#D9822B] focus:ring-2 focus:ring-[#D9822B]/20 transition-all shadow-xs font-body"
+                className="w-full h-11 rounded-full border border-neutral-300 bg-white pl-11 pr-4 text-xs sm:text-sm text-neutral-900 placeholder:text-neutral-400 outline-none focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all shadow-xs font-body"
               />
             </div>
 
@@ -383,7 +383,7 @@ export const CustomersPage: React.FC = () => {
                       </p>
 
                       {/* Title */}
-                      <h3 className="mt-2 text-base sm:text-lg font-bold text-neutral-900 group-hover:text-[#D9822B] transition-colors line-clamp-2 leading-snug font-display">
+                      <h3 className="mt-2 text-base sm:text-lg font-bold text-neutral-900 group-hover:text-[#B5651A] transition-colors line-clamp-2 leading-snug font-display">
                         {item.title}
                       </h3>
 

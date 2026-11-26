@@ -14,11 +14,11 @@ export const ProductWhatsAppPage: React.FC = () => {
         breadcrumbs={[{ label: 'Product', href: '/product' }, { label: 'WhatsApp Loyalty' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="font-mono text-[11px] font-bold text-[#D9822B] tracking-[0.2em] uppercase block">
+              <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block">
                 CONVERSATIONAL COMMERCE
               </span>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
@@ -35,7 +35,7 @@ export const ProductWhatsAppPage: React.FC = () => {
                   'Automated post-purchase points receipt sent within 3 seconds of POS billing',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#1F1A17] font-medium">
-                    <CheckCircle2Icon size={16} className="text-[#D9822B] shrink-0 mt-0.5" />
+                    <CheckCircle2Icon size={16} className="text-[#B5651A] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -43,7 +43,7 @@ export const ProductWhatsAppPage: React.FC = () => {
             </div>
 
             <div className="lg:col-span-6 flex justify-center">
-              <div className="w-[320px] rounded-[36px] bg-[#E5ECE8] p-3 shadow-xl border border-[#E8DCC9]">
+              <div className="w-[320px] rounded-[36px] bg-[#E5ECE8] p-3 shadow-xl border border-[#EBDFC6]">
                 <div className="bg-[#EFEAE2] rounded-[30px] p-4 space-y-3 text-xs">
                   <div className="bg-white p-3 rounded-[12px] shadow-2xs space-y-1">
                     <div className="font-bold text-[#1F1A17]">Punya Perks Loyalty Assistant</div>

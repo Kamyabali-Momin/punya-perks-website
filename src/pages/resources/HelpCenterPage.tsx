@@ -103,7 +103,7 @@ export const HelpCenterPage: React.FC = () => {
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10 text-center">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-[#E8DCC9] shadow-xs mb-6">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 border border-[#EBDFC6] shadow-xs mb-6">
             <LifeBuoy className="w-4 h-4 text-[#B5651A]" />
             <span className="font-mono text-[11px] font-bold text-[#17140F] tracking-wide uppercase">
               Help Centre & Knowledge Base
@@ -127,7 +127,7 @@ export const HelpCenterPage: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search keywords: POS sync, WhatsApp OTP, ledger audit, points expiry..."
-                className="w-full pl-12 pr-4 py-4 rounded-full bg-white border-2 border-[#E8DCC9] text-base text-[#17140F] placeholder-[#8C827A] outline-none shadow-md focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all font-body"
+                className="w-full pl-12 pr-4 py-4 rounded-full bg-white border-2 border-[#EBDFC6] text-base text-[#17140F] placeholder-[#8C827A] outline-none shadow-md focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all font-body"
               />
               {searchQuery && (
                 <button
@@ -169,7 +169,7 @@ export const HelpCenterPage: React.FC = () => {
                   className={`p-4 rounded-xl text-left border transition-all cursor-pointer flex flex-col justify-between h-28 ${
                     isActive
                       ? 'bg-white border-[#B5651A] shadow-md ring-1 ring-[#B5651A]'
-                      : 'bg-white/80 border-[#E8DCC9] hover:bg-white hover:border-[#B5651A]/40'
+                      : 'bg-white/80 border-[#EBDFC6] hover:bg-white hover:border-[#B5651A]/40'
                   }`}
                 >
                   <Icon className={`w-5 h-5 ${isActive ? 'text-[#B5651A]' : 'text-[#8C827A]'}`} />
@@ -197,7 +197,7 @@ export const HelpCenterPage: React.FC = () => {
               </div>
 
               {filteredFaqs.length === 0 ? (
-                <div className="p-8 text-center bg-white rounded-2xl border border-[#E8DCC9]">
+                <div className="p-8 text-center bg-white rounded-2xl border border-[#EBDFC6]">
                   <HelpCircle className="w-10 h-10 text-[#8C827A] mx-auto mb-3" />
                   <p className="text-[#17140F] font-bold">No articles match "{searchQuery}"</p>
                   <p className="text-xs text-[#5B534C] mt-1">Try another keyword or talk to our live support engineers.</p>
@@ -252,7 +252,7 @@ export const HelpCenterPage: React.FC = () => {
               <div className="relative overflow-hidden mt-8 p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] border border-[#3E2C20] shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                 <div className="absolute top-0 right-1/3 w-48 h-48 bg-[#B5651A]/15 rounded-full blur-2xl pointer-events-none" />
                 <div className="relative z-10">
-                  <div className="font-mono text-xs font-semibold text-[#D9822B] uppercase tracking-wider mb-1.5">
+                  <div className="font-mono text-xs font-semibold text-[#B5651A] uppercase tracking-wider mb-1.5">
                     API & Webhook Docs
                   </div>
                   <h3 className="font-display font-bold text-lg sm:text-xl text-[#FAF3E8] tracking-tight">
@@ -275,8 +275,8 @@ export const HelpCenterPage: React.FC = () => {
             {/* Direct Assistance Sidebar (4 cols) */}
             <div className="lg:col-span-4 space-y-6">
               {/* Live Support Card */}
-              <div className="bg-white rounded-2xl p-6 border border-[#E8DCC9] shadow-xs space-y-4">
-                <div className="w-10 h-10 rounded-full bg-[#FAF3E8] border border-[#E8DCC9] flex items-center justify-center text-[#B5651A]">
+              <div className="bg-white rounded-2xl p-6 border border-[#EBDFC6] shadow-xs space-y-4">
+                <div className="w-10 h-10 rounded-full bg-[#FAF3E8] border border-[#EBDFC6] flex items-center justify-center text-[#B5651A]">
                   <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>

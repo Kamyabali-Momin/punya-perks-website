@@ -15,7 +15,7 @@ export const TermsPage: React.FC = () => {
         microcopy=""
       />
 
-      <article className="py-16 sm:py-20 bg-white border-b border-[#E8DCC9] font-body text-[#1F1A17]">
+      <article className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body text-[#1F1A17]">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 md:px-8 space-y-6 text-sm sm:text-base leading-relaxed">
           <h2 className="font-display font-bold text-2xl text-[#1F1A17]">1. Service Level Agreements</h2>
           <p>

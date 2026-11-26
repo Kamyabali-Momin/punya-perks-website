@@ -25,7 +25,7 @@ export const PageCta: React.FC<PageCtaProps> = ({
   return (
     <section className={className} aria-labelledby="page-cta-title">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-        <div className="flex flex-col items-start justify-between gap-8 rounded-[24px] bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-xl border border-[#3E2C20] relative overflow-hidden">
+        <div className="flex flex-col items-start justify-between gap-8 rounded-[24px] bg-gradient-to-r from-[#1F0E05] via-[#2B160C] to-[#1F0E05] px-8 py-10 md:flex-row md:items-center md:px-12 shadow-xl border border-[#3E2C20] relative overflow-hidden">
           {/* Subtle Ambient Marigold Glow & Geometry Watermark */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/4 opacity-15 pointer-events-none">
             <svg width="360" height="360" viewBox="0 0 64 64" fill="none">
@@ -43,7 +43,7 @@ export const PageCta: React.FC<PageCtaProps> = ({
 
           {/* Left: Content */}
           <div className="flex-1 relative z-10 max-w-2xl">
-            <div className="text-[11px] font-bold uppercase tracking-wider text-[#D9822B] mb-2 font-body">
+            <div className="text-[11px] font-bold uppercase tracking-wider text-[#B5651A] mb-2 font-body">
               {subtitle}
             </div>
             <h2
@@ -61,7 +61,7 @@ export const PageCta: React.FC<PageCtaProps> = ({
           <div className="flex shrink-0 flex-wrap items-center gap-3 relative z-10">
             <a
               href={buttonHref}
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#B5651A] hover:bg-[#9a5413] px-7 text-xs font-bold text-white shadow-md hover:scale-105 transition-all cursor-pointer font-body"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-[#B5651A] hover:bg-[#9a5413] px-7 text-xs sm:text-sm font-semibold text-white shadow-md hover:scale-[1.02] active:scale-[0.98] transition-all cursor-pointer font-body"
             >
               <span>{buttonText}</span>
               <ArrowRightIcon size={14} className="text-white" />
@@ -69,7 +69,7 @@ export const PageCta: React.FC<PageCtaProps> = ({
             {secondaryText && secondaryHref && (
               <a
                 href={secondaryHref}
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/5 hover:bg-white/15 px-6 text-xs font-semibold text-white transition-all cursor-pointer font-body"
+                className="inline-flex h-12 items-center justify-center rounded-full border border-white/30 bg-white/10 hover:bg-white/20 px-6 text-xs sm:text-sm font-semibold text-white transition-all cursor-pointer font-body"
               >
                 {secondaryText}
               </a>

@@ -52,9 +52,9 @@ export const MetricsSection: React.FC = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className="rounded-2xl border border-[#17140F]/80 p-5 sm:p-6 text-center flex flex-col items-center justify-center min-h-[125px] bg-white shadow-2xs hover:border-[#B5651A] transition-colors"
+                className="rounded-2xl border border-[#EBDFC6] hover:border-[#B5651A]/60 p-5 sm:p-6 text-center flex flex-col items-center justify-center min-h-[130px] bg-white shadow-xs hover:shadow-md transition-all duration-300 group"
               >
-                <div className="font-display font-normal text-4xl sm:text-5xl text-[#B5651A] tracking-tight leading-none">
+                <div className="font-display font-normal text-4xl sm:text-5xl text-[#B5651A] group-hover:scale-105 transition-transform duration-300 tracking-tight leading-none">
                   {stat.value}
                 </div>
                 <p className="text-xs sm:text-[13px] text-[#5B534C] mt-2.5 leading-snug font-normal max-w-[190px]">

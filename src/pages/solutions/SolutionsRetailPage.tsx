@@ -20,25 +20,25 @@ export const SolutionsRetailPage: React.FC = () => {
         breadcrumbs={[{ label: 'Solutions' }, { label: 'Retail & Fashion' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#F3EBDD] border-b border-[#E8DCC9]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
-            <span className="font-mono text-[11px] font-bold text-[#D9822B] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
               PROBLEMS WE SOLVE
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#1F1A17]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
               Engineered for Multi-Store Retail Realities
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {problems.map((item, idx) => (
-              <div key={idx} className="rounded-[28px] bg-white p-8 border border-[#E8DCC9] shadow-sm space-y-4">
-                <span className="font-mono text-xs font-bold text-red-600 block">CHALLENGE {idx + 1}</span>
-                <h4 className="font-display font-bold text-base text-[#1F1A17]">{item.problem}</h4>
-                <div className="pt-3 border-t border-[#E8DCC9]/60">
-                  <span className="font-mono text-xs font-bold text-[#D9822B] block mb-1">PUNYA PERKS SOLUTION</span>
-                  <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{item.solution}</p>
+              <div key={idx} className="rounded-3xl bg-white p-7 sm:p-8 border border-[#EBDFC6] shadow-xs hover:shadow-md hover:border-[#B5651A]/40 transition-all duration-300 space-y-4">
+                <span className="font-mono text-xs font-bold text-[#B5651A] block">CHALLENGE {idx + 1}</span>
+                <h4 className="font-display font-bold text-lg text-[#17140F]">{item.problem}</h4>
+                <div className="pt-3 border-t border-[#EBDFC6]/60">
+                  <span className="font-mono text-[11px] font-bold text-[#B5651A] block mb-1">PUNYA PERKS SOLUTION</span>
+                  <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{item.solution}</p>
                 </div>
               </div>
             ))}

@@ -299,7 +299,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
                 </pre>
                 <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#847C75]">
                   <span>Punya Perks TypeScript SDK v2.4</span>
-                  <a href="/start" className="text-[#D9822B] hover:underline flex items-center gap-1">
+                  <a href="/start" className="text-[#B5651A] hover:underline flex items-center gap-1">
                     <span>View on NPM</span>
                     <ExternalLink size={12} />
                   </a>

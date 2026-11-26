@@ -348,7 +348,7 @@ export const GlossaryPage: React.FC = () => {
       </section>
 
       {/* Sticky Alphabet Filter Bar */}
-      <section className="bg-white border-b border-[#E8DCC9] sticky top-16 sm:top-20 z-30 shadow-xs">
+      <section className="bg-white border-b border-[#EBDFC6] sticky top-16 sm:top-20 z-30 shadow-xs">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 py-3">
           <div className="flex items-center justify-center gap-1 overflow-x-auto pb-1 scrollbar-none">
             <button
@@ -406,7 +406,7 @@ export const GlossaryPage: React.FC = () => {
               <button
                 type="button"
                 onClick={handleResetFilters}
-                className="text-xs font-bold text-[#D9822B] hover:text-[#B5651A] hover:underline cursor-pointer self-start sm:self-auto"
+                className="text-xs font-bold text-[#B5651A] hover:text-[#B5651A] hover:underline cursor-pointer self-start sm:self-auto"
               >
                 Reset all filters
               </button>
@@ -415,8 +415,8 @@ export const GlossaryPage: React.FC = () => {
 
           {/* Empty State */}
           {filteredTerms.length === 0 ? (
-            <div className="text-center py-16 bg-white rounded-3xl border border-dashed border-[#E8DCC9] max-w-lg mx-auto p-8 shadow-sm">
-              <BookOpenIcon className="w-12 h-12 text-[#D9822B]/40 mx-auto mb-3" />
+            <div className="text-center py-16 bg-white rounded-3xl border border-dashed border-[#EBDFC6] max-w-lg mx-auto p-8 shadow-sm">
+              <BookOpenIcon className="w-12 h-12 text-[#B5651A]/40 mx-auto mb-3" />
               <h3 className="font-display text-lg font-bold text-[#1C1610]">No matching loyalty terms found</h3>
               <p className="font-body text-xs sm:text-sm text-neutral-500 mt-1 max-w-xs mx-auto">
                 We couldn't find any terms matching your current search or filter criteria.
@@ -440,7 +440,7 @@ export const GlossaryPage: React.FC = () => {
                   <article
                     key={item.slug}
                     id={item.slug}
-                    className="bg-white rounded-3xl p-6 sm:p-7 border border-[#E8DCC9] shadow-[0_2px_12px_rgba(28,22,16,0.04)] hover:shadow-[0_8px_24px_rgba(28,22,16,0.08)] hover:border-[#D9822B]/50 transition-all duration-300 flex flex-col justify-between group scroll-mt-36"
+                    className="bg-white rounded-3xl p-6 sm:p-7 border border-[#EBDFC6] shadow-[0_2px_12px_rgba(28,22,16,0.04)] hover:shadow-[0_8px_24px_rgba(28,22,16,0.08)] hover:border-[#B5651A]/50 transition-all duration-300 flex flex-col justify-between group scroll-mt-36"
                   >
                     <div>
                       {/* Top Category Badge & Copy Action */}
@@ -451,7 +451,7 @@ export const GlossaryPage: React.FC = () => {
                         <button
                           type="button"
                           onClick={() => copyTermLink(item.slug)}
-                          className="text-neutral-400 hover:text-[#D9822B] transition-colors p-1.5 rounded-lg hover:bg-[#FAF4EC]"
+                          className="text-neutral-400 hover:text-[#B5651A] transition-colors p-1.5 rounded-lg hover:bg-[#FAF4EC]"
                           title="Copy link to this term"
                         >
                           {isCopied ? (
@@ -465,7 +465,7 @@ export const GlossaryPage: React.FC = () => {
                       </div>
 
                       {/* Term Title */}
-                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#1C1610] group-hover:text-[#D9822B] transition-colors tracking-tight mb-3">
+                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#1C1610] group-hover:text-[#B5651A] transition-colors tracking-tight mb-3">
                         {item.term}
                       </h3>
 
@@ -476,7 +476,7 @@ export const GlossaryPage: React.FC = () => {
 
                       {/* Formula / Standard Box */}
                       {item.formulaOrStandard && (
-                        <div className="mb-4 p-3 rounded-xl bg-[#FAF4EC] border border-[#E8DCC9] font-mono text-xs text-[#1C1610]">
+                        <div className="mb-4 p-3 rounded-xl bg-[#FAF4EC] border border-[#EBDFC6] font-mono text-xs text-[#1C1610]">
                           <span className="text-[10px] font-bold uppercase text-neutral-500 block mb-1">
                             Standard / Formula:
                           </span>
@@ -486,7 +486,7 @@ export const GlossaryPage: React.FC = () => {
 
                       {/* Expanded Section */}
                       {isExpanded && (
-                        <div className="space-y-4 pt-3 border-t border-[#E8DCC9] mt-4 text-xs leading-relaxed animate-fade-in font-body">
+                        <div className="space-y-4 pt-3 border-t border-[#EBDFC6] mt-4 text-xs leading-relaxed animate-fade-in font-body">
                           <div>
                             <h4 className="font-bold text-[#1C1610] uppercase tracking-wider text-[11px] mb-1">
                               Detailed Explanation
@@ -526,7 +526,7 @@ export const GlossaryPage: React.FC = () => {
                                     key={rt}
                                     type="button"
                                     onClick={() => setSearchTerm(rt)}
-                                    className="px-2 py-0.5 rounded-lg bg-[#FAF4EC] hover:bg-[#F3EBDD] text-[#1C1610] text-[11px] font-medium border border-[#E8DCC9] transition-colors cursor-pointer"
+                                    className="px-2 py-0.5 rounded-lg bg-[#FAF4EC] hover:bg-[#FAF5ED] text-[#1C1610] text-[11px] font-medium border border-[#EBDFC6] transition-colors cursor-pointer"
                                   >
                                     {rt}
                                   </button>
@@ -539,11 +539,11 @@ export const GlossaryPage: React.FC = () => {
                     </div>
 
                     {/* Bottom Expand Toggle & Anchor */}
-                    <div className="mt-5 pt-3 border-t border-[#E8DCC9] flex items-center justify-between">
+                    <div className="mt-5 pt-3 border-t border-[#EBDFC6] flex items-center justify-between">
                       <button
                         type="button"
                         onClick={() => setExpandedSlug(isExpanded ? null : item.slug)}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#D9822B] hover:text-[#B5651A] transition-colors cursor-pointer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B5651A] hover:text-[#B5651A] transition-colors cursor-pointer"
                       >
                         <span>{isExpanded ? 'Collapse definition' : 'Read full explanation & benchmarks'}</span>
                         <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />

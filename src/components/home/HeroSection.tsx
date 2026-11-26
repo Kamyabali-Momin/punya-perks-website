@@ -24,21 +24,21 @@ export const HeroSection: React.FC = () => {
           {/* Headline 1: DM Serif Display, 66px, line-height 1.06, tracking -2.5%, italic accent */}
           <h1 className="font-display font-normal text-4xl sm:text-5xl lg:text-6xl xl:text-[66px] text-[#17140F] tracking-[-0.025em] leading-[1.06]">
             Loyalty that <br className="hidden sm:inline" />
-            <span className="italic text-[#C4681A]">pays for itself.</span>
+            <span className="italic text-[#B5651A]">pays for itself.</span>
           </h1>
 
           {/* Subheadline Paragraph: Plus Jakarta Sans, 17-18px, #0A0908 */}
-          <p className="font-body text-base sm:text-lg text-[#0A0908]/90 leading-relaxed max-w-2xl mx-auto">
+          <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-2xl mx-auto">
             {hero.description}
           </p>
 
           {/* Dual Pill Buttons - Figma Node 5737:4719 */}
-          <div className="pt-1 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3.5">
             <Button
               href={hero.primaryCta.href}
               variant="primary"
               size="lg"
-              className="rounded-full px-8 py-3 text-sm font-medium shadow-sm w-full sm:w-auto bg-[#B5651A] hover:bg-[#9a5413] text-white border-none transition-colors"
+              className="rounded-full px-8 py-3.5 text-sm font-semibold shadow-sm w-full sm:w-auto bg-[#B5651A] hover:bg-[#9a5413] text-white border-none transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
             >
               {hero.primaryCta.text}
             </Button>
@@ -46,24 +46,24 @@ export const HeroSection: React.FC = () => {
               href={hero.secondaryCta.href}
               variant="ghost"
               size="lg"
-              className="rounded-full px-8 py-3 text-sm font-medium border border-[#17140F]/15 text-[#17140F] hover:bg-white/80 w-full sm:w-auto bg-white shadow-xs transition-colors"
+              className="rounded-full px-8 py-3.5 text-sm font-semibold border border-[#EBDFC6] text-[#17140F] hover:bg-white hover:border-[#B5651A]/40 w-full sm:w-auto bg-white/90 shadow-2xs transition-all cursor-pointer"
             >
               {hero.secondaryCta.text}
             </Button>
           </div>
 
           {/* Microcopy: 12px, #847C75 */}
-          <p className="text-xs text-[#847C75]">
+          <p className="text-xs text-[#847C75] pt-1">
             {hero.microcopy}
           </p>
         </div>
 
         {/* 2. 5-Tile Bento Grid Showcase - Figma Node 5737:4729 (max width: 1152px, height: 416px) */}
-        <div className="mt-8 sm:mt-10 max-w-[1152px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
+        <div className="mt-10 sm:mt-12 max-w-[1152px] mx-auto grid grid-cols-1 md:grid-cols-12 gap-5 items-stretch">
           {/* Left Column (3 cols / 280px): Live Ledger + Launch */}
           <div className="md:col-span-3 flex flex-col justify-between gap-5 md:h-[416px]">
             {/* Tile 1: Live Ledger (Figma Node 5737:4731 - height 211px) */}
-            <div className="bg-[#FBE9D6] border border-[#B5651A]/60 rounded-[16px] p-6 flex flex-col justify-between shadow-xs md:h-[211px]">
+            <div className="bg-[#FBE9D6] border border-[#B5651A]/40 hover:border-[#B5651A]/70 rounded-[20px] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300 md:h-[211px]">
               <div>
                 <span className="font-body text-[10px] font-bold text-[#17140F] uppercase tracking-[0.16em]">
                   LIVE LEDGER
@@ -87,7 +87,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Tile 2: Launch Card (Figma Node 5737:4741 - height 185px) */}
             <div
-              className="rounded-[16px] p-6 flex flex-col justify-between shadow-xs border border-[#B5651A]/60 relative overflow-hidden bg-cover bg-center md:h-[185px]"
+              className="rounded-[20px] p-6 flex flex-col justify-between shadow-xs hover:shadow-md border border-[#B5651A]/40 hover:border-[#B5651A]/70 relative overflow-hidden bg-cover bg-center transition-all duration-300 md:h-[185px]"
               style={{
                 backgroundImage: "url('/images/launch-tile-bg.png')",
               }}
@@ -112,7 +112,7 @@ export const HeroSection: React.FC = () => {
 
           {/* Center Column (6 cols / 560px): Mockup container with user provided luxury golden background */}
           <div
-            className="md:col-span-6 border border-[#B5651A]/60 rounded-[16px] overflow-hidden shadow-md md:h-[416px] flex items-center justify-center relative bg-cover bg-center"
+            className="md:col-span-6 border border-[#B5651A]/40 hover:border-[#B5651A]/70 rounded-[20px] overflow-hidden shadow-md hover:shadow-xl md:h-[416px] flex items-center justify-center relative bg-cover bg-center transition-all duration-300"
             style={{
               backgroundImage: "url('/images/mockup-bg.jpg')",
             }}
@@ -128,7 +128,7 @@ export const HeroSection: React.FC = () => {
           {/* Right Column (3 cols / 280px): Markets + Social Proof Quote */}
           <div className="md:col-span-3 flex flex-col justify-between gap-5 md:h-[416px]">
             {/* Tile 3: Markets (Figma Node 5737:4863 - height 271px) */}
-            <div className="bg-[#FBE9D6] border border-[#B5651A]/60 rounded-[16px] p-6 flex flex-col justify-between shadow-xs md:h-[271px]">
+            <div className="bg-[#FBE9D6] border border-[#B5651A]/40 hover:border-[#B5651A]/70 rounded-[20px] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all duration-300 md:h-[271px]">
               <div>
                 <span className="font-body text-[10px] font-bold text-[#17140F] uppercase tracking-[0.16em]">
                   MARKETS
@@ -152,7 +152,7 @@ export const HeroSection: React.FC = () => {
             </div>
 
             {/* Tile 4: Quote Card (Figma Node 5737:4883 - height 125px) */}
-            <div className="bg-[#FBE9D6] border border-[#B5651A]/60 rounded-[16px] p-5 sm:p-6 flex flex-col justify-center shadow-xs md:h-[125px]">
+            <div className="bg-[#FBE9D6] border border-[#B5651A]/40 hover:border-[#B5651A]/70 rounded-[20px] p-5 sm:p-6 flex flex-col justify-center shadow-xs hover:shadow-md transition-all duration-300 md:h-[125px]">
               <p className="text-sm sm:text-base font-normal font-display italic text-[#17140F] leading-snug">
                 “{hero.ledgerPreview.socialProof}”
               </p>

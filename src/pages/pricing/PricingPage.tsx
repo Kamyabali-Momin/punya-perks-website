@@ -231,12 +231,12 @@ export const PricingPage: React.FC = () => {
       </section>
 
       {/* Interactive Member Size Slider Calculator (Deskmerit Feature) */}
-      <section className="py-12 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-[#EBDFC6] shadow-sm space-y-6">
+      <section className="py-12 sm:py-16 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-[#EBDFC6] shadow-sm space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <div className="flex items-center gap-2 text-[#B5651A] font-bold text-xs uppercase tracking-wider mb-1">
+                <div className="flex items-center gap-2 text-[#B5651A] font-bold text-xs uppercase tracking-wider mb-1.5">
                   <Sliders size={15} />
                   <span>Interactive Member Calculator</span>
                 </div>
@@ -246,14 +246,14 @@ export const PricingPage: React.FC = () => {
               </div>
               <div className="text-left sm:text-right">
                 <span className="text-xs text-[#847C75]">Active Loyalty Members:</span>
-                <div className="font-display font-extrabold text-2xl text-[#B5651A]">
+                <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#B5651A]">
                   {memberCount.toLocaleString()}
                 </div>
               </div>
             </div>
 
             {/* Slider */}
-            <div className="space-y-2">
+            <div className="space-y-2.5">
               <input
                 type="range"
                 min="10000"
