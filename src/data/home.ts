@@ -45,6 +45,7 @@ export const homeData = {
     primaryCta: { text: "Request a demo", href: "/demo" },
     secondaryCta: { text: "Start in sandbox", href: "/start" },
     microcopy: "Free sandbox, no credit card. Pricing in INR, AUD and NZD.",
+    image: "/images/hero-tablet-mockup.png",
     ledgerPreview: {
       availablePoints: "3,850",
       pendingPoints: "300",
