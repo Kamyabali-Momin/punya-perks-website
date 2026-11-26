@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Plus, Minus, ArrowRight } from 'lucide-react';
+import { ChevronDownIcon, ArrowRightIcon } from 'lucide-react';
 
 export interface FaqItem {
-  q: string;
-  a: string;
+  q?: string;
+  question?: string;
+  a?: string;
+  answer?: string;
 }
 
 export interface InternalPageFaqProps {
@@ -19,34 +21,34 @@ export interface InternalPageFaqProps {
 
 export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
   title = 'Frequently asked architecture & rollout questions',
-  eyebrow = 'QUESTIONS & ANSWERS',
+  eyebrow = 'FAQ',
   faqs = [
     {
-      q: 'How long does a typical Punya Perks production rollout take?',
-      a: 'Most retail and e-commerce brands launch in 4 to 6 weeks. Our pre-built connectors for Shopify, Magento, Posist, and Pine Labs allow ledger testing in sandbox within your first week.',
+      q: 'What is loyalty program software?',
+      a: 'Loyalty program software is an enterprise operating system that manages member identities, calculates point earn and redeem rules across transactions, triggers automated promotional campaigns, and reconciles balance-sheet liabilities via an immutable ledger.',
     },
     {
-      q: 'Can we run dual ledgers during our transition from legacy loyalty?',
-      a: 'Yes. Punya Perks supports parallel transaction auditing and automated point balance ingestion via our migration API, ensuring zero downtime and zero point loss for your members.',
+      q: 'How is Punya Perks different from Capillary, Xoxoday or EasyRewardz?',
+      a: 'Unlike legacy point-solution marketing tools, Punya Perks is built around an append-only financial ledger that guarantees 0% discrepancy between finance and marketing.',
     },
     {
-      q: 'Does Punya Perks support regional tax compliance and GST?',
-      a: 'Absolutely. Line-item tax exclusions, GST handling for Indian retail, and AUD/NZD multi-currency ledgers are natively configurable out of the box.',
+      q: 'Can I run one programme across India, Australia and New Zealand?',
+      a: 'Yes. Punya Perks supports multi-region, multi-currency tenant cells. You can maintain separate currency rules (INR, AUD, NZD) and regional privacy compliance while giving your global leadership a single unified analytics dashboard.',
     },
     {
-      q: 'How does the WhatsApp member experience work without an app install?',
-      a: 'Members authenticate using OTP over WhatsApp. They can check real-time point balance, redeem reward vouchers, and receive purchase receipts instantly without downloading a native mobile app.',
+      q: 'How long does implementation take?',
+      a: 'Standard implementations go live in four weeks, not four quarters: Week 1 Provision, Week 2 Configure, Week 3 Connect pre-built POS/e-commerce integrations, and Week 4 Pilot and Launch.',
     },
     {
-      q: 'What are the developer API rate limits and SLA guarantees?',
-      a: 'Growth plans support 600 req/min, while Enterprise plans scale to 2,500+ req/min with dedicated database clusters and a 99.95% API uptime SLA.',
+      q: 'Is there a free trial?',
+      a: 'Yes. We offer an instant developer sandbox with synthetic member data, sample POS event streams, and full API access with no credit card required.',
     },
   ],
-  helpTitle = 'Need help designing your loyalty architecture?',
-  helpDescription = 'Connect with our solutions architects to review your POS, e-commerce catalog, and campaign requirements for a tailor-fit implementation roadmap.',
-  helpButtonText = 'Talk to an expert',
-  helpButtonHref = '/demo',
-  className = 'w-full py-16 sm:py-24 bg-[#FFFFFF] border-t border-[#EBDFC6] font-body',
+  helpTitle = 'Need Help Choosing the Right Technology Solution?',
+  helpDescription = 'Build smarter with AI-powered software, web, mobile, and enterprise solutions tailored to your business.',
+  helpButtonText = 'Contact',
+  helpButtonHref = '/contact',
+  className = 'w-full py-16 sm:py-24 bg-[#FFFDF9] border-t border-[#EBDFC6] font-body',
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -58,83 +60,116 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
     <section className={className} aria-labelledby="internal-faq-title">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Section Heading */}
-        <div className="mb-12">
-          <div className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] mb-3 font-body">
-            {eyebrow}
+        {(title || eyebrow) && (
+          <div className="text-center mb-12 sm:mb-16">
+            {eyebrow && (
+              <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
+                {eyebrow}
+              </span>
+            )}
+            {title && (
+              <h2
+                id="internal-faq-title"
+                className="font-display font-normal text-3xl sm:text-4xl text-[#17140F] tracking-tight"
+              >
+                {title}
+              </h2>
+            )}
           </div>
-          <h2
-            id="internal-faq-title"
-            className="font-display text-3xl sm:text-4xl lg:text-[42px] text-[#17140F] tracking-tight leading-[1.2]"
-          >
-            {title}
-          </h2>
-        </div>
+        )}
 
-        {/* 2-Column Split: Left Promo Card + Right Accordions (Deskmerit Pattern) */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left Column: Dark Accent Callout Highlight Box */}
-          <div className="col-span-1 lg:col-span-5 min-w-0 max-w-full w-full">
-            <div className="rounded-3xl bg-gradient-to-br from-[#17140F] via-[#241A13] to-[#1A1510] p-8 sm:p-10 text-white shadow-xl border border-[#3E2C20] relative overflow-hidden flex flex-col justify-between min-h-[380px]">
-              {/* Subtle Radial Glow in background */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#B5651A]/20 rounded-full blur-3xl pointer-events-none -mr-20 -mt-20" />
-              <div className="absolute bottom-0 left-0 w-48 h-48 bg-[#D9822B]/20 rounded-full blur-2xl pointer-events-none -ml-16 -mb-16" />
-
-              <div className="relative z-10">
-                {/* Brand Logo in Reverse */}
-                <div className="mb-6 flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#B5651A] text-white flex items-center justify-center font-bold text-sm">
+        {/* 2-Column Equal Height Layout matching Punya Perks Standard Structure */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+          {/* Left Dark Card with signature faq-card-bg.jpg */}
+          <div className="lg:col-span-4 flex flex-col h-full">
+            <div
+              className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#B5651A]/40 h-full min-h-[380px]"
+              style={{
+                backgroundImage: "url('/images/faq-card-bg.jpg')",
+                backgroundColor: '#17120D',
+              }}
+            >
+              {/* Top brand header & text */}
+              <div>
+                {/* Brand Logo Pill */}
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-full bg-[#B5651A] flex items-center justify-center font-display font-bold text-white text-sm shadow-xs">
                     P
                   </div>
-                  <span className="font-display italic text-xl text-[#EBDFC6]">Perks</span>
+                  <span className="font-display italic font-semibold text-white text-base tracking-tight">
+                    Punya Perks
+                  </span>
                 </div>
 
-                <h3 className="font-display text-2xl sm:text-3xl text-white tracking-tight leading-snug">
+                {/* Title */}
+                <h3 className="font-display font-normal text-2xl sm:text-[26px] leading-[1.25] text-white mt-8 sm:mt-10">
                   {helpTitle}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-[#EBDFC6]/80 leading-relaxed mt-4 font-body">
+                {/* Description */}
+                <p className="text-xs sm:text-[13px] text-white/80 leading-relaxed mt-4 font-body">
                   {helpDescription}
                 </p>
               </div>
 
-              <div className="pt-8 relative z-10">
+              {/* Bottom Contact Button */}
+              <div className="pt-8">
                 <a
                   href={helpButtonHref}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white text-[#17140F] hover:bg-[#FAF5ED] hover:text-[#B5651A] font-semibold text-xs sm:text-sm shadow-md transition-all group cursor-pointer font-body"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-[#17140F] font-body font-medium text-xs sm:text-sm hover:bg-[#F4ECDC] transition-all shadow-md group cursor-pointer"
                 >
                   <span>{helpButtonText}</span>
-                  <ArrowRight size={14} className="text-[#B5651A] group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRightIcon
+                    size={14}
+                    className="text-[#17140F] group-hover:translate-x-0.5 transition-transform"
+                  />
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Clean Accordion List with Plus / Minus */}
-          <div className="col-span-1 lg:col-span-7 divide-y divide-[#EBDFC6]/70">
+          {/* Right Column: Accordion Rows with Smooth Collapse */}
+          <div className="lg:col-span-8 flex flex-col justify-between divide-y divide-[#EBDFC6] border-y border-[#EBDFC6] h-full">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
+              const question = faq.q || faq.question || '';
+              const answer = faq.a || faq.answer || '';
+
               return (
-                <div key={idx} className="py-5 first:pt-0 last:pb-0">
+                <div key={idx} className="py-5 sm:py-5.5 transition-colors">
                   <button
+                    type="button"
                     onClick={() => toggle(idx)}
-                    className="w-full text-left flex items-start justify-between gap-4 group focus:outline-none cursor-pointer"
+                    className="w-full flex items-center justify-between text-left gap-4 cursor-pointer group"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-body text-base sm:text-lg font-semibold text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug">
-                      {faq.q}
+                    <span className="font-body font-semibold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug">
+                      {question}
                     </span>
-                    <span className="shrink-0 mt-1 flex items-center justify-center w-7 h-7 rounded-full bg-[#FAF5ED] text-[#B5651A] border border-[#EBDFC6] group-hover:bg-[#B5651A] group-hover:text-white transition-all">
-                      {isOpen ? <Minus size={14} /> : <Plus size={14} />}
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-[#FAF6F0] border border-[#EBDFC6] flex items-center justify-center text-[#17140F] group-hover:border-[#B5651A]/40 transition-all">
+                      <ChevronDownIcon
+                        size={15}
+                        className={`transition-transform duration-300 ease-in-out ${
+                          isOpen ? 'rotate-180 text-[#B5651A]' : 'text-[#847C75]'
+                        }`}
+                      />
                     </span>
                   </button>
 
-                  {isOpen && (
-                    <div className="mt-3 pr-8">
-                      <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed font-body">
-                        {faq.a}
+                  {/* Smooth Collapse Animation Container */}
+                  <div
+                    className={`grid transition-all duration-300 ease-in-out ${
+                      isOpen
+                        ? 'grid-rows-[1fr] opacity-100 mt-3'
+                        : 'grid-rows-[0fr] opacity-0'
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-xs sm:text-[13.5px] text-[#5B534C] leading-relaxed pr-6 font-body">
+                        {answer}
                       </p>
                     </div>
-                  )}
+                  </div>
                 </div>
               );
             })}

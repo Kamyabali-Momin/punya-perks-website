@@ -209,30 +209,43 @@ export const HelpCenterPage: React.FC = () => {
                   </button>
                 </div>
               ) : (
-                filteredFaqs.map((faq, idx) => {
-                  const isOpen = openFaq === idx;
-                  return (
-                    <div
-                      key={idx}
-                      className="bg-white rounded-xl border border-[#E8DCC9] overflow-hidden transition-all shadow-xs"
-                    >
-                      <button
-                        onClick={() => setOpenFaq(isOpen ? null : idx)}
-                        className="w-full p-5 text-left flex items-center justify-between gap-4 cursor-pointer hover:bg-[#FAF7F2]/50 transition-colors"
-                      >
-                        <span className="font-semibold text-sm sm:text-base text-[#17140F] leading-snug">
-                          {faq.question}
-                        </span>
-                        <ChevronDown className={`w-5 h-5 text-[#8C827A] shrink-0 transition-transform ${isOpen ? 'rotate-180 text-[#B5651A]' : ''}`} />
-                      </button>
-                      {isOpen && (
-                        <div className="px-5 pb-5 pt-1 text-sm text-[#5B534C] leading-relaxed border-t border-[#FAF3E8]">
-                          {faq.answer}
+                <div className="divide-y divide-[#EBDFC6] border-y border-[#EBDFC6]">
+                  {filteredFaqs.map((faq, idx) => {
+                    const isOpen = openFaq === idx;
+                    return (
+                      <div key={idx} className="py-5 sm:py-5.5 transition-colors">
+                        <button
+                          type="button"
+                          onClick={() => setOpenFaq(isOpen ? null : idx)}
+                          className="w-full flex items-center justify-between text-left gap-4 cursor-pointer group"
+                        >
+                          <span className="font-body font-semibold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug">
+                            {faq.question}
+                          </span>
+                          <span className="shrink-0 w-7 h-7 rounded-full bg-[#FAF6F0] border border-[#EBDFC6] flex items-center justify-center text-[#17140F] group-hover:border-[#B5651A]/40 transition-all">
+                            <ChevronDown
+                              size={15}
+                              className={`transition-transform duration-300 ease-in-out ${
+                                isOpen ? 'rotate-180 text-[#B5651A]' : 'text-[#847C75]'
+                              }`}
+                            />
+                          </span>
+                        </button>
+                        <div
+                          className={`grid transition-all duration-300 ease-in-out ${
+                            isOpen ? 'grid-rows-[1fr] opacity-100 mt-3' : 'grid-rows-[0fr] opacity-0'
+                          }`}
+                        >
+                          <div className="overflow-hidden">
+                            <p className="text-xs sm:text-[13.5px] text-[#5B534C] leading-relaxed pr-6 font-body">
+                              {faq.answer}
+                            </p>
+                          </div>
                         </div>
-                      )}
-                    </div>
-                  );
-                })
+                      </div>
+                    );
+                  })}
+                </div>
               )}
 
               {/* Developer Documentation Callout */}
