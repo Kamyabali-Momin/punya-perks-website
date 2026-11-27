@@ -184,112 +184,57 @@ export const PricingPage: React.FC = () => {
         imageAlt="Punya Perks Pricing & Rewards Portal Overview"
       />
 
-      {/* Currency Switcher & Billing Interval */}
-      <section className="py-12 bg-white border-b border-[#EBDFC6] font-body">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          {/* Currency Pill Selector */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-bold text-[#847C75] uppercase tracking-wider mr-1">Currency:</span>
-            <div className="flex items-center bg-[#FAF5ED] p-1 rounded-full border border-[#EBDFC6] text-xs font-semibold">
-              {(['INR', 'AUD', 'NZD', 'USD'] as const).map((c) => (
-                <button
-                  key={c}
-                  onClick={() => setCurrency(c)}
-                  className={`px-3.5 py-1.5 rounded-full transition-all cursor-pointer ${
-                    currency === c
-                      ? 'bg-[#B5651A] text-white shadow-xs'
-                      : 'text-[#17140F] hover:text-[#B5651A]'
-                  }`}
-                >
-                  {c}
-                </button>
-              ))}
+      {/* Currency/Billing Controls + 3 Pricing Cards (Clean background, tinted Recommended card) */}
+      <section className="relative w-full py-12 sm:py-16 bg-white border-b border-[#EBDFC6] font-body">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-10">
+          {/* Moved Currency & Billing Interval Controls directly into Pricing Comparison */}
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5 pb-6 border-b border-[#EBDFC6]">
+            {/* Currency Pill Selector */}
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-bold text-[#847C75] uppercase tracking-wider mr-1">Currency:</span>
+              <div className="flex items-center bg-[#FAF5ED] p-1 rounded-full border border-[#EBDFC6] text-xs font-semibold">
+                {(['INR', 'AUD', 'NZD', 'USD'] as const).map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => setCurrency(c)}
+                    className={`px-3.5 py-1.5 rounded-full transition-all cursor-pointer ${
+                      currency === c
+                        ? 'bg-[#B5651A] text-white shadow-xs'
+                        : 'text-[#17140F] hover:text-[#B5651A]'
+                    }`}
+                  >
+                    {c}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
 
-          {/* Monthly / Annual Toggle */}
-          <div className="flex items-center gap-3 text-xs font-semibold text-[#17140F]">
-            <span className={!annual ? 'text-[#B5651A] font-bold' : 'text-[#847C75]'}>Monthly</span>
-            <button
-              onClick={() => setAnnual(!annual)}
-              className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${
-                annual ? 'bg-[#B5651A]' : 'bg-[#EBDFC6]'
-              }`}
-              aria-label="Toggle annual billing"
-            >
-              <div
-                className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                  annual ? 'translate-x-6' : 'translate-x-0'
+            {/* Monthly / Annual Toggle */}
+            <div className="flex items-center gap-3 text-xs font-semibold text-[#17140F]">
+              <span className={!annual ? 'text-[#B5651A] font-bold' : 'text-[#847C75]'}>Monthly</span>
+              <button
+                type="button"
+                onClick={() => setAnnual(!annual)}
+                className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${
+                  annual ? 'bg-[#B5651A]' : 'bg-[#EBDFC6]'
                 }`}
-              />
-            </button>
-            <span className={annual ? 'text-[#B5651A] font-bold' : 'text-[#847C75]'}>
-              Annual <span className="bg-[#FBE9D6] text-[#B5651A] px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-[#B5651A]/20">Save 15%</span>
-            </span>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Member Size Slider Calculator (Deskmerit Feature) */}
-      <section className="py-12 sm:py-16 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-[#EBDFC6] shadow-sm space-y-6">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-              <div>
-                <div className="flex items-center gap-2 text-[#B5651A] font-bold text-xs uppercase tracking-wider mb-1.5">
-                  <Sliders size={15} />
-                  <span>Interactive Member Calculator</span>
-                </div>
-                <h3 className="font-display font-bold text-xl sm:text-2xl text-[#17140F]">
-                  Estimate your Growth plan investment
-                </h3>
-              </div>
-              <div className="text-left sm:text-right">
-                <span className="text-xs text-[#847C75]">Active Loyalty Members:</span>
-                <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#B5651A]">
-                  {memberCount.toLocaleString()}
-                </div>
-              </div>
-            </div>
-
-            {/* Slider */}
-            <div className="space-y-2.5">
-              <input
-                type="range"
-                min="10000"
-                max="300000"
-                step="5000"
-                value={memberCount}
-                onChange={(e) => setMemberCount(Number(e.target.value))}
-                className="w-full h-2.5 bg-[#EBDFC6] rounded-lg appearance-none cursor-pointer accent-[#B5651A]"
-              />
-              <div className="flex justify-between text-[11px] text-[#847C75] font-mono">
-                <span>10,000 members</span>
-                <span>100,000</span>
-                <span>200,000</span>
-                <span>300,000+ members</span>
-              </div>
-            </div>
-
-            <div className="pt-4 border-t border-[#EBDFC6]/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#5B534C]">
-              <span>Need over 300,000 active members? Our Enterprise tier offers custom volume tiers.</span>
-              <a href="/contact" className="font-bold text-[#B5651A] hover:underline whitespace-nowrap">
-                Talk to Enterprise Sales →
-              </a>
+                aria-label="Toggle annual billing"
+              >
+                <div
+                  className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
+                    annual ? 'translate-x-6' : 'translate-x-0'
+                  }`}
+                />
+              </button>
+              <span className={annual ? 'text-[#B5651A] font-bold' : 'text-[#847C75]'}>
+                Annual <span className="bg-[#FBE9D6] text-[#B5651A] px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-[#B5651A]/20">Save 15%</span>
+              </span>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* 3 Pricing Cards */}
-      <section
-        className="relative w-full py-16 sm:py-24 bg-[#1F0E05] bg-cover bg-center overflow-hidden border-b border-[#3E2413] font-body"
-        style={{
-          backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
-        }}
-      >
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+          {/* 3 Pricing Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch pt-2">
             {plans.map((p, idx) => (
               <div
                 key={p.name}
@@ -297,8 +242,8 @@ export const PricingPage: React.FC = () => {
                   idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : ''
                 } ${
                   p.featured
-                    ? 'bg-[#FFFDF9] border-2 border-[#B5651A] shadow-2xl'
-                    : 'bg-white border border-[#EBDFC6] shadow-xl hover:shadow-2xl'
+                    ? 'bg-gradient-to-b from-[#FEF6EA] to-[#FAF0E1] border-2 border-[#B5651A] shadow-lg'
+                    : 'bg-white border border-[#EBDFC6] shadow-xs hover:shadow-md'
                 }`}
               >
                 {p.featured && (
@@ -311,7 +256,7 @@ export const PricingPage: React.FC = () => {
                   <h3 className="font-display font-bold text-2xl text-[#17140F]">{p.name}</h3>
                   <p className="text-xs text-[#5B534C] mt-2 min-h-[34px] leading-relaxed">{p.desc}</p>
 
-                  <div className="my-6 pb-6 border-b border-[#EBDFC6]/70">
+                  <div className={`my-6 pb-6 border-b ${p.featured ? 'border-[#E6CFAF]' : 'border-[#EBDFC6]/70'}`}>
                     <div className="flex items-baseline gap-1">
                       <span className="font-display font-extrabold text-4xl sm:text-5xl text-[#17140F]">
                         {p.price}
@@ -326,8 +271,8 @@ export const PricingPage: React.FC = () => {
                   </div>
 
                   <ul className="space-y-3.5 text-xs sm:text-sm text-[#5B534C]">
-                    {p.features.map((f, idx) => (
-                      <li key={idx} className="flex items-start gap-2.5">
+                    {p.features.map((f, fIdx) => (
+                      <li key={fIdx} className="flex items-start gap-2.5">
                         <Check size={16} className="text-[#B5651A] shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </li>
@@ -354,8 +299,68 @@ export const PricingPage: React.FC = () => {
         </div>
       </section>
 
-      {/* Feature Comparison Matrix (Deskmerit Table Structure) */}
-      <section id="comparison-matrix" className="py-16 sm:py-24 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+      {/* Interactive Member Size Slider Calculator (Positioned after Pricing Comparison Cards) */}
+      <section className="py-12 sm:py-16 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-[#EBDFC6] shadow-sm space-y-6">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2 text-[#B5651A] font-bold text-xs uppercase tracking-wider mb-1.5">
+                  <Sliders size={15} />
+                  <span>Interactive Member Calculator</span>
+                </div>
+                <h3 className="font-display font-bold text-xl sm:text-2xl text-[#17140F]">
+                  Estimate your Growth plan investment
+                </h3>
+              </div>
+              <div className="flex items-center gap-6">
+                <div className="text-left sm:text-right">
+                  <span className="text-xs text-[#847C75]">Active Loyalty Members:</span>
+                  <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#B5651A]">
+                    {memberCount.toLocaleString()}
+                  </div>
+                </div>
+                <div className="pl-6 border-l border-[#EBDFC6] text-left sm:text-right">
+                  <span className="text-xs text-[#847C75]">Estimated Growth:</span>
+                  <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
+                    {curr.symbol}{growthPrice.toLocaleString()}<span className="text-xs font-body font-normal text-[#847C75]">/mo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Slider */}
+            <div className="space-y-2.5">
+              <input
+                type="range"
+                min="10000"
+                max="300000"
+                step="5000"
+                value={memberCount}
+                onChange={(e) => setMemberCount(Number(e.target.value))}
+                aria-label="Active Loyalty Members"
+                className="w-full h-2.5 bg-[#EBDFC6] rounded-lg appearance-none cursor-pointer accent-[#B5651A]"
+              />
+              <div className="flex justify-between text-[11px] text-[#847C75] font-mono">
+                <span>10,000 members</span>
+                <span>100,000</span>
+                <span>200,000</span>
+                <span>300,000+ members</span>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-[#EBDFC6]/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#5B534C]">
+              <span>Need over 300,000 active members? Our Enterprise tier offers custom volume tiers.</span>
+              <a href="/contact" className="font-bold text-[#B5651A] hover:underline whitespace-nowrap">
+                Talk to Enterprise Sales →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Feature Comparison Matrix */}
+      <section id="comparison-matrix" className="py-16 sm:py-24 bg-white border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
             <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block mb-2">
