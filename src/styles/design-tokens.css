@@ -1,58 +1,57 @@
 :root,
 [data-theme="marigold"] {
   /* ==========================================================================
-     PUNYA PERKS DESIGN SYSTEM TOKENS — OPTION A: MARIGOLD (Warm Editorial)
-     Warm Editorial · Newsreader Serif, Saffron & Teal on Warm Paper
-     Source: Punya-Perks-Website-Option-A-Marigold.pdf (Page 3)
+     PUNYA PERKS DESIGN SYSTEM TOKENS — BURNISHED ROYAL GOLD (Warm Editorial)
+     Deep Antique Gold, Obsidian Espresso & Warm Alabaster · Flat Solid Craft
      ========================================================================== */
 
   /* Canvas and Surfaces */
-  --pp-ground: #FBF7F0;
-  --pp-panel: #F3EBDD;
-  --pp-panel-deep: #EFE3CC;
-  --pp-panel-hover: #E8DECC;
-  
+  --pp-ground: #FAF6EE;
+  --pp-panel: #F4E9D2;
+  --pp-panel-deep: #EBDAB8;
+  --pp-panel-hover: #E5D1A8;
+
   /* Text and Ink Hierarchy */
-  --pp-ink: #1F1A17;
-  --pp-ink-secondary: #5B534C;
-  --pp-ink-muted: #847C75;
+  --pp-ink: #14100B;
+  --pp-ink-secondary: #534A40;
+  --pp-ink-muted: #7C7265;
   --pp-ink-inverse: #FFFFFF;
-  
-  /* Brand Primary (Saffron / Marigold) */
-  --pp-primary: #D9822B;
-  --pp-primary-dark: #B5651A;
-  --pp-primary-soft: #FBE9D6;
-  --pp-primary-focus: rgba(217, 130, 43, 0.25);
-  
-  /* Brand Accent & Teal (Deep Teal on Warm Paper) */
-  --pp-accent: #0F5C5A;
-  --pp-accent-soft: #DCEBE6;
-  --pp-accent-dark: #0B4745;
-  --pp-gold: #C9A15B;
-  
+
+  /* Brand Primary (Deep Burnished Gold) */
+  --pp-primary: #8E5B13;
+  --pp-primary-dark: #6E440B;
+  --pp-primary-soft: #F4E9D2;
+  --pp-primary-focus: rgba(142, 91, 19, 0.25);
+
+  /* Brand Accent & Antique Metallic Gold */
+  --pp-accent: #14100B;
+  --pp-accent-soft: #F4E9D2;
+  --pp-accent-dark: #0A0805;
+  --pp-gold: #C89232;
+
   /* Status & Compliance */
-  --pp-success: #1B8756;
-  --pp-warning: #D9822B;
-  --pp-error: #D32F2F;
+  --pp-success: #16794C;
+  --pp-warning: #8E5B13;
+  --pp-error: #C62828;
   --pp-info: #0F5C5A;
-  
+
   /* Borders and Dividers */
-  --pp-border-subtle: #E8DCC9;
-  --pp-border-strong: #D5C5AC;
-  
-  /* Border Radii - Exact Option A Specification: 20px, hairline-top editorial card */
+  --pp-border-subtle: #E2D3B5;
+  --pp-border-strong: #CBB68E;
+
+  /* Border Radii */
   --pp-radius-sm: 6px;
   --pp-radius-md: 12px;
   --pp-radius-lg: 16px;
   --pp-radius-bento: 20px;
   --pp-radius-pill: 9999px;
-  
-  /* Elevation Shadows - Warm & Soft Editorial */
-  --pp-shadow-sm: 0 1px 3px rgba(31, 26, 23, 0.05);
-  --pp-shadow-md: 0 4px 12px rgba(31, 26, 23, 0.07);
-  --pp-shadow-lg: 0 12px 32px rgba(31, 26, 23, 0.10);
-  --pp-shadow-bento: 0 14px 32px -8px rgba(217, 130, 43, 0.08);
-  
+
+  /* Elevation Shadows */
+  --pp-shadow-sm: 0 1px 3px rgba(20, 16, 11, 0.06);
+  --pp-shadow-md: 0 6px 18px rgba(20, 16, 11, 0.08);
+  --pp-shadow-lg: 0 16px 36px rgba(20, 16, 11, 0.12);
+  --pp-shadow-bento: 0 14px 32px -8px rgba(142, 91, 19, 0.10);
+
   /* Typography Families */
   --pp-font-display: 'Newsreader', Georgia, serif;
   --pp-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -62,28 +61,28 @@
    CONFIGURABLE THEME OVERRIDE: OPTION C — CHAMPAGNE
    ========================================================================== */
 [data-theme="champagne"] {
-  --pp-ground: #FFFDF9;
-  --pp-panel: #F4ECDC;
-  --pp-panel-deep: #EBDFC6;
-  --pp-panel-hover: #EADBCA;
-  
-  --pp-ink: #17140F;
-  --pp-ink-secondary: #5A5248;
-  --pp-ink-muted: #82796D;
+  --pp-ground: #FAF6EE;
+  --pp-panel: #F4E9D2;
+  --pp-panel-deep: #E2D3B5;
+  --pp-panel-hover: #E5D1A8;
+
+  --pp-ink: #14100B;
+  --pp-ink-secondary: #534A40;
+  --pp-ink-muted: #7C7265;
   --pp-ink-inverse: #FFFFFF;
-  
+
   --pp-primary: #6E1E2B;
   --pp-primary-dark: #4F1420;
   --pp-primary-soft: #F6E6E8;
   --pp-primary-focus: rgba(110, 30, 43, 0.25);
-  
-  --pp-accent: #C9A15B;
-  --pp-accent-soft: #F8F0DF;
-  --pp-accent-dark: #A68038;
-  
-  --pp-border-subtle: #EBDFC6;
-  --pp-border-strong: #D6C2A9;
-  
+
+  --pp-accent: #C89232;
+  --pp-accent-soft: #F4E9D2;
+  --pp-accent-dark: #8E5B13;
+
+  --pp-border-subtle: #E2D3B5;
+  --pp-border-strong: #CBB68E;
+
   --pp-radius-bento: 8px;
   --pp-font-display: 'DM Serif Display', Georgia, serif;
   --pp-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
@@ -97,24 +96,24 @@
   --pp-panel: #F1F6F3;
   --pp-panel-deep: #E3EEE8;
   --pp-panel-hover: #E8F1EC;
-  
+
   --pp-ink: #0E1B17;
   --pp-ink-secondary: #4E5B56;
   --pp-ink-muted: #7A8883;
   --pp-ink-inverse: #FFFFFF;
-  
+
   --pp-primary: #0F5C5A;
   --pp-primary-dark: #0B4745;
   --pp-primary-soft: #E4F1EC;
   --pp-primary-focus: rgba(15, 92, 90, 0.25);
-  
-  --pp-accent: #C9A15B;
-  --pp-accent-soft: #F7EED9;
-  --pp-accent-dark: #A68038;
-  
+
+  --pp-accent: #C89232;
+  --pp-accent-soft: #F4E9D2;
+  --pp-accent-dark: #8E5B13;
+
   --pp-border-subtle: #E2ECE7;
   --pp-border-strong: #C4D7CF;
-  
+
   --pp-radius-bento: 28px;
   --pp-font-display: 'Sora', 'Plus Jakarta Sans', system-ui, sans-serif;
   --pp-font-body: 'Plus Jakarta Sans', system-ui, sans-serif;

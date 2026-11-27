@@ -47,29 +47,29 @@ export const BlogPage: React.FC = () => {
     <MainLayout>
       {/* Hero with Subscribe CTA per Sitemap */}
       <section
-        className="relative w-full border-b border-[#EBDFC6] pt-12 pb-16 sm:pb-20 text-center overflow-hidden font-body bg-cover bg-bottom bg-no-repeat"
+        className="relative w-full border-b border-[#E2D3B5] pt-12 pb-16 sm:pb-20 text-center overflow-hidden font-body"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: '#FAF3E8',
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav aria-label="Breadcrumb" className="flex items-center justify-center gap-2 text-xs text-[#847C75] mb-4">
-            <Link to="/" className="hover:text-[#B5651A] transition-colors">
+            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
               Home
             </Link>
             <ChevronRight size={12} />
-            <Link to="/resources" className="hover:text-[#B5651A] transition-colors">
+            <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">
               Resources
             </Link>
             <ChevronRight size={12} />
-            <span className="text-[#17140F] font-bold">Blog</span>
+            <span className="text-[#14100B] font-bold">Blog</span>
           </nav>
 
-          <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
+          <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-3">
             PUNYA PERKS BLOG
           </span>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#17140F] tracking-tight mb-4 leading-tight">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#14100B] tracking-tight mb-4 leading-tight">
             Engineering, compliance &amp; loyalty craft.
           </h1>
           <p className="text-sm sm:text-base text-[#5B534C] max-w-2xl mx-auto leading-relaxed mb-8">
@@ -79,7 +79,7 @@ export const BlogPage: React.FC = () => {
           {/* Subscribe Bar */}
           <div className="max-w-md mx-auto">
             {subscribed ? (
-              <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-[#B5651A]/40 text-xs font-semibold text-[#B5651A] shadow-xs">
+              <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-[#8E5B13]/40 text-xs font-semibold text-[#8E5B13] shadow-xs">
                 <CheckCircle2 size={15} />
                 <span>Subscribed to Punya Perks monthly engineering &amp; loyalty notes.</span>
               </div>
@@ -93,12 +93,12 @@ export const BlogPage: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter work email to subscribe"
-                    className="w-full h-11 pl-10 pr-4 rounded-full bg-white border border-[#EBDFC6] text-xs sm:text-sm text-[#17140F] outline-none focus:border-[#B5651A]"
+                    className="w-full h-11 pl-10 pr-4 rounded-full bg-white border border-[#E2D3B5] text-xs sm:text-sm text-[#14100B] outline-none focus:border-[#8E5B13]"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="h-11 px-6 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-semibold text-xs sm:text-sm transition-colors cursor-pointer shrink-0"
+                  className="h-11 px-6 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-semibold text-xs sm:text-sm transition-colors cursor-pointer shrink-0"
                 >
                   Subscribe
                 </button>
@@ -109,9 +109,9 @@ export const BlogPage: React.FC = () => {
       </section>
 
       {/* Filter + Articles Grid */}
-      <section className="py-12 sm:py-16 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-12 sm:py-16 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EBDFC6]">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#E2D3B5]">
             <div className="relative w-full lg:max-w-sm">
               <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#847C75]" />
               <input
@@ -120,7 +120,7 @@ export const BlogPage: React.FC = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search articles..."
                 aria-label="Search blog articles"
-                className="w-full h-11 pl-10 pr-4 rounded-full border border-[#EBDFC6] bg-[#FAF5ED]/50 text-sm outline-none focus:border-[#B5651A]"
+                className="w-full h-11 pl-10 pr-4 rounded-full border border-[#E2D3B5] bg-[#FAF5ED]/50 text-sm outline-none focus:border-[#8E5B13]"
               />
             </div>
 
@@ -132,8 +132,8 @@ export const BlogPage: React.FC = () => {
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     selectedCategory === cat
-                      ? 'bg-[#B5651A] text-white shadow-xs'
-                      : 'bg-[#FAF5ED] text-[#5B534C] border border-[#EBDFC6] hover:text-[#17140F]'
+                      ? 'bg-[#8E5B13] text-white shadow-xs'
+                      : 'bg-[#FAF5ED] text-[#5B534C] border border-[#E2D3B5] hover:text-[#14100B]'
                   }`}
                 >
                   {cat}
@@ -143,7 +143,7 @@ export const BlogPage: React.FC = () => {
           </div>
 
           {filtered.length === 0 ? (
-            <div className="rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED] p-12 text-center space-y-3">
+            <div className="rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED] p-12 text-center space-y-3">
               <p className="text-sm sm:text-base text-[#5B534C]">
                 No blog articles found matching “{searchQuery}”.
               </p>
@@ -153,7 +153,7 @@ export const BlogPage: React.FC = () => {
                   setSearchQuery('');
                   setSelectedCategory('All');
                 }}
-                className="rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white text-xs font-semibold px-5 py-2.5 transition-colors cursor-pointer"
+                className="rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white text-xs font-semibold px-5 py-2.5 transition-colors cursor-pointer"
               >
                 Clear Filters
               </button>
@@ -164,7 +164,7 @@ export const BlogPage: React.FC = () => {
                 <Link
                   key={post.slug}
                   to={`/blog/${post.slug}`}
-                  className="group rounded-[22px] bg-[#FCF8F2] border border-[#EBDFC6] hover:border-[#B5651A]/70 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all"
+                  className="group rounded-[22px] bg-[#FCF8F2] border border-[#E2D3B5] hover:border-[#8E5B13]/70 p-5 flex flex-col justify-between shadow-2xs hover:shadow-md hover:-translate-y-0.5 transition-all"
                 >
                   <div>
                     <div className="h-48 rounded-[14px] overflow-hidden bg-[#F4ECDC] mb-4">
@@ -176,7 +176,7 @@ export const BlogPage: React.FC = () => {
                       />
                     </div>
                     <div className="flex items-center gap-2 text-xs mb-2">
-                      <span className="font-bold text-[#B5651A]">{post.category}</span>
+                      <span className="font-bold text-[#8E5B13]">{post.category}</span>
                       <span className="text-[#847C75]">·</span>
                       <span className="text-[#847C75]">{post.date}</span>
                       <span className="text-[#847C75]">·</span>
@@ -185,7 +185,7 @@ export const BlogPage: React.FC = () => {
                         {post.readTime}
                       </span>
                     </div>
-                    <h2 className="font-display font-bold text-xl text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug mb-2">
+                    <h2 className="font-display font-bold text-xl text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug mb-2">
                       {post.title}
                     </h2>
                     <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed mb-5">
@@ -193,21 +193,21 @@ export const BlogPage: React.FC = () => {
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#EBDFC6] flex items-center justify-between gap-3">
+                  <div className="pt-4 border-t border-[#E2D3B5] flex items-center justify-between gap-3">
                     <div className="flex items-center gap-2.5 min-w-0">
                       <img
                         src={post.author.avatar}
                         alt={post.author.name}
-                        className="w-7 h-7 rounded-full object-cover border border-[#EBDFC6] shrink-0"
+                        className="w-7 h-7 rounded-full object-cover border border-[#E2D3B5] shrink-0"
                       />
                       <div className="min-w-0">
-                        <div className="text-xs font-semibold text-[#17140F] truncate">
+                        <div className="text-xs font-semibold text-[#14100B] truncate">
                           {post.author.name}
                         </div>
                         <div className="text-[10px] text-[#847C75] truncate">{post.author.role}</div>
                       </div>
                     </div>
-                    <span className="text-xs font-semibold text-[#B5651A] inline-flex items-center gap-1 shrink-0 group-hover:translate-x-0.5 transition-transform">
+                    <span className="text-xs font-semibold text-[#8E5B13] inline-flex items-center gap-1 shrink-0 group-hover:translate-x-0.5 transition-transform">
                       Read <ArrowRight size={13} />
                     </span>
                   </div>

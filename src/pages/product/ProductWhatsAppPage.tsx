@@ -53,11 +53,11 @@ export const ProductWhatsAppPage: React.FC = () => {
         imageAlt="WhatsApp & Member Loyalty Parity"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block">
+              <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block">
                 CONVERSATIONAL COMMERCE
               </span>
               <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
@@ -74,7 +74,7 @@ export const ProductWhatsAppPage: React.FC = () => {
                   'Automated post-purchase points receipt sent within 3 seconds of POS billing',
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm text-[#1F1A17] font-medium">
-                    <CheckCircle2Icon size={16} className="text-[#B5651A] shrink-0 mt-0.5" />
+                    <CheckCircle2Icon size={16} className="text-[#8E5B13] shrink-0 mt-0.5" />
                     <span>{item}</span>
                   </div>
                 ))}
@@ -83,11 +83,11 @@ export const ProductWhatsAppPage: React.FC = () => {
 
             <div className="lg:col-span-6 flex justify-center">
               {/* Realistic WhatsApp Business Phone Frame */}
-              <div className="w-full max-w-[340px] rounded-[38px] bg-[#17140F] p-2.5 shadow-2xl border-2 border-[#3E2C20]">
+              <div className="w-full max-w-[340px] rounded-[38px] bg-[#14100B] p-2.5 shadow-2xl border-2 border-[#3E2C20]">
                 <div className="rounded-[30px] overflow-hidden bg-[#EFEAE2] flex flex-col">
                   <div className="bg-[#075E54] text-white px-4 py-3 flex items-center justify-between">
                     <div className="flex items-center gap-2.5 min-w-0">
-                      <div className="w-9 h-9 rounded-full bg-[#B5651A] border border-white/25 flex items-center justify-center font-display font-bold text-sm shrink-0">
+                      <div className="w-9 h-9 rounded-full bg-[#8E5B13] border border-white/25 flex items-center justify-center font-display font-bold text-sm shrink-0">
                         N
                       </div>
                       <div className="min-w-0">
@@ -118,7 +118,7 @@ export const ProductWhatsAppPage: React.FC = () => {
                         Available balance: <strong>3,850 pts</strong> (₹962)
                       </p>
                       <div className="text-[10px] text-[#847C75] text-right">10:42 AM ✓✓</div>
-                      <div className="pt-1.5 border-t border-[#EBDFC6]/70 grid grid-cols-2 gap-1.5 text-center">
+                      <div className="pt-1.5 border-t border-[#E2D3B5]/70 grid grid-cols-2 gap-1.5 text-center">
                         <span className="py-1.5 px-2 rounded-lg bg-[#FAF5ED] text-[#075E54] font-semibold text-[11px]">
                           View Vouchers
                         </span>
@@ -138,11 +138,11 @@ export const ProductWhatsAppPage: React.FC = () => {
                       <div className="text-[11px] font-bold text-[#1F1A17]">Ready to Redeem (3,850 pts)</div>
                       <div className="p-2 rounded-lg bg-[#FAF5ED] flex justify-between items-center text-[11px]">
                         <span className="font-medium text-[#1F1A17]">Amazon ₹500 Gift Card</span>
-                        <span className="font-bold text-[#B5651A]">500 pts</span>
+                        <span className="font-bold text-[#8E5B13]">500 pts</span>
                       </div>
                       <div className="p-2 rounded-lg bg-[#FAF5ED] flex justify-between items-center text-[11px]">
                         <span className="font-medium text-[#1F1A17]">Swiggy ₹300 Voucher</span>
-                        <span className="font-bold text-[#B5651A]">300 pts</span>
+                        <span className="font-bold text-[#8E5B13]">300 pts</span>
                       </div>
                     </div>
                   </div>
@@ -163,13 +163,13 @@ export const ProductWhatsAppPage: React.FC = () => {
       </section>
 
       {/* Pre-approved DLT & WhatsApp Template Gallery */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-10">
           <div className="text-center max-w-2xl mx-auto">
-            <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
               READY-TO-SEND TEMPLATES
             </span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#17140F]">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#14100B]">
               Sample TRAI DLT &amp; Meta Utility Flows
             </h2>
           </div>
@@ -178,18 +178,18 @@ export const ProductWhatsAppPage: React.FC = () => {
             {DLT_TEMPLATES.map((tpl) => (
               <div
                 key={tpl.name}
-                className="rounded-3xl bg-[#FAF5ED]/75 border border-[#EBDFC6] p-6 sm:p-7 flex flex-col justify-between gap-4"
+                className="rounded-3xl bg-[#FAF5ED]/75 border border-[#E2D3B5] p-6 sm:p-7 flex flex-col justify-between gap-4"
               >
                 <div className="space-y-3">
-                  <span className="inline-block rounded-full bg-white border border-[#EBDFC6] px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#B5651A]">
+                  <span className="inline-block rounded-full bg-white border border-[#E2D3B5] px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#8E5B13]">
                     {tpl.category}
                   </span>
-                  <h3 className="font-display font-bold text-lg text-[#17140F]">{tpl.name}</h3>
-                  <p className="rounded-xl bg-white border border-[#EBDFC6] p-3.5 text-xs font-mono text-[#5B534C] leading-relaxed">
+                  <h3 className="font-display font-bold text-lg text-[#14100B]">{tpl.name}</h3>
+                  <p className="rounded-xl bg-white border border-[#E2D3B5] p-3.5 text-xs font-mono text-[#5B534C] leading-relaxed">
                     {tpl.sample}
                   </p>
                 </div>
-                <div className="text-xs font-mono font-bold text-emerald-700 pt-2 border-t border-[#EBDFC6]">
+                <div className="text-xs font-mono font-bold text-emerald-700 pt-2 border-t border-[#E2D3B5]">
                   Benchmark: {tpl.openRate}
                 </div>
               </div>

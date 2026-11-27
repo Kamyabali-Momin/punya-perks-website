@@ -17,15 +17,15 @@ export const StartSandboxPage: React.FC = () => {
         microcopy=""
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
         <div className="max-w-[700px] mx-auto px-4 sm:px-6 md:px-8">
-          <div className="bg-white p-8 sm:p-10 rounded-[28px] border border-[#EBDFC6] shadow-sm">
+          <div className="bg-white p-8 sm:p-10 rounded-[28px] border border-[#E2D3B5] shadow-sm">
             {provisioned ? (
               <div className="text-center py-8 space-y-4">
                 <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 mx-auto flex items-center justify-center font-bold text-xl">✓</div>
                 <h4 className="font-display font-bold text-2xl text-[#1F1A17]">Sandbox Ready!</h4>
                 <p className="text-sm text-[#1F1A17]/70">We have provisioned your tenant console and API keys. Check your inbox to begin.</p>
-                <div className="pt-2 font-mono text-xs bg-[#FAF5ED] p-3 rounded-[12px] text-[#B5651A]">
+                <div className="pt-2 font-mono text-xs bg-[#FAF5ED] p-3 rounded-[12px] text-[#8E5B13]">
                   Tenant Endpoint: https://sandbox-ap-south-1.punyaperks.com/v1
                 </div>
               </div>
@@ -33,22 +33,22 @@ export const StartSandboxPage: React.FC = () => {
               <form onSubmit={(e) => { e.preventDefault(); setProvisioned(true); }} className="space-y-4">
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#1F1A17]/70 mb-1">Work Email</label>
-                  <input type="email" required placeholder="developer@brand.com" className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#EBDFC6] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#B5651A]" />
+                  <input type="email" required placeholder="developer@brand.com" className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#E2D3B5] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#8E5B13]" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#1F1A17]/70 mb-1">Company / Brand Name</label>
-                  <input required placeholder="Nova Brands" className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#EBDFC6] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#B5651A]" />
+                  <input required placeholder="Nova Brands" className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#E2D3B5] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#8E5B13]" />
                 </div>
                 <div>
                   <label className="block text-xs font-bold uppercase tracking-wider text-[#1F1A17]/70 mb-1">Primary Market Region</label>
-                  <select className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#EBDFC6] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#B5651A]">
+                  <select className="w-full rounded-[14px] bg-[#FAF5ED] border border-[#E2D3B5] px-4 py-2.5 text-xs sm:text-sm text-[#1F1A17] outline-none focus:border-[#8E5B13]">
                     <option>India (ap-south-1) · INR</option>
                     <option>Australia (ap-southeast-2) · AUD</option>
                     <option>New Zealand · NZD</option>
                     <option>Global / US · USD</option>
                   </select>
                 </div>
-                <button type="submit" className="w-full py-3.5 px-6 rounded-full bg-[#D9822B] text-white font-display font-semibold text-xs sm:text-sm hover:bg-[#B5651A] transition-all cursor-pointer">
+                <button type="submit" className="w-full py-3.5 px-6 rounded-full bg-[#A36D1C] text-white font-display font-semibold text-xs sm:text-sm hover:bg-[#8E5B13] transition-all cursor-pointer">
                   Provision Instant Free Sandbox
                 </button>
               </form>

@@ -40,21 +40,21 @@ export const NotFoundPage: React.FC = () => {
   return (
     <MainLayout>
       <section
-        className="py-20 sm:py-28 font-body bg-cover bg-bottom bg-no-repeat border-b border-[#EBDFC6]"
+        className="py-20 sm:py-28 font-body border-b border-[#E2D3B5]"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: '#FAF3E8',
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#EBDFC6] shadow-xs mb-4">
-            <ShieldAlert className="w-4 h-4 text-[#B5651A]" />
-            <span className="font-mono text-xs font-bold text-[#B5651A] tracking-[0.2em] uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#E2D3B5] shadow-xs mb-4">
+            <ShieldAlert className="w-4 h-4 text-[#8E5B13]" />
+            <span className="font-mono text-xs font-bold text-[#8E5B13] tracking-[0.2em] uppercase">
               Error 404 · Page Not Found
             </span>
           </div>
 
-          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl text-[#17140F] tracking-tight max-w-2xl mx-auto">
+          <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl text-[#14100B] tracking-tight max-w-2xl mx-auto">
             That page has expired or moved.
           </h1>
 
@@ -71,12 +71,12 @@ export const NotFoundPage: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search across all 44 pages (e.g. pricing, whatsapp, help)..."
-                className="w-full pl-12 pr-4 py-3.5 rounded-full bg-white border-2 border-[#EBDFC6] text-sm sm:text-base text-[#17140F] placeholder-[#8C827A] outline-none shadow-md focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all"
+                className="w-full pl-12 pr-4 py-3.5 rounded-full bg-white border-2 border-[#E2D3B5] text-sm sm:text-base text-[#14100B] placeholder-[#8C827A] outline-none shadow-md focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/20 transition-all"
               />
               {searchQuery && (
                 <button
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 text-xs font-semibold text-[#8C827A] hover:text-[#17140F] bg-[#FAF3E8] px-2.5 py-1 rounded-full cursor-pointer"
+                  className="absolute right-4 text-xs font-semibold text-[#8C827A] hover:text-[#14100B] bg-[#FAF3E8] px-2.5 py-1 rounded-full cursor-pointer"
                 >
                   Clear
                 </button>
@@ -89,10 +89,10 @@ export const NotFoundPage: React.FC = () => {
       {/* Directory & Top Links matching Sitemap Specifications */}
       <section className="py-16 md:py-20 bg-[#FAF7F2] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-8">
-          <div className="flex items-center justify-between border-b border-[#EBDFC6] pb-3">
+          <div className="flex items-center justify-between border-b border-[#E2D3B5] pb-3">
             <div className="flex items-center gap-2">
-              <Compass className="w-4 h-4 text-[#B5651A]" />
-              <h2 className="font-display font-bold text-lg text-[#17140F]">
+              <Compass className="w-4 h-4 text-[#8E5B13]" />
+              <h2 className="font-display font-bold text-lg text-[#14100B]">
                 {searchQuery ? `Search Results for "${searchQuery}"` : 'Recommended Destinations'}
               </h2>
             </div>
@@ -106,16 +106,16 @@ export const NotFoundPage: React.FC = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="p-5 rounded-2xl bg-white border border-[#EBDFC6] hover:border-[#B5651A] hover:shadow-md transition-all group flex flex-col justify-between"
+                className="p-5 rounded-2xl bg-white border border-[#E2D3B5] hover:border-[#8E5B13] hover:shadow-md transition-all group flex flex-col justify-between"
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="font-mono text-[10px] font-bold text-[#B5651A] bg-[#FAF3E8] px-2 py-0.5 rounded-full uppercase tracking-wider">
+                    <span className="font-mono text-[10px] font-bold text-[#8E5B13] bg-[#FAF3E8] px-2 py-0.5 rounded-full uppercase tracking-wider">
                       {item.section}
                     </span>
-                    <ArrowRight className="w-4 h-4 text-[#8C827A] group-hover:text-[#B5651A] group-hover:translate-x-1 transition-all" />
+                    <ArrowRight className="w-4 h-4 text-[#8C827A] group-hover:text-[#8E5B13] group-hover:translate-x-1 transition-all" />
                   </div>
-                  <h3 className="font-display font-bold text-base text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                  <h3 className="font-display font-bold text-base text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                     {item.title}
                   </h3>
                   <p className="text-xs text-[#5B534C] mt-1 leading-relaxed">
@@ -130,13 +130,13 @@ export const NotFoundPage: React.FC = () => {
           </div>
 
           {filteredLinks.length === 0 && (
-            <div className="p-12 text-center bg-white rounded-2xl border border-[#EBDFC6]">
+            <div className="p-12 text-center bg-white rounded-2xl border border-[#E2D3B5]">
               <HelpCircle className="w-10 h-10 text-[#8C827A] mx-auto mb-3" />
-              <p className="text-base font-bold text-[#17140F]">No pages found matching "{searchQuery}"</p>
+              <p className="text-base font-bold text-[#14100B]">No pages found matching "{searchQuery}"</p>
               <p className="text-xs text-[#5B534C] mt-1">Try checking your spelling or visit our homepage.</p>
               <a
                 href="/"
-                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#17140F] text-white text-xs font-semibold"
+                className="mt-4 inline-block px-5 py-2 rounded-full bg-[#14100B] text-white text-xs font-semibold"
               >
                 Return to Homepage
               </a>

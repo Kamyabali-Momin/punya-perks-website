@@ -156,15 +156,15 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
         ref={navRef}
         className={`sticky top-0 z-50 w-full transition-all duration-200 ${
           scrolled
-            ? 'bg-[#FBF7F0]/95 backdrop-blur-md shadow-md border-b border-[#EBDFC6] py-2.5'
-            : 'bg-[#FBF7F0] border-b border-[#EBDFC6] py-3.5'
+            ? 'bg-[#FAF6EE]/95 backdrop-blur-md shadow-md border-b border-[#E2D3B5] py-2.5'
+            : 'bg-[#FAF6EE] border-b border-[#E2D3B5] py-3.5'
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 flex items-center justify-between">
           {/* Brand Logo - Marigold floret + Punya Perks */}
           <a href="/" className="flex items-center gap-2.5 shrink-0 group">
             <svg
-              className="w-7 h-7 text-[#B5651A] shrink-0 transition-transform group-hover:scale-105"
+              className="w-7 h-7 text-[#8E5B13] shrink-0 transition-transform group-hover:scale-105"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -179,7 +179,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               <ellipse cx="6.34" cy="17.66" rx="2.2" ry="3.2" transform="rotate(45 6.34 17.66)" />
             </svg>
             <span className="font-display text-2xl tracking-tight text-[#1F1A17]">
-              Punya <span className="italic text-[#B5651A]">Perks</span>
+              Punya <span className="italic text-[#8E5B13]">Perks</span>
             </span>
           </a>
 
@@ -198,8 +198,8 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                     href={pillar.href}
                     className={`inline-flex items-center text-sm font-medium font-body whitespace-nowrap transition-colors py-1 cursor-pointer ${
                       isOpen
-                        ? 'text-[#B5651A] font-semibold'
-                        : 'text-[#17140F] hover:text-[#B5651A]'
+                        ? 'text-[#8E5B13] font-semibold'
+                        : 'text-[#14100B] hover:text-[#8E5B13]'
                     }`}
                   >
                     <span>{pillar.title}</span>
@@ -213,7 +213,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
           <div className="hidden lg:flex items-center gap-4 xl:gap-5 shrink-0">
             <a
               href="/start"
-              className="text-sm font-medium text-[#17140F] hover:text-[#B5651A] transition-colors whitespace-nowrap"
+              className="text-sm font-medium text-[#14100B] hover:text-[#8E5B13] transition-colors whitespace-nowrap"
             >
               Sign in
             </a>
@@ -222,7 +222,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               href="/demo"
               variant="primary"
               size="md"
-              className="rounded-full px-5 py-2.5 font-semibold shadow-xs bg-[#B5651A] hover:bg-[#9a5413] text-white transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap"
+              className="rounded-full px-5 py-2.5 font-semibold shadow-xs bg-[#8E5B13] hover:bg-[#6E440B] text-white transition-all hover:scale-[1.02] active:scale-[0.98] cursor-pointer whitespace-nowrap"
             >
               Request a demo
             </Button>
@@ -232,7 +232,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
           <button
             onClick={() => setMobileMenuOpen(true)}
             aria-label="Open mobile navigation menu"
-            className="lg:hidden p-2 rounded-xl text-[#17140F] hover:bg-[#FAF5ED] transition-colors"
+            className="lg:hidden p-2 rounded-xl text-[#14100B] hover:bg-[#FAF5ED] transition-colors"
           >
             <MenuIcon size={24} />
           </button>
@@ -241,7 +241,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
         {/* Desktop Mega-Menu Overlay Container */}
         {activeMenu && activePillarData && (
           <div
-            className="absolute top-full left-0 w-full bg-white border-b border-[#EBDFC6] shadow-xl transition-all animate-in fade-in slide-in-from-top-1 duration-200 z-50 font-body max-h-[82vh] overflow-y-auto"
+            className="absolute top-full left-0 w-full bg-white border-b border-[#E2D3B5] shadow-xl transition-all animate-in fade-in slide-in-from-top-1 duration-200 z-50 font-body max-h-[82vh] overflow-y-auto"
             onMouseEnter={() => {
               if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
             }}
@@ -258,7 +258,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                 {activePillarData.title === 'Platform' ? (
                   <div className="space-y-4">
                     {activePillarData.categories[0]?.categoryTitle && (
-                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] border-b border-[#EBDFC6] pb-2 font-body">
+                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8E5B13] border-b border-[#E2D3B5] pb-2 font-body">
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
@@ -269,24 +269,24 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                           <a
                             key={item.href}
                             href={item.href}
-                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#E2D3B5]/70 hover:border-[#8E5B13]/40 transition-all shadow-2xs"
                           >
-                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#E2D3B5] flex items-center justify-center shrink-0 text-[#8E5B13] group-hover:bg-[#8E5B13] group-hover:text-white transition-colors shadow-2xs">
                               <ItemIcon className="w-5 h-5" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
-                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                  <span className="font-display text-sm font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                                     {item.title}
                                   </span>
                                   {item.badge && (
-                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                    <span className="font-body text-[10px] font-bold bg-[#F4E9D2] text-[#8E5B13] px-2 py-0.5 rounded-full border border-[#8E5B13]/20">
                                       {item.badge}
                                     </span>
                                   )}
                                 </div>
-                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#8E5B13] transition-all shrink-0" />
                               </div>
                               <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed">
                                 {item.description}
@@ -301,7 +301,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                 activePillarData.title === 'Pricing' ? (
                   <div className="space-y-4">
                     {activePillarData.categories[0]?.categoryTitle && (
-                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] border-b border-[#EBDFC6] pb-2 font-body">
+                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8E5B13] border-b border-[#E2D3B5] pb-2 font-body">
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
@@ -312,24 +312,24 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                           <a
                             key={item.href}
                             href={item.href}
-                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#E2D3B5]/70 hover:border-[#8E5B13]/40 transition-all shadow-2xs"
                           >
-                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#E2D3B5] flex items-center justify-center shrink-0 text-[#8E5B13] group-hover:bg-[#8E5B13] group-hover:text-white transition-colors shadow-2xs">
                               <ItemIcon className="w-5 h-5" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
-                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                  <span className="font-display text-sm font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                                     {item.title}
                                   </span>
                                   {item.badge && (
-                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                    <span className="font-body text-[10px] font-bold bg-[#F4E9D2] text-[#8E5B13] px-2 py-0.5 rounded-full border border-[#8E5B13]/20">
                                       {item.badge}
                                     </span>
                                   )}
                                 </div>
-                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#8E5B13] transition-all shrink-0" />
                               </div>
                               <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed">
                                 {item.description}
@@ -344,7 +344,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                 activePillarData.title === 'Resources' ? (
                   <div className="space-y-4">
                     {activePillarData.categories[0]?.categoryTitle && (
-                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] border-b border-[#EBDFC6] pb-2 font-body">
+                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8E5B13] border-b border-[#E2D3B5] pb-2 font-body">
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
@@ -355,24 +355,24 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                           <a
                             key={item.href}
                             href={item.href}
-                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#E2D3B5]/70 hover:border-[#8E5B13]/40 transition-all shadow-2xs"
                           >
-                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#E2D3B5] flex items-center justify-center shrink-0 text-[#8E5B13] group-hover:bg-[#8E5B13] group-hover:text-white transition-colors shadow-2xs">
                               <ItemIcon className="w-5 h-5" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
-                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                  <span className="font-display text-sm font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                                     {item.title}
                                   </span>
                                   {item.badge && (
-                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                    <span className="font-body text-[10px] font-bold bg-[#F4E9D2] text-[#8E5B13] px-2 py-0.5 rounded-full border border-[#8E5B13]/20">
                                       {item.badge}
                                     </span>
                                   )}
                                 </div>
-                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#8E5B13] transition-all shrink-0" />
                               </div>
                               <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed line-clamp-2">
                                 {item.description}
@@ -387,7 +387,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                 activePillarData.title === 'Company' ? (
                   <div className="space-y-4">
                     {activePillarData.categories[0]?.categoryTitle && (
-                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] border-b border-[#EBDFC6] pb-2 font-body">
+                      <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8E5B13] border-b border-[#E2D3B5] pb-2 font-body">
                         {activePillarData.categories[0].categoryTitle}
                       </h4>
                     )}
@@ -398,24 +398,24 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                           <a
                             key={item.href}
                             href={item.href}
-                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                            className="group flex items-start gap-3.5 p-4 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#E2D3B5]/70 hover:border-[#8E5B13]/40 transition-all shadow-2xs"
                           >
-                            <div className="w-10 h-10 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs">
+                            <div className="w-10 h-10 rounded-xl bg-white border border-[#E2D3B5] flex items-center justify-center shrink-0 text-[#8E5B13] group-hover:bg-[#8E5B13] group-hover:text-white transition-colors shadow-2xs">
                               <ItemIcon className="w-5 h-5" />
                             </div>
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-2">
                                 <div className="flex items-center gap-2">
-                                  <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                  <span className="font-display text-sm font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                                     {item.title}
                                   </span>
                                   {item.badge && (
-                                    <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                    <span className="font-body text-[10px] font-bold bg-[#F4E9D2] text-[#8E5B13] px-2 py-0.5 rounded-full border border-[#8E5B13]/20">
                                       {item.badge}
                                     </span>
                                   )}
                                 </div>
-                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                                <ArrowRightIcon className="w-4 h-4 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#8E5B13] transition-all shrink-0" />
                               </div>
                               <p className="text-xs text-[#5B534C] mt-1.5 leading-relaxed line-clamp-2">
                                 {item.description}
@@ -432,7 +432,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                     {activePillarData.categories.map((cat, idx) => (
                       <div key={idx} className="space-y-3">
                         {cat.categoryTitle && (
-                          <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#B5651A] border-b border-[#EBDFC6] pb-2 font-body">
+                          <h4 className="text-[11px] font-bold uppercase tracking-[0.16em] text-[#8E5B13] border-b border-[#E2D3B5] pb-2 font-body">
                             {cat.categoryTitle}
                           </h4>
                         )}
@@ -443,24 +443,24 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                               <a
                                 key={item.href}
                                 href={item.href}
-                                className="group flex items-start gap-3 p-3.5 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#EBDFC6]/70 hover:border-[#B5651A]/40 transition-all shadow-2xs"
+                                className="group flex items-start gap-3 p-3.5 rounded-2xl bg-[#FAF5ED]/60 hover:bg-[#FAF5ED] border border-[#E2D3B5]/70 hover:border-[#8E5B13]/40 transition-all shadow-2xs"
                               >
-                                <div className="w-9 h-9 rounded-xl bg-white border border-[#EBDFC6] flex items-center justify-center shrink-0 text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors shadow-2xs mt-0.5">
+                                <div className="w-9 h-9 rounded-xl bg-white border border-[#E2D3B5] flex items-center justify-center shrink-0 text-[#8E5B13] group-hover:bg-[#8E5B13] group-hover:text-white transition-colors shadow-2xs mt-0.5">
                                   <ItemIcon className="w-4.5 h-4.5" />
                                 </div>
                                 <div className="flex-1 min-w-0">
                                   <div className="flex items-center justify-between gap-2">
                                     <div className="flex items-center gap-2">
-                                      <span className="font-display text-sm font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                                      <span className="font-display text-sm font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                                         {item.title}
                                       </span>
                                       {item.badge && (
-                                        <span className="font-body text-[10px] font-bold bg-[#FBE9D6] text-[#B5651A] px-2 py-0.5 rounded-full border border-[#B5651A]/20">
+                                        <span className="font-body text-[10px] font-bold bg-[#F4E9D2] text-[#8E5B13] px-2 py-0.5 rounded-full border border-[#8E5B13]/20">
                                           {item.badge}
                                         </span>
                                       )}
                                     </div>
-                                    <ArrowRightIcon className="w-3.5 h-3.5 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#B5651A] transition-all shrink-0" />
+                                    <ArrowRightIcon className="w-3.5 h-3.5 text-[#847C75] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 group-hover:text-[#8E5B13] transition-all shrink-0" />
                                   </div>
                                   <p className="text-xs text-[#5B534C] mt-1 leading-normal line-clamp-2">
                                     {item.description}
@@ -479,20 +479,20 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
               {/* Featured Callout Card */}
               {activePillarData.featuredCallout && (
                 <div
-                  className="col-span-4 rounded-3xl p-6 sm:p-8 border border-[#EBDFC6] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-no-repeat group h-full min-h-full"
+                  className="col-span-4 rounded-3xl p-6 sm:p-8 border border-[#E2D3B5] flex flex-col justify-between shadow-xs relative overflow-hidden bg-cover bg-no-repeat group h-full min-h-full"
                   style={{
                     backgroundImage: `url('${activePillarData.featuredCallout.bgImage || '/images/inner-hero-bg.jpg'}')`,
-                    backgroundColor: "#FAF3E8",
+                    backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
                     backgroundPosition: activePillarData.featuredCallout.bgImage ? "center" : "top right",
                   }}
                 >
                   {/* Subtle warm amber ambient glow to ensure rich depth */}
-                  <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#B5651A]/15 rounded-full blur-2xl pointer-events-none" />
+                  <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#8E5B13]/15 rounded-full blur-2xl pointer-events-none" />
                   <div className="relative z-10">
-                    <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block">
+                    <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.16em] uppercase block">
                       {activePillarData.featuredCallout.eyebrow}
                     </span>
-                    <h3 className="font-display font-bold text-xl sm:text-2xl text-[#17140F] mt-2 group-hover:text-[#B5651A] transition-colors leading-snug">
+                    <h3 className="font-display font-bold text-xl sm:text-2xl text-[#14100B] mt-2 group-hover:text-[#8E5B13] transition-colors leading-snug">
                       {activePillarData.featuredCallout.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#5B534C] mt-2.5 leading-relaxed">
@@ -502,7 +502,7 @@ export const Header: React.FC<HeaderProps> = ({ currentTheme = 'marigold', onThe
                   <div className="relative z-10 mt-6">
                     <a
                       href={activePillarData.featuredCallout.href}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8E5B13] hover:text-[#6E440B] transition-colors"
                     >
                       <span>{activePillarData.featuredCallout.linkText}</span>
                     </a>

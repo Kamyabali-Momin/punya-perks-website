@@ -29,7 +29,7 @@ export const CtaBanner: React.FC<CtaBannerProps> = ({
       className={`rounded-pp-bento bg-pp-primary text-white p-8 sm:p-12 md:p-16 text-center shadow-pp-lg relative overflow-hidden ${className}`}
     >
       {/* Decorative gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/10 pointer-events-none" />
+      <div className="absolute inset-0 bg-black/15 pointer-events-none" />
 
       <div className="relative z-10 max-w-3xl mx-auto space-y-4">
         {eyebrow && (

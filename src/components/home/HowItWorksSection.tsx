@@ -29,14 +29,14 @@ export const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-14 sm:py-16 lg:py-20 font-body" id="how-it-works">
+    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-14 sm:py-16 lg:py-20 font-body" id="how-it-works">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 reveal-on-scroll">
-          <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
+          <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
             HOW IT WORKS
           </span>
-          <h2 className="font-display font-normal text-3xl sm:text-4xl text-[#17140F] tracking-tight leading-[1.2]">
+          <h2 className="font-display font-normal text-3xl sm:text-4xl text-[#14100B] tracking-tight leading-[1.2]">
             Live in four weeks, not four quarters.
           </h2>
           <p className="font-body text-xs sm:text-sm text-[#847C75] mt-2.5 max-w-lg mx-auto">
@@ -49,7 +49,7 @@ export const HowItWorksSection: React.FC = () => {
           {steps.map((item, idx) => (
             <div
               key={item.title}
-              className={`rounded-[20px] bg-[#FEF0E1] p-4 sm:p-5 flex flex-col border border-[#F6DECA] hover:border-[#B5651A]/40 hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
+              className={`rounded-[20px] bg-[#F4E9D2] p-4 sm:p-5 flex flex-col border border-[#F6DECA] hover:border-[#8E5B13]/40 hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
                 idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : idx === 3 ? 'delay-300' : ''
               }`}
             >
@@ -65,10 +65,10 @@ export const HowItWorksSection: React.FC = () => {
 
               {/* Step & Title */}
               <div className="flex items-center gap-2 mb-2">
-                <span className="font-mono text-xs font-bold text-[#B5651A]">
+                <span className="font-mono text-xs font-bold text-[#8E5B13]">
                   {item.step}.
                 </span>
-                <h3 className="font-display font-normal text-lg sm:text-xl text-[#17140F]">
+                <h3 className="font-display font-normal text-lg sm:text-xl text-[#14100B]">
                   {item.title}
                 </h3>
               </div>

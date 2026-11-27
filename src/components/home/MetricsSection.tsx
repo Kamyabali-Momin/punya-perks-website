@@ -21,16 +21,16 @@ export const MetricsSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body overflow-hidden" id="by-the-numbers">
+    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-16 sm:py-20 lg:py-24 font-body overflow-hidden" id="by-the-numbers">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Split Row: Left Headline + Center 3D Bag Graphic + Right 2x2 Stat Cards */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-8 items-center">
           {/* Left Column: Eyebrow + Headline */}
           <div className="lg:col-span-4 space-y-4 reveal-on-scroll">
-            <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block">
+            <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block">
               BY THE NUMBERS
             </span>
-            <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[44px] text-[#17140F] tracking-tight leading-[1.12]">
+            <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[44px] text-[#14100B] tracking-tight leading-[1.12]">
               Built for scale,<br className="hidden sm:inline" /> measured in the open.
             </h2>
           </div>
@@ -52,11 +52,11 @@ export const MetricsSection: React.FC = () => {
             {stats.map((stat, idx) => (
               <div
                 key={idx}
-                className={`rounded-2xl border border-[#EBDFC6] hover:border-[#B5651A]/60 p-5 sm:p-6 text-center flex flex-col items-center justify-center min-h-[130px] bg-white shadow-xs hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
+                className={`rounded-2xl border border-[#E2D3B5] hover:border-[#8E5B13]/60 p-5 sm:p-6 text-center flex flex-col items-center justify-center min-h-[130px] bg-white shadow-xs hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
                   idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : idx === 3 ? 'delay-300' : ''
                 }`}
               >
-                <div className="font-display font-normal text-4xl sm:text-5xl text-[#B5651A] group-hover:scale-105 transition-transform duration-300 tracking-tight leading-none">
+                <div className="font-display font-normal text-4xl sm:text-5xl text-[#8E5B13] group-hover:scale-105 transition-transform duration-300 tracking-tight leading-none">
                   {stat.value}
                 </div>
                 <p className="text-xs sm:text-[13px] text-[#5B534C] mt-2.5 leading-snug font-normal max-w-[190px]">

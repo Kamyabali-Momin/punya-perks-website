@@ -70,12 +70,12 @@ export const SolutionsEcommercePage: React.FC = () => {
         imageAlt="Punya Perks D2C & E-commerce Earning Portal"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pillars.map((p, idx) => (
-              <div key={p.title} className="rounded-[28px] bg-white p-8 border border-[#EBDFC6] space-y-3 shadow-xs">
-                <span className="font-body text-xs font-bold text-[#B5651A]">0{idx + 1} // D2C RETENTION</span>
+              <div key={p.title} className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3 shadow-xs">
+                <span className="font-body text-xs font-bold text-[#8E5B13]">0{idx + 1} // D2C RETENTION</span>
                 <h3 className="font-display font-bold text-xl text-[#1F1A17]">{p.title}</h3>
                 <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{p.desc}</p>
               </div>
@@ -89,8 +89,8 @@ export const SolutionsEcommercePage: React.FC = () => {
               { metric: '15 min', label: 'Checkout hold window on abandoned carts' },
               { metric: '3.1x', label: 'Higher LTV for referred members' },
             ].map((s) => (
-              <div key={s.label} className="p-6 rounded-2xl bg-white border border-[#EBDFC6] text-center">
-                <div className="font-display font-bold text-2xl sm:text-3xl text-[#B5651A]">{s.metric}</div>
+              <div key={s.label} className="p-6 rounded-2xl bg-white border border-[#E2D3B5] text-center">
+                <div className="font-display font-bold text-2xl sm:text-3xl text-[#8E5B13]">{s.metric}</div>
                 <p className="text-xs text-[#5B534C] mt-1.5">{s.label}</p>
               </div>
             ))}
@@ -98,13 +98,13 @@ export const SolutionsEcommercePage: React.FC = () => {
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="max-w-2xl mb-10">
-            <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
               STOREFRONT CAPABILITIES
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
               Built for Modern D2C Margins and Return Windows
             </h2>
           </div>
@@ -113,12 +113,12 @@ export const SolutionsEcommercePage: React.FC = () => {
             {capabilities.map((cap) => {
               const Icon = cap.icon;
               return (
-                <div key={cap.title} className="p-7 rounded-3xl bg-[#FCF8F2] border border-[#EBDFC6] flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#EBDFC6] flex items-center justify-center text-[#B5651A] shrink-0">
+                <div key={cap.title} className="p-7 rounded-3xl bg-[#FCF8F2] border border-[#E2D3B5] flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] shrink-0">
                     <Icon size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-display font-bold text-lg text-[#17140F]">{cap.title}</h3>
+                    <h3 className="font-display font-bold text-lg text-[#14100B]">{cap.title}</h3>
                     <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{cap.desc}</p>
                   </div>
                 </div>

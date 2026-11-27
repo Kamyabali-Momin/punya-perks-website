@@ -316,7 +316,7 @@ export const homeData = {
     {
       id: "platinum",
       name: "Platinum Tier",
-      accentColor: "#D9822B",
+      accentColor: "#A36D1C",
       badgeBg: "bg-emerald-100 text-emerald-900",
       multiplier: "2.0x",
       requirement: "Spend ₹75,000 / year",

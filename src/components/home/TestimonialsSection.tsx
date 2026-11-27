@@ -45,14 +45,14 @@ export const TestimonialsSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="testimonials">
+    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-16 sm:py-20 lg:py-24 font-body" id="testimonials">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 reveal-on-scroll">
-          <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
+          <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-3">
             WHAT OPERATORS SAY
           </span>
-          <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[42px] text-[#17140F] tracking-tight leading-[1.18]">
+          <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[42px] text-[#14100B] tracking-tight leading-[1.18]">
             Teams that stopped reconciling spreadsheets.
           </h2>
         </div>
@@ -60,7 +60,7 @@ export const TestimonialsSection: React.FC = () => {
         {/* 2 Cards Layout matching user reference image */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
           {/* Left Card (7 cols on lg, 8 cols on xl): Operator Testimonial */}
-          <div className="lg:col-span-7 xl:col-span-8 min-w-0 rounded-[24px] bg-[#FAF5ED] p-6 sm:p-7 md:p-8 border border-[#EBDFC6] shadow-xs flex flex-col justify-between reveal-on-scroll">
+          <div className="lg:col-span-7 xl:col-span-8 min-w-0 rounded-[24px] bg-[#FAF5ED] p-6 sm:p-7 md:p-8 border border-[#E2D3B5] shadow-xs flex flex-col justify-between reveal-on-scroll">
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-7 items-start sm:items-stretch min-w-0">
               {/* Operator Photo */}
               <div className="w-full sm:w-[200px] md:w-[220px] aspect-[4/4] sm:aspect-auto rounded-[16px] overflow-hidden bg-[#533923] shrink-0 shadow-xs">
@@ -75,7 +75,7 @@ export const TestimonialsSection: React.FC = () => {
               {/* Review Narrative */}
               <div className="flex-1 flex flex-col justify-between min-w-0">
                 <div>
-                  <h3 className="font-display font-bold text-lg sm:text-[20px] text-[#17140F] leading-tight mb-1">
+                  <h3 className="font-display font-bold text-lg sm:text-[20px] text-[#14100B] leading-tight mb-1">
                     {current.name}
                   </h3>
                   <div className="text-xs sm:text-[13px] text-[#5A5248] font-body mb-4 font-normal">
@@ -102,7 +102,7 @@ export const TestimonialsSection: React.FC = () => {
                         }
                       />
                     ))}
-                    <span className="text-xs font-semibold text-[#17140F] ml-1.5 font-body">
+                    <span className="text-xs font-semibold text-[#14100B] ml-1.5 font-body">
                       ({current.rating.toFixed(1)})
                     </span>
                   </div>
@@ -112,14 +112,14 @@ export const TestimonialsSection: React.FC = () => {
                     <button
                       onClick={handlePrev}
                       aria-label="Previous testimonial"
-                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#17140F]/30 flex items-center justify-center text-[#17140F] hover:bg-[#17140F] hover:text-white transition-colors cursor-pointer"
+                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#14100B]/30 flex items-center justify-center text-[#14100B] hover:bg-[#14100B] hover:text-white transition-colors cursor-pointer"
                     >
                       <ChevronLeft size={16} />
                     </button>
                     <button
                       onClick={handleNext}
                       aria-label="Next testimonial"
-                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#17140F]/30 flex items-center justify-center text-[#17140F] hover:bg-[#17140F] hover:text-white transition-colors cursor-pointer"
+                      className="w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#14100B]/30 flex items-center justify-center text-[#14100B] hover:bg-[#14100B] hover:text-white transition-colors cursor-pointer"
                     >
                       <ChevronRight size={16} />
                     </button>
@@ -132,7 +132,7 @@ export const TestimonialsSection: React.FC = () => {
           {/* Right Card (5 cols on lg, 4 cols on xl): AI Strategy CTA Card */}
           <a
             href="/contact"
-            className="lg:col-span-5 xl:col-span-4 rounded-[24px] relative overflow-hidden shadow-xs border border-[#EBDFC6] block group cursor-pointer bg-cover bg-center min-h-[260px] sm:min-h-[320px] lg:min-h-[340px] hover:scale-[1.01] transition-all duration-300 reveal-on-scroll delay-100"
+            className="lg:col-span-5 xl:col-span-4 rounded-[24px] relative overflow-hidden shadow-xs border border-[#E2D3B5] block group cursor-pointer bg-cover bg-center min-h-[260px] sm:min-h-[320px] lg:min-h-[340px] hover:scale-[1.01] transition-all duration-300 reveal-on-scroll delay-100"
             style={{
               backgroundImage: "url('/images/testimonials/ai-card-full.jpg')",
               backgroundColor: '#24130A',

@@ -41,12 +41,12 @@ export const ResourceDetailPage: React.FC = () => {
   if (!resource) {
     return (
       <MainLayout>
-        <section className="bg-[#FAF5ED] border-b border-[#EBDFC6] py-20 md:py-28 font-body text-[#17140F]">
+        <section className="bg-[#FAF5ED] border-b border-[#E2D3B5] py-20 md:py-28 font-body text-[#14100B]">
           <div className="max-w-[780px] mx-auto px-4 sm:px-6 text-center space-y-5">
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FEF0E1] border border-[#F3D7BD] px-3.5 py-1 text-xs font-mono font-bold text-[#B5651A] uppercase">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F4E9D2] border border-[#F3D7BD] px-3.5 py-1 text-xs font-mono font-bold text-[#8E5B13] uppercase">
               RESOURCE NOT FOUND
             </span>
-            <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#17140F]">
+            <h1 className="font-display text-3xl sm:text-4xl font-bold text-[#14100B]">
               We couldn’t find that resource publication
             </h1>
             <p className="text-sm sm:text-base text-[#5B534C]">
@@ -55,7 +55,7 @@ export const ResourceDetailPage: React.FC = () => {
             <div className="pt-2">
               <Link
                 to="/resources"
-                className="inline-flex items-center gap-2 rounded-full bg-[#B5651A] hover:bg-[#9a5413] px-6 py-3 text-xs font-semibold text-white transition-colors"
+                className="inline-flex items-center gap-2 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] px-6 py-3 text-xs font-semibold text-white transition-colors"
               >
                 <ArrowLeft size={14} />
                 <span>Back to Resources Hub</span>
@@ -81,10 +81,10 @@ export const ResourceDetailPage: React.FC = () => {
     <MainLayout>
       {/* Editorial Hero */}
       <section
-        className="relative w-full border-b border-[#EBDFC6] pt-10 pb-14 sm:pt-12 sm:pb-18 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden text-[#17140F]"
+        className="relative w-full border-b border-[#E2D3B5] pt-10 pb-14 sm:pt-12 sm:pb-18 font-body overflow-hidden text-[#14100B]"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: '#FAF3E8',
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
         }}
       >
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
@@ -92,19 +92,19 @@ export const ResourceDetailPage: React.FC = () => {
           <nav aria-label="Breadcrumb" className="mb-6">
             <ol className="flex flex-wrap items-center gap-1.5 text-xs text-[#847C75]">
               <li>
-                <Link to="/" className="hover:text-[#B5651A] transition-colors">
+                <Link to="/" className="hover:text-[#8E5B13] transition-colors">
                   Home
                 </Link>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight size={12} aria-hidden="true" />
-                <Link to="/resources" className="hover:text-[#B5651A] transition-colors">
+                <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">
                   Resources
                 </Link>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight size={12} aria-hidden="true" />
-                <span className="text-[#17140F] font-semibold" aria-current="page">
+                <span className="text-[#14100B] font-semibold" aria-current="page">
                   {resource.tag}
                 </span>
               </li>
@@ -114,17 +114,17 @@ export const ResourceDetailPage: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-5">
               <div className="flex flex-wrap items-center gap-2.5 text-xs">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/90 border border-[#EBDFC6] px-3 py-1 font-mono font-bold uppercase tracking-wider text-[#B5651A] text-[11px]">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/90 border border-[#E2D3B5] px-3 py-1 font-mono font-bold uppercase tracking-wider text-[#8E5B13] text-[11px]">
                   <Sparkles size={12} />
                   <span>{resource.tag}</span>
                 </span>
                 <span className="inline-flex items-center gap-1 text-[#5B534C] font-mono text-[11px]">
-                  <Clock size={12} className="text-[#B5651A]" />
+                  <Clock size={12} className="text-[#8E5B13]" />
                   <span>{resource.meta}</span>
                 </span>
               </div>
 
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#17140F] leading-[1.15] tracking-tight">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-[44px] font-bold text-[#14100B] leading-[1.15] tracking-tight">
                 {resource.title}
               </h1>
 
@@ -132,20 +132,20 @@ export const ResourceDetailPage: React.FC = () => {
                 {resource.text}
               </p>
 
-              <div className="pt-3 border-t border-[#EBDFC6]/80 flex flex-wrap items-center justify-between gap-4">
+              <div className="pt-3 border-t border-[#E2D3B5]/80 flex flex-wrap items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#FEF0E1] border border-[#F6DECA] text-[#B5651A] font-bold text-sm flex items-center justify-center font-display shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#F4E9D2] border border-[#F6DECA] text-[#8E5B13] font-bold text-sm flex items-center justify-center font-display shrink-0">
                     {resource.author.initials}
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-[#17140F]">{resource.author.name}</div>
+                    <div className="text-sm font-bold text-[#14100B]">{resource.author.name}</div>
                     <div className="text-xs text-[#5B534C]">{resource.author.role}</div>
                   </div>
                 </div>
 
                 <Link
                   to="/resources"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8E5B13] hover:text-[#6E440B] transition-colors"
                 >
                   <ArrowLeft size={14} />
                   <span>All Resources Hub</span>
@@ -154,7 +154,7 @@ export const ResourceDetailPage: React.FC = () => {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="rounded-3xl overflow-hidden border border-[#EBDFC6] bg-white shadow-xl aspect-[16/10] lg:aspect-[4/3]">
+              <div className="rounded-3xl overflow-hidden border border-[#E2D3B5] bg-white shadow-xl aspect-[16/10] lg:aspect-[4/3]">
                 <img
                   src={resource.image}
                   alt={resource.title}
@@ -171,12 +171,12 @@ export const ResourceDetailPage: React.FC = () => {
 
       {/* Metrics Strip if present */}
       {resource.metrics && (
-        <section className="bg-white border-b border-[#EBDFC6] py-8 font-body">
+        <section className="bg-white border-b border-[#E2D3B5] py-8 font-body">
           <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {resource.metrics.map((m) => (
-                <div key={m.label} className="rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6] p-5">
-                  <div className="font-display font-extrabold text-3xl text-[#B5651A]">{m.value}</div>
+                <div key={m.label} className="rounded-2xl bg-[#FAF5ED] border border-[#E2D3B5] p-5">
+                  <div className="font-display font-extrabold text-3xl text-[#8E5B13]">{m.value}</div>
                   <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#5B534C] mt-1">
                     {m.label}
                   </div>
@@ -188,23 +188,23 @@ export const ResourceDetailPage: React.FC = () => {
       )}
 
       {/* Main Content + Gated Asset Sidebar */}
-      <section className="bg-white py-12 sm:py-16 border-b border-[#EBDFC6] font-body text-[#17140F]">
+      <section className="bg-white py-12 sm:py-16 border-b border-[#E2D3B5] font-body text-[#14100B]">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
             {/* Left Reading Column */}
             <div className="lg:col-span-8 space-y-8">
               {/* Executive Summary Callout */}
-              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-2.5">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] block">
+              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF5ED] border border-[#E2D3B5] space-y-2.5">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] block">
                   Executive Summary
                 </span>
-                <p className="text-sm sm:text-base text-[#17140F] leading-relaxed font-medium">
+                <p className="text-sm sm:text-base text-[#14100B] leading-relaxed font-medium">
                   {resource.summary}
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h2 className="font-display font-bold text-2xl sm:text-[28px] text-[#17140F] leading-snug">
+                <h2 className="font-display font-bold text-2xl sm:text-[28px] text-[#14100B] leading-snug">
                   {resource.content.heading1}
                 </h2>
                 <p className="text-sm sm:text-base text-[#5B534C] leading-[1.75]">
@@ -213,7 +213,7 @@ export const ResourceDetailPage: React.FC = () => {
               </div>
 
               <div className="space-y-3">
-                <h2 className="font-display font-bold text-2xl sm:text-[28px] text-[#17140F] leading-snug">
+                <h2 className="font-display font-bold text-2xl sm:text-[28px] text-[#14100B] leading-snug">
                   {resource.content.heading2}
                 </h2>
                 <p className="text-sm sm:text-base text-[#5B534C] leading-[1.75]">
@@ -223,7 +223,7 @@ export const ResourceDetailPage: React.FC = () => {
 
               {resource.content.heading3 && resource.content.para3 && (
                 <div className="space-y-3">
-                  <h2 className="font-display font-bold text-2xl sm:text-[28px] text-[#17140F] leading-snug">
+                  <h2 className="font-display font-bold text-2xl sm:text-[28px] text-[#14100B] leading-snug">
                     {resource.content.heading3}
                   </h2>
                   <p className="text-sm sm:text-base text-[#5B534C] leading-[1.75]">
@@ -233,15 +233,15 @@ export const ResourceDetailPage: React.FC = () => {
               )}
 
               {/* Key Highlights Checklist */}
-              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-4">
-                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] block">
+              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF5ED] border border-[#E2D3B5] space-y-4">
+                <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] block">
                   Key Highlights &amp; Takeaways
                 </span>
                 <ul className="space-y-3">
                   {resource.content.highlights.map((h) => (
                     <li
                       key={h}
-                      className="flex items-start gap-2.5 text-xs sm:text-sm font-medium text-[#17140F] bg-white rounded-xl border border-[#EBDFC6] p-3.5"
+                      className="flex items-start gap-2.5 text-xs sm:text-sm font-medium text-[#14100B] bg-white rounded-xl border border-[#E2D3B5] p-3.5"
                     >
                       <CheckCircle2 size={16} className="text-[#1B8756] shrink-0 mt-0.5" />
                       <span>{h}</span>
@@ -254,8 +254,8 @@ export const ResourceDetailPage: React.FC = () => {
             {/* Right Sticky Download & Architecture Sidebar */}
             <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
               {/* Gated PDF Download Card */}
-              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-4">
-                <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A]">
+              <div className="p-6 sm:p-7 rounded-3xl bg-[#FAF5ED] border border-[#E2D3B5] space-y-4">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13]">
                   <FileText size={16} />
                   <span>Full Publication PDF</span>
                 </div>
@@ -268,9 +268,9 @@ export const ResourceDetailPage: React.FC = () => {
                     <div className="w-8 h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center mx-auto">
                       <Check size={16} />
                     </div>
-                    <div className="text-xs font-bold text-[#17140F]">Download Link Dispatched</div>
+                    <div className="text-xs font-bold text-[#14100B]">Download Link Dispatched</div>
                     <p className="text-[11px] text-[#5B534C]">
-                      Sent to <span className="font-semibold text-[#17140F]">{gateEmail}</span>.
+                      Sent to <span className="font-semibold text-[#14100B]">{gateEmail}</span>.
                     </p>
                   </div>
                 ) : (
@@ -280,7 +280,7 @@ export const ResourceDetailPage: React.FC = () => {
                       value={gateName}
                       onChange={(e) => setGateName(e.target.value)}
                       placeholder="Your full name"
-                      className="w-full h-10 px-3.5 rounded-xl bg-white border border-[#EBDFC6] text-xs outline-none focus:border-[#B5651A]"
+                      className="w-full h-10 px-3.5 rounded-xl bg-white border border-[#E2D3B5] text-xs outline-none focus:border-[#8E5B13]"
                     />
                     <input
                       type="email"
@@ -288,11 +288,11 @@ export const ResourceDetailPage: React.FC = () => {
                       value={gateEmail}
                       onChange={(e) => setGateEmail(e.target.value)}
                       placeholder="Work email address"
-                      className="w-full h-10 px-3.5 rounded-xl bg-white border border-[#EBDFC6] text-xs outline-none focus:border-[#B5651A]"
+                      className="w-full h-10 px-3.5 rounded-xl bg-white border border-[#E2D3B5] text-xs outline-none focus:border-[#8E5B13]"
                     />
                     <button
                       type="submit"
-                      className="w-full h-11 px-4 rounded-xl bg-[#B5651A] hover:bg-[#9a5413] text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                      className="w-full h-11 px-4 rounded-xl bg-[#8E5B13] hover:bg-[#6E440B] text-white font-bold text-xs flex items-center justify-center gap-2 transition-colors cursor-pointer"
                     >
                       <Download size={15} />
                       <span>{resource.downloadText || 'Download Free PDF'}</span>
@@ -302,8 +302,8 @@ export const ResourceDetailPage: React.FC = () => {
               </div>
 
               {/* Dark Demo CTA Card */}
-              <div className="p-6 sm:p-7 rounded-3xl bg-[#17140F] text-white border border-[#3E2C20] space-y-4">
-                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#F5B06B] block">
+              <div className="p-6 sm:p-7 rounded-3xl bg-[#14100B] text-white border border-[#3E2C20] space-y-4">
+                <span className="text-[10px] font-mono font-bold uppercase tracking-widest text-[#D4A147] block">
                   DEPLOY PUNYA PERKS
                 </span>
                 <h3 className="font-display font-bold text-xl text-white leading-snug">
@@ -315,7 +315,7 @@ export const ResourceDetailPage: React.FC = () => {
                 <div className="flex flex-col gap-2.5">
                   <Link
                     to="/demo"
-                    className="w-full py-3 px-4 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
+                    className="w-full py-3 px-4 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-bold text-xs flex items-center justify-center gap-1.5 transition-colors"
                   >
                     <span>Book Platform Demo</span>
                     <ArrowRight size={13} />
@@ -334,20 +334,20 @@ export const ResourceDetailPage: React.FC = () => {
       </section>
 
       {/* Related Resources Grid */}
-      <section className="bg-[#FAF5ED]/60 py-12 sm:py-16 border-b border-[#EBDFC6] font-body">
+      <section className="bg-[#FAF5ED]/60 py-12 sm:py-16 border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1280px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
             <div>
-              <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#B5651A]">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#8E5B13]">
                 MORE PUBLICATIONS
               </span>
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#17140F] mt-1">
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#14100B] mt-1">
                 Explore Other Guides &amp; Briefs
               </h2>
             </div>
             <Link
               to="/resources"
-              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#8E5B13] hover:text-[#6E440B] transition-colors"
             >
               <span>Browse all resources</span>
               <ArrowRight size={14} />
@@ -359,21 +359,21 @@ export const ResourceDetailPage: React.FC = () => {
               <Link
                 key={rel.id}
                 to={`/resources/${rel.id}`}
-                className="group bg-white rounded-2xl border border-[#EBDFC6] hover:border-[#B5651A] p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all"
+                className="group bg-white rounded-2xl border border-[#E2D3B5] hover:border-[#8E5B13] p-5 flex flex-col justify-between shadow-2xs hover:shadow-md transition-all"
               >
                 <div>
                   <div className="flex items-center justify-between gap-2 mb-3">
-                    <span className="rounded-md bg-[#FEF0E1] border border-[#F6DECA] px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase text-[#B5651A]">
+                    <span className="rounded-md bg-[#F4E9D2] border border-[#F6DECA] px-2.5 py-0.5 text-[10px] font-mono font-bold uppercase text-[#8E5B13]">
                       {rel.tag}
                     </span>
                     <span className="text-[11px] font-mono text-[#847C75]">{rel.meta}</span>
                   </div>
-                  <h3 className="font-display font-bold text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug mb-2">
+                  <h3 className="font-display font-bold text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug mb-2">
                     {rel.title}
                   </h3>
                   <p className="text-xs text-[#5B534C] line-clamp-2 leading-relaxed">{rel.text}</p>
                 </div>
-                <div className="mt-5 pt-3 border-t border-[#F2EAE0] flex items-center justify-between text-xs font-semibold text-[#B5651A]">
+                <div className="mt-5 pt-3 border-t border-[#F2EAE0] flex items-center justify-between text-xs font-semibold text-[#8E5B13]">
                   <span className="text-[#5B534C] font-normal">{rel.author.name}</span>
                   <span className="inline-flex items-center gap-1">
                     {rel.actionLabel || 'Read'} <ArrowRight size={13} />

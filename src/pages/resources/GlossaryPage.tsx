@@ -272,27 +272,27 @@ export const GlossaryPage: React.FC = () => {
     <MainLayout>
       {/* Hero Section */}
       <section
-        className="relative w-full border-b border-[#EBDFC6] pt-14 pb-20 text-center overflow-hidden bg-cover bg-bottom bg-no-repeat font-body"
+        className="relative w-full border-b border-[#E2D3B5] pt-14 pb-20 text-center overflow-hidden font-body"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: "#FAF3E8",
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           {/* Breadcrumbs */}
           <nav aria-label="Breadcrumb" className="text-xs font-semibold flex items-center justify-center gap-2 mb-6 text-[#847C75]">
-            <Link to="/" className="hover:text-[#B5651A] transition-colors">Home</Link>
+            <Link to="/" className="hover:text-[#8E5B13] transition-colors">Home</Link>
             <span className="text-[#847C75]/60">/</span>
-            <Link to="/resources" className="hover:text-[#B5651A] transition-colors">Resources</Link>
+            <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">Resources</Link>
             <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#17140F] font-bold">Glossary</span>
+            <span className="text-[#14100B] font-bold">Glossary</span>
           </nav>
 
-          <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-3">
+          <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3">
             PUNYA PERKS TERMINOLOGY GLOSSARY
           </div>
 
-          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#17140F] tracking-tight mb-4 leading-tight">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#14100B] tracking-tight mb-4 leading-tight">
             Loyalty, in plain English.
           </h1>
 
@@ -308,13 +308,13 @@ export const GlossaryPage: React.FC = () => {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               placeholder="Search terms, concepts, formulas (e.g. Breakage, FIFO, Maker-Checker)..."
-              className="w-full pl-12 pr-16 py-3.5 rounded-2xl bg-white border border-[#EBDFC6] text-[#17140F] placeholder-neutral-400 text-xs sm:text-sm focus:outline-none focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 shadow-md transition-all font-body"
+              className="w-full pl-12 pr-16 py-3.5 rounded-2xl bg-white border border-[#E2D3B5] text-[#14100B] placeholder-neutral-400 text-xs sm:text-sm focus:outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/20 shadow-md transition-all font-body"
             />
             {searchTerm && (
               <button
                 type="button"
                 onClick={() => setSearchTerm('')}
-                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-[#17140F] text-xs font-semibold px-2 py-0.5 rounded bg-neutral-100 cursor-pointer"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-[#14100B] text-xs font-semibold px-2 py-0.5 rounded bg-neutral-100 cursor-pointer"
               >
                 Clear
               </button>
@@ -335,8 +335,8 @@ export const GlossaryPage: React.FC = () => {
                   }}
                   className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-[#B5651A] text-white font-bold shadow-sm'
-                      : 'bg-white/90 text-[#5B534C] hover:text-[#17140F] border border-[#EBDFC6]'
+                      ? 'bg-[#8E5B13] text-white font-bold shadow-sm'
+                      : 'bg-white/90 text-[#5B534C] hover:text-[#14100B] border border-[#E2D3B5]'
                   }`}
                 >
                   {cat}
@@ -348,7 +348,7 @@ export const GlossaryPage: React.FC = () => {
       </section>
 
       {/* Sticky Alphabet Filter Bar */}
-      <section className="bg-white border-b border-[#EBDFC6] sticky top-16 sm:top-20 z-30 shadow-xs">
+      <section className="bg-white border-b border-[#E2D3B5] sticky top-16 sm:top-20 z-30 shadow-xs">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 py-3">
           <div className="flex items-center justify-center gap-1 overflow-x-auto pb-1 scrollbar-none">
             <button
@@ -356,7 +356,7 @@ export const GlossaryPage: React.FC = () => {
               onClick={() => setSelectedLetter('All')}
               className={`px-3 py-1 rounded-md text-xs font-bold transition-all cursor-pointer ${
                 selectedLetter === 'All'
-                  ? 'bg-[#D9822B] text-white shadow-xs'
+                  ? 'bg-[#A36D1C] text-white shadow-xs'
                   : 'text-neutral-600 hover:text-[#1C1610] hover:bg-[#FAF4EC]'
               }`}
             >
@@ -373,7 +373,7 @@ export const GlossaryPage: React.FC = () => {
                   onClick={() => setSelectedLetter(letter)}
                   className={`w-7 h-7 flex items-center justify-center rounded-md text-xs font-bold transition-all ${
                     isSelected
-                      ? 'bg-[#D9822B] text-white shadow-xs'
+                      ? 'bg-[#A36D1C] text-white shadow-xs'
                       : hasTerms
                       ? 'text-[#1C1610] hover:bg-[#FAF4EC] cursor-pointer'
                       : 'text-neutral-300 cursor-not-allowed'
@@ -406,7 +406,7 @@ export const GlossaryPage: React.FC = () => {
               <button
                 type="button"
                 onClick={handleResetFilters}
-                className="text-xs font-bold text-[#B5651A] hover:text-[#B5651A] hover:underline cursor-pointer self-start sm:self-auto"
+                className="text-xs font-bold text-[#8E5B13] hover:text-[#8E5B13] hover:underline cursor-pointer self-start sm:self-auto"
               >
                 Reset all filters
               </button>
@@ -415,8 +415,8 @@ export const GlossaryPage: React.FC = () => {
 
           {/* Empty State */}
           {filteredTerms.length === 0 ? (
-            <div className="text-center py-16 bg-white rounded-3xl border border-dashed border-[#EBDFC6] max-w-lg mx-auto p-8 shadow-sm">
-              <BookOpenIcon className="w-12 h-12 text-[#B5651A]/40 mx-auto mb-3" />
+            <div className="text-center py-16 bg-white rounded-3xl border border-dashed border-[#E2D3B5] max-w-lg mx-auto p-8 shadow-sm">
+              <BookOpenIcon className="w-12 h-12 text-[#8E5B13]/40 mx-auto mb-3" />
               <h3 className="font-display text-lg font-bold text-[#1C1610]">No matching loyalty terms found</h3>
               <p className="font-body text-xs sm:text-sm text-neutral-500 mt-1 max-w-xs mx-auto">
                 We couldn't find any terms matching your current search or filter criteria.
@@ -424,7 +424,7 @@ export const GlossaryPage: React.FC = () => {
               <button
                 type="button"
                 onClick={handleResetFilters}
-                className="mt-5 px-5 py-2.5 bg-[#D9822B] text-white text-xs font-bold rounded-xl hover:bg-[#B5651A] transition-all cursor-pointer shadow-sm"
+                className="mt-5 px-5 py-2.5 bg-[#A36D1C] text-white text-xs font-bold rounded-xl hover:bg-[#8E5B13] transition-all cursor-pointer shadow-sm"
               >
                 Clear search & filters
               </button>
@@ -440,18 +440,18 @@ export const GlossaryPage: React.FC = () => {
                   <article
                     key={item.slug}
                     id={item.slug}
-                    className="bg-white rounded-3xl p-6 sm:p-7 border border-[#EBDFC6] shadow-[0_2px_12px_rgba(28,22,16,0.04)] hover:shadow-[0_8px_24px_rgba(28,22,16,0.08)] hover:border-[#B5651A]/50 transition-all duration-300 flex flex-col justify-between group scroll-mt-36"
+                    className="bg-white rounded-3xl p-6 sm:p-7 border border-[#E2D3B5] shadow-[0_2px_12px_rgba(28,22,16,0.04)] hover:shadow-[0_8px_24px_rgba(28,22,16,0.08)] hover:border-[#8E5B13]/50 transition-all duration-300 flex flex-col justify-between group scroll-mt-36"
                   >
                     <div>
                       {/* Top Category Badge & Copy Action */}
                       <div className="flex items-center justify-between gap-3 mb-3">
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-[#FEF0E1] text-[#B5651A] border border-[#F3D7BD]">
+                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold uppercase tracking-wider bg-[#F4E9D2] text-[#8E5B13] border border-[#F3D7BD]">
                           {item.category}
                         </span>
                         <button
                           type="button"
                           onClick={() => copyTermLink(item.slug)}
-                          className="text-neutral-400 hover:text-[#B5651A] transition-colors p-1.5 rounded-lg hover:bg-[#FAF4EC]"
+                          className="text-neutral-400 hover:text-[#8E5B13] transition-colors p-1.5 rounded-lg hover:bg-[#FAF4EC]"
                           title="Copy link to this term"
                         >
                           {isCopied ? (
@@ -465,7 +465,7 @@ export const GlossaryPage: React.FC = () => {
                       </div>
 
                       {/* Term Title */}
-                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#1C1610] group-hover:text-[#B5651A] transition-colors tracking-tight mb-3">
+                      <h3 className="font-display text-xl sm:text-2xl font-bold text-[#1C1610] group-hover:text-[#8E5B13] transition-colors tracking-tight mb-3">
                         {item.term}
                       </h3>
 
@@ -476,7 +476,7 @@ export const GlossaryPage: React.FC = () => {
 
                       {/* Formula / Standard Box */}
                       {item.formulaOrStandard && (
-                        <div className="mb-4 p-3 rounded-xl bg-[#FAF4EC] border border-[#EBDFC6] font-mono text-xs text-[#1C1610]">
+                        <div className="mb-4 p-3 rounded-xl bg-[#FAF4EC] border border-[#E2D3B5] font-mono text-xs text-[#1C1610]">
                           <span className="text-[10px] font-bold uppercase text-neutral-500 block mb-1">
                             Standard / Formula:
                           </span>
@@ -486,7 +486,7 @@ export const GlossaryPage: React.FC = () => {
 
                       {/* Expanded Section */}
                       {isExpanded && (
-                        <div className="space-y-4 pt-3 border-t border-[#EBDFC6] mt-4 text-xs leading-relaxed animate-fade-in font-body">
+                        <div className="space-y-4 pt-3 border-t border-[#E2D3B5] mt-4 text-xs leading-relaxed animate-fade-in font-body">
                           <div>
                             <h4 className="font-bold text-[#1C1610] uppercase tracking-wider text-[11px] mb-1">
                               Detailed Explanation
@@ -505,9 +505,9 @@ export const GlossaryPage: React.FC = () => {
                             </p>
                           </div>
 
-                          <div className="p-3.5 rounded-2xl bg-[#FEF0E1]/60 border border-[#F3D7BD]">
-                            <h4 className="font-bold text-[#B5651A] uppercase tracking-wider text-[11px] mb-1 flex items-center gap-1.5">
-                              <ShieldCheckIcon className="w-4 h-4 text-[#B5651A]" />
+                          <div className="p-3.5 rounded-2xl bg-[#F4E9D2]/60 border border-[#F3D7BD]">
+                            <h4 className="font-bold text-[#8E5B13] uppercase tracking-wider text-[11px] mb-1 flex items-center gap-1.5">
+                              <ShieldCheckIcon className="w-4 h-4 text-[#8E5B13]" />
                               Punya Perks Approach
                             </h4>
                             <p className="text-neutral-700 leading-relaxed">
@@ -526,7 +526,7 @@ export const GlossaryPage: React.FC = () => {
                                     key={rt}
                                     type="button"
                                     onClick={() => setSearchTerm(rt)}
-                                    className="px-2 py-0.5 rounded-lg bg-[#FAF4EC] hover:bg-[#FAF5ED] text-[#1C1610] text-[11px] font-medium border border-[#EBDFC6] transition-colors cursor-pointer"
+                                    className="px-2 py-0.5 rounded-lg bg-[#FAF4EC] hover:bg-[#FAF5ED] text-[#1C1610] text-[11px] font-medium border border-[#E2D3B5] transition-colors cursor-pointer"
                                   >
                                     {rt}
                                   </button>
@@ -539,11 +539,11 @@ export const GlossaryPage: React.FC = () => {
                     </div>
 
                     {/* Bottom Expand Toggle & Anchor */}
-                    <div className="mt-5 pt-3 border-t border-[#EBDFC6] flex items-center justify-between">
+                    <div className="mt-5 pt-3 border-t border-[#E2D3B5] flex items-center justify-between">
                       <button
                         type="button"
                         onClick={() => setExpandedSlug(isExpanded ? null : item.slug)}
-                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B5651A] hover:text-[#B5651A] transition-colors cursor-pointer"
+                        className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8E5B13] hover:text-[#8E5B13] transition-colors cursor-pointer"
                       >
                         <span>{isExpanded ? 'Collapse definition' : 'Read full explanation & benchmarks'}</span>
                         <ChevronDownIcon className={`w-3.5 h-3.5 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
@@ -563,18 +563,18 @@ export const GlossaryPage: React.FC = () => {
 
       {/* Community Question / Feedback Banner matching reference design with Luxury Dark Gold Background */}
       <section
-        className="relative w-full py-16 sm:py-24 bg-[#1F0E05] text-white border-b border-[#3E2413] bg-cover bg-center overflow-hidden font-body"
+        className="relative w-full py-16 sm:py-24 bg-[#14100B] text-white border-b border-[#3E2413] bg-cover bg-center overflow-hidden font-body"
         style={{
           backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
         }}
       >
         {/* Subtle dark gradient overlay on the left to ensure crisp text contrast over the banner */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-[#14100B]/70 pointer-events-none" />
 
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           <div className="max-w-2xl space-y-5 text-left">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-xs font-semibold text-[#17140F] border border-white/40 shadow-xs">
-              <HelpCircleIcon className="w-3.5 h-3.5 text-[#B5651A]" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white text-xs font-semibold text-[#14100B] border border-white/40 shadow-xs">
+              <HelpCircleIcon className="w-3.5 h-3.5 text-[#8E5B13]" />
               <span>Have a loyalty term or compliance nuance we should cover?</span>
             </div>
 
@@ -589,13 +589,13 @@ export const GlossaryPage: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 pt-3">
               <Link
                 to="/contact"
-                className="px-6 py-3 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-medium text-xs sm:text-sm transition-all shadow-md cursor-pointer"
+                className="px-6 py-3 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-medium text-xs sm:text-sm transition-all shadow-md cursor-pointer"
               >
                 Schedule platform walkthrough
               </Link>
               <Link
                 to="/platform/security"
-                className="px-6 py-3 rounded-full bg-white hover:bg-neutral-100 text-[#17140F] font-medium text-xs sm:text-sm transition-all shadow-xs cursor-pointer"
+                className="px-6 py-3 rounded-full bg-white hover:bg-neutral-100 text-[#14100B] font-medium text-xs sm:text-sm transition-all shadow-xs cursor-pointer"
               >
                 Explore Security & Compliance
               </Link>

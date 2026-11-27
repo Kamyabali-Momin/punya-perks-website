@@ -89,7 +89,7 @@ export const DesignSystemShowcase: React.FC = () => {
                 onClick={() => setTheme('marigold')}
                 className={`px-4 py-2 rounded-pp-pill text-xs font-semibold transition-all ${
                   theme === 'marigold'
-                    ? 'bg-[#D9822B] text-white shadow-pp-md ring-2 ring-offset-2 ring-[#D9822B]'
+                    ? 'bg-[#A36D1C] text-white shadow-pp-md ring-2 ring-offset-2 ring-[#A36D1C]'
                     : 'bg-white text-pp-ink border border-pp-border-strong hover:bg-pp-panel'
                 }`}
               >

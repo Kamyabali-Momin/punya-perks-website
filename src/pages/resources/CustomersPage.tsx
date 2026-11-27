@@ -71,10 +71,10 @@ export const CustomersPage: React.FC = () => {
     <MainLayout>
       {/* Hero Section */}
       <section
-        className="relative w-full border-b border-[#EBDFC6] pt-10 pb-20 md:pt-12 md:pb-24 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden text-[#17140F]"
+        className="relative w-full border-b border-[#E2D3B5] pt-10 pb-20 md:pt-12 md:pb-24 font-body overflow-hidden text-[#14100B]"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: '#FAF3E8',
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
         }}
       >
         <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
@@ -82,19 +82,19 @@ export const CustomersPage: React.FC = () => {
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-1.5 text-xs text-[#847C75] font-body">
               <li>
-                <Link to="/" className="hover:text-[#B5651A] transition-colors">
+                <Link to="/" className="hover:text-[#8E5B13] transition-colors">
                   Home
                 </Link>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRightIcon size={12} strokeWidth={1.75} aria-hidden="true" />
-                <Link to="/resources" className="hover:text-[#B5651A] transition-colors">
+                <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">
                   Resources
                 </Link>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRightIcon size={12} strokeWidth={1.75} aria-hidden="true" />
-                <span className="text-[#17140F] font-bold" aria-current="page">
+                <span className="text-[#14100B] font-bold" aria-current="page">
                   Customer Stories
                 </span>
               </li>
@@ -104,13 +104,13 @@ export const CustomersPage: React.FC = () => {
           {/* Hero Grid */}
           <div className="mt-6 grid items-center gap-8 lg:gap-12 lg:grid-cols-12">
             <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/80 border border-[#EBDFC6] px-3 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-white/80 border border-[#E2D3B5] px-3 py-1 text-[11px] font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3">
                 <SparklesIcon size={12} />
                 <span>CUSTOMER STORIES &amp; CASE STUDIES</span>
               </span>
               <h1
                 id="page-title"
-                className="font-display text-[32px] font-extrabold leading-[1.15] tracking-tight text-[#17140F] md:text-[46px]"
+                className="font-display text-[32px] font-extrabold leading-[1.15] tracking-tight text-[#14100B] md:text-[46px]"
               >
                 Enterprise loyalty programmes that moved the numbers
               </h1>
@@ -121,14 +121,14 @@ export const CustomersPage: React.FC = () => {
               <div className="mt-7 flex flex-wrap items-center gap-3.5">
                 <a
                   href="#stories-catalog"
-                  className="rounded-full bg-[#B5651A] hover:bg-[#9a5413] px-6 py-3 text-xs font-semibold text-white shadow-sm transition-all inline-flex items-center gap-2"
+                  className="rounded-full bg-[#8E5B13] hover:bg-[#6E440B] px-6 py-3 text-xs font-semibold text-white shadow-sm transition-all inline-flex items-center gap-2"
                 >
                   <span>Browse {ALL_CUSTOMER_STORIES.length} Case Studies</span>
                   <ArrowRightIcon size={14} />
                 </a>
                 <Link
                   to="/demo"
-                  className="rounded-full border border-[#EBDFC6] bg-white/85 hover:bg-white px-6 py-3 text-xs font-semibold text-[#17140F] transition-colors shadow-2xs"
+                  className="rounded-full border border-[#E2D3B5] bg-white/85 hover:bg-white px-6 py-3 text-xs font-semibold text-[#14100B] transition-colors shadow-2xs"
                 >
                   Book a platform walkthrough
                 </Link>
@@ -137,32 +137,32 @@ export const CustomersPage: React.FC = () => {
 
             {/* Right Telemetry Summary Card */}
             <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="w-full max-w-[540px] rounded-3xl overflow-hidden border border-[#EBDFC6] bg-white/95 shadow-xl p-6 sm:p-7 space-y-5">
-                <div className="flex items-center justify-between pb-3 border-b border-[#EBDFC6]">
+              <div className="w-full max-w-[540px] rounded-3xl overflow-hidden border border-[#E2D3B5] bg-white/95 shadow-xl p-6 sm:p-7 space-y-5">
+                <div className="flex items-center justify-between pb-3 border-b border-[#E2D3B5]">
                   <div className="flex items-center gap-2">
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                    <span className="font-mono text-xs font-bold text-[#17140F]">
+                    <span className="font-mono text-xs font-bold text-[#14100B]">
                       VERIFIED CUSTOMER TELEMETRY
                     </span>
                   </div>
-                  <span className="text-[11px] font-mono font-semibold text-[#B5651A] bg-[#FEF0E1] px-2.5 py-0.5 rounded-full border border-[#F3D7BD]">
+                  <span className="text-[11px] font-mono font-semibold text-[#8E5B13] bg-[#F4E9D2] px-2.5 py-0.5 rounded-full border border-[#F3D7BD]">
                     99.99% Uptime SLA
                   </span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3.5">
-                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6]">
+                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5]">
                     <div className="text-[10px] font-mono text-[#847C75] uppercase">
                       Repeat Purchase Lift
                     </div>
-                    <div className="font-display font-extrabold text-2xl text-[#B5651A] mt-0.5">
+                    <div className="font-display font-extrabold text-2xl text-[#8E5B13] mt-0.5">
                       +34%
                     </div>
                     <div className="text-[11px] text-[#5B534C] mt-0.5">
                       480-store fashion retail
                     </div>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6]">
+                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5]">
                     <div className="text-[10px] font-mono text-[#847C75] uppercase">
                       Ledger Discrepancy
                     </div>
@@ -173,22 +173,22 @@ export const CustomersPage: React.FC = () => {
                       Double-entry audit verified
                     </div>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6]">
+                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5]">
                     <div className="text-[10px] font-mono text-[#847C75] uppercase">
                       Visit Velocity
                     </div>
-                    <div className="font-display font-extrabold text-2xl text-[#B5651A] mt-0.5">
+                    <div className="font-display font-extrabold text-2xl text-[#8E5B13] mt-0.5">
                       4.2x
                     </div>
                     <div className="text-[11px] text-[#5B534C] mt-0.5">
                       Multi-outlet QSR chains
                     </div>
                   </div>
-                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6]">
+                  <div className="p-3.5 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5]">
                     <div className="text-[10px] font-mono text-[#847C75] uppercase">
                       POS Response
                     </div>
-                    <div className="font-display font-extrabold text-2xl text-[#B5651A] mt-0.5">
+                    <div className="font-display font-extrabold text-2xl text-[#8E5B13] mt-0.5">
                       &lt;110ms
                     </div>
                     <div className="text-[11px] text-[#5B534C] mt-0.5">
@@ -227,7 +227,7 @@ export const CustomersPage: React.FC = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search stories, POS, banking..."
                 aria-label="Search customer stories"
-                className="w-full h-11 rounded-full border border-[#DFD2BA] bg-[#FAF7F2] pl-11 pr-4 text-xs sm:text-sm text-[#17140F] placeholder:text-[#847C75] outline-none focus:border-[#B5651A] focus:bg-white focus:ring-2 focus:ring-[#B5651A]/15 transition-all font-body"
+                className="w-full h-11 rounded-full border border-[#DFD2BA] bg-[#FAF7F2] pl-11 pr-4 text-xs sm:text-sm text-[#14100B] placeholder:text-[#847C75] outline-none focus:border-[#8E5B13] focus:bg-white focus:ring-2 focus:ring-[#8E5B13]/15 transition-all font-body"
               />
             </div>
 
@@ -241,8 +241,8 @@ export const CustomersPage: React.FC = () => {
                     onClick={() => setSelectedTag(tag)}
                     className={`rounded-full px-3.5 py-2 text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer inline-flex items-center gap-1.5 ${
                       isActive
-                        ? 'bg-[#B5651A] text-white shadow-xs font-bold'
-                        : 'bg-[#FAF5ED] border border-[#EBDFC6] text-[#5B534C] hover:border-[#B5651A] hover:text-[#17140F]'
+                        ? 'bg-[#8E5B13] text-white shadow-xs font-bold'
+                        : 'bg-[#FAF5ED] border border-[#E2D3B5] text-[#5B534C] hover:border-[#8E5B13] hover:text-[#14100B]'
                     }`}
                   >
                     <span>{tag}</span>
@@ -263,22 +263,22 @@ export const CustomersPage: React.FC = () => {
           {selectedTag === 'All' && !searchTerm.trim() && (
             <Link
               to={`/customers/${FEATURED_CUSTOMER_STORY.slug}`}
-              className="group mb-12 overflow-hidden rounded-3xl border border-[#EBDFC6] hover:border-[#B5651A] bg-[#FAF7F2] text-[#17140F] shadow-sm hover:shadow-lg transition-all duration-300 grid lg:grid-cols-12 items-stretch"
+              className="group mb-12 overflow-hidden rounded-3xl border border-[#E2D3B5] hover:border-[#8E5B13] bg-[#FAF7F2] text-[#14100B] shadow-sm hover:shadow-lg transition-all duration-300 grid lg:grid-cols-12 items-stretch"
             >
               {/* Left Narrative Column */}
               <div className="p-6 sm:p-8 lg:p-11 lg:col-span-7 flex flex-col justify-between gap-6">
                 <div>
                   <div className="flex flex-wrap items-center gap-2.5 mb-4">
-                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FEF0E1] border border-[#F3D7BD] px-3 py-1 text-xs font-semibold text-[#B5651A]">
+                    <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F4E9D2] border border-[#F3D7BD] px-3 py-1 text-xs font-semibold text-[#8E5B13]">
                       <SparklesIcon size={13} />
                       <span>Featured Case Study</span>
                     </span>
-                    <span className="inline-flex items-center gap-1 rounded-full bg-white border border-[#EBDFC6] px-3 py-1 text-[11px] font-mono text-[#5B534C]">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-white border border-[#E2D3B5] px-3 py-1 text-[11px] font-mono text-[#5B534C]">
                       {FEATURED_CUSTOMER_STORY.meta}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-tight font-display">
+                  <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-tight font-display">
                     {FEATURED_CUSTOMER_STORY.title}
                   </h2>
 
@@ -291,9 +291,9 @@ export const CustomersPage: React.FC = () => {
                     {FEATURED_CUSTOMER_STORY.metrics.slice(0, 3).map((m) => (
                       <div
                         key={m.label}
-                        className="rounded-xl bg-white border border-[#EBDFC6] px-3.5 py-2.5"
+                        className="rounded-xl bg-white border border-[#E2D3B5] px-3.5 py-2.5"
                       >
-                        <div className="font-display font-bold text-lg sm:text-xl text-[#B5651A]">
+                        <div className="font-display font-bold text-lg sm:text-xl text-[#8E5B13]">
                           {m.value}
                         </div>
                         <div className="text-[11px] text-[#5B534C] font-medium truncate">
@@ -304,15 +304,15 @@ export const CustomersPage: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-[#EBDFC6] flex flex-wrap items-center justify-between gap-4">
+                <div className="pt-4 border-t border-[#E2D3B5] flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
                     <img
                       src={FEATURED_CUSTOMER_STORY.authorAvatar}
                       alt={FEATURED_CUSTOMER_STORY.author}
-                      className="h-9 w-9 rounded-full object-cover border border-[#EBDFC6]"
+                      className="h-9 w-9 rounded-full object-cover border border-[#E2D3B5]"
                     />
                     <div>
-                      <div className="text-xs font-bold text-[#17140F]">
+                      <div className="text-xs font-bold text-[#14100B]">
                         {FEATURED_CUSTOMER_STORY.author}
                       </div>
                       <div className="text-[11px] text-[#5B534C]">
@@ -321,7 +321,7 @@ export const CustomersPage: React.FC = () => {
                     </div>
                   </div>
 
-                  <span className="inline-flex items-center gap-2 rounded-full bg-[#B5651A] group-hover:bg-[#9a5413] px-5 py-2.5 text-xs font-semibold text-white shadow-xs transition-all">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-[#8E5B13] group-hover:bg-[#6E440B] px-5 py-2.5 text-xs font-semibold text-white shadow-xs transition-all">
                     <span>Read Full Case Study</span>
                     <ArrowRightIcon
                       size={14}
@@ -338,8 +338,8 @@ export const CustomersPage: React.FC = () => {
                   alt={FEATURED_CUSTOMER_STORY.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur-xs px-3 py-1 text-[11px] font-mono font-bold text-[#17140F] border border-[#EBDFC6] shadow-xs">
-                  <ClockIcon size={12} className="text-[#B5651A]" />
+                <span className="absolute top-4 right-4 inline-flex items-center gap-1.5 rounded-full bg-white/95 backdrop-blur-xs px-3 py-1 text-[11px] font-mono font-bold text-[#14100B] border border-[#E2D3B5] shadow-xs">
+                  <ClockIcon size={12} className="text-[#8E5B13]" />
                   <span>{FEATURED_CUSTOMER_STORY.readTime}</span>
                 </span>
               </div>
@@ -348,7 +348,7 @@ export const CustomersPage: React.FC = () => {
 
           {/* Section Subheader */}
           <div className="flex items-center justify-between mb-6">
-            <h2 className="font-display font-bold text-xl sm:text-2xl text-[#17140F]">
+            <h2 className="font-display font-bold text-xl sm:text-2xl text-[#14100B]">
               {selectedTag === 'All' ? 'All Enterprise Case Studies' : selectedTag}
             </h2>
             <span className="text-xs font-mono text-[#847C75]">
@@ -358,7 +358,7 @@ export const CustomersPage: React.FC = () => {
 
           {/* Case Study Grid */}
           {filteredStories.length === 0 ? (
-            <div className="rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED] p-12 text-center">
+            <div className="rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED] p-12 text-center">
               <p className="text-sm sm:text-base text-[#5B534C] font-body">
                 No case studies found matching “{searchTerm}”.
               </p>
@@ -368,7 +368,7 @@ export const CustomersPage: React.FC = () => {
                   setSearchTerm('');
                   setSelectedTag('All');
                 }}
-                className="mt-4 rounded-full bg-[#B5651A] text-white text-xs font-semibold px-5 py-2.5 hover:bg-[#9a5413] transition-colors"
+                className="mt-4 rounded-full bg-[#8E5B13] text-white text-xs font-semibold px-5 py-2.5 hover:bg-[#6E440B] transition-colors"
               >
                 Clear Filters
               </button>
@@ -381,7 +381,7 @@ export const CustomersPage: React.FC = () => {
                   <Link
                     key={item.slug}
                     to={`/customers/${item.slug}`}
-                    className="group flex h-full flex-col justify-between rounded-2xl border border-[#EBDFC6] bg-white p-5 sm:p-6 shadow-2xs hover:border-[#B5651A] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#B5651A]/40"
+                    className="group flex h-full flex-col justify-between rounded-2xl border border-[#E2D3B5] bg-white p-5 sm:p-6 shadow-2xs hover:border-[#8E5B13] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#8E5B13]/40"
                   >
                     <div>
                       {/* Image Box */}
@@ -397,16 +397,16 @@ export const CustomersPage: React.FC = () => {
                         />
 
                         {/* Industry Badge */}
-                        <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-[#17140F] shadow-xs backdrop-blur-xs font-body border border-[#EBDFC6]">
-                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FEF0E1] text-[#B5651A] group-hover:bg-[#B5651A] group-hover:text-white transition-colors duration-200">
+                        <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-2.5 py-1 text-[11px] font-bold text-[#14100B] shadow-xs backdrop-blur-xs font-body border border-[#E2D3B5]">
+                          <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#F4E9D2] text-[#8E5B13] group-hover:bg-[#8E5B13] group-hover:text-white transition-colors duration-200">
                             <TagIcon size={12} />
                           </span>
                           <span>{item.tag}</span>
                         </span>
 
                         {/* Key Result Overlay Pill */}
-                        <span className="absolute bottom-3 right-3 rounded-xl bg-[#17140F]/85 backdrop-blur-xs px-3 py-1.5 text-white border border-white/15 shadow-sm">
-                          <span className="font-display font-bold text-sm text-[#F5B06B]">
+                        <span className="absolute bottom-3 right-3 rounded-xl bg-[#14100B]/85 backdrop-blur-xs px-3 py-1.5 text-white border border-white/15 shadow-sm">
+                          <span className="font-display font-bold text-sm text-[#D4A147]">
                             {item.headlineMetric}
                           </span>
                           <span className="ml-1.5 text-[10px] font-mono text-white/85">
@@ -417,12 +417,12 @@ export const CustomersPage: React.FC = () => {
 
                       {/* Single-line Meta + Read Time */}
                       <div className="flex items-center justify-between gap-2 text-[11px] font-mono">
-                        <span className="font-semibold text-[#B5651A] truncate">{item.meta}</span>
+                        <span className="font-semibold text-[#8E5B13] truncate">{item.meta}</span>
                         <span className="text-[#847C75] shrink-0">{item.readTime}</span>
                       </div>
 
                       {/* Title */}
-                      <h3 className="mt-2.5 text-lg font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug font-display">
+                      <h3 className="mt-2.5 text-lg font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug font-display">
                         {item.title}
                       </h3>
 
@@ -438,14 +438,14 @@ export const CustomersPage: React.FC = () => {
                         <img
                           src={item.authorAvatar}
                           alt={item.author}
-                          className="h-8 w-8 rounded-full object-cover border border-[#EBDFC6] shrink-0"
+                          className="h-8 w-8 rounded-full object-cover border border-[#E2D3B5] shrink-0"
                           onError={(e) => {
                             (e.target as HTMLImageElement).src =
                               'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80';
                           }}
                         />
                         <div className="min-w-0">
-                          <p className="text-xs font-bold text-[#17140F] leading-tight truncate font-body">
+                          <p className="text-xs font-bold text-[#14100B] leading-tight truncate font-body">
                             {item.author}
                           </p>
                           <p className="text-[11px] text-[#847C75] leading-tight mt-0.5 truncate font-body">
@@ -454,7 +454,7 @@ export const CustomersPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#EBDFC6] bg-[#FAF5ED] px-3.5 py-1.5 text-xs font-semibold text-[#17140F] group-hover:bg-[#B5651A] group-hover:border-[#B5651A] group-hover:text-white transition-all duration-200 shrink-0 whitespace-nowrap font-body">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#E2D3B5] bg-[#FAF5ED] px-3.5 py-1.5 text-xs font-semibold text-[#14100B] group-hover:bg-[#8E5B13] group-hover:border-[#8E5B13] group-hover:text-white transition-all duration-200 shrink-0 whitespace-nowrap font-body">
                         <span>Read Case Study</span>
                         <ArrowRightIcon
                           size={13}
@@ -471,14 +471,14 @@ export const CustomersPage: React.FC = () => {
       </section>
 
       {/* Cross-Industry Proof Banner */}
-      <section className="bg-[#FAF5ED] border-t border-b border-[#EBDFC6] py-12 font-body">
+      <section className="bg-[#FAF5ED] border-t border-b border-[#E2D3B5] py-12 font-body">
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="rounded-3xl bg-white border border-[#EBDFC6] p-6 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+          <div className="rounded-3xl bg-white border border-[#E2D3B5] p-6 sm:p-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6">
             <div className="space-y-2 max-w-2xl">
-              <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#B5651A]">
+              <span className="text-[11px] font-mono font-bold uppercase tracking-widest text-[#8E5B13]">
                 MIGRATE WITHOUT POS DOWNTIME
               </span>
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#17140F]">
+              <h2 className="font-display font-bold text-2xl sm:text-3xl text-[#14100B]">
                 Want to benchmark your loyalty architecture before switching?
               </h2>
               <p className="text-sm text-[#5B534C] leading-relaxed">
@@ -488,13 +488,13 @@ export const CustomersPage: React.FC = () => {
             <div className="flex flex-wrap items-center gap-3 shrink-0">
               <Link
                 to="/benchmarks"
-                className="rounded-full border border-[#EBDFC6] bg-[#FAF5ED] hover:border-[#B5651A] px-5 py-3 text-xs font-semibold text-[#17140F] transition-colors"
+                className="rounded-full border border-[#E2D3B5] bg-[#FAF5ED] hover:border-[#8E5B13] px-5 py-3 text-xs font-semibold text-[#14100B] transition-colors"
               >
                 Read Industry Benchmarks
               </Link>
               <Link
                 to="/demo"
-                className="rounded-full bg-[#17140F] hover:bg-[#B5651A] px-6 py-3 text-xs font-semibold text-white transition-colors inline-flex items-center gap-2"
+                className="rounded-full bg-[#14100B] hover:bg-[#8E5B13] px-6 py-3 text-xs font-semibold text-white transition-colors inline-flex items-center gap-2"
               >
                 <span>Request Custom Case Study</span>
                 <ArrowRightIcon size={14} />

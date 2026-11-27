@@ -34,14 +34,14 @@ export const HomeFaqSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="faq">
+    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-16 sm:py-20 lg:py-24 font-body" id="faq">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-16 reveal-on-scroll">
-          <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
+          <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
             FAQ
           </span>
-          <h2 className="font-display font-normal text-3xl sm:text-4xl text-[#17140F] tracking-tight">
+          <h2 className="font-display font-normal text-3xl sm:text-4xl text-[#14100B] tracking-tight">
             Questions buyers ask first
           </h2>
         </div>
@@ -51,7 +51,7 @@ export const HomeFaqSection: React.FC = () => {
           {/* Left Dark Card - Matches exact height of the FAQ list */}
           <div className="lg:col-span-4 flex flex-col h-full reveal-on-scroll">
             <div
-              className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#B5651A]/40 h-full min-h-[280px] lg:min-h-[380px]"
+              className="rounded-[20px] overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#8E5B13]/40 h-full min-h-[280px] lg:min-h-[380px]"
               style={{
                 backgroundImage: "url('/images/faq-card-bg.jpg')",
                 backgroundColor: "#17120D",
@@ -61,7 +61,7 @@ export const HomeFaqSection: React.FC = () => {
               <div>
                 {/* Brand Logo Pill */}
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-full bg-[#B5651A] flex items-center justify-center font-display font-bold text-white text-sm shadow-xs">
+                  <div className="w-7 h-7 rounded-full bg-[#8E5B13] flex items-center justify-center font-display font-bold text-white text-sm shadow-xs">
                     P
                   </div>
                   <span className="font-display italic font-semibold text-white text-base tracking-tight">
@@ -84,17 +84,17 @@ export const HomeFaqSection: React.FC = () => {
               <div className="pt-8">
                 <a
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-[#17140F] font-body font-medium text-xs sm:text-sm hover:bg-[#F4ECDC] transition-all shadow-md group"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-[#14100B] font-body font-medium text-xs sm:text-sm hover:bg-[#F4ECDC] transition-all shadow-md group"
                 >
                   <span>Contact</span>
-                  <ArrowRightIcon size={14} className="text-[#17140F] group-hover:translate-x-0.5 transition-transform" />
+                  <ArrowRightIcon size={14} className="text-[#14100B] group-hover:translate-x-0.5 transition-transform" />
                 </a>
               </div>
             </div>
           </div>
 
           {/* Right Column: Accordion Rows with Smooth Collapse */}
-          <div className="lg:col-span-8 flex flex-col justify-between divide-y divide-[#EBDFC6] border-y border-[#EBDFC6] h-full reveal-on-scroll delay-100">
+          <div className="lg:col-span-8 flex flex-col justify-between divide-y divide-[#E2D3B5] border-y border-[#E2D3B5] h-full reveal-on-scroll delay-100">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               return (
@@ -104,14 +104,14 @@ export const HomeFaqSection: React.FC = () => {
                     onClick={() => setOpenIndex(isOpen ? null : idx)}
                     className="w-full flex items-center justify-between text-left gap-4 cursor-pointer group"
                   >
-                    <span className="font-body font-semibold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                    <span className="font-body font-semibold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                       {faq.question}
                     </span>
-                    <span className="shrink-0 w-7 h-7 rounded-full bg-[#FAF6F0] border border-[#EBDFC6] flex items-center justify-center text-[#17140F] group-hover:border-[#B5651A]/40 transition-all">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-[#FAF6F0] border border-[#E2D3B5] flex items-center justify-center text-[#14100B] group-hover:border-[#8E5B13]/40 transition-all">
                       <ChevronDownIcon
                         size={15}
                         className={`transition-transform duration-300 ease-in-out ${
-                          isOpen ? 'rotate-180 text-[#B5651A]' : 'text-[#847C75]'
+                          isOpen ? 'rotate-180 text-[#8E5B13]' : 'text-[#847C75]'
                         }`}
                       />
                     </span>

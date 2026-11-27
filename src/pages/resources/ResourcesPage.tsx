@@ -77,23 +77,23 @@ export const ResourcesPage: React.FC = () => {
     <MainLayout>
       {/* 1. Hero Section */}
       <section
-        className="relative w-full border-b border-[#EBDFC6] pt-12 pb-20 text-center overflow-hidden font-body bg-cover bg-bottom bg-no-repeat text-[#17140F]"
+        className="relative w-full border-b border-[#E2D3B5] pt-12 pb-20 text-center overflow-hidden font-body text-[#14100B]"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: '#FAF3E8',
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <nav className="flex items-center justify-center gap-2 text-xs font-mono text-[#847C75] mb-4">
-            <Link to="/" className="hover:text-[#B5651A] transition-colors">
+            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
               Home
             </Link>
-            <ChevronRight size={12} className="text-[#B5651A]/60" />
-            <Link to="/resources" className="hover:text-[#B5651A] transition-colors">
+            <ChevronRight size={12} className="text-[#8E5B13]/60" />
+            <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">
               Resources
             </Link>
-            <ChevronRight size={12} className="text-[#B5651A]/60" />
-            <span className="text-[#B5651A] font-bold">
+            <ChevronRight size={12} className="text-[#8E5B13]/60" />
+            <span className="text-[#8E5B13] font-bold">
               {isBenchmarksRoute
                 ? 'Benchmarks'
                 : isComparisonsRoute
@@ -104,12 +104,12 @@ export const ResourcesPage: React.FC = () => {
             </span>
           </nav>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FEF0E1] border border-[#F6DECA] text-[#B5651A] text-xs font-mono font-bold uppercase tracking-wider mb-4 shadow-2xs">
-            <Sparkles size={13} className="text-[#B5651A]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4E9D2] border border-[#F6DECA] text-[#8E5B13] text-xs font-mono font-bold uppercase tracking-wider mb-4 shadow-2xs">
+            <Sparkles size={13} className="text-[#8E5B13]" />
             <span>{pageMeta.pretitle}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#17140F] tracking-tight mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#14100B] tracking-tight mb-4 leading-tight">
             {pageMeta.title}
           </h1>
 
@@ -141,8 +141,8 @@ export const ResourcesPage: React.FC = () => {
                   to={hubLink.href}
                   className={`px-3 py-2.5 rounded-xl border text-center text-xs font-semibold transition-all ${
                     active
-                      ? 'bg-[#B5651A] text-white border-[#B5651A] shadow-xs'
-                      : 'bg-[#FAF5ED]/70 text-[#17140F] border-[#EBDFC6] hover:border-[#B5651A]/50 hover:bg-[#FAF5ED]'
+                      ? 'bg-[#8E5B13] text-white border-[#8E5B13] shadow-xs'
+                      : 'bg-[#FAF5ED]/70 text-[#14100B] border-[#E2D3B5] hover:border-[#8E5B13]/50 hover:bg-[#FAF5ED]'
                   }`}
                 >
                   {hubLink.label}
@@ -152,7 +152,7 @@ export const ResourcesPage: React.FC = () => {
           </div>
 
           {/* Search Bar & Tag Filter Controls */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EBDFC6]">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#E2D3B5]">
             <div className="relative w-full lg:max-w-md">
               <Search
                 size={18}
@@ -164,13 +164,13 @@ export const ResourcesPage: React.FC = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search guides, topics, or keywords..."
                 aria-label="Search guides and resources"
-                className="w-full h-11 pl-11 pr-10 rounded-full border border-[#EBDFC6] bg-[#FAF5ED]/50 text-sm text-[#17140F] placeholder-[#847C75] outline-none focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/15 focus:bg-white transition-all shadow-2xs"
+                className="w-full h-11 pl-11 pr-10 rounded-full border border-[#E2D3B5] bg-[#FAF5ED]/50 text-sm text-[#14100B] placeholder-[#847C75] outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/15 focus:bg-white transition-all shadow-2xs"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#847C75] hover:text-[#17140F] cursor-pointer"
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#847C75] hover:text-[#14100B] cursor-pointer"
                   aria-label="Clear search"
                 >
                   <X size={16} />
@@ -188,8 +188,8 @@ export const ResourcesPage: React.FC = () => {
                     onClick={() => setSelectedTag(tag)}
                     className={`rounded-full px-4 py-2 text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer select-none ${
                       isActive
-                        ? 'bg-[#B5651A] text-white shadow-xs font-bold'
-                        : 'bg-[#FAF5ED] text-[#5B534C] hover:bg-[#F2E8D8] hover:text-[#17140F] border border-[#EBDFC6]'
+                        ? 'bg-[#8E5B13] text-white shadow-xs font-bold'
+                        : 'bg-[#FAF5ED] text-[#5B534C] hover:bg-[#F2E8D8] hover:text-[#14100B] border border-[#E2D3B5]'
                     }`}
                   >
                     {tag}
@@ -203,16 +203,16 @@ export const ResourcesPage: React.FC = () => {
           {selectedTag === 'All' && !searchQuery.trim() && (
             <Link
               to={`/resources/${FEATURED_RESOURCE.id}`}
-              className="mb-14 overflow-hidden rounded-3xl border border-[#EBDFC6] hover:border-[#B5651A]/60 bg-white text-[#17140F] shadow-xs hover:shadow-md transition-all grid md:grid-cols-12 items-stretch group"
+              className="mb-14 overflow-hidden rounded-3xl border border-[#E2D3B5] hover:border-[#8E5B13]/60 bg-white text-[#14100B] shadow-xs hover:shadow-md transition-all grid md:grid-cols-12 items-stretch group"
             >
               <div className="p-8 md:p-10 lg:p-12 md:col-span-7 flex flex-col justify-between h-full bg-white">
                 <div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#FEF0E1] border border-[#F6DECA] px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-4">
-                    <Sparkles size={13} className="text-[#B5651A]" />
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F4E9D2] border border-[#F6DECA] px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-4">
+                    <Sparkles size={13} className="text-[#8E5B13]" />
                     {FEATURED_RESOURCE.tag}
                   </span>
 
-                  <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-[#17140F] leading-tight group-hover:text-[#B5651A] transition-colors">
+                  <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-[#14100B] leading-tight group-hover:text-[#8E5B13] transition-colors">
                     {FEATURED_RESOURCE.title}
                   </h2>
 
@@ -221,13 +221,13 @@ export const ResourcesPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-[#EBDFC6]/80 flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-8 pt-6 border-t border-[#E2D3B5]/80 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-[#B5651A] group-hover:bg-[#9a5413] px-6 py-3 text-xs font-bold text-white shadow-xs transition-all">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#8E5B13] group-hover:bg-[#6E440B] px-6 py-3 text-xs font-bold text-white shadow-xs transition-all">
                       <Download size={14} />
                       <span>{FEATURED_RESOURCE.downloadText || 'Download Free Playbook'}</span>
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-3 rounded-full text-xs font-bold text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-3 rounded-full text-xs font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                       <span>Read Playbook</span>
                       <ArrowRight size={13} />
                     </span>
@@ -239,14 +239,14 @@ export const ResourcesPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-[#FAF5ED] border-t md:border-t-0 md:border-l border-[#EBDFC6]">
+              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-[#FAF5ED] border-t md:border-t-0 md:border-l border-[#E2D3B5]">
                 <img
                   src={FEATURED_RESOURCE.image}
                   alt={FEATURED_RESOURCE.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
-                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-xs px-3 py-1 rounded-md text-[11px] font-mono font-bold text-[#17140F] border border-[#EBDFC6]">
+                <div className="absolute inset-0 bg-black/20 opacity-60 group-hover:opacity-40 transition-opacity" />
+                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-xs px-3 py-1 rounded-md text-[11px] font-mono font-bold text-[#14100B] border border-[#E2D3B5]">
                   Read Full Guide →
                 </div>
               </div>
@@ -256,7 +256,7 @@ export const ResourcesPage: React.FC = () => {
           {/* 4. Section Heading */}
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#17140F]">
+              <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#14100B]">
                 {selectedTag === 'All' ? 'All Guides & Resources' : `${selectedTag} Resources`}
               </h2>
               <p className="text-xs text-[#847C75] mt-1 font-mono">
@@ -272,17 +272,17 @@ export const ResourcesPage: React.FC = () => {
                 <Link
                   key={item.id}
                   to={`/resources/${item.id}`}
-                  className="bg-white rounded-3xl border border-[#EBDFC6] hover:border-[#B5651A] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group overflow-hidden"
+                  className="bg-white rounded-3xl border border-[#E2D3B5] hover:border-[#8E5B13] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group overflow-hidden"
                 >
                   <div>
-                    <div className="w-full h-48 sm:h-52 relative overflow-hidden bg-[#FAF5ED] border-b border-[#EBDFC6]/60">
+                    <div className="w-full h-48 sm:h-52 relative overflow-hidden bg-[#FAF5ED] border-b border-[#E2D3B5]/60">
                       <img
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-3 left-3">
-                        <span className="font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#FEF0E1] text-[#B5651A] border border-[#F6DECA] text-[10px] shadow-2xs">
+                        <span className="font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] text-[10px] shadow-2xs">
                           {item.tag}
                         </span>
                       </div>
@@ -290,11 +290,11 @@ export const ResourcesPage: React.FC = () => {
 
                     <div className="p-6">
                       <div className="flex items-center gap-2 text-[11px] text-[#847C75] mb-2 font-mono">
-                        <Clock size={12} className="text-[#B5651A]" />
+                        <Clock size={12} className="text-[#8E5B13]" />
                         <span>{item.meta}</span>
                       </div>
 
-                      <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug mb-2">
+                      <h3 className="font-display font-bold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug mb-2">
                         {item.title}
                       </h3>
 
@@ -305,13 +305,13 @@ export const ResourcesPage: React.FC = () => {
                   </div>
 
                   <div className="p-6 pt-0 mt-2">
-                    <div className="pt-4 border-t border-[#EBDFC6]/80 flex items-center justify-between gap-3">
+                    <div className="pt-4 border-t border-[#E2D3B5]/80 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="w-8 h-8 rounded-full bg-[#FEF0E1] border border-[#F6DECA] text-[#B5651A] font-bold text-xs flex items-center justify-center font-display shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-[#F4E9D2] border border-[#F6DECA] text-[#8E5B13] font-bold text-xs flex items-center justify-center font-display shrink-0">
                           {item.author.initials}
                         </div>
                         <div className="min-w-0">
-                          <p className="text-xs font-bold text-[#17140F] leading-tight truncate">
+                          <p className="text-xs font-bold text-[#14100B] leading-tight truncate">
                             {item.author.name}
                           </p>
                           <p className="text-[10px] text-[#847C75] leading-tight mt-0.5 truncate">
@@ -320,7 +320,7 @@ export const ResourcesPage: React.FC = () => {
                         </div>
                       </div>
 
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#17140F] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#17140F] group-hover:bg-[#B5651A] group-hover:border-[#B5651A] group-hover:text-white transition-all duration-200 shrink-0 whitespace-nowrap">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#14100B] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#14100B] group-hover:bg-[#8E5B13] group-hover:border-[#8E5B13] group-hover:text-white transition-all duration-200 shrink-0 whitespace-nowrap">
                         <span>{item.actionLabel || 'Read'}</span>
                         <ArrowRight size={13} />
                       </span>
@@ -330,9 +330,9 @@ export const ResourcesPage: React.FC = () => {
               ))}
             </div>
           ) : (
-            <div className="rounded-3xl border border-[#EBDFC6] bg-[#FAF5ED] p-12 text-center max-w-lg mx-auto">
-              <BookOpen size={36} className="mx-auto text-[#B5651A] mb-3 opacity-80" />
-              <h3 className="text-lg font-display font-bold text-[#17140F] mb-1">
+            <div className="rounded-3xl border border-[#E2D3B5] bg-[#FAF5ED] p-12 text-center max-w-lg mx-auto">
+              <BookOpen size={36} className="mx-auto text-[#8E5B13] mb-3 opacity-80" />
+              <h3 className="text-lg font-display font-bold text-[#14100B] mb-1">
                 No matching resources found
               </h3>
               <p className="text-xs text-[#5B534C] mb-6">
@@ -344,7 +344,7 @@ export const ResourcesPage: React.FC = () => {
                   setSearchQuery('');
                   setSelectedTag('All');
                 }}
-                className="rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white text-xs font-bold px-5 py-2.5 transition-colors cursor-pointer"
+                className="rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white text-xs font-bold px-5 py-2.5 transition-colors cursor-pointer"
               >
                 Clear Filters &amp; Show All
               </button>

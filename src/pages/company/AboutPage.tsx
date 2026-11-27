@@ -137,33 +137,33 @@ export const AboutPage: React.FC = () => {
     <MainLayout>
       {/* 1. Hero Section (Deskmerit Dark Gradient Architecture) */}
             <section
-        className="relative w-full border-b border-[#EBDFC6] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden text-[#17140F]"
+        className="relative w-full border-b border-[#E2D3B5] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body overflow-hidden text-[#14100B]"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: "#FAF3E8",
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           {/* Breadcrumb Navigation */}
           <div className="text-xs text-[#847C75] font-medium flex items-center gap-2 mb-6">
-            <Link to="/" className="hover:text-[#B5651A] transition-colors">
+            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
               Home
             </Link>
             <span className="text-[#847C75]/60">/</span>
             <span className="text-[#847C75]">Company</span>
             <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#17140F] font-bold">About Us</span>
+            <span className="text-[#14100B] font-bold">About Us</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content Column */}
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-3">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3">
                 ABOUT PUNYA PERKS
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#17140F] mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#14100B] mb-6">
                 We believe loyalty ledgers should be honest —{' '}
-                <span className="text-[#B5651A] italic">and fair to both sides.</span>
+                <span className="text-[#8E5B13] italic">and fair to both sides.</span>
               </h1>
               <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-xl mb-8">
                 Punya Perks is engineered with append-only ledger precision, serving multi-brand retail conglomerates, banking institutions, and e-commerce leaders globally.
@@ -173,14 +173,14 @@ export const AboutPage: React.FC = () => {
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
                 <Link
                   to="/demo"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
                 >
                   <span>Request a demo</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/platform"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#17140F] font-bold text-xs sm:text-sm border border-[#EBDFC6] transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#14100B] font-bold text-xs sm:text-sm border border-[#E2D3B5] transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
                 >
                   <span>Explore our platform</span>
                 </Link>
@@ -189,15 +189,15 @@ export const AboutPage: React.FC = () => {
 
             {/* Right Media Preview Card */}
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#EBDFC6] aspect-[16/10] sm:aspect-[4/3] group bg-[#FAF5ED] w-full max-w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E2D3B5] aspect-[16/10] sm:aspect-[4/3] group bg-[#FAF5ED] w-full max-w-full">
                 <img
                   src="/images/products/user-web-home.png"
                   alt="Punya Perks Global Platform Portal"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-black/25 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono flex items-center justify-between">
-                  <span className="bg-[#B5651A]/90 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
+                  <span className="bg-[#8E5B13]/90 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                     Multi-Tenant Loyalty Console
                   </span>
                   <span className="text-white flex items-center gap-1 font-bold">
@@ -212,13 +212,13 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 2. Philosophy / What We Believe Section (Deskmerit 3-Pillar Pattern) */}
-      <section className="py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-2">
               OUR PHILOSOPHY
             </div>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#17140F] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#14100B] tracking-tight">
               What we believe
             </h2>
             <p className="text-sm text-[#847C75] mt-3 leading-relaxed">
@@ -232,13 +232,13 @@ export const AboutPage: React.FC = () => {
               return (
                 <div
                   key={b.title}
-                  className="p-8 rounded-2xl bg-white border border-[#EBDFC6] shadow-xs hover:border-[#B5651A] hover:shadow-md transition-all group flex flex-col justify-between"
+                  className="p-8 rounded-2xl bg-white border border-[#E2D3B5] shadow-xs hover:border-[#8E5B13] hover:shadow-md transition-all group flex flex-col justify-between"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6] text-[#17140F] group-hover:bg-[#B5651A] group-hover:border-[#B5651A] group-hover:text-white flex items-center justify-center mb-5 transition-all duration-200 shadow-xs">
+                    <div className="w-12 h-12 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5] text-[#14100B] group-hover:bg-[#8E5B13] group-hover:border-[#8E5B13] group-hover:text-white flex items-center justify-center mb-5 transition-all duration-200 shadow-xs">
                       <Icon className="w-5 h-5 transition-colors" />
                     </div>
-                    <h3 className="font-display font-bold text-xl text-[#17140F] group-hover:text-[#B5651A] transition-colors mb-3">
+                    <h3 className="font-display font-bold text-xl text-[#14100B] group-hover:text-[#8E5B13] transition-colors mb-3">
                       {b.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
@@ -253,13 +253,13 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 3. Executive Leadership & Core Team Section (Deskmerit 8-Member Grid) */}
-      <section className="py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+      <section className="py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-2">
               EXECUTIVE LEADERSHIP & CORE TEAM
             </div>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#17140F] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#14100B] tracking-tight">
               The team building high-trust software
             </h2>
             <p className="text-sm text-[#5B534C] mt-3 leading-relaxed">
@@ -270,7 +270,7 @@ export const AboutPage: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {teamMembers.map((member) => (
               <div key={member.name} className="group flex flex-col">
-                <div className="w-full aspect-square rounded-2xl overflow-hidden bg-[#FAF5ED] border border-[#EBDFC6] group-hover:border-[#B5651A] group-hover:shadow-md transition-all duration-300 relative">
+                <div className="w-full aspect-square rounded-2xl overflow-hidden bg-[#FAF5ED] border border-[#E2D3B5] group-hover:border-[#8E5B13] group-hover:shadow-md transition-all duration-300 relative">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -279,7 +279,7 @@ export const AboutPage: React.FC = () => {
                   />
                 </div>
                 <div className="mt-3.5">
-                  <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug">
                     {member.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#5B534C] mt-1">
@@ -293,13 +293,13 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 4. Global Footprint Section (Deskmerit Across the Globe) */}
-      <section className="py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-2">
               GLOBAL FOOTPRINT
             </div>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#17140F] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#14100B] tracking-tight">
               Punya Perks Across the Globe
             </h2>
             <p className="text-sm sm:text-base text-[#5B534C] mt-3 leading-relaxed">
@@ -311,23 +311,23 @@ export const AboutPage: React.FC = () => {
             {offices.map((off) => (
               <div
                 key={off.country + off.city}
-                className="p-7 rounded-2xl bg-white border border-[#EBDFC6] hover:border-[#B5651A] transition-all hover:shadow-md shadow-xs flex flex-col justify-between group"
+                className="p-7 rounded-2xl bg-white border border-[#E2D3B5] hover:border-[#8E5B13] transition-all hover:shadow-md shadow-xs flex flex-col justify-between group"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded-lg bg-[#FAF5ED] border border-[#EBDFC6] flex items-center justify-center text-[#B5651A] group-hover:scale-110 transition-transform shadow-2xs">
+                      <div className="w-8 h-8 rounded-lg bg-[#FAF5ED] border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] group-hover:scale-110 transition-transform shadow-2xs">
                         <MapPin className="w-4 h-4" />
                       </div>
-                      <h3 className="font-display font-bold text-base text-[#17140F] group-hover:text-[#B5651A] transition-colors">
+                      <h3 className="font-display font-bold text-base text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
                         {off.country}
                       </h3>
                     </div>
-                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#FEF0E1] text-[#B5651A] border border-[#F6DECA] shadow-2xs">
+                    <span className="text-[10px] font-bold px-2.5 py-1 rounded-full bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] shadow-2xs">
                       {off.tag}
                     </span>
                   </div>
-                  <div className="text-xs font-semibold text-[#17140F] mb-1">
+                  <div className="text-xs font-semibold text-[#14100B] mb-1">
                     {off.city} Hub
                   </div>
                   <p className="text-xs sm:text-[13px] text-[#5B534C] leading-relaxed mb-6 font-normal">
@@ -335,15 +335,15 @@ export const AboutPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#EBDFC6]/80 flex items-center justify-between text-xs text-[#17140F]">
+                <div className="pt-4 border-t border-[#E2D3B5]/80 flex items-center justify-between text-xs text-[#14100B]">
                   <a
                     href={`tel:${off.phone.replace(/[^+\d]/g, '')}`}
-                    className="flex items-center gap-1.5 text-xs font-semibold text-[#17140F] group-hover:text-[#B5651A] transition-colors"
+                    className="flex items-center gap-1.5 text-xs font-semibold text-[#14100B] group-hover:text-[#8E5B13] transition-colors"
                   >
-                    <Phone className="w-3.5 h-3.5 text-[#B5651A]" />
+                    <Phone className="w-3.5 h-3.5 text-[#8E5B13]" />
                     <span>{off.phone}</span>
                   </a>
-                  <span className="text-[11px] text-[#B5651A] font-mono font-medium">
+                  <span className="text-[11px] text-[#8E5B13] font-mono font-medium">
                     {off.zone.split(' ')[0]}
                   </span>
                 </div>

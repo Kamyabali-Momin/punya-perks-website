@@ -13,17 +13,17 @@ export const RegionAustraliaPage: React.FC = () => {
         breadcrumbs={[{ label: 'Regions' }, { label: 'Australia' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-[28px] bg-white p-8 border border-[#EBDFC6] space-y-3">
+          <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3">
             <h3 className="font-display font-bold text-xl text-[#1F1A17]">Privacy Act & APPs</h3>
             <p className="text-xs sm:text-sm text-[#1F1A17]/75">Strict adherence to the 13 Australian Privacy Principles with clear collection notices and opt-outs.</p>
           </div>
-          <div className="rounded-[28px] bg-white p-8 border border-[#EBDFC6] space-y-3">
+          <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3">
             <h3 className="font-display font-bold text-xl text-[#1F1A17]">Spam Act 2003 Consent</h3>
             <p className="text-xs sm:text-sm text-[#1F1A17]/75">Double opt-in tracking for promotional messages and one-click unsubscribe links automatically honored.</p>
           </div>
-          <div className="rounded-[28px] bg-white p-8 border border-[#EBDFC6] space-y-3">
+          <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3">
             <h3 className="font-display font-bold text-xl text-[#1F1A17]">Sydney AWS Residency</h3>
             <p className="text-xs sm:text-sm text-[#1F1A17]/75">Dedicated database cell hosted in AWS Sydney (ap-southeast-2) with sub-30ms nationwide latency.</p>
           </div>

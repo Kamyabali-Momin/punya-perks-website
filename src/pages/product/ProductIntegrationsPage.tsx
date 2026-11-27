@@ -94,18 +94,18 @@ export const ProductIntegrationsPage: React.FC = () => {
         imageAlt="Punya Perks POS & E-Commerce Ecosystem"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6]">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           {categories.map((cat) => (
             <div key={cat.name} className="space-y-5">
-              <div className="border-b border-[#EBDFC6] pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+              <div className="border-b border-[#E2D3B5] pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
                 <div>
                   <h2 className="font-display font-bold text-xl sm:text-2xl text-[#1F1A17]">
                     {cat.name}
                   </h2>
                   <p className="text-xs sm:text-sm text-[#5B534C] mt-1">{cat.subtitle}</p>
                 </div>
-                <span className="text-[11px] font-body font-bold uppercase tracking-wider text-[#B5651A] shrink-0">
+                <span className="text-[11px] font-body font-bold uppercase tracking-wider text-[#8E5B13] shrink-0">
                   {cat.partners.length} Connectors
                 </span>
               </div>
@@ -114,9 +114,9 @@ export const ProductIntegrationsPage: React.FC = () => {
                 {cat.partners.map((p) => (
                   <div
                     key={p.name}
-                    className="p-4 sm:p-5 rounded-[18px] bg-white border border-[#EBDFC6] flex flex-col items-center justify-between text-center gap-3 shadow-2xs hover:shadow-md hover:border-[#B5651A]/50 transition-all h-full group"
+                    className="p-4 sm:p-5 rounded-[18px] bg-white border border-[#E2D3B5] flex flex-col items-center justify-between text-center gap-3 shadow-2xs hover:shadow-md hover:border-[#8E5B13]/50 transition-all h-full group"
                   >
-                    <div className="w-full h-12 rounded-xl bg-[#FAF5ED] border border-[#EBDFC6]/80 flex items-center justify-center px-3 py-2 shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-full h-12 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5]/80 flex items-center justify-center px-3 py-2 shrink-0 group-hover:scale-105 transition-transform">
                       <img
                         src={p.logo}
                         alt={p.name}
@@ -141,23 +141,23 @@ export const ProductIntegrationsPage: React.FC = () => {
       </section>
 
       {/* Connector Sync Benchmarks Table */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <span className="font-mono text-[11px] font-bold text-[#B5651A] uppercase tracking-widest">
+              <span className="font-mono text-[11px] font-bold text-[#8E5B13] uppercase tracking-widest">
                 CONNECTOR SPECIFICATIONS &amp; SLAS
               </span>
-              <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
+              <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
                 Typical Integration Latency &amp; Go-Live Timeline
               </h2>
             </div>
             <span className="text-xs font-mono text-[#847C75]">Measured in AWS Mumbai &amp; Sydney</span>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED]/40">
+          <div className="overflow-x-auto rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED]/40">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-[#FAF5ED] border-b border-[#EBDFC6] font-mono text-[11px] uppercase text-[#5B534C]">
+              <thead className="bg-[#FAF5ED] border-b border-[#E2D3B5] font-mono text-[11px] uppercase text-[#5B534C]">
                 <tr>
                   <th className="py-3.5 px-4">Connector</th>
                   <th className="py-3.5 px-4">Integration Method</th>
@@ -166,7 +166,7 @@ export const ProductIntegrationsPage: React.FC = () => {
                   <th className="py-3.5 px-4 text-right">Resilience Guarantee</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#EBDFC6] bg-white text-[#17140F]">
+              <tbody className="divide-y divide-[#E2D3B5] bg-white text-[#14100B]">
                 {CONNECTOR_SPECS.map((row) => (
                   <tr key={row.connector} className="hover:bg-[#FAF5ED]/40">
                     <td className="py-3.5 px-4 font-bold">{row.connector}</td>

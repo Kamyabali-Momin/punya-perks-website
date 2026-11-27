@@ -79,10 +79,10 @@ export const ChangelogPage: React.FC = () => {
         secondaryCtaHref="/start"
       />
 
-      <section className="py-12 sm:py-20 bg-[#FAF7F2] border-b border-[#EBDFC6] font-body">
+      <section className="py-12 sm:py-20 bg-[#FAF7F2] border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-10">
           {/* Filter Pills + Subscribe Release Notes */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-[#EBDFC6]">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-6 border-b border-[#E2D3B5]">
             <div className="flex flex-wrap gap-2">
               {(['All', 'Engine', 'Compliance', 'Connectors', 'Member App'] as const).map((cat) => (
                 <button
@@ -91,8 +91,8 @@ export const ChangelogPage: React.FC = () => {
                   onClick={() => setFilter(cat)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     filter === cat
-                      ? 'bg-[#B5651A] text-white shadow-xs'
-                      : 'bg-white text-[#5B534C] border border-[#EBDFC6] hover:text-[#17140F]'
+                      ? 'bg-[#8E5B13] text-white shadow-xs'
+                      : 'bg-white text-[#5B534C] border border-[#E2D3B5] hover:text-[#14100B]'
                   }`}
                 >
                   {cat}
@@ -101,7 +101,7 @@ export const ChangelogPage: React.FC = () => {
             </div>
 
             {subscribed ? (
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#B5651A]/40 text-xs font-semibold text-[#B5651A]">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#8E5B13]/40 text-xs font-semibold text-[#8E5B13]">
                 <CheckCircle2 size={14} />
                 <span>Subscribed to release notifications.</span>
               </div>
@@ -115,12 +115,12 @@ export const ChangelogPage: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Work email for release notes"
-                    className="h-10 pl-9 pr-4 rounded-full bg-white border border-[#EBDFC6] text-xs w-full sm:w-64 outline-none focus:border-[#B5651A]"
+                    className="h-10 pl-9 pr-4 rounded-full bg-white border border-[#E2D3B5] text-xs w-full sm:w-64 outline-none focus:border-[#8E5B13]"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="h-10 px-5 rounded-full bg-[#17140F] hover:bg-black text-white text-xs font-semibold transition-colors cursor-pointer shrink-0"
+                  className="h-10 px-5 rounded-full bg-[#14100B] hover:bg-black text-white text-xs font-semibold transition-colors cursor-pointer shrink-0"
                 >
                   Subscribe
                 </button>
@@ -133,21 +133,21 @@ export const ChangelogPage: React.FC = () => {
             {visibleReleases.map((rel) => (
               <div
                 key={rel.version}
-                className="rounded-3xl bg-white p-7 sm:p-9 border border-[#EBDFC6] shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
+                className="rounded-3xl bg-white p-7 sm:p-9 border border-[#E2D3B5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between"
               >
                 <div className="space-y-4">
-                  <div className="flex flex-wrap items-center justify-between gap-2 pb-3.5 border-b border-[#EBDFC6]">
+                  <div className="flex flex-wrap items-center justify-between gap-2 pb-3.5 border-b border-[#E2D3B5]">
                     <div className="flex items-center gap-2">
-                      <span className="font-body text-sm font-bold text-[#B5651A] bg-[#FEF0E1] px-3 py-0.5 rounded-full border border-[#F3D7BD]">
+                      <span className="font-body text-sm font-bold text-[#8E5B13] bg-[#F4E9D2] px-3 py-0.5 rounded-full border border-[#F3D7BD]">
                         {rel.version}
                       </span>
-                      <span className="text-[11px] font-semibold text-[#5B534C] bg-[#FAF5ED] px-2.5 py-0.5 rounded-full border border-[#EBDFC6]">
+                      <span className="text-[11px] font-semibold text-[#5B534C] bg-[#FAF5ED] px-2.5 py-0.5 rounded-full border border-[#E2D3B5]">
                         {rel.category}
                       </span>
                     </div>
                     <span className="text-xs text-[#847C75] font-semibold">{rel.date}</span>
                   </div>
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-[#17140F] leading-snug">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-[#14100B] leading-snug">
                     {rel.title}
                   </h3>
                   <ul className="space-y-2.5 text-xs sm:text-sm text-[#5B534C] list-disc pl-5 leading-relaxed pt-1">

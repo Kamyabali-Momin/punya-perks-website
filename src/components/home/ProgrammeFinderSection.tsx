@@ -97,20 +97,20 @@ export const ProgrammeFinderSection: React.FC = () => {
 
   return (
     <section
-      className="relative w-full py-16 sm:py-24 bg-[#1F0E05] bg-cover bg-center overflow-hidden border-b border-[#3E2413] font-body"
+      className="relative w-full py-16 sm:py-24 bg-[#14100B] bg-cover bg-center overflow-hidden border-b border-[#3E2413] font-body"
       style={{
         backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
       }}
       id="programme-finder"
     >
       {/* Subtle overlay to ensure great text contrast on left while keeping right art vibrant */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#170E07]/85 via-[#170E07]/45 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[#14100B]/70 pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Narrative Column */}
           <div className="lg:col-span-6 space-y-4 reveal-on-scroll">
-            <span className="font-mono text-[11px] font-bold text-[#E59846] tracking-[0.2em] uppercase block">
+            <span className="font-mono text-[11px] font-bold text-[#D4A147] tracking-[0.2em] uppercase block">
               PROGRAMME FINDER
             </span>
 
@@ -126,7 +126,7 @@ export const ProgrammeFinderSection: React.FC = () => {
 
           {/* Right Form Card matching user reference image */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end reveal-on-scroll delay-100">
-            <div className="w-full max-w-[480px] rounded-[28px] bg-white text-[#17140F] p-6 sm:p-8 shadow-2xl border border-white/20 space-y-4">
+            <div className="w-full max-w-[480px] rounded-[28px] bg-white text-[#14100B] p-6 sm:p-8 shadow-2xl border border-white/20 space-y-4">
               {/* Field 1: Industry */}
               <div>
                 <label className="block font-mono text-[10px] font-bold text-[#847C75] tracking-wider uppercase mb-1.5">
@@ -139,7 +139,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                       setIndustry(e.target.value);
                       setShowResult(false);
                     }}
-                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#EBDFC6] px-4 pr-10 text-xs sm:text-sm text-[#17140F] font-semibold focus:ring-2 focus:ring-[#B5651A]/20 focus:border-[#B5651A] outline-none cursor-pointer transition-all hover:border-[#B5651A]/60"
+                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#E2D3B5] px-4 pr-10 text-xs sm:text-sm text-[#14100B] font-semibold focus:ring-2 focus:ring-[#8E5B13]/20 focus:border-[#8E5B13] outline-none cursor-pointer transition-all hover:border-[#8E5B13]/60"
                   >
                     <option value="Retail & fashion">Retail & fashion</option>
                     <option value="Banks & fintech">Banks & fintech</option>
@@ -166,7 +166,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                       setGoal(e.target.value);
                       setShowResult(false);
                     }}
-                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#EBDFC6] px-4 pr-10 text-xs sm:text-sm text-[#17140F] font-semibold focus:ring-2 focus:ring-[#B5651A]/20 focus:border-[#B5651A] outline-none cursor-pointer transition-all hover:border-[#B5651A]/60"
+                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#E2D3B5] px-4 pr-10 text-xs sm:text-sm text-[#14100B] font-semibold focus:ring-2 focus:ring-[#8E5B13]/20 focus:border-[#8E5B13] outline-none cursor-pointer transition-all hover:border-[#8E5B13]/60"
                   >
                     <option value="Repeat purchase">Repeat purchase</option>
                     <option value="Average order value">Average order value (AOV)</option>
@@ -192,7 +192,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                       setMarket(e.target.value);
                       setShowResult(false);
                     }}
-                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#EBDFC6] px-4 pr-10 text-xs sm:text-sm text-[#17140F] font-semibold focus:ring-2 focus:ring-[#B5651A]/20 focus:border-[#B5651A] outline-none cursor-pointer transition-all hover:border-[#B5651A]/60"
+                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#E2D3B5] px-4 pr-10 text-xs sm:text-sm text-[#14100B] font-semibold focus:ring-2 focus:ring-[#8E5B13]/20 focus:border-[#8E5B13] outline-none cursor-pointer transition-all hover:border-[#8E5B13]/60"
                   >
                     <option value="India">India</option>
                     <option value="Australia">Australia</option>
@@ -209,7 +209,7 @@ export const ProgrammeFinderSection: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowResult(true)}
-                className="w-full h-12 rounded-xl bg-[#B5651A] hover:bg-[#9a5413] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 mt-2 group"
+                className="w-full h-12 rounded-xl bg-[#8E5B13] hover:bg-[#6E440B] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 mt-2 group"
               >
                 <span>Show my template</span>
                 <ArrowRightIcon size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -217,12 +217,12 @@ export const ProgrammeFinderSection: React.FC = () => {
 
               {/* Instant Output Blueprint Drawer */}
               {showResult && (
-                <div className="pt-4 border-t border-[#EBDFC6] space-y-3.5 animate-fade-in">
+                <div className="pt-4 border-t border-[#E2D3B5] space-y-3.5 animate-fade-in">
                   <div className="flex items-center justify-between">
-                    <span className="font-display font-normal text-base text-[#17140F]">
+                    <span className="font-display font-normal text-base text-[#14100B]">
                       {currentTemplate.name}
                     </span>
-                    <span className="bg-[#FEF0E1] text-[#B5651A] border border-[#F6DECA] px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold">
+                    <span className="bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold">
                       {currentTemplate.plan}
                     </span>
                   </div>
@@ -234,8 +234,8 @@ export const ProgrammeFinderSection: React.FC = () => {
                     </div>
                     <div className="grid grid-cols-1 gap-1.5">
                       {currentTemplate.mechanisms.map((m, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-[#17140F]/85">
-                          <CheckCircle2Icon size={14} className="text-[#B5651A] shrink-0 mt-0.5" />
+                        <div key={idx} className="flex items-start gap-2 text-xs text-[#14100B]/85">
+                          <CheckCircle2Icon size={14} className="text-[#8E5B13] shrink-0 mt-0.5" />
                           <span>{m}</span>
                         </div>
                       ))}
@@ -243,13 +243,13 @@ export const ProgrammeFinderSection: React.FC = () => {
                   </div>
 
                   {/* Compliance & Timeline Box */}
-                  <div className="p-3 rounded-[10px] bg-[#FAF6F0] border border-[#EBDFC6] space-y-1 text-xs">
-                    <div className="text-[#17140F]">
-                      <strong className="font-semibold text-[#B5651A]">Compliance:</strong>{' '}
+                  <div className="p-3 rounded-[10px] bg-[#FAF6F0] border border-[#E2D3B5] space-y-1 text-xs">
+                    <div className="text-[#14100B]">
+                      <strong className="font-semibold text-[#8E5B13]">Compliance:</strong>{' '}
                       {currentTemplate.compliance}
                     </div>
                     <div className="text-[#5A5248]">
-                      <strong className="font-semibold text-[#17140F]">Estimated Go-Live:</strong>{' '}
+                      <strong className="font-semibold text-[#14100B]">Estimated Go-Live:</strong>{' '}
                       {currentTemplate.timeline}
                     </div>
                   </div>
@@ -257,7 +257,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                   {/* Direct Sandbox CTA */}
                   <a
                     href="/start"
-                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-[#17140F] hover:bg-black text-[#FFFDF9] text-xs font-semibold transition-colors"
+                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-[#14100B] hover:bg-black text-[#FFFDF9] text-xs font-semibold transition-colors"
                   >
                     <span>Start Sandbox with this Playbook</span>
                     <ArrowRightIcon size={13} />

@@ -65,20 +65,20 @@ export const RoiEstimatorSection: React.FC = () => {
 
   return (
     <section
-      className="relative w-full py-16 sm:py-20 lg:py-24 font-body border-b border-[#EBDFC6] bg-cover bg-center overflow-hidden"
+      className="relative w-full py-16 sm:py-20 lg:py-24 font-body border-b border-[#E2D3B5] bg-cover bg-center overflow-hidden"
       style={{
         backgroundImage: "url('/images/roi-wave-bg.jpg')",
-        backgroundColor: "#FAF3E8",
+        backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
       }}
       id="roi-estimate"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14 reveal-on-scroll">
-          <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-3">
+          <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-3">
             ROI ESTIMATE
           </span>
-          <h2 className="font-display font-medium text-3xl sm:text-4xl lg:text-[46px] text-[#17140F] tracking-tight leading-[1.15] mb-3.5">
+          <h2 className="font-display font-medium text-3xl sm:text-4xl lg:text-[46px] text-[#14100B] tracking-tight leading-[1.15] mb-3.5">
             What would a 4-point lift in <br className="hidden sm:inline" />
             repeat purchase be worth?
           </h2>
@@ -110,14 +110,14 @@ export const RoiEstimatorSection: React.FC = () => {
                       onClick={() => handleIndustryChange(ind)}
                       className={`py-2 px-3 lg:w-full lg:py-2.5 lg:px-3.5 transition-all cursor-pointer rounded-xl text-left select-none flex items-center gap-2.5 ${
                         isActive
-                          ? 'border border-[#C26D1E] text-[#B5651A] bg-[#FEF0E1]/70 shadow-2xs'
-                          : 'text-[#17140F] hover:text-[#B5651A] hover:bg-[#FAF5EE] bg-[#FAF5EE]/60 lg:bg-transparent border border-transparent'
+                          ? 'border border-[#C26D1E] text-[#8E5B13] bg-[#F4E9D2]/70 shadow-2xs'
+                          : 'text-[#14100B] hover:text-[#8E5B13] hover:bg-[#FAF5EE] bg-[#FAF5EE]/60 lg:bg-transparent border border-transparent'
                       }`}
                     >
                       <span
                         className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 transition-colors ${
                           isActive
-                            ? 'bg-[#B5651A] text-white'
+                            ? 'bg-[#8E5B13] text-white'
                             : 'bg-[#FAF5EE] text-[#847C75] border border-[#EFE3D5]'
                         }`}
                       >
@@ -144,7 +144,7 @@ export const RoiEstimatorSection: React.FC = () => {
                 alt="Loyalty Rewards Graphic"
                 className="w-28 h-auto object-contain select-none pointer-events-none drop-shadow-sm mb-2"
               />
-              <span className="text-[10px] font-body font-bold uppercase tracking-[0.14em] text-[#B5651A]">
+              <span className="text-[10px] font-body font-bold uppercase tracking-[0.14em] text-[#8E5B13]">
                 {industry} Benchmark
               </span>
               <p className="text-[11px] text-[#5B534C] leading-snug mt-1">
@@ -163,11 +163,11 @@ export const RoiEstimatorSection: React.FC = () => {
                 <div className="p-4 sm:p-5 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5] flex flex-col justify-between">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center text-[#B5651A] shrink-0">
+                      <div className="w-9 h-9 rounded-xl bg-[#F4E9D2] border border-[#F6DECA] flex items-center justify-center text-[#8E5B13] shrink-0">
                         <Users size={16} />
                       </div>
                       <div>
-                        <span className="block text-[11px] font-mono uppercase font-bold text-[#17140F] tracking-wider">
+                        <span className="block text-[11px] font-mono uppercase font-bold text-[#14100B] tracking-wider">
                           ACTIVE MEMBERS
                         </span>
                         <span className="text-[12px] text-[#847C75]">
@@ -175,7 +175,7 @@ export const RoiEstimatorSection: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="font-display font-medium text-2xl sm:text-[26px] text-[#17140F] shrink-0">
+                    <div className="font-display font-medium text-2xl sm:text-[26px] text-[#14100B] shrink-0">
                       {members.toLocaleString('en-IN')}
                     </div>
                   </div>
@@ -187,7 +187,7 @@ export const RoiEstimatorSection: React.FC = () => {
                     step="10000"
                     value={members}
                     onChange={(e) => setMembers(Number(e.target.value))}
-                    className="w-full accent-[#B5651A] cursor-pointer h-1.5 bg-[#EAE0D2] rounded-lg appearance-none my-2.5"
+                    className="w-full accent-[#8E5B13] cursor-pointer h-1.5 bg-[#EAE0D2] rounded-lg appearance-none my-2.5"
                   />
 
                   <div className="flex justify-between text-[11px] font-mono text-[#847C75]">
@@ -201,11 +201,11 @@ export const RoiEstimatorSection: React.FC = () => {
                 <div className="p-4 sm:p-5 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5] flex flex-col justify-between">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center text-[#B5651A] shrink-0 font-bold">
+                      <div className="w-9 h-9 rounded-xl bg-[#F4E9D2] border border-[#F6DECA] flex items-center justify-center text-[#8E5B13] shrink-0 font-bold">
                         <IndianRupee size={16} />
                       </div>
                       <div>
-                        <span className="block text-[11px] font-mono uppercase font-bold text-[#17140F] tracking-wider">
+                        <span className="block text-[11px] font-mono uppercase font-bold text-[#14100B] tracking-wider">
                           AVERAGE ORDER (AOV)
                         </span>
                         <span className="text-[12px] text-[#847C75]">
@@ -213,7 +213,7 @@ export const RoiEstimatorSection: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="font-display font-medium text-2xl sm:text-[26px] text-[#17140F] shrink-0">
+                    <div className="font-display font-medium text-2xl sm:text-[26px] text-[#14100B] shrink-0">
                       ₹ {aov.toLocaleString('en-IN')}
                     </div>
                   </div>
@@ -225,7 +225,7 @@ export const RoiEstimatorSection: React.FC = () => {
                     step="100"
                     value={aov}
                     onChange={(e) => setAov(Number(e.target.value))}
-                    className="w-full accent-[#B5651A] cursor-pointer h-1.5 bg-[#EAE0D2] rounded-lg appearance-none my-2.5"
+                    className="w-full accent-[#8E5B13] cursor-pointer h-1.5 bg-[#EAE0D2] rounded-lg appearance-none my-2.5"
                   />
 
                   <div className="flex justify-between text-[11px] font-mono text-[#847C75]">
@@ -239,11 +239,11 @@ export const RoiEstimatorSection: React.FC = () => {
                 <div className="p-4 sm:p-5 rounded-[20px] bg-[#FAF5EE] border border-[#EFE3D5] flex flex-col justify-between">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-[#FEF0E1] border border-[#F6DECA] flex items-center justify-center text-[#B5651A] shrink-0">
+                      <div className="w-9 h-9 rounded-xl bg-[#F4E9D2] border border-[#F6DECA] flex items-center justify-center text-[#8E5B13] shrink-0">
                         <Repeat size={16} />
                       </div>
                       <div>
-                        <span className="block text-[11px] font-mono uppercase font-bold text-[#17140F] tracking-wider">
+                        <span className="block text-[11px] font-mono uppercase font-bold text-[#14100B] tracking-wider">
                           ANNUAL FREQUENCY
                         </span>
                         <span className="text-[12px] text-[#847C75]">
@@ -251,7 +251,7 @@ export const RoiEstimatorSection: React.FC = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="font-display font-medium text-2xl sm:text-[26px] text-[#17140F] shrink-0">
+                    <div className="font-display font-medium text-2xl sm:text-[26px] text-[#14100B] shrink-0">
                       {ordersPerYear.toFixed(1)}{' '}
                       <span className="text-xs sm:text-sm font-body text-[#847C75]">orders</span>
                     </div>
@@ -264,7 +264,7 @@ export const RoiEstimatorSection: React.FC = () => {
                     step="0.1"
                     value={ordersPerYear}
                     onChange={(e) => setOrdersPerYear(Number(e.target.value))}
-                    className="w-full accent-[#B5651A] cursor-pointer h-1.5 bg-[#EAE0D2] rounded-lg appearance-none my-2.5"
+                    className="w-full accent-[#8E5B13] cursor-pointer h-1.5 bg-[#EAE0D2] rounded-lg appearance-none my-2.5"
                   />
 
                   <div className="flex justify-between text-[11px] font-mono text-[#847C75]">
@@ -279,12 +279,12 @@ export const RoiEstimatorSection: React.FC = () => {
               <div className="lg:col-span-5 flex flex-col">
                 <div className="rounded-[22px] bg-[#16120D] p-6 sm:p-7 text-white flex flex-col justify-between h-full border border-[#2A2118] shadow-lg relative overflow-hidden">
                   {/* Ambient warm light */}
-                  <div className="absolute top-0 right-0 w-44 h-44 bg-[#B5651A]/15 rounded-full blur-2xl pointer-events-none" />
+                  <div className="absolute top-0 right-0 w-44 h-44 bg-[#8E5B13]/15 rounded-full blur-2xl pointer-events-none" />
 
                   <div className="relative z-10 space-y-5">
                     {/* Top Row: Eyebrow pill + top-line lift rate */}
                     <div className="flex items-center justify-between">
-                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#B5651A]/15 border border-[#B5651A]/40 text-[#D89B5C] font-mono text-[10px] font-bold tracking-wider uppercase">
+                      <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#8E5B13]/15 border border-[#8E5B13]/40 text-[#D89B5C] font-mono text-[10px] font-bold tracking-wider uppercase">
                         <Sparkles size={11} className="text-[#D89B5C]" />
                         <span>ANNUAL LIFT ESTIMATE</span>
                       </div>
@@ -332,7 +332,7 @@ export const RoiEstimatorSection: React.FC = () => {
                   <div className="relative z-10 pt-5 mt-5 border-t border-white/10">
                     <a
                       href="/demo"
-                      className="w-full py-3.5 px-6 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group cursor-pointer"
+                      className="w-full py-3.5 px-6 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 group cursor-pointer"
                     >
                       <span>Get Detailed Financial Model</span>
                       <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />

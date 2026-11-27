@@ -68,33 +68,33 @@ export const PartnersPage: React.FC = () => {
     <MainLayout>
       {/* 1. Hero Section with Inner Hero Background */}
       <section
-        className="relative w-full border-b border-[#EBDFC6] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body bg-cover bg-bottom bg-no-repeat overflow-hidden text-[#17140F]"
+        className="relative w-full border-b border-[#E2D3B5] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body overflow-hidden text-[#14100B]"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: "#FAF3E8",
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           {/* Breadcrumb Navigation */}
           <div className="text-xs text-[#847C75] font-medium flex items-center gap-2 mb-6">
-            <Link to="/" className="hover:text-[#B5651A] transition-colors">
+            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
               Home
             </Link>
             <span className="text-[#847C75]/60">/</span>
             <span className="text-[#847C75]">Company</span>
             <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#17140F] font-bold">Partners</span>
+            <span className="text-[#14100B] font-bold">Partners</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content Column */}
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-3">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3">
                 PARTNER ECOSYSTEM
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#17140F] mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#14100B] mb-6">
                 Grow your consulting practice with{' '}
-                <span className="text-[#B5651A] italic">transparent loyalty infrastructure.</span>
+                <span className="text-[#8E5B13] italic">transparent loyalty infrastructure.</span>
               </h1>
               <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-xl mb-8">
                 Whether you want to white-label Punya Perks under your agency domain, earn recurring referral commissions, or build custom POS & ERP integrations, we give partners high margins and dedicated engineering backing.
@@ -104,14 +104,14 @@ export const PartnersPage: React.FC = () => {
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
                 <Link
                   to="/partners/apply"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
                 >
                   <span>Apply as Partner</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
                   href="#partner-tracks"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#17140F] font-bold text-xs sm:text-sm border border-[#EBDFC6] transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#14100B] font-bold text-xs sm:text-sm border border-[#E2D3B5] transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
                 >
                   <span>Explore partner tracks</span>
                 </a>
@@ -120,15 +120,15 @@ export const PartnersPage: React.FC = () => {
 
             {/* Right Media Preview Card */}
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#EBDFC6] aspect-[16/10] sm:aspect-[4/3] group bg-[#FAF5ED] w-full max-w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E2D3B5] aspect-[16/10] sm:aspect-[4/3] group bg-[#FAF5ED] w-full max-w-full">
                 <img
                   src="/images/products/user-web-redeem.png"
                   alt="Punya Perks Global Partner Portal"
                   className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-black/25 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono flex items-center justify-between">
-                  <span className="bg-[#B5651A]/90 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
+                  <span className="bg-[#8E5B13]/90 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                     Multi-Client Tenant Console
                   </span>
                   <span className="text-white flex items-center gap-1 font-bold">
@@ -143,13 +143,13 @@ export const PartnersPage: React.FC = () => {
       </section>
 
       {/* 2. 3-Tier Partner Tracks Section (Deskmerit Partner Grid Pattern) */}
-      <section id="partner-tracks" className="py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section id="partner-tracks" className="py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#B5651A] mb-2">
+            <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-2">
               PARTNERSHIP TIERS
             </div>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#17140F] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#14100B] tracking-tight">
               Choose your partner engagement model
             </h2>
             <p className="text-sm text-[#847C75] mt-3 leading-relaxed">
@@ -161,22 +161,22 @@ export const PartnersPage: React.FC = () => {
             {tracks.map((t) => (
               <div
                 key={t.name}
-                className="p-8 rounded-2xl bg-[#FAF5ED]/50 border border-[#EBDFC6] shadow-xs hover:border-[#B5651A] hover:bg-white hover:shadow-md transition-all flex flex-col justify-between group"
+                className="p-8 rounded-2xl bg-[#FAF5ED]/50 border border-[#E2D3B5] shadow-xs hover:border-[#8E5B13] hover:bg-white hover:shadow-md transition-all flex flex-col justify-between group"
               >
                 <div>
-                  <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#FEF0E1] text-[#B5651A] border border-[#F6DECA] inline-block mb-4">
+                  <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] inline-block mb-4">
                     {t.benefit}
                   </span>
-                  <h3 className="font-display font-bold text-2xl text-[#17140F] group-hover:text-[#B5651A] transition-colors mb-3">
+                  <h3 className="font-display font-bold text-2xl text-[#14100B] group-hover:text-[#8E5B13] transition-colors mb-3">
                     {t.name}
                   </h3>
                   <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed mb-6">
                     {t.desc}
                   </p>
 
-                  <div className="space-y-2.5 pt-4 border-t border-[#EBDFC6]/80 mb-8">
+                  <div className="space-y-2.5 pt-4 border-t border-[#E2D3B5]/80 mb-8">
                     {t.features.map((f) => (
-                      <div key={f} className="flex items-start gap-2.5 text-xs text-[#17140F]">
+                      <div key={f} className="flex items-start gap-2.5 text-xs text-[#14100B]">
                         <Check size={14} className="text-[#1B8756] shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </div>
@@ -186,7 +186,7 @@ export const PartnersPage: React.FC = () => {
 
                 <Link
                   to={t.href}
-                  className="w-full py-3 px-4 rounded-xl bg-[#17140F] group-hover:bg-[#B5651A] text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
+                  className="w-full py-3 px-4 rounded-xl bg-[#14100B] group-hover:bg-[#8E5B13] text-white font-bold text-xs text-center flex items-center justify-center gap-1.5 transition-colors cursor-pointer shadow-xs"
                 >
                   <span>Apply for this tier</span>
                   <ArrowRight size={13} />

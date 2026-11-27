@@ -259,7 +259,7 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
       />
 
       {/* Tabs Navigation */}
-      <section className="bg-white border-b border-[#EBDFC6] font-body">
+      <section className="bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar">
             {[
@@ -274,8 +274,8 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
                 onClick={() => setActiveTab(tab.id as DevTab)}
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap cursor-pointer ${
                   activeTab === tab.id
-                    ? 'bg-[#B5651A] text-white shadow-xs'
-                    : 'text-[#5B534C] hover:text-[#17140F] hover:bg-[#FAF5ED]'
+                    ? 'bg-[#8E5B13] text-white shadow-xs'
+                    : 'text-[#5B534C] hover:text-[#14100B] hover:bg-[#FAF5ED]'
                 }`}
               >
                 {tab.label}
@@ -286,13 +286,13 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
       </section>
 
       {/* 4 Architectural Pillars (Each card links to dedicated internal specification page) */}
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
-            <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.16em] uppercase block mb-2">
               DEVELOPER FOUNDATION
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#17140F]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#14100B]">
               Designed for high-concurrency loyalty infrastructure
             </h2>
           </div>
@@ -304,24 +304,24 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
                 <Link
                   key={item.slug}
                   to={`/platform/developers/${item.slug}`}
-                  className="rounded-2xl bg-white p-7 border border-[#EBDFC6] hover:border-[#B5651A] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
+                  className="rounded-2xl bg-white p-7 border border-[#E2D3B5] hover:border-[#8E5B13] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-[#FAF5ED] text-[#B5651A] flex items-center justify-center mb-5 group-hover:bg-[#B5651A] group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 rounded-xl bg-[#FAF5ED] text-[#8E5B13] flex items-center justify-center mb-5 group-hover:bg-[#8E5B13] group-hover:text-white transition-colors">
                       <Icon size={22} />
                     </div>
-                    <span className="font-body text-[10px] font-bold text-[#B5651A] bg-[#FBE9D6] px-2.5 py-0.5 rounded-full border border-[#B5651A]/20 uppercase">
+                    <span className="font-body text-[10px] font-bold text-[#8E5B13] bg-[#F4E9D2] px-2.5 py-0.5 rounded-full border border-[#8E5B13]/20 uppercase">
                       {item.badge}
                     </span>
-                    <h3 className="font-display font-bold text-xl text-[#17140F] group-hover:text-[#B5651A] transition-colors mt-3 mb-2">
+                    <h3 className="font-display font-bold text-xl text-[#14100B] group-hover:text-[#8E5B13] transition-colors mt-3 mb-2">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="pt-5 mt-5 border-t border-[#EBDFC6]/60">
-                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] group-hover:text-[#9a5413] transition-colors">
+                  <div className="pt-5 mt-5 border-t border-[#E2D3B5]/60">
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8E5B13] group-hover:text-[#6E440B] transition-colors">
                       <span>Read specification</span>
                       <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                     </span>
@@ -334,20 +334,20 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
       </section>
 
       {/* Interactive Workbench & REST Endpoints Grid */}
-      <section id="api-reference" className="py-16 sm:py-24 bg-white border-b border-[#EBDFC6] font-body">
+      <section id="api-reference" className="py-16 sm:py-24 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
             {/* Left: Filtered Catalog based on activeTab */}
             <div className="lg:col-span-7 space-y-6">
               <div>
-                <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block mb-2">
+                <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.16em] uppercase block mb-2">
                   {activeTab === 'webhooks'
                     ? 'SIGNED EVENT STREAM'
                     : activeTab === 'sdks'
                     ? 'OFFICIAL CLIENT LIBRARIES'
                     : 'REST ENDPOINTS'}
                 </span>
-                <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
+                <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
                   {activeTab === 'webhooks'
                     ? 'Deterministic webhooks for every state change'
                     : activeTab === 'sdks'
@@ -363,28 +363,28 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
                 {activeItems.map((ep, idx) => (
                   <div
                     key={idx}
-                    className="rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED]/50 p-5 hover:bg-[#FAF5ED] transition-colors"
+                    className="rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED]/50 p-5 hover:bg-[#FAF5ED] transition-colors"
                   >
                     <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
                       <div className="flex items-center gap-2.5">
                         <span
                           className={`font-mono text-[11px] font-bold px-2.5 py-1 rounded-md uppercase ${
                             ep.method === 'POST' || ep.method === 'NPM'
-                              ? 'bg-[#B5651A] text-white'
-                              : 'bg-[#17140F] text-[#EBDFC6]'
+                              ? 'bg-[#8E5B13] text-white'
+                              : 'bg-[#14100B] text-[#E2D3B5]'
                           }`}
                         >
                           {ep.method}
                         </span>
-                        <span className="font-mono text-xs sm:text-sm font-semibold text-[#17140F]">
+                        <span className="font-mono text-xs sm:text-sm font-semibold text-[#14100B]">
                           {ep.path}
                         </span>
                       </div>
-                      <span className="text-[10px] font-medium text-[#847C75] bg-white px-2 py-0.5 rounded border border-[#EBDFC6]">
+                      <span className="text-[10px] font-medium text-[#847C75] bg-white px-2 py-0.5 rounded border border-[#E2D3B5]">
                         {ep.auth}
                       </span>
                     </div>
-                    <h4 className="font-display font-bold text-base text-[#17140F]">
+                    <h4 className="font-display font-bold text-base text-[#14100B]">
                       {ep.title}
                     </h4>
                     <p className="text-xs text-[#5B534C] mt-1 leading-relaxed">
@@ -397,33 +397,33 @@ print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")
 
             {/* Right: Code Sample Console */}
             <div className="lg:col-span-5 w-full">
-              <div className="rounded-2xl bg-[#17140F] text-white p-6 shadow-2xl border border-[#3E2C20] relative">
+              <div className="rounded-2xl bg-[#14100B] text-white p-6 shadow-2xl border border-[#3E2C20] relative">
                 <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
                   <div className="flex items-center gap-2">
                     <div className="w-3 h-3 rounded-full bg-red-500/80" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                     <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                    <span className="font-mono text-xs text-[#EBDFC6]/70 ml-2">
+                    <span className="font-mono text-xs text-[#E2D3B5]/70 ml-2">
                       {activeConsole.filename}
                     </span>
                   </div>
                   <button
                     type="button"
                     onClick={copyCode}
-                    className="flex items-center gap-1.5 text-xs text-[#EBDFC6] hover:text-white transition-colors cursor-pointer"
+                    className="flex items-center gap-1.5 text-xs text-[#E2D3B5] hover:text-white transition-colors cursor-pointer"
                   >
                     {copiedSnippet ? <Check size={14} className="text-green-400" /> : <Copy size={14} />}
                     <span>{copiedSnippet ? 'Copied' : 'Copy'}</span>
                   </button>
                 </div>
-                <pre className="font-mono text-[11px] sm:text-xs text-[#EBDFC6] leading-relaxed overflow-x-auto p-2 bg-[#120F0B] rounded-xl border border-white/5">
+                <pre className="font-mono text-[11px] sm:text-xs text-[#E2D3B5] leading-relaxed overflow-x-auto p-2 bg-[#120F0B] rounded-xl border border-white/5">
                   <code>{activeConsole.code}</code>
                 </pre>
                 <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#847C75]">
                   <span>{activeConsole.footerLabel}</span>
                   <Link
                     to={activeConsole.footerHref}
-                    className="text-[#F5B06B] hover:underline flex items-center gap-1"
+                    className="text-[#D4A147] hover:underline flex items-center gap-1"
                   >
                     <span>Open Full Spec</span>
                     <ExternalLink size={12} />

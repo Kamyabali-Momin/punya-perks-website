@@ -102,32 +102,32 @@ export const ProductTrustPage: React.FC = () => {
       />
 
       {/* Core 4 Governance Pillars */}
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="rounded-[28px] bg-white p-7 border border-[#EBDFC6] space-y-3 shadow-xs">
-              <ShieldCheckIcon className="text-[#B5651A]" size={24} />
+            <div className="rounded-[28px] bg-white p-7 border border-[#E2D3B5] space-y-3 shadow-xs">
+              <ShieldCheckIcon className="text-[#8E5B13]" size={24} />
               <h2 className="font-display font-bold text-lg text-[#1F1A17]">Double-Entry Journal</h2>
               <p className="text-xs text-[#5B534C] leading-relaxed">
                 Debits and credits balance to the exact integer across earn, escrow hold, burn, and FIFO breakage.
               </p>
             </div>
-            <div className="rounded-[28px] bg-white p-7 border border-[#EBDFC6] space-y-3 shadow-xs">
-              <UserCheckIcon className="text-[#B5651A]" size={24} />
+            <div className="rounded-[28px] bg-white p-7 border border-[#E2D3B5] space-y-3 shadow-xs">
+              <UserCheckIcon className="text-[#8E5B13]" size={24} />
               <h2 className="font-display font-bold text-lg text-[#1F1A17]">Maker-Checker Approval</h2>
               <p className="text-xs text-[#5B534C] leading-relaxed">
                 Dual authorization required for manual goodwill adjustments, tier overrides, and high-liability rules.
               </p>
             </div>
-            <div className="rounded-[28px] bg-white p-7 border border-[#EBDFC6] space-y-3 shadow-xs">
-              <LockIcon className="text-[#B5651A]" size={24} />
+            <div className="rounded-[28px] bg-white p-7 border border-[#E2D3B5] space-y-3 shadow-xs">
+              <LockIcon className="text-[#8E5B13]" size={24} />
               <h2 className="font-display font-bold text-lg text-[#1F1A17]">Fraud &amp; Velocity Filters</h2>
               <p className="text-xs text-[#5B534C] leading-relaxed">
                 Detect cashier collusion, duplicate receipt OCR scans, bot scraping, and burner mobile bursts.
               </p>
             </div>
-            <div className="rounded-[28px] bg-white p-7 border border-[#EBDFC6] space-y-3 shadow-xs">
-              <FileTextIcon className="text-[#B5651A]" size={24} />
+            <div className="rounded-[28px] bg-white p-7 border border-[#E2D3B5] space-y-3 shadow-xs">
+              <FileTextIcon className="text-[#8E5B13]" size={24} />
               <h2 className="font-display font-bold text-lg text-[#1F1A17]">Consent &amp; DSR Portal</h2>
               <p className="text-xs text-[#5B534C] leading-relaxed">
                 Versioned opt-in trails with automated Data Subject Access and Right-to-Erasure pseudonymization.
@@ -138,16 +138,16 @@ export const ProductTrustPage: React.FC = () => {
       </section>
 
       {/* Sample Append-Only Ledger Table + Maker-Checker Queue */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           {/* Ledger Table */}
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
               <div>
-                <span className="font-mono text-[11px] font-bold text-[#B5651A] uppercase tracking-widest">
+                <span className="font-mono text-[11px] font-bold text-[#8E5B13] uppercase tracking-widest">
                   SAMPLE AUDIT EXPORT
                 </span>
-                <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
+                <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
                   Immutable Double-Entry Point Journal
                 </h2>
               </div>
@@ -156,9 +156,9 @@ export const ProductTrustPage: React.FC = () => {
               </span>
             </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED]/40">
+            <div className="overflow-x-auto rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED]/40">
               <table className="w-full text-left text-xs font-mono">
-                <thead className="bg-[#FAF5ED] border-b border-[#EBDFC6] text-[#5B534C] uppercase text-[10px]">
+                <thead className="bg-[#FAF5ED] border-b border-[#E2D3B5] text-[#5B534C] uppercase text-[10px]">
                   <tr>
                     <th className="py-3.5 px-4">Journal ID</th>
                     <th className="py-3.5 px-4">Timestamp</th>
@@ -169,17 +169,17 @@ export const ProductTrustPage: React.FC = () => {
                     <th className="py-3.5 px-4 text-right">State</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#EBDFC6] bg-white text-[#17140F]">
+                <tbody className="divide-y divide-[#E2D3B5] bg-white text-[#14100B]">
                   {SAMPLE_LEDGER_ENTRIES.map((entry) => (
                     <tr key={entry.id} className="hover:bg-[#FAF5ED]/40">
-                      <td className="py-3.5 px-4 font-bold text-[#B5651A]">{entry.id}</td>
+                      <td className="py-3.5 px-4 font-bold text-[#8E5B13]">{entry.id}</td>
                       <td className="py-3.5 px-4 text-[#5B534C]">{entry.time}</td>
                       <td className="py-3.5 px-4 font-body font-medium">{entry.member}</td>
                       <td className="py-3.5 px-4 text-rose-700">{entry.debit}</td>
                       <td className="py-3.5 px-4 text-emerald-700">{entry.credit}</td>
                       <td className="py-3.5 px-4 text-[#847C75]">{entry.hash}</td>
                       <td className="py-3.5 px-4 text-right">
-                        <span className="rounded-full bg-[#FAF5ED] border border-[#EBDFC6] px-2.5 py-0.5 text-[10px] font-bold">
+                        <span className="rounded-full bg-[#FAF5ED] border border-[#E2D3B5] px-2.5 py-0.5 text-[10px] font-bold">
                           {entry.status}
                         </span>
                       </td>
@@ -192,9 +192,9 @@ export const ProductTrustPage: React.FC = () => {
 
           {/* Maker-Checker & Velocity Anomaly Cards */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-6 rounded-3xl bg-[#17140F] text-white p-7 sm:p-8 border border-[#3E2C20] space-y-5">
+            <div className="lg:col-span-6 rounded-3xl bg-[#14100B] text-white p-7 sm:p-8 border border-[#3E2C20] space-y-5">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-[#F5B06B]">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[#D4A147]">
                   MAKER-CHECKER SIGN-OFF QUEUE
                 </span>
                 <span className="text-[11px] font-mono text-white/60">2 Pending Reviews</span>
@@ -221,9 +221,9 @@ export const ProductTrustPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-6 rounded-3xl bg-[#FAF5ED] border border-[#EBDFC6] p-7 sm:p-8 space-y-5">
+            <div className="lg:col-span-6 rounded-3xl bg-[#FAF5ED] border border-[#E2D3B5] p-7 sm:p-8 space-y-5">
               <div className="flex items-center justify-between">
-                <span className="font-mono text-[10px] uppercase tracking-widest text-[#B5651A] font-bold">
+                <span className="font-mono text-[10px] uppercase tracking-widest text-[#8E5B13] font-bold">
                   LIVE ANTI-ABUSE SIGNALS
                 </span>
                 <span className="inline-flex items-center gap-1 text-[11px] font-mono text-rose-700 font-semibold">
@@ -231,19 +231,19 @@ export const ProductTrustPage: React.FC = () => {
                 </span>
               </div>
               <div className="space-y-3">
-                <div className="rounded-2xl bg-white border border-[#EBDFC6] p-4 space-y-1">
-                  <div className="flex items-center justify-between text-xs font-bold text-[#17140F]">
+                <div className="rounded-2xl bg-white border border-[#E2D3B5] p-4 space-y-1">
+                  <div className="flex items-center justify-between text-xs font-bold text-[#14100B]">
                     <span>Blocked: Terminal Collusion Velocity #V-09</span>
-                    <span className="font-mono text-[11px] text-[#B5651A]">Store #MUM-14</span>
+                    <span className="font-mono text-[11px] text-[#8E5B13]">Store #MUM-14</span>
                   </div>
                   <p className="text-xs text-[#5B534C]">
                     7 consecutive unlinked bills credited to same phone within 14 minutes at Counter #3. Award quarantined automatically.
                   </p>
                 </div>
-                <div className="rounded-2xl bg-white border border-[#EBDFC6] p-4 space-y-1">
-                  <div className="flex items-center justify-between text-xs font-bold text-[#17140F]">
+                <div className="rounded-2xl bg-white border border-[#E2D3B5] p-4 space-y-1">
+                  <div className="flex items-center justify-between text-xs font-bold text-[#14100B]">
                     <span>Blocked: Duplicate Receipt Perceptual Hash</span>
-                    <span className="font-mono text-[11px] text-[#B5651A]">OCR Gate #R-04</span>
+                    <span className="font-mono text-[11px] text-[#8E5B13]">OCR Gate #R-04</span>
                   </div>
                   <p className="text-xs text-[#5B534C]">
                     Cropped photo of invoice #INV-77102 rejected across second account using structural image hash match.
@@ -256,12 +256,12 @@ export const ProductTrustPage: React.FC = () => {
           {/* Regional Residency & Privacy Compliance */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {COMPLIANCE_REGIONS.map((item) => (
-              <div key={item.region} className="rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED]/60 p-6 space-y-2.5">
-                <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#B5651A]">
+              <div key={item.region} className="rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED]/60 p-6 space-y-2.5">
+                <div className="flex items-center gap-2 text-xs font-mono font-bold text-[#8E5B13]">
                   <Globe2Icon size={14} />
                   <span>{item.region}</span>
                 </div>
-                <h3 className="font-display font-bold text-base text-[#17140F]">{item.regulations}</h3>
+                <h3 className="font-display font-bold text-base text-[#14100B]">{item.regulations}</h3>
                 <p className="text-xs text-[#5B534C] leading-relaxed">{item.controls}</p>
               </div>
             ))}

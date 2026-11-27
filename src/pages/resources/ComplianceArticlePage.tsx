@@ -13,10 +13,10 @@ export const ComplianceArticlePage: React.FC = () => {
         breadcrumbs={[{ label: 'Resources', href: '/resources' }, { label: 'India Compliance Checklist' }]}
       />
 
-      <article className="py-16 sm:py-20 bg-white border-b border-[#EBDFC6] font-body text-[#1F1A17]">
+      <article className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body text-[#1F1A17]">
         <div className="max-w-[800px] mx-auto px-4 sm:px-6 md:px-8 space-y-8 text-sm sm:text-base leading-relaxed">
-          <div className="p-6 rounded-[24px] bg-[#FAF5ED] border border-[#EBDFC6] text-xs space-y-2">
-            <span className="font-mono font-bold text-[#B5651A] uppercase tracking-wider block">KEY TAKEAWAY</span>
+          <div className="p-6 rounded-[24px] bg-[#FAF5ED] border border-[#E2D3B5] text-xs space-y-2">
+            <span className="font-mono font-bold text-[#8E5B13] uppercase tracking-wider block">KEY TAKEAWAY</span>
             <p className="text-[#1F1A17]/80">
               India's DPDP Act mandates that loyalty programmes collect explicit, itemized, and versioned consent. Passive enrollment during checkout is no longer compliant.
             </p>

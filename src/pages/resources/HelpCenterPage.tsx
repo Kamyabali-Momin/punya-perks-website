@@ -294,29 +294,29 @@ export const HelpCenterPage: React.FC = () => {
     <MainLayout>
       {/* 1. Compact, Consistent Hero with Breadcrumb & Search */}
       <section
-        className="relative pt-10 pb-14 sm:pt-14 sm:pb-16 overflow-hidden border-b border-[#EBDFC6] bg-cover bg-bottom bg-no-repeat font-body"
+        className="relative pt-10 pb-14 sm:pt-14 sm:pb-16 overflow-hidden border-b border-[#E2D3B5] font-body"
         style={{
-          backgroundImage: "url('/images/inner-hero-bg.jpg')",
-          backgroundColor: '#FAF3E8',
+          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
+          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10 text-center">
           <nav className="flex items-center justify-center gap-2 text-xs text-[#847C75] mb-5">
-            <Link to="/" className="hover:text-[#B5651A] transition-colors">Home</Link>
+            <Link to="/" className="hover:text-[#8E5B13] transition-colors">Home</Link>
             <ChevronRight size={12} />
-            <Link to="/resources" className="hover:text-[#B5651A] transition-colors">Resources</Link>
+            <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">Resources</Link>
             <ChevronRight size={12} />
-            <span className="text-[#17140F] font-bold">Help Centre</span>
+            <span className="text-[#14100B] font-bold">Help Centre</span>
           </nav>
 
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/85 border border-[#EBDFC6] shadow-2xs mb-4">
-            <LifeBuoy className="w-3.5 h-3.5 text-[#B5651A]" />
-            <span className="text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/85 border border-[#E2D3B5] shadow-2xs mb-4">
+            <LifeBuoy className="w-3.5 h-3.5 text-[#8E5B13]" />
+            <span className="text-[11px] font-bold text-[#8E5B13] tracking-[0.16em] uppercase">
               HELP CENTRE &amp; KNOWLEDGE BASE
             </span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-[#17140F] tracking-tight max-w-3xl mx-auto leading-[1.12]">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-semibold text-[#14100B] tracking-tight max-w-3xl mx-auto leading-[1.12]">
             How can we help your loyalty team today?
           </h1>
 
@@ -333,13 +333,13 @@ export const HelpCenterPage: React.FC = () => {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search guides & answers: POS sync, WhatsApp OTP, ledger audit, DPDP..."
-                className="w-full pl-12 pr-20 py-3.5 sm:py-4 rounded-full bg-white border border-[#D5C5AC] text-sm sm:text-base text-[#17140F] placeholder-[#8C827A] outline-none shadow-md focus:border-[#B5651A] focus:ring-2 focus:ring-[#B5651A]/20 transition-all"
+                className="w-full pl-12 pr-20 py-3.5 sm:py-4 rounded-full bg-white border border-[#D5C5AC] text-sm sm:text-base text-[#14100B] placeholder-[#8C827A] outline-none shadow-md focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/20 transition-all"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-4 text-xs font-semibold text-[#5B534C] hover:text-[#17140F] bg-[#FAF3E8] px-3 py-1 rounded-full cursor-pointer"
+                  className="absolute right-4 text-xs font-semibold text-[#5B534C] hover:text-[#14100B] bg-[#FAF3E8] px-3 py-1 rounded-full cursor-pointer"
                 >
                   Clear
                 </button>
@@ -347,13 +347,13 @@ export const HelpCenterPage: React.FC = () => {
             </div>
 
             <div className="mt-3 flex flex-wrap items-center justify-center gap-2 text-xs text-[#5B534C]">
-              <span className="font-semibold text-[#17140F]">Popular:</span>
+              <span className="font-semibold text-[#14100B]">Popular:</span>
               {['POS offline', 'WhatsApp', 'ledger', 'DPDP', 'Pine Labs'].map((term) => (
                 <button
                   key={term}
                   type="button"
                   onClick={() => setSearchQuery(term)}
-                  className="px-2.5 py-0.5 rounded-full bg-white/80 border border-[#EBDFC6] hover:border-[#B5651A] hover:text-[#B5651A] transition-colors cursor-pointer"
+                  className="px-2.5 py-0.5 rounded-full bg-white/80 border border-[#E2D3B5] hover:border-[#8E5B13] hover:text-[#8E5B13] transition-colors cursor-pointer"
                 >
                   {term}
                 </button>
@@ -364,7 +364,7 @@ export const HelpCenterPage: React.FC = () => {
       </section>
 
       {/* 2. Main Knowledge Base Area */}
-      <section className="py-12 sm:py-16 bg-[#FAF7F2] border-b border-[#EBDFC6] font-body">
+      <section className="py-12 sm:py-16 bg-[#FAF7F2] border-b border-[#E2D3B5] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           {/* Category Filter Cards with Accurate Counts */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3.5">
@@ -379,14 +379,14 @@ export const HelpCenterPage: React.FC = () => {
                   onClick={() => setActiveCategory(cat.id)}
                   className={`p-4 rounded-2xl text-left border transition-all cursor-pointer flex flex-col justify-between min-h-[118px] ${
                     isActive
-                      ? 'bg-white border-[#B5651A] shadow-md ring-1 ring-[#B5651A]/40'
-                      : 'bg-white/90 border-[#EBDFC6] hover:bg-white hover:border-[#B5651A]/40'
+                      ? 'bg-white border-[#8E5B13] shadow-md ring-1 ring-[#8E5B13]/40'
+                      : 'bg-white/90 border-[#E2D3B5] hover:bg-white hover:border-[#8E5B13]/40'
                   }`}
                 >
                   <div className="flex items-center justify-between gap-2 w-full">
                     <span
                       className={`w-8 h-8 rounded-xl flex items-center justify-center shrink-0 ${
-                        isActive ? 'bg-[#B5651A] text-white' : 'bg-[#FAF3E8] text-[#B5651A]'
+                        isActive ? 'bg-[#8E5B13] text-white' : 'bg-[#FAF3E8] text-[#8E5B13]'
                       }`}
                     >
                       <Icon className="w-4 h-4" />
@@ -394,7 +394,7 @@ export const HelpCenterPage: React.FC = () => {
                     <span className="text-[11px] font-bold text-[#847C75]">{count}</span>
                   </div>
                   <div className="pt-3">
-                    <div className="text-xs font-bold text-[#17140F] leading-snug">{cat.name}</div>
+                    <div className="text-xs font-bold text-[#14100B] leading-snug">{cat.name}</div>
                     <div className="text-[11px] text-[#847C75] mt-0.5">{cat.desc}</div>
                   </div>
                 </button>
@@ -408,12 +408,12 @@ export const HelpCenterPage: React.FC = () => {
             <div className="lg:col-span-8 space-y-12 min-w-0">
               {/* Step-by-Step Knowledge Base Guides */}
               <div className="space-y-5">
-                <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#EBDFC6]">
+                <div className="flex flex-wrap items-center justify-between gap-2 pb-3 border-b border-[#E2D3B5]">
                   <div>
-                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#B5651A] block">
+                    <span className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#8E5B13] block">
                       PLAYBOOKS &amp; HOW-TO GUIDES
                     </span>
-                    <h2 className="font-display font-bold text-2xl text-[#17140F]">
+                    <h2 className="font-display font-bold text-2xl text-[#14100B]">
                       Implementation &amp; Operations Guides
                     </h2>
                   </div>
@@ -423,13 +423,13 @@ export const HelpCenterPage: React.FC = () => {
                 </div>
 
                 {filteredGuides.length === 0 ? (
-                  <div className="p-8 text-center bg-white rounded-2xl border border-[#EBDFC6]">
+                  <div className="p-8 text-center bg-white rounded-2xl border border-[#E2D3B5]">
                     <FileText className="w-8 h-8 text-[#8C827A] mx-auto mb-2" />
-                    <p className="text-sm font-bold text-[#17140F]">No guides match this filter</p>
+                    <p className="text-sm font-bold text-[#14100B]">No guides match this filter</p>
                     <button
                       type="button"
                       onClick={() => { setSearchQuery(''); setActiveCategory('all'); }}
-                      className="mt-3 px-4 py-1.5 rounded-full bg-[#17140F] text-white text-xs font-semibold cursor-pointer"
+                      className="mt-3 px-4 py-1.5 rounded-full bg-[#14100B] text-white text-xs font-semibold cursor-pointer"
                     >
                       Show all topics
                     </button>
@@ -441,11 +441,11 @@ export const HelpCenterPage: React.FC = () => {
                         key={guide.id}
                         type="button"
                         onClick={() => { setActiveGuide(guide); setHelpfulVote(null); }}
-                        className="text-left p-5 rounded-2xl bg-white border border-[#EBDFC6] hover:border-[#B5651A] hover:shadow-md transition-all flex flex-col justify-between gap-4 group cursor-pointer"
+                        className="text-left p-5 rounded-2xl bg-white border border-[#E2D3B5] hover:border-[#8E5B13] hover:shadow-md transition-all flex flex-col justify-between gap-4 group cursor-pointer"
                       >
                         <div className="space-y-2">
                           <div className="flex flex-wrap items-center justify-between gap-2">
-                            <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#FEF0E1] text-[#B5651A] border border-[#F6DECA]">
+                            <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA]">
                               {guide.categoryLabel}
                             </span>
                             <span className="text-[11px] text-[#847C75] inline-flex items-center gap-1">
@@ -453,7 +453,7 @@ export const HelpCenterPage: React.FC = () => {
                               {guide.readTime}
                             </span>
                           </div>
-                          <h3 className="font-display font-bold text-base sm:text-lg text-[#17140F] group-hover:text-[#B5651A] transition-colors leading-snug">
+                          <h3 className="font-display font-bold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug">
                             {guide.title}
                           </h3>
                           <p className="text-xs text-[#5B534C] leading-relaxed line-clamp-2">
@@ -463,7 +463,7 @@ export const HelpCenterPage: React.FC = () => {
 
                         <div className="pt-3 border-t border-[#FAF3E8] flex items-center justify-between text-xs">
                           <span className="font-semibold text-[#847C75]">For {guide.audience}</span>
-                          <span className="font-semibold text-[#B5651A] inline-flex items-center gap-1">
+                          <span className="font-semibold text-[#8E5B13] inline-flex items-center gap-1">
                             Read guide <ArrowRight size={13} className="group-hover:translate-x-0.5 transition-transform" />
                           </span>
                         </div>
@@ -474,9 +474,9 @@ export const HelpCenterPage: React.FC = () => {
               </div>
 
               {/* Developer Documentation Callout */}
-              <div className="relative overflow-hidden p-6 sm:p-7 rounded-2xl bg-gradient-to-r from-[#17140F] via-[#241A13] to-[#17140F] border border-[#3E2C20] shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+              <div className="relative overflow-hidden p-6 sm:p-7 rounded-2xl bg-[#14100B] border border-[#3E2C20] shadow-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
                 <div className="relative z-10">
-                  <div className="text-xs font-semibold text-[#E59846] uppercase tracking-wider mb-1">
+                  <div className="text-xs font-semibold text-[#D4A147] uppercase tracking-wider mb-1">
                     API &amp; Webhook Docs
                   </div>
                   <h3 className="font-display font-bold text-lg sm:text-xl text-[#FAF3E8]">
@@ -488,7 +488,7 @@ export const HelpCenterPage: React.FC = () => {
                 </div>
                 <Link
                   to="/platform/developers"
-                  className="relative z-10 px-5 py-2.5 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white text-xs font-semibold transition-all shrink-0 inline-flex items-center gap-2 shadow-sm"
+                  className="relative z-10 px-5 py-2.5 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white text-xs font-semibold transition-all shrink-0 inline-flex items-center gap-2 shadow-sm"
                 >
                   <span>Visit Developer Portal</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -499,13 +499,13 @@ export const HelpCenterPage: React.FC = () => {
             {/* Right 4 Columns: Support & Diagnostics Sidebar */}
             <aside className="lg:col-span-4 space-y-6">
               {/* Live Support Card */}
-              <div className="bg-white rounded-2xl p-6 border border-[#EBDFC6] shadow-xs space-y-4">
+              <div className="bg-white rounded-2xl p-6 border border-[#E2D3B5] shadow-xs space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-[#FAF3E8] border border-[#EBDFC6] flex items-center justify-center text-[#B5651A] shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#FAF3E8] border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] shrink-0">
                     <MessageSquare className="w-5 h-5" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-lg text-[#17140F]">Need human support?</h3>
+                    <h3 className="font-display font-bold text-lg text-[#14100B]">Need human support?</h3>
                     <span className="text-[11px] font-semibold text-[#1B8756] inline-flex items-center gap-1">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#1B8756]" />
                       Engineers online · IST, GST &amp; AEST
@@ -517,18 +517,18 @@ export const HelpCenterPage: React.FC = () => {
                   Reach our technical account managers for POS debugging, webhook logs, or ledger reconciliation checks.
                 </p>
 
-                <div className="space-y-2 text-xs pt-3 border-t border-[#EBDFC6]">
+                <div className="space-y-2 text-xs pt-3 border-t border-[#E2D3B5]">
                   <div className="flex items-center justify-between py-1">
                     <span className="text-[#8C827A]">Enterprise SLA</span>
-                    <span className="font-semibold text-[#17140F]">&lt; 15 min response</span>
+                    <span className="font-semibold text-[#14100B]">&lt; 15 min response</span>
                   </div>
                   <div className="flex items-center justify-between py-1">
                     <span className="text-[#8C827A]">Growth Plan SLA</span>
-                    <span className="font-semibold text-[#17140F]">&lt; 2 hour response</span>
+                    <span className="font-semibold text-[#14100B]">&lt; 2 hour response</span>
                   </div>
                   <div className="flex items-center justify-between py-1">
                     <span className="text-[#8C827A]">Direct Support</span>
-                    <span className="font-semibold text-[#17140F]">support@punyaperks.com</span>
+                    <span className="font-semibold text-[#14100B]">support@punyaperks.com</span>
                   </div>
                 </div>
 
@@ -536,7 +536,7 @@ export const HelpCenterPage: React.FC = () => {
                   <button
                     type="button"
                     onClick={() => { setTicketOpen(true); setTicketSubmitted(false); }}
-                    className="w-full py-2.5 px-4 rounded-full bg-[#17140F] hover:bg-black text-white text-center text-xs font-semibold transition-colors cursor-pointer"
+                    className="w-full py-2.5 px-4 rounded-full bg-[#14100B] hover:bg-black text-white text-center text-xs font-semibold transition-colors cursor-pointer"
                   >
                     Open Support Ticket
                   </button>
@@ -552,35 +552,35 @@ export const HelpCenterPage: React.FC = () => {
               </div>
 
               {/* System Status Link Card */}
-              <div className="bg-[#FAF3E8] rounded-2xl p-6 border border-[#EBDFC6] space-y-3">
+              <div className="bg-[#FAF3E8] rounded-2xl p-6 border border-[#E2D3B5] space-y-3">
                 <div className="flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-                  <span className="text-xs font-bold text-[#17140F] uppercase tracking-wider">All Systems Normal</span>
+                  <span className="text-xs font-bold text-[#14100B] uppercase tracking-wider">All Systems Normal</span>
                 </div>
                 <p className="text-xs text-[#5B534C] leading-relaxed">
                   Real-time telemetry across AWS Mumbai, Sydney, and UAE data clusters is at 99.99% operational uptime.
                 </p>
                 <Link
                   to="/status"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B5651A] hover:underline"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#8E5B13] hover:underline"
                 >
                   View Live Status &amp; Regional Latency <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
 
               {/* Quick Self-Serve Links */}
-              <div className="bg-white rounded-2xl p-6 border border-[#EBDFC6] space-y-3">
-                <h4 className="font-display font-bold text-sm text-[#17140F]">Self-Serve Reference</h4>
+              <div className="bg-white rounded-2xl p-6 border border-[#E2D3B5] space-y-3">
+                <h4 className="font-display font-bold text-sm text-[#14100B]">Self-Serve Reference</h4>
                 <div className="space-y-2 text-xs">
-                  <Link to="/changelog" className="flex items-center justify-between py-1.5 text-[#5B534C] hover:text-[#B5651A] transition-colors border-b border-[#FAF3E8]">
+                  <Link to="/changelog" className="flex items-center justify-between py-1.5 text-[#5B534C] hover:text-[#8E5B13] transition-colors border-b border-[#FAF3E8]">
                     <span>Platform Changelog &amp; Release Notes</span>
                     <ArrowRight size={12} />
                   </Link>
-                  <Link to="/glossary" className="flex items-center justify-between py-1.5 text-[#5B534C] hover:text-[#B5651A] transition-colors border-b border-[#FAF3E8]">
+                  <Link to="/glossary" className="flex items-center justify-between py-1.5 text-[#5B534C] hover:text-[#8E5B13] transition-colors border-b border-[#FAF3E8]">
                     <span>Loyalty Terminology Glossary</span>
                     <ArrowRight size={12} />
                   </Link>
-                  <Link to="/platform/security" className="flex items-center justify-between py-1.5 text-[#5B534C] hover:text-[#B5651A] transition-colors">
+                  <Link to="/platform/security" className="flex items-center justify-between py-1.5 text-[#5B534C] hover:text-[#8E5B13] transition-colors">
                     <span>Security, DPDP &amp; Trust Centre</span>
                     <ArrowRight size={12} />
                   </Link>
@@ -603,16 +603,16 @@ export const HelpCenterPage: React.FC = () => {
           helpButtonHref="/contact"
         />
       ) : (
-        <section className="w-full py-16 bg-[#FFFDF9] border-t border-[#EBDFC6] font-body">
+        <section className="w-full py-16 bg-[#FFFDF9] border-t border-[#E2D3B5] font-body">
           <div className="max-w-xl mx-auto px-4 text-center space-y-3">
-            <p className="text-base font-bold text-[#17140F]">No FAQs match “{searchQuery}”</p>
+            <p className="text-base font-bold text-[#14100B]">No FAQs match “{searchQuery}”</p>
             <button
               type="button"
               onClick={() => {
                 setSearchQuery('');
                 setActiveCategory('all');
               }}
-              className="px-5 py-2.5 bg-[#17140F] text-white rounded-full text-xs font-semibold cursor-pointer"
+              className="px-5 py-2.5 bg-[#14100B] text-white rounded-full text-xs font-semibold cursor-pointer"
             >
               Reset Search &amp; Topic Filters
             </button>
@@ -623,10 +623,10 @@ export const HelpCenterPage: React.FC = () => {
       {/* Guide Reader Modal */}
       {activeGuide && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-white rounded-3xl max-w-2xl w-full border border-[#EBDFC6] shadow-2xl overflow-hidden max-h-[90vh] flex flex-col font-body">
-            <div className="bg-[#17140F] text-white px-6 py-5 flex items-start justify-between gap-4">
+          <div className="bg-white rounded-3xl max-w-2xl w-full border border-[#E2D3B5] shadow-2xl overflow-hidden max-h-[90vh] flex flex-col font-body">
+            <div className="bg-[#14100B] text-white px-6 py-5 flex items-start justify-between gap-4">
               <div>
-                <div className="text-[11px] font-bold uppercase tracking-wider text-[#E59846] mb-1">
+                <div className="text-[11px] font-bold uppercase tracking-wider text-[#D4A147] mb-1">
                   {activeGuide.categoryLabel} · For {activeGuide.audience} · {activeGuide.readTime}
                 </div>
                 <h3 className="font-display font-bold text-xl sm:text-2xl text-white leading-snug">
@@ -648,12 +648,12 @@ export const HelpCenterPage: React.FC = () => {
 
               <div className="space-y-4">
                 {activeGuide.steps.map((step, i) => (
-                  <div key={step.title} className="p-4 rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6] flex gap-3.5">
-                    <span className="w-7 h-7 rounded-full bg-[#B5651A] text-white font-bold text-xs flex items-center justify-center shrink-0">
+                  <div key={step.title} className="p-4 rounded-2xl bg-[#FAF5ED] border border-[#E2D3B5] flex gap-3.5">
+                    <span className="w-7 h-7 rounded-full bg-[#8E5B13] text-white font-bold text-xs flex items-center justify-center shrink-0">
                       {i + 1}
                     </span>
                     <div>
-                      <div className="font-display font-bold text-sm text-[#17140F]">{step.title}</div>
+                      <div className="font-display font-bold text-sm text-[#14100B]">{step.title}</div>
                       <p className="text-xs text-[#5B534C] mt-1 leading-relaxed">{step.detail}</p>
                     </div>
                   </div>
@@ -661,12 +661,12 @@ export const HelpCenterPage: React.FC = () => {
               </div>
 
               {activeGuide.snippet && (
-                <div className="p-4 rounded-xl bg-[#17140F] text-[#E59846] font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-xs overflow-x-auto">
+                <div className="p-4 rounded-xl bg-[#14100B] text-[#D4A147] font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-xs overflow-x-auto">
                   {activeGuide.snippet}
                 </div>
               )}
 
-              <div className="pt-4 border-t border-[#EBDFC6] flex flex-wrap items-center justify-between gap-3">
+              <div className="pt-4 border-t border-[#E2D3B5] flex flex-wrap items-center justify-between gap-3">
                 <span className="text-xs font-semibold text-[#5B534C]">Was this guide helpful?</span>
                 <div className="flex items-center gap-2">
                   <button
@@ -675,7 +675,7 @@ export const HelpCenterPage: React.FC = () => {
                     className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border cursor-pointer transition-colors ${
                       helpfulVote === 'yes'
                         ? 'bg-[#1B8756] text-white border-[#1B8756]'
-                        : 'bg-white text-[#17140F] border-[#EBDFC6] hover:border-[#B5651A]'
+                        : 'bg-white text-[#14100B] border-[#E2D3B5] hover:border-[#8E5B13]'
                     }`}
                   >
                     <ThumbsUp size={13} /> Yes
@@ -685,8 +685,8 @@ export const HelpCenterPage: React.FC = () => {
                     onClick={() => setHelpfulVote('no')}
                     className={`inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold border cursor-pointer transition-colors ${
                       helpfulVote === 'no'
-                        ? 'bg-[#17140F] text-white border-[#17140F]'
-                        : 'bg-white text-[#17140F] border-[#EBDFC6] hover:border-[#B5651A]'
+                        ? 'bg-[#14100B] text-white border-[#14100B]'
+                        : 'bg-white text-[#14100B] border-[#E2D3B5] hover:border-[#8E5B13]'
                     }`}
                   >
                     <ThumbsDown size={13} /> Needs detail
@@ -701,13 +701,13 @@ export const HelpCenterPage: React.FC = () => {
       {/* Support Ticket Modal */}
       {ticketOpen && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-[#EBDFC6] shadow-2xl space-y-5 font-body">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-[#E2D3B5] shadow-2xl space-y-5 font-body">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#B5651A]">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#8E5B13]">
                   ENGINEERING SUPPORT DESK
                 </span>
-                <h3 className="font-display font-bold text-xl text-[#17140F] mt-1">
+                <h3 className="font-display font-bold text-xl text-[#14100B] mt-1">
                   Open a Support Ticket
                 </h3>
               </div>
@@ -721,9 +721,9 @@ export const HelpCenterPage: React.FC = () => {
             </div>
 
             {ticketSubmitted ? (
-              <div className="p-5 rounded-2xl bg-[#FAF5ED] border border-[#EBDFC6] space-y-2 text-center">
+              <div className="p-5 rounded-2xl bg-[#FAF5ED] border border-[#E2D3B5] space-y-2 text-center">
                 <CheckCircle2 size={28} className="text-emerald-600 mx-auto" />
-                <div className="font-display font-bold text-base text-[#17140F]">
+                <div className="font-display font-bold text-base text-[#14100B]">
                   Ticket #PP-4821 Created
                 </div>
                 <p className="text-xs text-[#5B534C]">
@@ -733,22 +733,22 @@ export const HelpCenterPage: React.FC = () => {
             ) : (
               <form onSubmit={handleTicketSubmit} className="space-y-3.5">
                 <div>
-                  <label className="block text-xs font-semibold text-[#17140F] mb-1">Work Email</label>
+                  <label className="block text-xs font-semibold text-[#14100B] mb-1">Work Email</label>
                   <input
                     type="email"
                     required
                     value={ticketEmail}
                     onChange={(e) => setTicketEmail(e.target.value)}
                     placeholder="ops@company.com"
-                    className="w-full h-11 px-4 rounded-xl border border-[#EBDFC6] text-sm outline-none focus:border-[#B5651A]"
+                    className="w-full h-11 px-4 rounded-xl border border-[#E2D3B5] text-sm outline-none focus:border-[#8E5B13]"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#17140F] mb-1">Priority / Severity</label>
+                  <label className="block text-xs font-semibold text-[#14100B] mb-1">Priority / Severity</label>
                   <select
                     value={ticketSeverity}
                     onChange={(e) => setTicketSeverity(e.target.value)}
-                    className="w-full h-11 px-3 rounded-xl border border-[#EBDFC6] bg-white text-sm outline-none focus:border-[#B5651A]"
+                    className="w-full h-11 px-3 rounded-xl border border-[#E2D3B5] bg-white text-sm outline-none focus:border-[#8E5B13]"
                   >
                     <option>P1 · Production POS / Checkout Blocker</option>
                     <option>P2 · Standard Technical Question</option>
@@ -756,19 +756,19 @@ export const HelpCenterPage: React.FC = () => {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#17140F] mb-1">Summary</label>
+                  <label className="block text-xs font-semibold text-[#14100B] mb-1">Summary</label>
                   <textarea
                     required
                     rows={3}
                     value={ticketSubject}
                     onChange={(e) => setTicketSubject(e.target.value)}
                     placeholder="Describe the connector, endpoint, or ledger question..."
-                    className="w-full p-3 rounded-xl border border-[#EBDFC6] text-sm outline-none focus:border-[#B5651A]"
+                    className="w-full p-3 rounded-xl border border-[#E2D3B5] text-sm outline-none focus:border-[#8E5B13]"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full h-11 rounded-full bg-[#B5651A] hover:bg-[#9a5413] text-white font-semibold text-sm inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
+                  className="w-full h-11 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-semibold text-sm inline-flex items-center justify-center gap-2 transition-colors cursor-pointer"
                 >
                   <Send size={14} />
                   <span>Submit Ticket</span>

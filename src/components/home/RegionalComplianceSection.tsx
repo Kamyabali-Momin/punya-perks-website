@@ -27,14 +27,14 @@ export const RegionalComplianceSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-16 sm:py-20 lg:py-24 font-body" id="by-market">
+    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-16 sm:py-20 lg:py-24 font-body" id="by-market">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase block mb-2">
+          <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
             BY MARKET
           </span>
-          <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#17140F] tracking-tight leading-[1.15]">
+          <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[40px] text-[#14100B] tracking-tight leading-[1.15]">
             Three markets. Three rulebooks. <br className="hidden sm:inline" />
             One platform.
           </h2>
@@ -45,13 +45,13 @@ export const RegionalComplianceSection: React.FC = () => {
           {markets.map((m) => (
             <div
               key={m.country}
-              className="rounded-[24px] bg-[#F4ECDC] p-7 sm:p-9 border border-[#EBDFC6] flex flex-col justify-between group hover:border-[#B5651A]/40 transition-colors shadow-xs"
+              className="rounded-[24px] bg-[#F4ECDC] p-7 sm:p-9 border border-[#E2D3B5] flex flex-col justify-between group hover:border-[#8E5B13]/40 transition-colors shadow-xs"
             >
               <div>
-                <span className="font-mono text-xs font-bold text-[#B5651A] tracking-wider block mb-2">
+                <span className="font-mono text-xs font-bold text-[#8E5B13] tracking-wider block mb-2">
                   {m.country}
                 </span>
-                <h3 className="font-display font-normal text-xl sm:text-2xl text-[#17140F] mb-4">
+                <h3 className="font-display font-normal text-xl sm:text-2xl text-[#14100B] mb-4">
                   {m.laws}
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
@@ -59,10 +59,10 @@ export const RegionalComplianceSection: React.FC = () => {
                 </p>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-[#EBDFC6]">
+              <div className="pt-6 mt-6 border-t border-[#E2D3B5]">
                 <a
                   href={m.href}
-                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-[#8E5B13] hover:text-[#6E440B] transition-colors"
                 >
                   <span>{m.linkText}</span>
                 </a>

@@ -44,11 +44,11 @@ export const CustomerTrustSection: React.FC = () => {
   const marqueeLogos = [...brandLogos, ...brandLogos, ...brandLogos, ...brandLogos];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#EBDFC6] py-10 sm:py-12 font-body overflow-hidden">
+    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-10 sm:py-12 font-body overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 reveal-on-scroll">
         {/* Eyebrow Label */}
         <div className="mb-6 text-center sm:text-left">
-          <span className="font-mono text-[11px] font-bold text-[#B5651A] tracking-[0.2em] uppercase leading-tight inline-block">
+          <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase leading-tight inline-block">
             PROGRAMMES RUN ON PUNYA PERKS
           </span>
         </div>
