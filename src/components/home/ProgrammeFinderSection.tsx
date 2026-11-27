@@ -97,14 +97,9 @@ export const ProgrammeFinderSection: React.FC = () => {
 
   return (
     <section
-      className="relative w-full py-16 sm:py-24 bg-[#14100B] bg-cover bg-center overflow-hidden border-b border-[#3E2413] font-body"
-      style={{
-        backgroundImage: "url('/images/modules/sec3-dark-rewards-bg.jpg')",
-      }}
+      className="relative w-full py-16 sm:py-24 bg-[#14100B] overflow-hidden border-b border-[#8E5B13]/40 font-body"
       id="programme-finder"
     >
-      {/* Subtle overlay to ensure great text contrast on left while keeping right art vibrant */}
-      <div className="absolute inset-0 bg-[#14100B]/70 pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">

@@ -29,7 +29,7 @@ export const HowItWorksSection: React.FC = () => {
   ];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-14 sm:py-16 lg:py-20 font-body" id="how-it-works">
+    <section className="w-full bg-white border-b border-[#E2D3B5] py-14 sm:py-16 lg:py-20 font-body" id="how-it-works">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12 reveal-on-scroll">
@@ -44,12 +44,12 @@ export const HowItWorksSection: React.FC = () => {
           </p>
         </div>
 
-        {/* 4 Cards Grid - Compact, natural, human design with reduced padding */}
+        {/* 4 Crisp White Cards with Burnished Gold Accents */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {steps.map((item, idx) => (
             <div
               key={item.title}
-              className={`rounded-[20px] bg-[#F4E9D2] p-4 sm:p-5 flex flex-col border border-[#F6DECA] hover:border-[#8E5B13]/40 hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
+              className={`rounded-[20px] bg-white p-4 sm:p-5 flex flex-col border border-[#D4BE96] hover:border-[#8E5B13] hover:shadow-md transition-all duration-300 group reveal-on-scroll ${
                 idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : idx === 3 ? 'delay-300' : ''
               }`}
             >

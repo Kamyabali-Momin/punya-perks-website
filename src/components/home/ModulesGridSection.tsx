@@ -31,8 +31,7 @@ export const ModulesGridSection: React.FC = () => {
 
   return (
     <section
-      className="w-full bg-[#FFFDF9] bg-cover bg-center bg-no-repeat border-b border-[#E2D3B5] py-16 sm:py-20 lg:py-24 font-body relative"
-      style={{ backgroundImage: "url('/images/modules-bg.jpg')" }}
+      className="w-full bg-[#FAF6EE] border-b border-[#E2D3B5] py-16 sm:py-20 lg:py-24 font-body relative"
       id="modules"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">

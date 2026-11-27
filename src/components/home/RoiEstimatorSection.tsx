@@ -65,11 +65,7 @@ export const RoiEstimatorSection: React.FC = () => {
 
   return (
     <section
-      className="relative w-full py-16 sm:py-20 lg:py-24 font-body border-b border-[#E2D3B5] bg-cover bg-center overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/roi-wave-bg.jpg')",
-        backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
-      }}
+      className="relative w-full py-16 sm:py-20 lg:py-24 font-body border-b border-[#E2D3B5] bg-[#FAF6EE] overflow-hidden"
       id="roi-estimate"
     >
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">

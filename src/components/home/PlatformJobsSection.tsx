@@ -50,7 +50,7 @@ export const PlatformJobsSection: React.FC = () => {
   const active = TAB_SHOWCASES[selectedTab];
 
   return (
-    <section className="w-full bg-[#FFFDF9] border-b border-[#E2D3B5] py-14 sm:py-20 lg:py-24 font-body" id="platform-jobs">
+    <section className="w-full bg-white border-b border-[#E2D3B5] py-14 sm:py-20 lg:py-24 font-body" id="platform-jobs">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           {/* Left Column: Copy & 5 Pill Tabs */}
@@ -59,7 +59,7 @@ export const PlatformJobsSection: React.FC = () => {
               ONE PLATFORM, FOUR JOBS
             </span>
             <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[42px] text-[#14100B] tracking-tight leading-[1.12]">
-              Earn, redeem, engage, <span className="italic text-[#C4681A]">operate.</span>
+              Earn, redeem, engage, <span className="italic text-[#8E5B13]">operate.</span>
             </h2>
             <p className="text-sm sm:text-base text-[#5B534C] leading-relaxed">
               Every mechanism your programme needs is built in and governed by one ledger, so finance, marketing and engineering see the same number. Retail wants omnichannel earning; banks need cash-convertible points with KYC; hospitality runs on visits. Choose the playbook, keep the platform.
