@@ -552,14 +552,11 @@ export const ProductOverviewPage: React.FC = () => {
             );
           }
 
-          // Section 05: Warm wave banner background with 4 cards and bottom-right 3D badge icons
+          // Section 05: Clean background with 4 cards and bottom-right 3D badge icons
           return (
             <section
               key={group.num}
-              className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#FDFBF7] border-b border-[#EADBC6] bg-cover bg-center overflow-hidden"
-              style={{
-                backgroundImage: "url('/images/modules/sec5-banner-bg.jpg')",
-              }}
+              className="relative w-full py-16 sm:py-20 lg:py-24 bg-[#FDFBF7] border-b border-[#EADBC6] overflow-hidden"
             >
               <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
                 <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-14">

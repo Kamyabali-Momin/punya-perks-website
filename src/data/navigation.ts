@@ -141,7 +141,7 @@ export const navigationData: NavPillar[] = [
           },
           {
             title: "Australia & New Zealand",
-            href: "/solutions/retail",
+            href: "/regions/australia",
             description: "Privacy Act 2020, Spam Act consent, and AUD/NZD settlement.",
           },
         ],

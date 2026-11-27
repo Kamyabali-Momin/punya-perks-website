@@ -6,22 +6,25 @@ import { Link } from 'react-router-dom';
 import {
   ArrowRight,
   CheckCircle2,
+  Globe,
+  Code2,
+  HeartHandshake,
 } from 'lucide-react';
 
 export const CareersPage: React.FC = () => {
   const values = [
     {
-      emoji: '🌍',
+      icon: Globe,
       title: 'Remote-First & Async',
       desc: 'We judge outcomes, not green status dots. Work when and where you are most productive across flexible hours.',
     },
     {
-      emoji: '🦀',
+      icon: Code2,
       title: 'High Craft Standards',
       desc: 'Rust & Go on the transaction broker, TypeScript on the web, robust event streaming. We care deeply about sub-120ms interactions.',
     },
     {
-      emoji: '🤝',
+      icon: HeartHandshake,
       title: 'Ethical Integrity',
       desc: "We never build features we wouldn't want managing our own personal payment accounts or member balances.",
     },
@@ -160,7 +163,9 @@ export const CareersPage: React.FC = () => {
                 key={v.title}
                 className="p-7 sm:p-8 rounded-2xl bg-[#F6EFE2]/50 border border-[#EADBC6] shadow-xs hover:border-[#BC3908] hover:bg-white hover:shadow-md transition-all group"
               >
-                <span className="text-3xl mb-4 block">{v.emoji}</span>
+                <div className="w-12 h-12 rounded-xl bg-white border border-[#EADBC6] flex items-center justify-center text-[#BC3908] group-hover:bg-[#BC3908] group-hover:text-white group-hover:border-[#BC3908] transition-all duration-300 mb-5 shadow-xs">
+                  <v.icon className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
+                </div>
                 <h3 className="font-display font-bold text-lg text-[#220901] group-hover:text-[#BC3908] transition-colors mb-2">
                   {v.title}
                 </h3>
