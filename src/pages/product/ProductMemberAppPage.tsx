@@ -76,23 +76,23 @@ export const ProductMemberAppPage: React.FC = () => {
         imageAlt="Kombee User Side Web Member Portal"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block">
+              <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block">
                 WHITE-LABEL EXCELLENCE
               </span>
-              <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
+              <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#220901]">
                 Your Brand. Native Performance. Zero Generic SaaS Clutter.
               </h2>
-              <p className="text-sm sm:text-base text-[#1F1A17]/75 leading-relaxed">
+              <p className="text-sm sm:text-base text-[#220901]/75 leading-relaxed">
                 Publish native apps on the App Store and Google Play under your corporate developer accounts. Full brand theming, custom iconography, and automatic Apple Wallet / Google Wallet pass generation.
               </p>
 
               {/* Interactive App Screen Switcher */}
               <div className="space-y-3 pt-1">
-                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#847C75] block">
+                <span className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#826B63] block">
                   PREVIEW ACTUAL KOMBEE LOYALTY APP SCREENS
                 </span>
                 <div className="flex flex-wrap gap-2">
@@ -103,31 +103,31 @@ export const ProductMemberAppPage: React.FC = () => {
                       onClick={() => setScreen(key)}
                       className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                         screen === key
-                          ? 'bg-[#8E5B13] text-white shadow-sm'
-                          : 'bg-white text-[#1F1A17] border border-[#E2D3B5] hover:border-[#8E5B13]/40'
+                          ? 'bg-[#BC3908] text-white shadow-sm'
+                          : 'bg-white text-[#220901] border border-[#EADBC6] hover:border-[#BC3908]/40'
                       }`}
                     >
                       {APP_SCREENS[key].label}
                     </button>
                   ))}
                 </div>
-                <p className="text-xs text-[#5B534C]">{activeScreen.caption}</p>
+                <p className="text-xs text-[#563E37]">{activeScreen.caption}</p>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="p-4 bg-white rounded-[20px] border border-[#E2D3B5]">
-                  <div className="font-display font-bold text-sm text-[#1F1A17]">Dynamic Tier Themes</div>
-                  <div className="text-xs text-[#1F1A17]/70 mt-1">App UI transforms in real-time as members advance tiers.</div>
+                <div className="p-4 bg-white rounded-[20px] border border-[#EADBC6]">
+                  <div className="font-display font-bold text-sm text-[#220901]">Dynamic Tier Themes</div>
+                  <div className="text-xs text-[#220901]/70 mt-1">App UI transforms in real-time as members advance tiers.</div>
                 </div>
-                <div className="p-4 bg-white rounded-[20px] border border-[#E2D3B5]">
-                  <div className="font-display font-bold text-sm text-[#1F1A17]">Multilingual by Default</div>
-                  <div className="text-xs text-[#1F1A17]/70 mt-1">English, Hindi, and full Arabic RTL typography out of the box.</div>
+                <div className="p-4 bg-white rounded-[20px] border border-[#EADBC6]">
+                  <div className="font-display font-bold text-sm text-[#220901]">Multilingual by Default</div>
+                  <div className="text-xs text-[#220901]/70 mt-1">English, Hindi, and full Arabic RTL typography out of the box.</div>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-6 flex justify-center">
-              <div className="w-[290px] sm:w-[310px] rounded-[42px] bg-[#1F1A17] p-3 shadow-2xl border-4 border-[#E2D3B5]">
+              <div className="w-[290px] sm:w-[310px] rounded-[42px] bg-[#220901] p-3 shadow-2xl border-4 border-[#EADBC6]">
                 <div className="rounded-[32px] overflow-hidden bg-white">
                   <img
                     src={activeScreen.src}
@@ -142,13 +142,13 @@ export const ProductMemberAppPage: React.FC = () => {
       </section>
 
       {/* Tier Ladder Architecture */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               CONFIGURABLE TIER LADDER
             </span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#220901]">
               Sample 3-Tier Progression &amp; Benefits Matrix
             </h2>
           </div>
@@ -157,19 +157,19 @@ export const ProductMemberAppPage: React.FC = () => {
             {TIER_LADDER.map((item) => (
               <div
                 key={item.tier}
-                className="rounded-3xl bg-[#FAF5ED]/75 border border-[#E2D3B5] p-7 space-y-4"
+                className="rounded-3xl bg-[#F6EFE2]/75 border border-[#EADBC6] p-7 space-y-4"
               >
                 <div>
-                  <span className="text-[11px] font-mono font-bold text-[#8E5B13] uppercase">
+                  <span className="text-[11px] font-mono font-bold text-[#BC3908] uppercase">
                     {item.multiplier}
                   </span>
-                  <h3 className="font-display font-bold text-2xl text-[#14100B] mt-1">{item.tier}</h3>
-                  <div className="text-xs font-mono text-[#847C75] mt-1">{item.threshold}</div>
+                  <h3 className="font-display font-bold text-2xl text-[#220901] mt-1">{item.tier}</h3>
+                  <div className="text-xs font-mono text-[#826B63] mt-1">{item.threshold}</div>
                 </div>
-                <ul className="space-y-2.5 pt-2 border-t border-[#E2D3B5]">
+                <ul className="space-y-2.5 pt-2 border-t border-[#EADBC6]">
                   {item.perks.map((perk) => (
-                    <li key={perk} className="flex items-start gap-2 text-xs sm:text-sm text-[#14100B]">
-                      <CheckCircle2Icon size={15} className="text-[#8E5B13] shrink-0 mt-0.5" />
+                    <li key={perk} className="flex items-start gap-2 text-xs sm:text-sm text-[#220901]">
+                      <CheckCircle2Icon size={15} className="text-[#BC3908] shrink-0 mt-0.5" />
                       <span>{perk}</span>
                     </li>
                   ))}

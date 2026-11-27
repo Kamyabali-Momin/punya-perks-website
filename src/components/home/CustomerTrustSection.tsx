@@ -44,19 +44,22 @@ export const CustomerTrustSection: React.FC = () => {
   const marqueeLogos = [...brandLogos, ...brandLogos, ...brandLogos, ...brandLogos];
 
   return (
-    <section className="w-full bg-[#FAF6EE] border-b border-[#E2D3B5] py-10 sm:py-12 font-body overflow-hidden">
+    <section className="w-full bg-[#FDFBF7] border-b border-[#EADBC6] py-10 sm:py-12 font-body overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 reveal-on-scroll">
         {/* Eyebrow Label */}
         <div className="mb-6 text-center sm:text-left">
-          <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase leading-tight inline-block">
+          <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase leading-tight inline-block">
             PROGRAMMES RUN ON PUNYA PERKS
           </span>
         </div>
 
-        {/* Marquee Container */}
+        {/* Marquee Container with Gradient Fading Edges */}
         <div className="relative w-full overflow-hidden">
-          <div className="absolute left-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-r from-[#FAF6EE] to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 sm:w-28 bg-gradient-to-l from-[#FAF6EE] to-transparent z-10 pointer-events-none" />
+          {/* Left Fade Gradient */}
+          <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-r from-[#FDFBF7] via-[#FDFBF7]/80 to-transparent z-10 pointer-events-none" />
+
+          {/* Right Fade Gradient */}
+          <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-32 bg-gradient-to-l from-[#FDFBF7] via-[#FDFBF7]/80 to-transparent z-10 pointer-events-none" />
 
           {/* Seamless Horizontal Scroll Track (Logos without background) */}
           <div className="animate-marquee flex items-center gap-14 sm:gap-20 md:gap-24 py-4">

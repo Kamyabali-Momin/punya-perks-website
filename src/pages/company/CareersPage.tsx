@@ -77,35 +77,35 @@ export const CareersPage: React.FC = () => {
     <MainLayout>
       {/* 1. Hero Section with Inner Hero Background */}
       <section
-        className="relative w-full border-b border-[#E2D3B5] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body overflow-hidden text-[#14100B]"
+        className="relative w-full border-b border-[#EADBC6] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body overflow-hidden text-[#220901]"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
-          backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
+          backgroundImage: "radial-gradient(ellipse 65% 55% at 15% 15%, rgba(246, 170, 28, 0.14), transparent 70%), radial-gradient(ellipse 55% 50% at 85% 80%, rgba(188, 57, 8, 0.09), transparent 70%), linear-gradient(135deg, #FDFBF7 0%, #F6EFE2 100%)",
+          backgroundColor: "#F6EFE2",
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           {/* Breadcrumb Navigation */}
-          <div className="text-xs text-[#847C75] font-medium flex items-center gap-2 mb-6">
-            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
+          <div className="text-xs text-[#826B63] font-medium flex items-center gap-2 mb-6">
+            <Link to="/" className="hover:text-[#BC3908] transition-colors">
               Home
             </Link>
-            <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#847C75]">Company</span>
-            <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#14100B] font-bold">Careers</span>
+            <span className="text-[#826B63]/60">/</span>
+            <span className="text-[#826B63]">Company</span>
+            <span className="text-[#826B63]/60">/</span>
+            <span className="text-[#220901] font-bold">Careers</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content Column */}
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#BC3908] mb-3">
                 CAREERS AT PUNYA PERKS
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#14100B] mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#220901] mb-6">
                 Build software that respects{' '}
-                <span className="text-[#8E5B13] italic">the craft of knowledge work.</span>
+                <span className="text-[#BC3908] italic">the craft of knowledge work.</span>
               </h1>
-              <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed max-w-xl mb-8">
+              <p className="font-body text-base sm:text-lg text-[#563E37] leading-relaxed max-w-xl mb-8">
                 We are a distributed engineering and product team solving one of the most fraught challenges in commerce: honest, auditable customer loyalty without fragile legacy monoliths.
               </p>
 
@@ -113,14 +113,14 @@ export const CareersPage: React.FC = () => {
               <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
                 <a
                   href="#open-positions"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#BC3908] hover:bg-[#941B0C] text-white font-bold text-xs sm:text-sm shadow-sm hover:shadow transition-all cursor-pointer whitespace-nowrap shrink-0 group"
                 >
                   <span>View Open Positions</span>
                   <ArrowRight size={15} className="group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="#culture"
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#14100B] font-bold text-xs sm:text-sm border border-[#E2D3B5] transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/80 hover:bg-white text-[#220901] font-bold text-xs sm:text-sm border border-[#EADBC6] transition-all cursor-pointer whitespace-nowrap shrink-0 shadow-xs"
                 >
                   <span>Learn about our culture</span>
                 </a>
@@ -129,7 +129,7 @@ export const CareersPage: React.FC = () => {
 
             {/* Right Media Preview Card */}
             <div className="col-span-1 lg:col-span-6 min-w-0 max-w-full w-full">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#E2D3B5] aspect-[16/10] sm:aspect-[4/3] group bg-[#FAF5ED] w-full max-w-full">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl border border-[#EADBC6] aspect-[16/10] sm:aspect-[4/3] group bg-[#F6EFE2] w-full max-w-full">
                 <img
                   src="/images/products/user-web-campaigns.png"
                   alt="Punya Perks Collaborative Product Experience"
@@ -137,7 +137,7 @@ export const CareersPage: React.FC = () => {
                 />
                 <div className="absolute inset-0 bg-black/25 pointer-events-none" />
                 <div className="absolute bottom-4 left-4 right-4 text-white text-xs font-mono flex items-center justify-between">
-                  <span className="bg-[#8E5B13]/90 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
+                  <span className="bg-[#BC3908]/90 px-2.5 py-1 rounded-md backdrop-blur-xs shadow-xs">
                     Engineering Culture & Pods
                   </span>
                   <span className="text-white flex items-center gap-1 font-bold">
@@ -152,19 +152,19 @@ export const CareersPage: React.FC = () => {
       </section>
 
       {/* 2. Values & Culture (Deskmerit 3-Card Pattern) */}
-      <section id="culture" className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section id="culture" className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {values.map((v) => (
               <div
                 key={v.title}
-                className="p-7 sm:p-8 rounded-2xl bg-[#FAF5ED]/50 border border-[#E2D3B5] shadow-xs hover:border-[#8E5B13] hover:bg-white hover:shadow-md transition-all group"
+                className="p-7 sm:p-8 rounded-2xl bg-[#F6EFE2]/50 border border-[#EADBC6] shadow-xs hover:border-[#BC3908] hover:bg-white hover:shadow-md transition-all group"
               >
                 <span className="text-3xl mb-4 block">{v.emoji}</span>
-                <h3 className="font-display font-bold text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors mb-2">
+                <h3 className="font-display font-bold text-lg text-[#220901] group-hover:text-[#BC3908] transition-colors mb-2">
                   {v.title}
                 </h3>
-                <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
+                <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">
                   {v.desc}
                 </p>
               </div>
@@ -174,16 +174,16 @@ export const CareersPage: React.FC = () => {
       </section>
 
       {/* 3. Open Positions Section (Deskmerit Jobs Pattern) */}
-      <section id="open-positions" className="py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section id="open-positions" className="py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="max-w-2xl mb-12">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-2 block">
+            <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#BC3908] mb-2 block">
               JOIN OUR ENGINEERING TEAM
             </span>
-            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#14100B] tracking-tight">
+            <h2 className="font-display font-medium text-3xl sm:text-4xl text-[#220901] tracking-tight">
               Open Positions
             </h2>
-            <p className="text-sm text-[#5B534C] mt-2 leading-relaxed">
+            <p className="text-sm text-[#563E37] mt-2 leading-relaxed">
               Explore current engineering, customer architecture, and growth openings across our distributed teams.
             </p>
           </div>
@@ -192,28 +192,28 @@ export const CareersPage: React.FC = () => {
             {openings.map((job) => (
               <div
                 key={job.title}
-                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#E2D3B5] hover:border-[#8E5B13] transition-all shadow-xs hover:shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6 group"
+                className="p-6 sm:p-7 rounded-2xl bg-white border border-[#EADBC6] hover:border-[#BC3908] transition-all shadow-xs hover:shadow-md flex flex-col md:flex-row md:items-center justify-between gap-6 group"
               >
                 <div className="space-y-1.5 min-w-0">
                   <div className="flex flex-wrap items-center gap-2.5">
-                    <h3 className="font-display font-bold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
+                    <h3 className="font-display font-bold text-base sm:text-lg text-[#220901] group-hover:text-[#BC3908] transition-colors">
                       {job.title}
                     </h3>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] text-[10px] font-mono font-bold">
+                    <span className="px-2.5 py-0.5 rounded-full bg-[#F6EFE2] text-[#BC3908] border border-[#F4D89C] text-[10px] font-mono font-bold">
                       {job.type}
                     </span>
                   </div>
-                  <div className="text-xs text-[#847C75] font-mono">
+                  <div className="text-xs text-[#826B63] font-mono">
                     {job.dept} · {job.location}
                   </div>
-                  <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed pt-1 max-w-2xl">
+                  <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed pt-1 max-w-2xl">
                     {job.desc}
                   </p>
                 </div>
 
                 <a
                   href={`mailto:careers@punyaperks.com?subject=Application: ${encodeURIComponent(job.title)}`}
-                  className="px-5 py-2.5 rounded-xl bg-[#14100B] hover:bg-[#8E5B13] text-white font-bold text-xs shrink-0 transition-all flex items-center justify-center gap-1.5 self-start md:self-center cursor-pointer shadow-xs"
+                  className="px-5 py-2.5 rounded-xl bg-[#220901] hover:bg-[#BC3908] text-white font-bold text-xs shrink-0 transition-all flex items-center justify-center gap-1.5 self-start md:self-center cursor-pointer shadow-xs"
                 >
                   <span>Apply for role</span>
                   <ArrowRight size={13} />

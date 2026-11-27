@@ -94,18 +94,18 @@ export const ProductIntegrationsPage: React.FC = () => {
         imageAlt="Punya Perks POS & E-Commerce Ecosystem"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           {categories.map((cat) => (
             <div key={cat.name} className="space-y-5">
-              <div className="border-b border-[#E2D3B5] pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+              <div className="border-b border-[#EADBC6] pb-3 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
                 <div>
-                  <h2 className="font-display font-bold text-xl sm:text-2xl text-[#1F1A17]">
+                  <h2 className="font-display font-bold text-xl sm:text-2xl text-[#220901]">
                     {cat.name}
                   </h2>
-                  <p className="text-xs sm:text-sm text-[#5B534C] mt-1">{cat.subtitle}</p>
+                  <p className="text-xs sm:text-sm text-[#563E37] mt-1">{cat.subtitle}</p>
                 </div>
-                <span className="text-[11px] font-body font-bold uppercase tracking-wider text-[#8E5B13] shrink-0">
+                <span className="text-[11px] font-body font-bold uppercase tracking-wider text-[#BC3908] shrink-0">
                   {cat.partners.length} Connectors
                 </span>
               </div>
@@ -114,9 +114,9 @@ export const ProductIntegrationsPage: React.FC = () => {
                 {cat.partners.map((p) => (
                   <div
                     key={p.name}
-                    className="p-4 sm:p-5 rounded-[18px] bg-white border border-[#E2D3B5] flex flex-col items-center justify-between text-center gap-3 shadow-2xs hover:shadow-md hover:border-[#8E5B13]/50 transition-all h-full group"
+                    className="p-4 sm:p-5 rounded-[18px] bg-white border border-[#EADBC6] flex flex-col items-center justify-between text-center gap-3 shadow-2xs hover:shadow-md hover:border-[#BC3908]/50 transition-all h-full group"
                   >
-                    <div className="w-full h-12 rounded-xl bg-[#FAF5ED] border border-[#E2D3B5]/80 flex items-center justify-center px-3 py-2 shrink-0 group-hover:scale-105 transition-transform">
+                    <div className="w-full h-12 rounded-xl bg-[#F6EFE2] border border-[#EADBC6]/80 flex items-center justify-center px-3 py-2 shrink-0 group-hover:scale-105 transition-transform">
                       <img
                         src={p.logo}
                         alt={p.name}
@@ -125,10 +125,10 @@ export const ProductIntegrationsPage: React.FC = () => {
                       />
                     </div>
                     <div className="space-y-1">
-                      <div className="font-display font-bold text-xs sm:text-sm text-[#1F1A17] leading-snug">
+                      <div className="font-display font-bold text-xs sm:text-sm text-[#220901] leading-snug">
                         {p.name}
                       </div>
-                      <div className="text-[10px] font-body font-semibold text-[#847C75] uppercase tracking-wider">
+                      <div className="text-[10px] font-body font-semibold text-[#826B63] uppercase tracking-wider">
                         {p.tag}
                       </div>
                     </div>
@@ -141,23 +141,23 @@ export const ProductIntegrationsPage: React.FC = () => {
       </section>
 
       {/* Connector Sync Benchmarks Table */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
             <div>
-              <span className="font-mono text-[11px] font-bold text-[#8E5B13] uppercase tracking-widest">
+              <span className="font-mono text-[11px] font-bold text-[#BC3908] uppercase tracking-widest">
                 CONNECTOR SPECIFICATIONS &amp; SLAS
               </span>
-              <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
+              <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#220901]">
                 Typical Integration Latency &amp; Go-Live Timeline
               </h2>
             </div>
-            <span className="text-xs font-mono text-[#847C75]">Measured in AWS Mumbai &amp; Sydney</span>
+            <span className="text-xs font-mono text-[#826B63]">Measured in AWS Mumbai &amp; Sydney</span>
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-[#E2D3B5] bg-[#FAF5ED]/40">
+          <div className="overflow-x-auto rounded-2xl border border-[#EADBC6] bg-[#F6EFE2]/40">
             <table className="w-full text-left text-xs sm:text-sm">
-              <thead className="bg-[#FAF5ED] border-b border-[#E2D3B5] font-mono text-[11px] uppercase text-[#5B534C]">
+              <thead className="bg-[#F6EFE2] border-b border-[#EADBC6] font-mono text-[11px] uppercase text-[#563E37]">
                 <tr>
                   <th className="py-3.5 px-4">Connector</th>
                   <th className="py-3.5 px-4">Integration Method</th>
@@ -166,14 +166,14 @@ export const ProductIntegrationsPage: React.FC = () => {
                   <th className="py-3.5 px-4 text-right">Resilience Guarantee</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E2D3B5] bg-white text-[#14100B]">
+              <tbody className="divide-y divide-[#EADBC6] bg-white text-[#220901]">
                 {CONNECTOR_SPECS.map((row) => (
-                  <tr key={row.connector} className="hover:bg-[#FAF5ED]/40">
+                  <tr key={row.connector} className="hover:bg-[#F6EFE2]/40">
                     <td className="py-3.5 px-4 font-bold">{row.connector}</td>
-                    <td className="py-3.5 px-4 text-[#5B534C] font-mono text-xs">{row.protocol}</td>
+                    <td className="py-3.5 px-4 text-[#563E37] font-mono text-xs">{row.protocol}</td>
                     <td className="py-3.5 px-4 font-mono text-emerald-700 font-bold">{row.latency}</td>
                     <td className="py-3.5 px-4 font-mono">{row.rollout}</td>
-                    <td className="py-3.5 px-4 text-right text-xs text-[#5B534C]">{row.offline}</td>
+                    <td className="py-3.5 px-4 text-right text-xs text-[#563E37]">{row.offline}</td>
                   </tr>
                 ))}
               </tbody>

@@ -73,14 +73,14 @@ export const SolutionsBankingPage: React.FC = () => {
         imageAlt="Punya Perks Banking Rewards & Cash-Out Portal"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             {pillars.map((p) => (
-              <div key={p.num} className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3 shadow-xs">
-                <span className="font-body text-xs font-bold text-[#8E5B13] block">{p.num}</span>
-                <h3 className="font-display font-bold text-xl text-[#1F1A17]">{p.title}</h3>
-                <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{p.desc}</p>
+              <div key={p.num} className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3 shadow-xs">
+                <span className="font-body text-xs font-bold text-[#BC3908] block">{p.num}</span>
+                <h3 className="font-display font-bold text-xl text-[#220901]">{p.title}</h3>
+                <p className="text-xs sm:text-sm text-[#220901]/75 leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -92,22 +92,22 @@ export const SolutionsBankingPage: React.FC = () => {
               { metric: '4-Eyes', label: 'Maker-checker adjustment control' },
               { metric: '500+', label: 'Gift card, airline & UPI burn options' },
             ].map((s) => (
-              <div key={s.label} className="p-6 rounded-2xl bg-white border border-[#E2D3B5] text-center">
-                <div className="font-display font-bold text-2xl sm:text-3xl text-[#8E5B13]">{s.metric}</div>
-                <p className="text-xs text-[#5B534C] mt-1.5">{s.label}</p>
+              <div key={s.label} className="p-6 rounded-2xl bg-white border border-[#EADBC6] text-center">
+                <div className="font-display font-bold text-2xl sm:text-3xl text-[#BC3908]">{s.metric}</div>
+                <p className="text-xs text-[#563E37] mt-1.5">{s.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="max-w-2xl mb-10">
-            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               ARCHITECTURAL CONTROLS
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#220901]">
               Built to Pass InfoSec and Internal Audit Reviews
             </h2>
           </div>
@@ -116,13 +116,13 @@ export const SolutionsBankingPage: React.FC = () => {
             {capabilities.map((cap) => {
               const Icon = cap.icon;
               return (
-                <div key={cap.title} className="p-7 rounded-3xl bg-[#FCF8F2] border border-[#E2D3B5] flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] shrink-0">
+                <div key={cap.title} className="p-7 rounded-3xl bg-[#FDFBF7] border border-[#EADBC6] flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#EADBC6] flex items-center justify-center text-[#BC3908] shrink-0">
                     <Icon size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-display font-bold text-lg text-[#14100B]">{cap.title}</h3>
-                    <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{cap.desc}</p>
+                    <h3 className="font-display font-bold text-lg text-[#220901]">{cap.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">{cap.desc}</p>
                   </div>
                 </div>
               );

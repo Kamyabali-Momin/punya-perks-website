@@ -185,14 +185,14 @@ export const PricingPage: React.FC = () => {
       />
 
       {/* Currency/Billing Controls + 3 Pricing Cards (Clean background, tinted Recommended card) */}
-      <section className="relative w-full py-12 sm:py-16 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="relative w-full py-12 sm:py-16 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-10">
           {/* Moved Currency & Billing Interval Controls directly into Pricing Comparison */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-5 pb-6 border-b border-[#E2D3B5]">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-5 pb-6 border-b border-[#EADBC6]">
             {/* Currency Pill Selector */}
             <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-[#847C75] uppercase tracking-wider mr-1">Currency:</span>
-              <div className="flex items-center bg-[#FAF5ED] p-1 rounded-full border border-[#E2D3B5] text-xs font-semibold">
+              <span className="text-xs font-bold text-[#826B63] uppercase tracking-wider mr-1">Currency:</span>
+              <div className="flex items-center bg-[#F6EFE2] p-1 rounded-full border border-[#EADBC6] text-xs font-semibold">
                 {(['INR', 'AUD', 'NZD', 'USD'] as const).map((c) => (
                   <button
                     key={c}
@@ -200,8 +200,8 @@ export const PricingPage: React.FC = () => {
                     onClick={() => setCurrency(c)}
                     className={`px-3.5 py-1.5 rounded-full transition-all cursor-pointer ${
                       currency === c
-                        ? 'bg-[#8E5B13] text-white shadow-xs'
-                        : 'text-[#14100B] hover:text-[#8E5B13]'
+                        ? 'bg-[#BC3908] text-white shadow-xs'
+                        : 'text-[#220901] hover:text-[#BC3908]'
                     }`}
                   >
                     {c}
@@ -211,13 +211,13 @@ export const PricingPage: React.FC = () => {
             </div>
 
             {/* Monthly / Annual Toggle */}
-            <div className="flex items-center gap-3 text-xs font-semibold text-[#14100B]">
-              <span className={!annual ? 'text-[#8E5B13] font-bold' : 'text-[#847C75]'}>Monthly</span>
+            <div className="flex items-center gap-3 text-xs font-semibold text-[#220901]">
+              <span className={!annual ? 'text-[#BC3908] font-bold' : 'text-[#826B63]'}>Monthly</span>
               <button
                 type="button"
                 onClick={() => setAnnual(!annual)}
                 className={`w-12 h-6 flex items-center rounded-full p-1 cursor-pointer transition-colors ${
-                  annual ? 'bg-[#8E5B13]' : 'bg-[#E2D3B5]'
+                  annual ? 'bg-[#BC3908]' : 'bg-[#EADBC6]'
                 }`}
                 aria-label="Toggle annual billing"
               >
@@ -227,8 +227,8 @@ export const PricingPage: React.FC = () => {
                   }`}
                 />
               </button>
-              <span className={annual ? 'text-[#8E5B13] font-bold' : 'text-[#847C75]'}>
-                Annual <span className="bg-[#F4E9D2] text-[#8E5B13] px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-[#8E5B13]/20">Save 15%</span>
+              <span className={annual ? 'text-[#BC3908] font-bold' : 'text-[#826B63]'}>
+                Annual <span className="bg-[#F6EFE2] text-[#BC3908] px-2.5 py-0.5 rounded-full text-[10px] font-bold border border-[#BC3908]/20">Save 15%</span>
               </span>
             </div>
           </div>
@@ -242,38 +242,38 @@ export const PricingPage: React.FC = () => {
                   idx === 1 ? 'delay-100' : idx === 2 ? 'delay-200' : ''
                 } ${
                   p.featured
-                    ? 'bg-[#F4E9D2] border-2 border-[#8E5B13] shadow-lg'
-                    : 'bg-white border border-[#E2D3B5] shadow-xs hover:shadow-md'
+                    ? 'bg-[#F6EFE2] border-2 border-[#BC3908] shadow-lg'
+                    : 'bg-white border border-[#EADBC6] shadow-xs hover:shadow-md'
                 }`}
               >
                 {p.featured && (
-                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#8E5B13] text-white font-body text-[10px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-sm">
+                  <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#BC3908] text-white font-body text-[10px] font-bold uppercase tracking-wider px-4 py-1 rounded-full shadow-sm">
                     MOST RECOMMENDED
                   </span>
                 )}
 
                 <div>
-                  <h3 className="font-display font-bold text-2xl text-[#14100B]">{p.name}</h3>
-                  <p className="text-xs text-[#5B534C] mt-2 min-h-[34px] leading-relaxed">{p.desc}</p>
+                  <h3 className="font-display font-bold text-2xl text-[#220901]">{p.name}</h3>
+                  <p className="text-xs text-[#563E37] mt-2 min-h-[34px] leading-relaxed">{p.desc}</p>
 
-                  <div className={`my-6 pb-6 border-b ${p.featured ? 'border-[#E6CFAF]' : 'border-[#E2D3B5]/70'}`}>
+                  <div className={`my-6 pb-6 border-b ${p.featured ? 'border-[#EADBC6]' : 'border-[#EADBC6]/70'}`}>
                     <div className="flex items-baseline gap-1">
-                      <span className="font-display font-extrabold text-4xl sm:text-5xl text-[#14100B]">
+                      <span className="font-display font-extrabold text-4xl sm:text-5xl text-[#220901]">
                         {p.price}
                       </span>
-                      {p.period && <span className="text-xs text-[#847C75]">{p.period}</span>}
+                      {p.period && <span className="text-xs text-[#826B63]">{p.period}</span>}
                     </div>
                     {annual && p.price !== 'Custom' && (
-                      <span className="text-[11px] text-[#8E5B13] font-semibold block mt-1">
+                      <span className="text-[11px] text-[#BC3908] font-semibold block mt-1">
                         Billed annually (15% savings applied)
                       </span>
                     )}
                   </div>
 
-                  <ul className="space-y-3.5 text-xs sm:text-sm text-[#5B534C]">
+                  <ul className="space-y-3.5 text-xs sm:text-sm text-[#563E37]">
                     {p.features.map((f, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
-                        <Check size={16} className="text-[#8E5B13] shrink-0 mt-0.5" />
+                        <Check size={16} className="text-[#BC3908] shrink-0 mt-0.5" />
                         <span>{f}</span>
                       </li>
                     ))}
@@ -285,8 +285,8 @@ export const PricingPage: React.FC = () => {
                     href={p.href}
                     className={`w-full inline-flex items-center justify-center gap-2 py-3.5 rounded-full font-semibold text-xs sm:text-sm transition-all cursor-pointer ${
                       p.featured
-                        ? 'bg-[#8E5B13] hover:bg-[#6E440B] text-white shadow-md hover:scale-102'
-                        : 'bg-[#FAF5ED] hover:bg-[#E2D3B5] text-[#14100B] border border-[#E2D3B5]'
+                        ? 'bg-[#BC3908] hover:bg-[#941B0C] text-white shadow-md hover:scale-102'
+                        : 'bg-[#F6EFE2] hover:bg-[#EADBC6] text-[#220901] border border-[#EADBC6]'
                     }`}
                   >
                     <span>{p.cta}</span>
@@ -300,30 +300,30 @@ export const PricingPage: React.FC = () => {
       </section>
 
       {/* Interactive Member Size Slider Calculator (Positioned after Pricing Comparison Cards) */}
-      <section className="py-12 sm:py-16 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-12 sm:py-16 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-[#E2D3B5] shadow-sm space-y-6">
+          <div className="max-w-4xl mx-auto bg-white rounded-3xl p-6 sm:p-8 md:p-10 border border-[#EADBC6] shadow-sm space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <div className="flex items-center gap-2 text-[#8E5B13] font-bold text-xs uppercase tracking-wider mb-1.5">
+                <div className="flex items-center gap-2 text-[#BC3908] font-bold text-xs uppercase tracking-wider mb-1.5">
                   <Sliders size={15} />
                   <span>Interactive Member Calculator</span>
                 </div>
-                <h3 className="font-display font-bold text-xl sm:text-2xl text-[#14100B]">
+                <h3 className="font-display font-bold text-xl sm:text-2xl text-[#220901]">
                   Estimate your Growth plan investment
                 </h3>
               </div>
               <div className="flex items-center gap-6">
                 <div className="text-left sm:text-right">
-                  <span className="text-xs text-[#847C75]">Active Loyalty Members:</span>
-                  <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#8E5B13]">
+                  <span className="text-xs text-[#826B63]">Active Loyalty Members:</span>
+                  <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#BC3908]">
                     {memberCount.toLocaleString()}
                   </div>
                 </div>
-                <div className="pl-6 border-l border-[#E2D3B5] text-left sm:text-right">
-                  <span className="text-xs text-[#847C75]">Estimated Growth:</span>
-                  <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
-                    {curr.symbol}{growthPrice.toLocaleString()}<span className="text-xs font-body font-normal text-[#847C75]">/mo</span>
+                <div className="pl-6 border-l border-[#EADBC6] text-left sm:text-right">
+                  <span className="text-xs text-[#826B63]">Estimated Growth:</span>
+                  <div className="font-display font-extrabold text-2xl sm:text-3xl text-[#220901]">
+                    {curr.symbol}{growthPrice.toLocaleString()}<span className="text-xs font-body font-normal text-[#826B63]">/mo</span>
                   </div>
                 </div>
               </div>
@@ -339,9 +339,9 @@ export const PricingPage: React.FC = () => {
                 value={memberCount}
                 onChange={(e) => setMemberCount(Number(e.target.value))}
                 aria-label="Active Loyalty Members"
-                className="w-full h-2.5 bg-[#E2D3B5] rounded-lg appearance-none cursor-pointer accent-[#8E5B13]"
+                className="w-full h-2.5 bg-[#EADBC6] rounded-lg appearance-none cursor-pointer accent-[#BC3908]"
               />
-              <div className="flex justify-between text-[11px] text-[#847C75] font-mono">
+              <div className="flex justify-between text-[11px] text-[#826B63] font-mono">
                 <span>10,000 members</span>
                 <span>100,000</span>
                 <span>200,000</span>
@@ -349,9 +349,9 @@ export const PricingPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-4 border-t border-[#E2D3B5]/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#5B534C]">
+            <div className="pt-4 border-t border-[#EADBC6]/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-[#563E37]">
               <span>Need over 300,000 active members? Our Enterprise tier offers custom volume tiers.</span>
-              <a href="/contact" className="font-bold text-[#8E5B13] hover:underline whitespace-nowrap">
+              <a href="/contact" className="font-bold text-[#BC3908] hover:underline whitespace-nowrap">
                 Talk to Enterprise Sales →
               </a>
             </div>
@@ -360,55 +360,55 @@ export const PricingPage: React.FC = () => {
       </section>
 
       {/* Feature Comparison Matrix */}
-      <section id="comparison-matrix" className="py-16 sm:py-24 bg-white border-b border-[#E2D3B5] font-body">
+      <section id="comparison-matrix" className="py-16 sm:py-24 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
-            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.16em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.16em] uppercase block mb-2">
               DEEP COMPARISON
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#220901]">
               Feature comparison matrix
             </h2>
           </div>
 
-          <div className="overflow-x-auto bg-white rounded-3xl border border-[#E2D3B5] shadow-sm">
+          <div className="overflow-x-auto bg-white rounded-3xl border border-[#EADBC6] shadow-sm">
             <table className="w-full text-left text-xs sm:text-sm">
               <thead>
-                <tr className="border-b border-[#E2D3B5] bg-[#FAF5ED]/50 text-[#14100B]">
+                <tr className="border-b border-[#EADBC6] bg-[#F6EFE2]/50 text-[#220901]">
                   <th className="py-4 px-6 font-display font-bold text-base sm:text-lg">Capabilities</th>
                   <th className="py-4 px-4 font-bold text-center w-36">Launch</th>
-                  <th className="py-4 px-4 font-bold text-center w-36 text-[#8E5B13] bg-[#F4E9D2]/30">Growth</th>
+                  <th className="py-4 px-4 font-bold text-center w-36 text-[#BC3908] bg-[#F6EFE2]/30">Growth</th>
                   <th className="py-4 px-4 font-bold text-center w-36">Enterprise</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-[#E2D3B5]/60">
+              <tbody className="divide-y divide-[#EADBC6]/60">
                 {matrixSections.map((section, sIdx) => (
                   <React.Fragment key={sIdx}>
-                    <tr className="bg-[#FAF5ED]/80">
-                      <td colSpan={4} className="py-3 px-6 font-bold text-xs uppercase tracking-wider text-[#8E5B13]">
+                    <tr className="bg-[#F6EFE2]/80">
+                      <td colSpan={4} className="py-3 px-6 font-bold text-xs uppercase tracking-wider text-[#BC3908]">
                         {section.category}
                       </td>
                     </tr>
                     {section.features.map((feat, fIdx) => (
-                      <tr key={fIdx} className="hover:bg-[#FAF5ED]/30 transition-colors">
-                        <td className="py-3.5 px-6 font-medium text-[#14100B]">{feat.name}</td>
-                        <td className="py-3.5 px-4 text-center text-[#5B534C]">
+                      <tr key={fIdx} className="hover:bg-[#F6EFE2]/30 transition-colors">
+                        <td className="py-3.5 px-6 font-medium text-[#220901]">{feat.name}</td>
+                        <td className="py-3.5 px-4 text-center text-[#563E37]">
                           {typeof feat.launch === 'boolean' ? (
-                            feat.launch ? <Check size={16} className="text-[#8E5B13] mx-auto" /> : <span className="text-gray-300">—</span>
+                            feat.launch ? <Check size={16} className="text-[#BC3908] mx-auto" /> : <span className="text-gray-300">—</span>
                           ) : (
                             feat.launch
                           )}
                         </td>
-                        <td className="py-3.5 px-4 text-center font-semibold text-[#14100B] bg-[#F4E9D2]/20">
+                        <td className="py-3.5 px-4 text-center font-semibold text-[#220901] bg-[#F6EFE2]/20">
                           {typeof feat.growth === 'boolean' ? (
-                            feat.growth ? <Check size={16} className="text-[#8E5B13] mx-auto" /> : <span className="text-gray-300">—</span>
+                            feat.growth ? <Check size={16} className="text-[#BC3908] mx-auto" /> : <span className="text-gray-300">—</span>
                           ) : (
                             feat.growth
                           )}
                         </td>
-                        <td className="py-3.5 px-4 text-center font-semibold text-[#14100B]">
+                        <td className="py-3.5 px-4 text-center font-semibold text-[#220901]">
                           {typeof feat.enterprise === 'boolean' ? (
-                            feat.enterprise ? <Check size={16} className="text-[#8E5B13] mx-auto" /> : <span className="text-gray-300">—</span>
+                            feat.enterprise ? <Check size={16} className="text-[#BC3908] mx-auto" /> : <span className="text-gray-300">—</span>
                           ) : (
                             feat.enterprise
                           )}

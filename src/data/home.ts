@@ -292,7 +292,7 @@ export const homeData = {
     {
       id: "silver",
       name: "Silver Tier",
-      accentColor: "#847C75",
+      accentColor: "#826B63",
       badgeBg: "bg-neutral-100 text-neutral-700",
       multiplier: "1.0x",
       requirement: "Entry on sign-up",
@@ -304,7 +304,7 @@ export const homeData = {
     {
       id: "gold",
       name: "Gold Tier",
-      accentColor: "#C9A15B",
+      accentColor: "#F6AA1C",
       badgeBg: "bg-amber-100 text-amber-800",
       multiplier: "1.5x",
       requirement: "Spend ₹25,000 / year",
@@ -316,7 +316,7 @@ export const homeData = {
     {
       id: "platinum",
       name: "Platinum Tier",
-      accentColor: "#A36D1C",
+      accentColor: "#F6AA1C",
       badgeBg: "bg-emerald-100 text-emerald-900",
       multiplier: "2.0x",
       requirement: "Spend ₹75,000 / year",

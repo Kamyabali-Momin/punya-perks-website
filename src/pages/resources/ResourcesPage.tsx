@@ -77,23 +77,23 @@ export const ResourcesPage: React.FC = () => {
     <MainLayout>
       {/* 1. Hero Section */}
       <section
-        className="relative w-full border-b border-[#E2D3B5] pt-12 pb-20 text-center overflow-hidden font-body text-[#14100B]"
+        className="relative w-full border-b border-[#EADBC6] pt-12 pb-20 text-center overflow-hidden font-body text-[#220901]"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
-          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
+          backgroundImage: "radial-gradient(ellipse 65% 55% at 15% 15%, rgba(246, 170, 28, 0.14), transparent 70%), radial-gradient(ellipse 55% 50% at 85% 80%, rgba(188, 57, 8, 0.09), transparent 70%), linear-gradient(135deg, #FDFBF7 0%, #F6EFE2 100%)",
+          backgroundColor: "#F6EFE2",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-xs font-mono text-[#847C75] mb-4">
-            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
+          <nav className="flex items-center justify-center gap-2 text-xs font-mono text-[#826B63] mb-4">
+            <Link to="/" className="hover:text-[#BC3908] transition-colors">
               Home
             </Link>
-            <ChevronRight size={12} className="text-[#8E5B13]/60" />
-            <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">
+            <ChevronRight size={12} className="text-[#BC3908]/60" />
+            <Link to="/resources" className="hover:text-[#BC3908] transition-colors">
               Resources
             </Link>
-            <ChevronRight size={12} className="text-[#8E5B13]/60" />
-            <span className="text-[#8E5B13] font-bold">
+            <ChevronRight size={12} className="text-[#BC3908]/60" />
+            <span className="text-[#BC3908] font-bold">
               {isBenchmarksRoute
                 ? 'Benchmarks'
                 : isComparisonsRoute
@@ -104,16 +104,16 @@ export const ResourcesPage: React.FC = () => {
             </span>
           </nav>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4E9D2] border border-[#F6DECA] text-[#8E5B13] text-xs font-mono font-bold uppercase tracking-wider mb-4 shadow-2xs">
-            <Sparkles size={13} className="text-[#8E5B13]" />
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F6EFE2] border border-[#F4D89C] text-[#BC3908] text-xs font-mono font-bold uppercase tracking-wider mb-4 shadow-2xs">
+            <Sparkles size={13} className="text-[#BC3908]" />
             <span>{pageMeta.pretitle}</span>
           </div>
 
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#14100B] tracking-tight mb-4 leading-tight">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-medium text-[#220901] tracking-tight mb-4 leading-tight">
             {pageMeta.title}
           </h1>
 
-          <p className="text-sm sm:text-base text-[#5B534C] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#563E37] max-w-2xl mx-auto leading-relaxed">
             {pageMeta.description}
           </p>
         </div>
@@ -141,8 +141,8 @@ export const ResourcesPage: React.FC = () => {
                   to={hubLink.href}
                   className={`px-3 py-2.5 rounded-xl border text-center text-xs font-semibold transition-all ${
                     active
-                      ? 'bg-[#8E5B13] text-white border-[#8E5B13] shadow-xs'
-                      : 'bg-[#FAF5ED]/70 text-[#14100B] border-[#E2D3B5] hover:border-[#8E5B13]/50 hover:bg-[#FAF5ED]'
+                      ? 'bg-[#BC3908] text-white border-[#BC3908] shadow-xs'
+                      : 'bg-[#F6EFE2]/70 text-[#220901] border-[#EADBC6] hover:border-[#BC3908]/50 hover:bg-[#F6EFE2]'
                   }`}
                 >
                   {hubLink.label}
@@ -152,11 +152,11 @@ export const ResourcesPage: React.FC = () => {
           </div>
 
           {/* Search Bar & Tag Filter Controls */}
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#E2D3B5]">
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-10 pb-6 border-b border-[#EADBC6]">
             <div className="relative w-full lg:max-w-md">
               <Search
                 size={18}
-                className="absolute left-4 top-1/2 -translate-y-1/2 text-[#847C75] pointer-events-none"
+                className="absolute left-4 top-1/2 -translate-y-1/2 text-[#826B63] pointer-events-none"
               />
               <input
                 type="search"
@@ -164,13 +164,13 @@ export const ResourcesPage: React.FC = () => {
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search guides, topics, or keywords..."
                 aria-label="Search guides and resources"
-                className="w-full h-11 pl-11 pr-10 rounded-full border border-[#E2D3B5] bg-[#FAF5ED]/50 text-sm text-[#14100B] placeholder-[#847C75] outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/15 focus:bg-white transition-all shadow-2xs"
+                className="w-full h-11 pl-11 pr-10 rounded-full border border-[#EADBC6] bg-[#F6EFE2]/50 text-sm text-[#220901] placeholder-[#826B63] outline-none focus:border-[#BC3908] focus:ring-2 focus:ring-[#BC3908]/15 focus:bg-white transition-all shadow-2xs"
               />
               {searchQuery && (
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#847C75] hover:text-[#14100B] cursor-pointer"
+                  className="absolute right-3.5 top-1/2 -translate-y-1/2 text-[#826B63] hover:text-[#220901] cursor-pointer"
                   aria-label="Clear search"
                 >
                   <X size={16} />
@@ -188,8 +188,8 @@ export const ResourcesPage: React.FC = () => {
                     onClick={() => setSelectedTag(tag)}
                     className={`rounded-full px-4 py-2 text-xs font-semibold whitespace-nowrap shrink-0 transition-all cursor-pointer select-none ${
                       isActive
-                        ? 'bg-[#8E5B13] text-white shadow-xs font-bold'
-                        : 'bg-[#FAF5ED] text-[#5B534C] hover:bg-[#F2E8D8] hover:text-[#14100B] border border-[#E2D3B5]'
+                        ? 'bg-[#BC3908] text-white shadow-xs font-bold'
+                        : 'bg-[#F6EFE2] text-[#563E37] hover:bg-[#F6EFE2] hover:text-[#220901] border border-[#EADBC6]'
                     }`}
                   >
                     {tag}
@@ -203,50 +203,50 @@ export const ResourcesPage: React.FC = () => {
           {selectedTag === 'All' && !searchQuery.trim() && (
             <Link
               to={`/resources/${FEATURED_RESOURCE.id}`}
-              className="mb-14 overflow-hidden rounded-3xl border border-[#E2D3B5] hover:border-[#8E5B13]/60 bg-white text-[#14100B] shadow-xs hover:shadow-md transition-all grid md:grid-cols-12 items-stretch group"
+              className="mb-14 overflow-hidden rounded-3xl border border-[#EADBC6] hover:border-[#BC3908]/60 bg-white text-[#220901] shadow-xs hover:shadow-md transition-all grid md:grid-cols-12 items-stretch group"
             >
               <div className="p-8 md:p-10 lg:p-12 md:col-span-7 flex flex-col justify-between h-full bg-white">
                 <div>
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F4E9D2] border border-[#F6DECA] px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-4">
-                    <Sparkles size={13} className="text-[#8E5B13]" />
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#F6EFE2] border border-[#F4D89C] px-3.5 py-1 text-xs font-mono font-bold uppercase tracking-wider text-[#BC3908] mb-4">
+                    <Sparkles size={13} className="text-[#BC3908]" />
                     {FEATURED_RESOURCE.tag}
                   </span>
 
-                  <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-[#14100B] leading-tight group-hover:text-[#8E5B13] transition-colors">
+                  <h2 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-[#220901] leading-tight group-hover:text-[#BC3908] transition-colors">
                     {FEATURED_RESOURCE.title}
                   </h2>
 
-                  <p className="mt-4 text-sm sm:text-base text-[#5B534C] leading-relaxed line-clamp-3 md:line-clamp-4">
+                  <p className="mt-4 text-sm sm:text-base text-[#563E37] leading-relaxed line-clamp-3 md:line-clamp-4">
                     {FEATURED_RESOURCE.text}
                   </p>
                 </div>
 
-                <div className="mt-8 pt-6 border-t border-[#E2D3B5]/80 flex flex-wrap items-center justify-between gap-4">
+                <div className="mt-8 pt-6 border-t border-[#EADBC6]/80 flex flex-wrap items-center justify-between gap-4">
                   <div className="flex items-center gap-3">
-                    <span className="inline-flex items-center gap-2 rounded-full bg-[#8E5B13] group-hover:bg-[#6E440B] px-6 py-3 text-xs font-bold text-white shadow-xs transition-all">
+                    <span className="inline-flex items-center gap-2 rounded-full bg-[#BC3908] group-hover:bg-[#621708] px-6 py-3 text-xs font-bold text-white shadow-xs transition-all">
                       <Download size={14} />
                       <span>{FEATURED_RESOURCE.downloadText || 'Download Free Playbook'}</span>
                     </span>
-                    <span className="inline-flex items-center gap-1.5 px-3 py-3 rounded-full text-xs font-bold text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-3 rounded-full text-xs font-bold text-[#220901] group-hover:text-[#BC3908] transition-colors">
                       <span>Read Playbook</span>
                       <ArrowRight size={13} />
                     </span>
                   </div>
 
-                  <span className="text-xs text-[#847C75] font-mono">
+                  <span className="text-xs text-[#826B63] font-mono">
                     {FEATURED_RESOURCE.meta}
                   </span>
                 </div>
               </div>
 
-              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-[#FAF5ED] border-t md:border-t-0 md:border-l border-[#E2D3B5]">
+              <div className="md:col-span-5 h-64 md:h-full relative overflow-hidden bg-[#F6EFE2] border-t md:border-t-0 md:border-l border-[#EADBC6]">
                 <img
                   src={FEATURED_RESOURCE.image}
                   alt={FEATURED_RESOURCE.title}
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/20 opacity-60 group-hover:opacity-40 transition-opacity" />
-                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-xs px-3 py-1 rounded-md text-[11px] font-mono font-bold text-[#14100B] border border-[#E2D3B5]">
+                <div className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-xs px-3 py-1 rounded-md text-[11px] font-mono font-bold text-[#220901] border border-[#EADBC6]">
                   Read Full Guide →
                 </div>
               </div>
@@ -256,10 +256,10 @@ export const ResourcesPage: React.FC = () => {
           {/* 4. Section Heading */}
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#14100B]">
+              <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#220901]">
                 {selectedTag === 'All' ? 'All Guides & Resources' : `${selectedTag} Resources`}
               </h2>
-              <p className="text-xs text-[#847C75] mt-1 font-mono">
+              <p className="text-xs text-[#826B63] mt-1 font-mono">
                 Showing {filteredItems.length} curated playbooks and publications
               </p>
             </div>
@@ -272,55 +272,55 @@ export const ResourcesPage: React.FC = () => {
                 <Link
                   key={item.id}
                   to={`/resources/${item.id}`}
-                  className="bg-white rounded-3xl border border-[#E2D3B5] hover:border-[#8E5B13] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group overflow-hidden"
+                  className="bg-white rounded-3xl border border-[#EADBC6] hover:border-[#BC3908] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group overflow-hidden"
                 >
                   <div>
-                    <div className="w-full h-48 sm:h-52 relative overflow-hidden bg-[#FAF5ED] border-b border-[#E2D3B5]/60">
+                    <div className="w-full h-48 sm:h-52 relative overflow-hidden bg-[#F6EFE2] border-b border-[#EADBC6]/60">
                       <img
                         src={item.image}
                         alt={item.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute top-3 left-3">
-                        <span className="font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] text-[10px] shadow-2xs">
+                        <span className="font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded-md bg-[#F6EFE2] text-[#BC3908] border border-[#F4D89C] text-[10px] shadow-2xs">
                           {item.tag}
                         </span>
                       </div>
                     </div>
 
                     <div className="p-6">
-                      <div className="flex items-center gap-2 text-[11px] text-[#847C75] mb-2 font-mono">
-                        <Clock size={12} className="text-[#8E5B13]" />
+                      <div className="flex items-center gap-2 text-[11px] text-[#826B63] mb-2 font-mono">
+                        <Clock size={12} className="text-[#BC3908]" />
                         <span>{item.meta}</span>
                       </div>
 
-                      <h3 className="font-display font-bold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug mb-2">
+                      <h3 className="font-display font-bold text-base sm:text-lg text-[#220901] group-hover:text-[#BC3908] transition-colors leading-snug mb-2">
                         {item.title}
                       </h3>
 
-                      <p className="text-xs text-[#5B534C] leading-relaxed">
+                      <p className="text-xs text-[#563E37] leading-relaxed">
                         {item.text}
                       </p>
                     </div>
                   </div>
 
                   <div className="p-6 pt-0 mt-2">
-                    <div className="pt-4 border-t border-[#E2D3B5]/80 flex items-center justify-between gap-3">
+                    <div className="pt-4 border-t border-[#EADBC6]/80 flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2.5 min-w-0">
-                        <div className="w-8 h-8 rounded-full bg-[#F4E9D2] border border-[#F6DECA] text-[#8E5B13] font-bold text-xs flex items-center justify-center font-display shrink-0">
+                        <div className="w-8 h-8 rounded-full bg-[#F6EFE2] border border-[#F4D89C] text-[#BC3908] font-bold text-xs flex items-center justify-center font-display shrink-0">
                           {item.author.initials}
                         </div>
                         <div className="min-w-0">
-                          <p className="text-xs font-bold text-[#14100B] leading-tight truncate">
+                          <p className="text-xs font-bold text-[#220901] leading-tight truncate">
                             {item.author.name}
                           </p>
-                          <p className="text-[10px] text-[#847C75] leading-tight mt-0.5 truncate">
+                          <p className="text-[10px] text-[#826B63] leading-tight mt-0.5 truncate">
                             {item.author.role}
                           </p>
                         </div>
                       </div>
 
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#14100B] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#14100B] group-hover:bg-[#8E5B13] group-hover:border-[#8E5B13] group-hover:text-white transition-all duration-200 shrink-0 whitespace-nowrap">
+                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#220901] bg-transparent px-3.5 py-1.5 text-xs font-semibold text-[#220901] group-hover:bg-[#BC3908] group-hover:border-[#BC3908] group-hover:text-white transition-all duration-200 shrink-0 whitespace-nowrap">
                         <span>{item.actionLabel || 'Read'}</span>
                         <ArrowRight size={13} />
                       </span>
@@ -330,12 +330,12 @@ export const ResourcesPage: React.FC = () => {
               ))}
             </div>
           ) : (
-            <div className="rounded-3xl border border-[#E2D3B5] bg-[#FAF5ED] p-12 text-center max-w-lg mx-auto">
-              <BookOpen size={36} className="mx-auto text-[#8E5B13] mb-3 opacity-80" />
-              <h3 className="text-lg font-display font-bold text-[#14100B] mb-1">
+            <div className="rounded-3xl border border-[#EADBC6] bg-[#F6EFE2] p-12 text-center max-w-lg mx-auto">
+              <BookOpen size={36} className="mx-auto text-[#BC3908] mb-3 opacity-80" />
+              <h3 className="text-lg font-display font-bold text-[#220901] mb-1">
                 No matching resources found
               </h3>
-              <p className="text-xs text-[#5B534C] mb-6">
+              <p className="text-xs text-[#563E37] mb-6">
                 We couldn&apos;t find any publications matching “{searchQuery}” in the {selectedTag} category.
               </p>
               <button
@@ -344,7 +344,7 @@ export const ResourcesPage: React.FC = () => {
                   setSearchQuery('');
                   setSelectedTag('All');
                 }}
-                className="rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white text-xs font-bold px-5 py-2.5 transition-colors cursor-pointer"
+                className="rounded-full bg-[#BC3908] hover:bg-[#941B0C] text-white text-xs font-bold px-5 py-2.5 transition-colors cursor-pointer"
               >
                 Clear Filters &amp; Show All
               </button>

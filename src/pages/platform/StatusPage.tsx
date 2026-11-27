@@ -144,10 +144,10 @@ export const StatusPage: React.FC = () => {
     <MainLayout>
       {/* Hero Section matching Site Specification */}
       <section
-        className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#E2D3B5]"
+        className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden border-b border-[#EADBC6]"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
-          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
+          backgroundImage: "radial-gradient(ellipse 65% 55% at 15% 15%, rgba(246, 170, 28, 0.14), transparent 70%), radial-gradient(ellipse 55% 50% at 85% 80%, rgba(188, 57, 8, 0.09), transparent 70%), linear-gradient(135deg, #FDFBF7 0%, #F6EFE2 100%)",
+          backgroundColor: "#F6EFE2",
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10 text-center">
@@ -159,69 +159,69 @@ export const StatusPage: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-[#14100B] tracking-tight max-w-4xl mx-auto leading-[1.12]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-semibold text-[#220901] tracking-tight max-w-4xl mx-auto leading-[1.12]">
             Real-Time System Telemetry & Regional Cluster Status
           </h1>
 
-          <p className="mt-5 text-base sm:text-lg text-[#5B534C] max-w-2xl mx-auto font-body leading-relaxed">
+          <p className="mt-5 text-base sm:text-lg text-[#563E37] max-w-2xl mx-auto font-body leading-relaxed">
             Live health indicators across AWS Mumbai, UAE, Sydney, and Frankfurt. High availability double-entry ledger backed by contractual financial SLAs.
           </p>
 
           {/* Quick Stats Grid */}
           <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E2D3B5] text-center">
-              <div className="text-2xl sm:text-3xl font-display font-bold text-[#14100B]">99.994%</div>
-              <div className="text-xs text-[#8C827A] font-medium mt-1">90-Day Global Uptime</div>
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EADBC6] text-center">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-[#220901]">99.994%</div>
+              <div className="text-xs text-[#826B63] font-medium mt-1">90-Day Global Uptime</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E2D3B5] text-center">
-              <div className="text-2xl sm:text-3xl font-display font-bold text-[#14100B]">42ms</div>
-              <div className="text-xs text-[#8C827A] font-medium mt-1">Average P95 Latency</div>
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EADBC6] text-center">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-[#220901]">42ms</div>
+              <div className="text-xs text-[#826B63] font-medium mt-1">Average P95 Latency</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E2D3B5] text-center">
-              <div className="text-2xl sm:text-3xl font-display font-bold text-[#14100B]">0</div>
-              <div className="text-xs text-[#8C827A] font-medium mt-1">Active P1 Incidents</div>
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EADBC6] text-center">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-[#220901]">0</div>
+              <div className="text-xs text-[#826B63] font-medium mt-1">Active P1 Incidents</div>
             </div>
-            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#E2D3B5] text-center">
-              <div className="text-2xl sm:text-3xl font-display font-bold text-[#14100B]">4 Regions</div>
-              <div className="text-xs text-[#8C827A] font-medium mt-1">Data Sovereignty</div>
+            <div className="bg-white/80 backdrop-blur-xs p-4 rounded-xl border border-[#EADBC6] text-center">
+              <div className="text-2xl sm:text-3xl font-display font-bold text-[#220901]">4 Regions</div>
+              <div className="text-xs text-[#826B63] font-medium mt-1">Data Sovereignty</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Telemetry Dashboard */}
-      <section className="py-16 md:py-20 bg-[#FAF7F2] font-body">
+      <section className="py-16 md:py-20 bg-[#FDFBF7] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           
           {/* Section 1: Regional Cluster Health */}
           <div className="space-y-4">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <h2 className="font-display font-bold text-2xl text-[#14100B]">Regional Cloud Clusters</h2>
-                <p className="text-xs sm:text-sm text-[#5B534C] mt-0.5">Sovereign multi-tenant data pods with local failovers.</p>
+                <h2 className="font-display font-bold text-2xl text-[#220901]">Regional Cloud Clusters</h2>
+                <p className="text-xs sm:text-sm text-[#563E37] mt-0.5">Sovereign multi-tenant data pods with local failovers.</p>
               </div>
-              <span className="font-mono text-xs text-[#8C827A] bg-white px-3 py-1.5 rounded-full border border-[#E2D3B5] self-start sm:self-auto">
+              <span className="font-mono text-xs text-[#826B63] bg-white px-3 py-1.5 rounded-full border border-[#EADBC6] self-start sm:self-auto">
                 Auto-refreshed every 60s
               </span>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
               {clusters.map((c) => (
-                <div key={c.code} className="bg-white p-5 rounded-2xl border border-[#E2D3B5] shadow-xs space-y-3">
+                <div key={c.code} className="bg-white p-5 rounded-2xl border border-[#EADBC6] shadow-xs space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono text-[#8C827A] uppercase">{c.code}</span>
+                    <span className="text-xs font-mono text-[#826B63] uppercase">{c.code}</span>
                     <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
                       {c.status}
                     </span>
                   </div>
                   <div>
-                    <div className="font-display font-bold text-lg text-[#14100B]">{c.name}</div>
-                    <div className="text-xs text-[#5B534C]">{c.region}</div>
+                    <div className="font-display font-bold text-lg text-[#220901]">{c.name}</div>
+                    <div className="text-xs text-[#563E37]">{c.region}</div>
                   </div>
-                  <div className="pt-2 border-t border-[#E2D3B5] flex items-center justify-between text-xs">
-                    <span className="text-[#8C827A]">Edge Latency: <strong className="text-[#14100B]">{c.latency}</strong></span>
-                    <span className="text-[#8C827A]">30d: <strong className="text-emerald-700">{c.uptime30d}</strong></span>
+                  <div className="pt-2 border-t border-[#EADBC6] flex items-center justify-between text-xs">
+                    <span className="text-[#826B63]">Edge Latency: <strong className="text-[#220901]">{c.latency}</strong></span>
+                    <span className="text-[#826B63]">30d: <strong className="text-emerald-700">{c.uptime30d}</strong></span>
                   </div>
                 </div>
               ))}
@@ -231,29 +231,29 @@ export const StatusPage: React.FC = () => {
           {/* Section 2: Core Platform Services */}
           <div className="space-y-4">
             <div>
-              <h2 className="font-display font-bold text-2xl text-[#14100B]">Core Platform Services</h2>
-              <p className="text-xs sm:text-sm text-[#5B534C] mt-0.5">Continuous health telemetry for transactional workflows.</p>
+              <h2 className="font-display font-bold text-2xl text-[#220901]">Core Platform Services</h2>
+              <p className="text-xs sm:text-sm text-[#563E37] mt-0.5">Continuous health telemetry for transactional workflows.</p>
             </div>
 
-            <div className="bg-white rounded-2xl border border-[#E2D3B5] divide-y divide-[#FAF3E8] overflow-hidden shadow-xs">
+            <div className="bg-white rounded-2xl border border-[#EADBC6] divide-y divide-[#F6EFE2] overflow-hidden shadow-xs">
               {services.map((svc) => {
                 const Icon = svc.icon;
                 return (
-                  <div key={svc.name} className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#FAF7F2]/40 transition-colors">
+                  <div key={svc.name} className="p-5 sm:p-6 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:bg-[#FDFBF7]/40 transition-colors">
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-[#FAF3E8] border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] shrink-0 mt-0.5">
+                      <div className="w-10 h-10 rounded-xl bg-[#F6EFE2] border border-[#EADBC6] flex items-center justify-center text-[#BC3908] shrink-0 mt-0.5">
                         <Icon className="w-5 h-5" />
                       </div>
                       <div>
-                        <div className="font-display font-bold text-base text-[#14100B]">{svc.name}</div>
-                        <div className="text-xs sm:text-sm text-[#5B534C] mt-0.5">{svc.description}</div>
+                        <div className="font-display font-bold text-base text-[#220901]">{svc.name}</div>
+                        <div className="text-xs sm:text-sm text-[#563E37] mt-0.5">{svc.description}</div>
                       </div>
                     </div>
 
                     <div className="flex items-center gap-6 shrink-0 md:justify-end">
                       <div className="text-right hidden sm:block">
-                        <div className="font-mono text-xs font-bold text-[#14100B]">{svc.uptime90d}</div>
-                        <div className="text-[11px] text-[#8C827A]">90-Day Uptime</div>
+                        <div className="font-mono text-xs font-bold text-[#220901]">{svc.uptime90d}</div>
+                        <div className="text-[11px] text-[#826B63]">90-Day Uptime</div>
                       </div>
                       <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold">
                         <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
@@ -269,35 +269,35 @@ export const StatusPage: React.FC = () => {
           {/* Section 3: Past Incidents & Maintenance Log */}
           <div className="space-y-4">
             <div>
-              <h2 className="font-display font-bold text-2xl text-[#14100B]">Past Incidents & Maintenance (Last 90 Days)</h2>
-              <p className="text-xs sm:text-sm text-[#5B534C] mt-0.5">Transparent post-mortems and infrastructure change disclosures.</p>
+              <h2 className="font-display font-bold text-2xl text-[#220901]">Past Incidents & Maintenance (Last 90 Days)</h2>
+              <p className="text-xs sm:text-sm text-[#563E37] mt-0.5">Transparent post-mortems and infrastructure change disclosures.</p>
             </div>
 
             <div className="space-y-3">
               {pastIncidents.map((inc, i) => (
-                <div key={i} className="bg-white p-5 rounded-xl border border-[#E2D3B5] shadow-xs space-y-2">
+                <div key={i} className="bg-white p-5 rounded-xl border border-[#EADBC6] shadow-xs space-y-2">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs">
-                    <span className="font-mono text-[#8C827A]">{inc.date}</span>
+                    <span className="font-mono text-[#826B63]">{inc.date}</span>
                     <span className="inline-flex items-center gap-1 text-emerald-700 font-bold">
                       <CheckCircle2 className="w-3.5 h-3.5" /> {inc.status} ({inc.duration})
                     </span>
                   </div>
-                  <h3 className="font-display font-bold text-base text-[#14100B]">{inc.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#5B534C]">{inc.impact}</p>
+                  <h3 className="font-display font-bold text-base text-[#220901]">{inc.title}</h3>
+                  <p className="text-xs sm:text-sm text-[#563E37]">{inc.impact}</p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Section 4: Subscribe to Status Alerts */}
-          <div className="p-8 rounded-2xl bg-[#F8F0DF] border border-[#E2D3B5] flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="p-8 rounded-2xl bg-[#F6EFE2] border border-[#EADBC6] flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="space-y-2 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-2">
-                <Bell className="w-4 h-4 text-[#8E5B13]" />
-                <span className="font-mono text-xs font-bold text-[#14100B] uppercase">Incident Alerts</span>
+                <Bell className="w-4 h-4 text-[#BC3908]" />
+                <span className="font-mono text-xs font-bold text-[#220901] uppercase">Incident Alerts</span>
               </div>
-              <h3 className="font-display font-bold text-xl text-[#14100B]">Get notified of scheduled maintenance</h3>
-              <p className="text-xs sm:text-sm text-[#5B534C] max-w-lg">
+              <h3 className="font-display font-bold text-xl text-[#220901]">Get notified of scheduled maintenance</h3>
+              <p className="text-xs sm:text-sm text-[#563E37] max-w-lg">
                 Subscribe to receive SMS or email notifications whenever an incident is reported, updated, or resolved.
               </p>
             </div>
@@ -315,11 +315,11 @@ export const StatusPage: React.FC = () => {
                     value={subscribedEmail}
                     onChange={(e) => setSubscribedEmail(e.target.value)}
                     placeholder="Enter engineering email..."
-                    className="px-4 py-2.5 rounded-full bg-white border border-[#E2D3B5] text-xs sm:text-sm text-[#14100B] outline-none focus:border-[#8E5B13]"
+                    className="px-4 py-2.5 rounded-full bg-white border border-[#EADBC6] text-xs sm:text-sm text-[#220901] outline-none focus:border-[#BC3908]"
                   />
                   <button
                     type="submit"
-                    className="px-5 py-2.5 rounded-full bg-[#14100B] hover:bg-black text-white text-xs sm:text-sm font-semibold transition-colors cursor-pointer"
+                    className="px-5 py-2.5 rounded-full bg-[#220901] hover:bg-black text-white text-xs sm:text-sm font-semibold transition-colors cursor-pointer"
                   >
                     Subscribe
                   </button>

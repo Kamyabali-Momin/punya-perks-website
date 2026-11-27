@@ -173,9 +173,9 @@ export const IntegrationsSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-[#1F1A17] border-b border-[#2E241E] py-16 sm:py-20 font-body overflow-hidden" id="integrations">
+    <section className="w-full bg-[#220901] border-b border-[#220901] py-16 sm:py-20 font-body overflow-hidden" id="integrations">
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 text-center mb-10 sm:mb-12 reveal-on-scroll">
-        <span className="font-mono text-[11px] sm:text-xs font-bold text-[#C4681A] tracking-[0.2em] uppercase block mb-2.5">
+        <span className="font-mono text-[11px] sm:text-xs font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2.5">
           POWERED BY
         </span>
         <h2 className="font-display font-normal text-3xl sm:text-4xl lg:text-[42px] text-white tracking-tight">
@@ -185,14 +185,14 @@ export const IntegrationsSection: React.FC = () => {
 
       {/* Marquee Row 1 */}
       <div className="relative w-full overflow-hidden mb-4 sm:mb-5">
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#1F1A17] via-[#1F1A17]/90 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#1F1A17] via-[#1F1A17]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#220901] via-[#220901]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#220901] via-[#220901]/90 to-transparent z-10 pointer-events-none" />
 
         <div className="animate-marquee flex items-center gap-3 sm:gap-4 py-1">
           {marqueeRow1.map((partner, idx) => (
             <div
               key={`row1-${partner.name}-${idx}`}
-              className="shrink-0 h-[62px] sm:h-[70px] md:h-[76px] px-6 sm:px-8 rounded-[16px] sm:rounded-[18px] bg-[#221A15] border border-[#443022] hover:border-[#C4681A] hover:bg-[#2A1F18] flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer hover:scale-105"
+              className="shrink-0 h-[62px] sm:h-[70px] md:h-[76px] px-6 sm:px-8 rounded-[16px] sm:rounded-[18px] bg-[#220901] border border-[#621708] hover:border-[#BC3908] hover:bg-[#220901] flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer hover:scale-105"
               title={partner.name}
             >
               {renderPartnerContent(partner)}
@@ -203,14 +203,14 @@ export const IntegrationsSection: React.FC = () => {
 
       {/* Marquee Row 2 (Scrolling in reverse for dynamic visual movement) */}
       <div className="relative w-full overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#1F1A17] via-[#1F1A17]/90 to-transparent z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#1F1A17] via-[#1F1A17]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-r from-[#220901] via-[#220901]/90 to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-20 sm:w-36 bg-gradient-to-l from-[#220901] via-[#220901]/90 to-transparent z-10 pointer-events-none" />
 
         <div className="animate-marquee-reverse flex items-center gap-3 sm:gap-4 py-1">
           {marqueeRow2.map((partner, idx) => (
             <div
               key={`row2-${partner.name}-${idx}`}
-              className="shrink-0 h-[62px] sm:h-[70px] md:h-[76px] px-6 sm:px-8 rounded-[16px] sm:rounded-[18px] bg-[#221A15] border border-[#443022] hover:border-[#C4681A] hover:bg-[#2A1F18] flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer hover:scale-105"
+              className="shrink-0 h-[62px] sm:h-[70px] md:h-[76px] px-6 sm:px-8 rounded-[16px] sm:rounded-[18px] bg-[#220901] border border-[#621708] hover:border-[#BC3908] hover:bg-[#220901] flex items-center justify-center transition-all duration-200 shadow-sm cursor-pointer hover:scale-105"
               title={partner.name}
             >
               {renderPartnerContent(partner)}

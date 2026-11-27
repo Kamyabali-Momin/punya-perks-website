@@ -81,36 +81,36 @@ export const WebinarsEventsPage: React.FC = () => {
   return (
     <MainLayout>
       <section
-        className="relative w-full border-b border-[#E2D3B5] pt-12 pb-16 sm:pb-20 text-center overflow-hidden font-body"
+        className="relative w-full border-b border-[#EADBC6] pt-12 pb-16 sm:pb-20 text-center overflow-hidden font-body"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
-          backgroundColor: '#F7F1E4', backgroundSize: '56px 56px',
+          backgroundImage: "radial-gradient(ellipse 65% 55% at 15% 15%, rgba(246, 170, 28, 0.14), transparent 70%), radial-gradient(ellipse 55% 50% at 85% 80%, rgba(188, 57, 8, 0.09), transparent 70%), linear-gradient(135deg, #FDFBF7 0%, #F6EFE2 100%)",
+          backgroundColor: "#F6EFE2",
         }}
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <nav className="flex items-center justify-center gap-2 text-xs text-[#847C75] mb-4">
-            <Link to="/" className="hover:text-[#8E5B13] transition-colors">Home</Link>
+          <nav className="flex items-center justify-center gap-2 text-xs text-[#826B63] mb-4">
+            <Link to="/" className="hover:text-[#BC3908] transition-colors">Home</Link>
             <ChevronRight size={12} />
-            <Link to="/resources" className="hover:text-[#8E5B13] transition-colors">Resources</Link>
+            <Link to="/resources" className="hover:text-[#BC3908] transition-colors">Resources</Link>
             <ChevronRight size={12} />
-            <span className="text-[#14100B] font-bold">Webinars &amp; Events</span>
+            <span className="text-[#220901] font-bold">Webinars &amp; Events</span>
           </nav>
 
-          <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-3">
+          <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-3">
             WEBINARS &amp; EXECUTIVE BRIEFINGS
           </span>
-          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#14100B] tracking-tight mb-4 leading-tight">
+          <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold text-[#220901] tracking-tight mb-4 leading-tight">
             Live sessions &amp; on-demand workshops.
           </h1>
-          <p className="text-sm sm:text-base text-[#5B534C] max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-[#563E37] max-w-2xl mx-auto leading-relaxed">
             Join loyalty architects, retail operators, and compliance leaders for practical walkthroughs across India, ANZ, and the UAE.
           </p>
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-12 sm:py-16 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-5 border-b border-[#E2D3B5]">
+          <div className="flex flex-wrap items-center justify-between gap-4 mb-10 pb-5 border-b border-[#EADBC6]">
             <div className="flex flex-wrap gap-2">
               {(['All', 'Upcoming Live', 'On-Demand Replay'] as const).map((tab) => (
                 <button
@@ -119,15 +119,15 @@ export const WebinarsEventsPage: React.FC = () => {
                   onClick={() => setFilter(tab)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
                     filter === tab
-                      ? 'bg-[#8E5B13] text-white shadow-xs'
-                      : 'bg-[#FAF5ED] text-[#5B534C] border border-[#E2D3B5] hover:text-[#14100B]'
+                      ? 'bg-[#BC3908] text-white shadow-xs'
+                      : 'bg-[#F6EFE2] text-[#563E37] border border-[#EADBC6] hover:text-[#220901]'
                   }`}
                 >
                   {tab}
                 </button>
               ))}
             </div>
-            <span className="text-xs font-semibold text-[#847C75]">
+            <span className="text-xs font-semibold text-[#826B63]">
               Showing {visibleEvents.length} sessions
             </span>
           </div>
@@ -136,41 +136,41 @@ export const WebinarsEventsPage: React.FC = () => {
             {visibleEvents.map((ev) => (
               <div
                 key={ev.id}
-                className="rounded-3xl bg-[#FCF8F2] border border-[#E2D3B5] hover:border-[#8E5B13]/50 p-7 sm:p-8 flex flex-col justify-between gap-6 shadow-2xs hover:shadow-md transition-all"
+                className="rounded-3xl bg-[#FDFBF7] border border-[#EADBC6] hover:border-[#BC3908]/50 p-7 sm:p-8 flex flex-col justify-between gap-6 shadow-2xs hover:shadow-md transition-all"
               >
                 <div className="space-y-3">
                   <div className="flex flex-wrap items-center justify-between gap-2">
                     <span
                       className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider ${
                         ev.type === 'Upcoming Live'
-                          ? 'bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA]'
-                          : 'bg-white text-[#5B534C] border border-[#E2D3B5]'
+                          ? 'bg-[#F6EFE2] text-[#BC3908] border border-[#F4D89C]'
+                          : 'bg-white text-[#563E37] border border-[#EADBC6]'
                       }`}
                     >
                       <Video size={12} />
                       {ev.type}
                     </span>
-                    <span className="text-xs font-semibold text-[#847C75]">{ev.topic}</span>
+                    <span className="text-xs font-semibold text-[#826B63]">{ev.topic}</span>
                   </div>
 
-                  <h2 className="font-display font-bold text-xl sm:text-2xl text-[#14100B] leading-snug">
+                  <h2 className="font-display font-bold text-xl sm:text-2xl text-[#220901] leading-snug">
                     {ev.title}
                   </h2>
-                  <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{ev.description}</p>
+                  <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">{ev.description}</p>
                 </div>
 
-                <div className="pt-4 border-t border-[#E2D3B5] space-y-4">
-                  <div className="flex flex-wrap items-center gap-4 text-xs text-[#5B534C]">
+                <div className="pt-4 border-t border-[#EADBC6] space-y-4">
+                  <div className="flex flex-wrap items-center gap-4 text-xs text-[#563E37]">
                     <span className="inline-flex items-center gap-1.5">
-                      <Calendar size={13} className="text-[#8E5B13]" />
+                      <Calendar size={13} className="text-[#BC3908]" />
                       {ev.date}
                     </span>
                     <span className="inline-flex items-center gap-1.5">
-                      <Clock size={13} className="text-[#8E5B13]" />
+                      <Clock size={13} className="text-[#BC3908]" />
                       {ev.duration}
                     </span>
                     <span className="inline-flex items-center gap-1.5">
-                      <Users size={13} className="text-[#8E5B13]" />
+                      <Users size={13} className="text-[#BC3908]" />
                       {ev.speakers}
                     </span>
                   </div>
@@ -181,7 +181,7 @@ export const WebinarsEventsPage: React.FC = () => {
                       setSelectedEvent(ev);
                       setRegistered(false);
                     }}
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white text-xs font-semibold transition-colors cursor-pointer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#BC3908] hover:bg-[#941B0C] text-white text-xs font-semibold transition-colors cursor-pointer"
                   >
                     <span>{ev.type === 'Upcoming Live' ? 'Register for session' : 'Watch on-demand'}</span>
                     <ArrowRight size={13} />
@@ -195,62 +195,62 @@ export const WebinarsEventsPage: React.FC = () => {
 
       {selectedEvent && (
         <div className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex items-center justify-center p-4">
-          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-[#E2D3B5] shadow-2xl space-y-5">
+          <div className="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 border border-[#EADBC6] shadow-2xl space-y-5">
             <div className="flex items-start justify-between gap-3">
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#8E5B13]">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#BC3908]">
                   {selectedEvent.type}
                 </span>
-                <h3 className="font-display font-bold text-xl text-[#14100B] mt-1">
+                <h3 className="font-display font-bold text-xl text-[#220901] mt-1">
                   {selectedEvent.title}
                 </h3>
               </div>
               <button
                 type="button"
                 onClick={() => setSelectedEvent(null)}
-                className="p-1.5 rounded-full hover:bg-[#FAF5ED] cursor-pointer"
+                className="p-1.5 rounded-full hover:bg-[#F6EFE2] cursor-pointer"
               >
                 <X size={18} />
               </button>
             </div>
 
             {registered ? (
-              <div className="p-5 rounded-2xl bg-[#FAF5ED] border border-[#E2D3B5] space-y-2 text-center">
+              <div className="p-5 rounded-2xl bg-[#F6EFE2] border border-[#EADBC6] space-y-2 text-center">
                 <CheckCircle2 size={28} className="text-emerald-600 mx-auto" />
-                <div className="font-display font-bold text-base text-[#14100B]">
+                <div className="font-display font-bold text-base text-[#220901]">
                   {selectedEvent.type === 'Upcoming Live' ? 'Seat Confirmed!' : 'Replay Link Sent!'}
                 </div>
-                <p className="text-xs text-[#5B534C]">
+                <p className="text-xs text-[#563E37]">
                   Calendar invite and session access link have been dispatched to {email}.
                 </p>
               </div>
             ) : (
               <form onSubmit={handleRegister} className="space-y-3.5">
                 <div>
-                  <label className="block text-xs font-semibold text-[#14100B] mb-1">Full Name</label>
+                  <label className="block text-xs font-semibold text-[#220901] mb-1">Full Name</label>
                   <input
                     type="text"
                     required
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Aryan Kantharia"
-                    className="w-full h-11 px-4 rounded-xl border border-[#E2D3B5] text-sm outline-none focus:border-[#8E5B13]"
+                    className="w-full h-11 px-4 rounded-xl border border-[#EADBC6] text-sm outline-none focus:border-[#BC3908]"
                   />
                 </div>
                 <div>
-                  <label className="block text-xs font-semibold text-[#14100B] mb-1">Work Email</label>
+                  <label className="block text-xs font-semibold text-[#220901] mb-1">Work Email</label>
                   <input
                     type="email"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="aryan@company.com"
-                    className="w-full h-11 px-4 rounded-xl border border-[#E2D3B5] text-sm outline-none focus:border-[#8E5B13]"
+                    className="w-full h-11 px-4 rounded-xl border border-[#EADBC6] text-sm outline-none focus:border-[#BC3908]"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full h-11 rounded-full bg-[#8E5B13] hover:bg-[#6E440B] text-white font-semibold text-sm transition-colors cursor-pointer"
+                  className="w-full h-11 rounded-full bg-[#BC3908] hover:bg-[#941B0C] text-white font-semibold text-sm transition-colors cursor-pointer"
                 >
                   {selectedEvent.type === 'Upcoming Live' ? 'Confirm Registration' : 'Unlock Replay'}
                 </button>

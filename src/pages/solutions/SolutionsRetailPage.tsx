@@ -78,25 +78,25 @@ export const SolutionsRetailPage: React.FC = () => {
       />
 
       {/* Section 1: Challenges & Solutions */}
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
-            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               PROBLEMS WE SOLVE
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#220901]">
               Engineered for Multi-Store Retail Realities
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {problems.map((item, idx) => (
-              <div key={idx} className="rounded-3xl bg-white p-7 sm:p-8 border border-[#E2D3B5] shadow-xs hover:shadow-md hover:border-[#8E5B13]/40 transition-all duration-300 space-y-4">
-                <span className="font-body text-xs font-bold text-[#8E5B13] block">CHALLENGE 0{idx + 1}</span>
-                <h4 className="font-display font-bold text-lg text-[#14100B]">{item.problem}</h4>
-                <div className="pt-3 border-t border-[#E2D3B5]/60">
-                  <span className="font-body text-[11px] font-bold text-[#8E5B13] block mb-1">PUNYA PERKS SOLUTION</span>
-                  <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{item.solution}</p>
+              <div key={idx} className="rounded-3xl bg-white p-7 sm:p-8 border border-[#EADBC6] shadow-xs hover:shadow-md hover:border-[#BC3908]/40 transition-all duration-300 space-y-4">
+                <span className="font-body text-xs font-bold text-[#BC3908] block">CHALLENGE 0{idx + 1}</span>
+                <h4 className="font-display font-bold text-lg text-[#220901]">{item.problem}</h4>
+                <div className="pt-3 border-t border-[#EADBC6]/60">
+                  <span className="font-body text-[11px] font-bold text-[#BC3908] block mb-1">PUNYA PERKS SOLUTION</span>
+                  <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">{item.solution}</p>
                 </div>
               </div>
             ))}
@@ -105,7 +105,7 @@ export const SolutionsRetailPage: React.FC = () => {
       </section>
 
       {/* Section 2: Benchmarks & Core Retail Capabilities */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
@@ -114,9 +114,9 @@ export const SolutionsRetailPage: React.FC = () => {
               { metric: '85%+', label: 'WhatsApp receipt open rate in-store' },
               { metric: '0.00%', label: 'Finance vs. marketing ledger drift' },
             ].map((stat) => (
-              <div key={stat.label} className="p-6 rounded-2xl bg-[#FAF5ED] border border-[#E2D3B5] text-center">
-                <div className="font-display font-bold text-3xl sm:text-4xl text-[#8E5B13]">{stat.metric}</div>
-                <p className="text-xs text-[#5B534C] mt-1.5">{stat.label}</p>
+              <div key={stat.label} className="p-6 rounded-2xl bg-[#F6EFE2] border border-[#EADBC6] text-center">
+                <div className="font-display font-bold text-3xl sm:text-4xl text-[#BC3908]">{stat.metric}</div>
+                <p className="text-xs text-[#563E37] mt-1.5">{stat.label}</p>
               </div>
             ))}
           </div>
@@ -125,13 +125,13 @@ export const SolutionsRetailPage: React.FC = () => {
             {capabilities.map((cap) => {
               const Icon = cap.icon;
               return (
-                <div key={cap.title} className="p-7 rounded-3xl bg-[#FCF8F2] border border-[#E2D3B5] flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] shrink-0">
+                <div key={cap.title} className="p-7 rounded-3xl bg-[#FDFBF7] border border-[#EADBC6] flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#EADBC6] flex items-center justify-center text-[#BC3908] shrink-0">
                     <Icon size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-display font-bold text-lg text-[#14100B]">{cap.title}</h3>
-                    <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{cap.desc}</p>
+                    <h3 className="font-display font-bold text-lg text-[#220901]">{cap.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">{cap.desc}</p>
                   </div>
                 </div>
               );
@@ -141,24 +141,24 @@ export const SolutionsRetailPage: React.FC = () => {
       </section>
 
       {/* Section 3: 4-Week Rollout */}
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="max-w-2xl mb-10">
-            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               DEPLOYMENT BLUEPRINT
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#220901]">
               From Legacy Silos to Unified Retail Loyalty in 4 Weeks
             </h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             {rolloutSteps.map((s) => (
-              <div key={s.week} className="p-6 rounded-3xl bg-white border border-[#E2D3B5] space-y-2">
-                <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#F4E9D2] text-[#8E5B13] text-[11px] font-bold">
+              <div key={s.week} className="p-6 rounded-3xl bg-white border border-[#EADBC6] space-y-2">
+                <span className="inline-block px-2.5 py-0.5 rounded-full bg-[#F6EFE2] text-[#BC3908] text-[11px] font-bold">
                   {s.week}
                 </span>
-                <h3 className="font-display font-bold text-base text-[#14100B] pt-1">{s.title}</h3>
-                <p className="text-xs text-[#5B534C] leading-relaxed">{s.desc}</p>
+                <h3 className="font-display font-bold text-base text-[#220901] pt-1">{s.title}</h3>
+                <p className="text-xs text-[#563E37] leading-relaxed">{s.desc}</p>
               </div>
             ))}
           </div>

@@ -71,24 +71,24 @@ export const ProductCampaignsPage: React.FC = () => {
         imageAlt="Kombee User Side Web — Campaigns & Offers"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               SIX-STEP WORKFLOW
             </span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#1F1A17]">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#220901]">
               From Concept to Customer in Minutes
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {steps.map((s) => (
-              <div key={s.num} className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] shadow-sm flex flex-col justify-between">
+              <div key={s.num} className="rounded-[28px] bg-white p-8 border border-[#EADBC6] shadow-sm flex flex-col justify-between">
                 <div>
-                  <span className="font-display font-extrabold text-3xl text-[#8E5B13] block mb-3">{s.num}</span>
-                  <h3 className="font-display font-bold text-xl text-[#1F1A17] mb-2">{s.title}</h3>
-                  <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{s.desc}</p>
+                  <span className="font-display font-extrabold text-3xl text-[#BC3908] block mb-3">{s.num}</span>
+                  <h3 className="font-display font-bold text-xl text-[#220901] mb-2">{s.title}</h3>
+                  <p className="text-xs sm:text-sm text-[#220901]/75 leading-relaxed">{s.desc}</p>
                 </div>
               </div>
             ))}
@@ -97,13 +97,13 @@ export const ProductCampaignsPage: React.FC = () => {
       </section>
 
       {/* Ready-to-Deploy Campaign Playbook Benchmarks */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               PROVEN CAMPAIGN TEMPLATES
             </span>
-            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-[#220901]">
               Sample Plays &amp; Historical Benchmarks
             </h2>
           </div>
@@ -112,24 +112,24 @@ export const ProductCampaignsPage: React.FC = () => {
             {CAMPAIGN_TEMPLATES.map((tpl) => (
               <div
                 key={tpl.title}
-                className="rounded-3xl bg-[#FAF5ED]/75 border border-[#E2D3B5] p-6 flex flex-col justify-between gap-4 hover:border-[#8E5B13]/50 transition-all"
+                className="rounded-3xl bg-[#F6EFE2]/75 border border-[#EADBC6] p-6 flex flex-col justify-between gap-4 hover:border-[#BC3908]/50 transition-all"
               >
                 <div className="space-y-2.5">
-                  <span className="inline-block rounded-full bg-white border border-[#E2D3B5] px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#8E5B13]">
+                  <span className="inline-block rounded-full bg-white border border-[#EADBC6] px-2.5 py-0.5 text-[10px] font-mono font-bold text-[#BC3908]">
                     {tpl.badge}
                   </span>
-                  <h3 className="font-display font-bold text-lg text-[#14100B] leading-snug">
+                  <h3 className="font-display font-bold text-lg text-[#220901] leading-snug">
                     {tpl.title}
                   </h3>
-                  <p className="text-xs text-[#5B534C]">
-                    <span className="font-semibold text-[#14100B]">Trigger:</span> {tpl.trigger}
+                  <p className="text-xs text-[#563E37]">
+                    <span className="font-semibold text-[#220901]">Trigger:</span> {tpl.trigger}
                   </p>
-                  <p className="text-xs text-[#5B534C]">
-                    <span className="font-semibold text-[#14100B]">Reward:</span> {tpl.incentive}
+                  <p className="text-xs text-[#563E37]">
+                    <span className="font-semibold text-[#220901]">Reward:</span> {tpl.incentive}
                   </p>
                 </div>
-                <div className="pt-3 border-t border-[#E2D3B5] flex items-center justify-between text-xs font-mono">
-                  <span className="text-[#847C75]">Avg. Impact</span>
+                <div className="pt-3 border-t border-[#EADBC6] flex items-center justify-between text-xs font-mono">
+                  <span className="text-[#826B63]">Avg. Impact</span>
                   <span className="font-bold text-emerald-700">{tpl.benchmark}</span>
                 </div>
               </div>
@@ -139,38 +139,38 @@ export const ProductCampaignsPage: React.FC = () => {
       </section>
 
       {/* Dark Holdout Proof Banner */}
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
-          <div className="rounded-[28px] bg-[#14100B] text-white p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center shadow-xl border border-[#3E2C20] relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-[#8E5B13]/20 rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#A36D1C]/15 rounded-full blur-2xl pointer-events-none" />
+          <div className="rounded-[28px] bg-[#220901] text-white p-8 sm:p-12 lg:p-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center shadow-xl border border-[#621708] relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-80 h-80 bg-[#BC3908]/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-[#F6AA1C]/15 rounded-full blur-2xl pointer-events-none" />
 
             <div className="lg:col-span-7 space-y-4 relative z-10">
-              <span className="font-mono text-[11px] font-bold text-[#D4A147] uppercase tracking-[0.16em] inline-block px-3 py-1 rounded-full bg-[#8E5B13]/15 border border-[#8E5B13]/30">
+              <span className="font-mono text-[11px] font-bold text-[#F6AA1C] uppercase tracking-[0.16em] inline-block px-3 py-1 rounded-full bg-[#BC3908]/15 border border-[#BC3908]/30">
                 SCIENTIFIC HOLDOUT TESTING
               </span>
-              <h3 className="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#FAF3E8] tracking-tight leading-[1.15]">
+              <h3 className="font-display font-semibold text-2xl sm:text-3xl lg:text-4xl text-[#F6EFE2] tracking-tight leading-[1.15]">
                 Prove incrementality. Not just correlated spend.
               </h3>
-              <p className="text-sm sm:text-base text-[#E2D3B5]/85 leading-relaxed font-body">
+              <p className="text-sm sm:text-base text-[#EADBC6]/85 leading-relaxed font-body">
                 Legacy systems count all purchases during a campaign as campaign revenue. Punya Perks isolates an unprompted control cohort to prove the exact net lift generated by your loyalty points liability.
               </p>
             </div>
 
-            <div className="lg:col-span-5 bg-[#1F1710] rounded-[22px] p-6 sm:p-7 border border-[#3E2C20] shadow-md space-y-3.5 relative z-10">
-              <div className="flex justify-between items-center text-xs font-mono text-[#E2D3B5]/80 pb-2 border-b border-white/10">
+            <div className="lg:col-span-5 bg-[#160500] rounded-[22px] p-6 sm:p-7 border border-[#621708] shadow-md space-y-3.5 relative z-10">
+              <div className="flex justify-between items-center text-xs font-mono text-[#EADBC6]/80 pb-2 border-b border-white/10">
                 <span>Holdout Control Group:</span>
                 <span className="text-white font-bold">10% (25,000 members)</span>
               </div>
-              <div className="flex justify-between items-center text-xs font-mono text-[#E2D3B5]/80 pb-2 border-b border-white/10">
+              <div className="flex justify-between items-center text-xs font-mono text-[#EADBC6]/80 pb-2 border-b border-white/10">
                 <span>Treatment Group Spend:</span>
                 <span className="text-[#52C485] font-bold">₹1,840 AOV</span>
               </div>
-              <div className="flex justify-between items-center text-xs font-mono text-[#E2D3B5]/80 pb-2 border-b border-white/10">
+              <div className="flex justify-between items-center text-xs font-mono text-[#EADBC6]/80 pb-2 border-b border-white/10">
                 <span>Control Group Spend:</span>
                 <span className="text-white/60 font-medium">₹1,410 AOV</span>
               </div>
-              <div className="pt-2 flex justify-between items-center text-sm font-display font-bold text-[#D4A147]">
+              <div className="pt-2 flex justify-between items-center text-sm font-display font-bold text-[#F6AA1C]">
                 <span>Net Incremental Lift:</span>
                 <span className="text-base text-[#52C485] font-mono font-bold">+30.5% Lift</span>
               </div>

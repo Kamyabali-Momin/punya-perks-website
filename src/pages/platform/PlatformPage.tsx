@@ -73,13 +73,13 @@ export const PlatformPage: React.FC = () => {
       />
 
       {/* 4 Architectural Cards */}
-      <section className="py-16 sm:py-24 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-24 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
-            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.16em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.16em] uppercase block mb-2">
               FOUNDATIONAL INFRASTRUCTURE
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl lg:text-4xl text-[#220901]">
               Engineered for zero downtime and financial precision
             </h2>
           </div>
@@ -90,26 +90,26 @@ export const PlatformPage: React.FC = () => {
               return (
                 <div
                   key={item.title}
-                  className="rounded-3xl bg-white p-7 border border-[#E2D3B5] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                  className="rounded-3xl bg-white p-7 border border-[#EADBC6] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
                 >
                   <div>
-                    <div className="w-12 h-12 rounded-2xl bg-[#FAF5ED] text-[#8E5B13] flex items-center justify-center mb-5 group-hover:bg-[#8E5B13] group-hover:text-white transition-colors">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F6EFE2] text-[#BC3908] flex items-center justify-center mb-5 group-hover:bg-[#BC3908] group-hover:text-white transition-colors">
                       <Icon size={22} />
                     </div>
-                    <span className="font-body text-[10px] font-bold text-[#8E5B13] bg-[#F4E9D2] px-2.5 py-0.5 rounded-full border border-[#8E5B13]/20 uppercase">
+                    <span className="font-body text-[10px] font-bold text-[#BC3908] bg-[#F6EFE2] px-2.5 py-0.5 rounded-full border border-[#BC3908]/20 uppercase">
                       {item.badge}
                     </span>
-                    <h3 className="font-display font-bold text-xl text-[#14100B] mt-3 mb-2">
+                    <h3 className="font-display font-bold text-xl text-[#220901] mt-3 mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
+                    <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
-                  <div className="pt-5 mt-5 border-t border-[#E2D3B5]/60">
+                  <div className="pt-5 mt-5 border-t border-[#EADBC6]/60">
                     <a
                       href="/platform/security"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#8E5B13] hover:text-[#6E440B] transition-colors"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#BC3908] hover:text-[#621708] transition-colors"
                     >
                       <span>Read security spec</span>
                       <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />

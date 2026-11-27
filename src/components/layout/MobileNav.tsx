@@ -46,7 +46,7 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, pillars }
         <div className="p-4 border-b border-pp-border-subtle flex items-center justify-between">
           <div className="flex items-center gap-2.5">
             <svg
-              className="w-6 h-6 text-[#8E5B13] shrink-0"
+              className="w-6 h-6 text-[#BC3908] shrink-0"
               viewBox="0 0 24 24"
               fill="currentColor"
             >
@@ -60,8 +60,8 @@ export const MobileNav: React.FC<MobileNavProps> = ({ isOpen, onClose, pillars }
               <ellipse cx="17.66" cy="6.34" rx="2.2" ry="3.2" transform="rotate(45 17.66 6.34)" />
               <ellipse cx="6.34" cy="17.66" rx="2.2" ry="3.2" transform="rotate(45 6.34 17.66)" />
             </svg>
-            <span className="font-display text-xl text-[#1F1A17]">
-              Punya <span className="italic text-[#8E5B13]">Perks</span>
+            <span className="font-display text-xl text-[#220901]">
+              Punya <span className="italic text-[#BC3908]">Perks</span>
             </span>
           </div>
           <button

@@ -89,7 +89,7 @@ export const DesignSystemShowcase: React.FC = () => {
                 onClick={() => setTheme('marigold')}
                 className={`px-4 py-2 rounded-pp-pill text-xs font-semibold transition-all ${
                   theme === 'marigold'
-                    ? 'bg-[#A36D1C] text-white shadow-pp-md ring-2 ring-offset-2 ring-[#A36D1C]'
+                    ? 'bg-[#F6AA1C] text-white shadow-pp-md ring-2 ring-offset-2 ring-[#F6AA1C]'
                     : 'bg-white text-pp-ink border border-pp-border-strong hover:bg-pp-panel'
                 }`}
               >
@@ -99,7 +99,7 @@ export const DesignSystemShowcase: React.FC = () => {
                 onClick={() => setTheme('champagne')}
                 className={`px-4 py-2 rounded-pp-pill text-xs font-semibold transition-all ${
                   theme === 'champagne'
-                    ? 'bg-[#6E1E2B] text-white shadow-pp-md ring-2 ring-offset-2 ring-[#6E1E2B]'
+                    ? 'bg-[#621708] text-white shadow-pp-md ring-2 ring-offset-2 ring-[#621708]'
                     : 'bg-white text-pp-ink border border-pp-border-strong hover:bg-pp-panel'
                 }`}
               >

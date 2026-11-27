@@ -99,7 +99,7 @@ export const ProductAnalyticsPage: React.FC = () => {
       />
 
       {/* Top Executive KPI Strip */}
-      <section className="py-12 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-12 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
             {[
@@ -108,14 +108,14 @@ export const ProductAnalyticsPage: React.FC = () => {
               { label: 'MEMBER VS GUEST AOV', value: '1.48x', sub: '₹3,240 member vs ₹2,190 guest' },
               { label: 'DEFERRED LIABILITY', value: '₹1.42 Cr', sub: 'Ind AS 115 breakage reconciled daily' },
             ].map((stat) => (
-              <div key={stat.label} className="rounded-2xl bg-[#FAF5ED] border border-[#E2D3B5] p-6">
-                <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#847C75]">
+              <div key={stat.label} className="rounded-2xl bg-[#F6EFE2] border border-[#EADBC6] p-6">
+                <div className="font-mono text-[10px] font-bold uppercase tracking-wider text-[#826B63]">
                   {stat.label}
                 </div>
-                <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#8E5B13] mt-1">
+                <div className="font-display font-extrabold text-3xl sm:text-4xl text-[#BC3908] mt-1">
                   {stat.value}
                 </div>
-                <div className="text-xs text-[#5B534C] mt-1">{stat.sub}</div>
+                <div className="text-xs text-[#563E37] mt-1">{stat.sub}</div>
               </div>
             ))}
           </div>
@@ -123,36 +123,36 @@ export const ProductAnalyticsPage: React.FC = () => {
       </section>
 
       {/* Core CDP Capabilities */}
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#F4E9D2] text-[#8E5B13] flex items-center justify-center">
+            <div className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3 shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#F6EFE2] text-[#BC3908] flex items-center justify-center">
                 <TrendingUpIcon size={20} />
               </div>
-              <span className="font-mono text-xs font-bold text-[#8E5B13] block">COHORT RETENTION</span>
-              <h2 className="font-display font-bold text-xl text-[#1F1A17]">Month-over-Month Curves</h2>
-              <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
+              <span className="font-mono text-xs font-bold text-[#BC3908] block">COHORT RETENTION</span>
+              <h2 className="font-display font-bold text-xl text-[#220901]">Month-over-Month Curves</h2>
+              <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">
                 Track repeat order behaviour 30, 60, 90, and 365 days after WhatsApp or store POS enrolment.
               </p>
             </div>
-            <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#F4E9D2] text-[#8E5B13] flex items-center justify-center">
+            <div className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3 shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#F6EFE2] text-[#BC3908] flex items-center justify-center">
                 <UsersIcon size={20} />
               </div>
-              <span className="font-mono text-xs font-bold text-[#8E5B13] block">RFM SEGMENTATION</span>
-              <h2 className="font-display font-bold text-xl text-[#1F1A17]">Autonomous Value Tiers</h2>
-              <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
+              <span className="font-mono text-xs font-bold text-[#BC3908] block">RFM SEGMENTATION</span>
+              <h2 className="font-display font-bold text-xl text-[#220901]">Autonomous Value Tiers</h2>
+              <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">
                 Recency, Frequency, and Monetary clusters computed nightly across in-store and online receipts without SQL scripts.
               </p>
             </div>
-            <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3 shadow-xs">
-              <div className="w-10 h-10 rounded-xl bg-[#F4E9D2] text-[#8E5B13] flex items-center justify-center">
+            <div className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3 shadow-xs">
+              <div className="w-10 h-10 rounded-xl bg-[#F6EFE2] text-[#BC3908] flex items-center justify-center">
                 <LayersIcon size={20} />
               </div>
-              <span className="font-mono text-xs font-bold text-[#8E5B13] block">BREAKAGE MODELING</span>
-              <h2 className="font-display font-bold text-xl text-[#1F1A17]">Actuarial Accounting</h2>
-              <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
+              <span className="font-mono text-xs font-bold text-[#BC3908] block">BREAKAGE MODELING</span>
+              <h2 className="font-display font-bold text-xl text-[#220901]">Actuarial Accounting</h2>
+              <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">
                 Forecast unredeemed points expiration and FIFO breakage reserves aligned to Ind AS 115 and IFRS 15 audit standards.
               </p>
             </div>
@@ -161,18 +161,18 @@ export const ProductAnalyticsPage: React.FC = () => {
       </section>
 
       {/* Interactive RFM CDP Explorer + Cohort Table */}
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-14">
           {/* Interactive Segment Inspector */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             <div className="lg:col-span-5 space-y-4">
-              <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block">
+              <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block">
                 LIVE CDP AUDIENCE SNAPSHOT
               </span>
-              <h2 className="font-display font-extrabold text-3xl text-[#14100B] leading-tight">
+              <h2 className="font-display font-extrabold text-3xl text-[#220901] leading-tight">
                 Select any RFM cohort to inspect behaviour &amp; next action.
               </h2>
-              <p className="text-sm text-[#5B534C] leading-relaxed">
+              <p className="text-sm text-[#563E37] leading-relaxed">
                 Sample distribution from a 765,050-member omnichannel retail tenant. Click a cluster to preview real-time campaign routing.
               </p>
 
@@ -186,15 +186,15 @@ export const ProductAnalyticsPage: React.FC = () => {
                       onClick={() => setSelectedSegmentId(seg.id)}
                       className={`w-full text-left p-4 rounded-2xl border transition-all cursor-pointer flex items-center justify-between gap-3 ${
                         isActive
-                          ? 'bg-[#FAF5ED] border-[#8E5B13] shadow-xs'
-                          : 'bg-white border-[#E2D3B5] hover:border-[#8E5B13]/40'
+                          ? 'bg-[#F6EFE2] border-[#BC3908] shadow-xs'
+                          : 'bg-white border-[#EADBC6] hover:border-[#BC3908]/40'
                       }`}
                     >
                       <div>
-                        <div className="font-display font-bold text-sm text-[#14100B]">{seg.name}</div>
-                        <div className="text-xs text-[#847C75] font-mono mt-0.5">{seg.members} profiles</div>
+                        <div className="font-display font-bold text-sm text-[#220901]">{seg.name}</div>
+                        <div className="text-xs text-[#826B63] font-mono mt-0.5">{seg.members} profiles</div>
                       </div>
-                      <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-white border border-[#E2D3B5] text-[#8E5B13]">
+                      <span className="text-xs font-mono font-bold px-2.5 py-1 rounded-full bg-white border border-[#EADBC6] text-[#BC3908]">
                         {seg.share}
                       </span>
                     </button>
@@ -203,10 +203,10 @@ export const ProductAnalyticsPage: React.FC = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-7 rounded-3xl bg-[#14100B] text-white p-7 sm:p-9 border border-[#3E2C20] shadow-xl space-y-6">
+            <div className="lg:col-span-7 rounded-3xl bg-[#220901] text-white p-7 sm:p-9 border border-[#621708] shadow-xl space-y-6">
               <div className="flex flex-wrap items-center justify-between gap-3 pb-4 border-b border-white/10">
                 <div>
-                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#D4A147]">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#F6AA1C]">
                     ACTIVE SEGMENT TELEMETRY
                   </span>
                   <h3 className="font-display font-bold text-2xl text-white mt-0.5">
@@ -225,7 +225,7 @@ export const ProductAnalyticsPage: React.FC = () => {
                 </div>
                 <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
                   <div className="text-[10px] font-mono uppercase text-white/60">Average Order Value</div>
-                  <div className="font-display font-bold text-2xl text-[#D4A147] mt-1">{activeSegment.aov}</div>
+                  <div className="font-display font-bold text-2xl text-[#F6AA1C] mt-1">{activeSegment.aov}</div>
                 </div>
                 <div className="rounded-2xl bg-white/5 border border-white/10 p-4">
                   <div className="text-[10px] font-mono uppercase text-white/60">Purchase Frequency</div>
@@ -233,10 +233,10 @@ export const ProductAnalyticsPage: React.FC = () => {
                 </div>
               </div>
 
-              <div className="rounded-2xl bg-[#1C160E] border border-[#8E5B13]/40 p-5 flex items-start gap-3">
-                <CheckCircle2Icon size={18} className="text-[#D4A147] shrink-0 mt-0.5" />
+              <div className="rounded-2xl bg-[#220901] border border-[#BC3908]/40 p-5 flex items-start gap-3">
+                <CheckCircle2Icon size={18} className="text-[#F6AA1C] shrink-0 mt-0.5" />
                 <div>
-                  <div className="text-xs font-mono uppercase text-[#D4A147] font-bold">Recommended Automated Play</div>
+                  <div className="text-xs font-mono uppercase text-[#F6AA1C] font-bold">Recommended Automated Play</div>
                   <p className="text-sm text-white/90 mt-1 leading-relaxed">{activeSegment.recommendedAction}</p>
                 </div>
               </div>
@@ -244,24 +244,24 @@ export const ProductAnalyticsPage: React.FC = () => {
           </div>
 
           {/* Cohort Retention Table */}
-          <div className="rounded-3xl border border-[#E2D3B5] bg-[#FAF5ED]/60 p-6 sm:p-8 space-y-5">
+          <div className="rounded-3xl border border-[#EADBC6] bg-[#F6EFE2]/60 p-6 sm:p-8 space-y-5">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
               <div>
-                <span className="font-mono text-[11px] font-bold text-[#8E5B13] uppercase tracking-wider">
+                <span className="font-mono text-[11px] font-bold text-[#BC3908] uppercase tracking-wider">
                   QUARTERLY RETENTION MATRIX
                 </span>
-                <h3 className="font-display font-bold text-2xl text-[#14100B]">
+                <h3 className="font-display font-bold text-2xl text-[#220901]">
                   30 / 90 / 180 / 365-Day Repeat Purchase Cohorts
                 </h3>
               </div>
-              <span className="text-xs font-mono text-[#5B534C] inline-flex items-center gap-1">
-                <BarChart3Icon size={14} className="text-[#8E5B13]" /> Sample Apparel &amp; Retail Benchmark
+              <span className="text-xs font-mono text-[#563E37] inline-flex items-center gap-1">
+                <BarChart3Icon size={14} className="text-[#BC3908]" /> Sample Apparel &amp; Retail Benchmark
               </span>
             </div>
 
-            <div className="overflow-x-auto rounded-2xl border border-[#E2D3B5] bg-white">
+            <div className="overflow-x-auto rounded-2xl border border-[#EADBC6] bg-white">
               <table className="w-full text-left text-xs sm:text-sm">
-                <thead className="bg-[#FAF5ED] border-b border-[#E2D3B5] font-mono text-[11px] uppercase text-[#5B534C]">
+                <thead className="bg-[#F6EFE2] border-b border-[#EADBC6] font-mono text-[11px] uppercase text-[#563E37]">
                   <tr>
                     <th className="py-3.5 px-4">Acquisition Cohort</th>
                     <th className="py-3.5 px-4">Enrolled</th>
@@ -272,11 +272,11 @@ export const ProductAnalyticsPage: React.FC = () => {
                     <th className="py-3.5 px-4 text-right">Net Lift vs Control</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#F2EAE0] text-[#14100B]">
+                <tbody className="divide-y divide-[#EFE3D0] text-[#220901]">
                   {COHORT_RETENTION.map((row) => (
-                    <tr key={row.cohort} className="hover:bg-[#FAF5ED]/40 transition-colors">
+                    <tr key={row.cohort} className="hover:bg-[#F6EFE2]/40 transition-colors">
                       <td className="py-3.5 px-4 font-semibold">{row.cohort}</td>
-                      <td className="py-3.5 px-4 font-mono text-[#5B534C]">{row.enrolled}</td>
+                      <td className="py-3.5 px-4 font-mono text-[#563E37]">{row.enrolled}</td>
                       <td className="py-3.5 px-4 font-mono">{row.m1}</td>
                       <td className="py-3.5 px-4 font-mono">{row.m3}</td>
                       <td className="py-3.5 px-4 font-mono">{row.m6}</td>

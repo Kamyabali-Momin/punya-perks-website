@@ -70,14 +70,14 @@ export const SolutionsHospitalityPage: React.FC = () => {
         imageAlt="Punya Perks Hospitality Campaigns & Visit Challenges"
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 space-y-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {pillars.map((p, idx) => (
-              <div key={p.title} className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3 shadow-xs">
-                <span className="font-body text-xs font-bold text-[#8E5B13]">0{idx + 1} // GUEST FREQUENCY</span>
-                <h3 className="font-display font-bold text-xl text-[#1F1A17]">{p.title}</h3>
-                <p className="text-xs sm:text-sm text-[#1F1A17]/75 leading-relaxed">{p.desc}</p>
+              <div key={p.title} className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3 shadow-xs">
+                <span className="font-body text-xs font-bold text-[#BC3908]">0{idx + 1} // GUEST FREQUENCY</span>
+                <h3 className="font-display font-bold text-xl text-[#220901]">{p.title}</h3>
+                <p className="text-xs sm:text-sm text-[#220901]/75 leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
@@ -89,22 +89,22 @@ export const SolutionsHospitalityPage: React.FC = () => {
               { metric: '2.4x', label: 'Redemption lift on off-peak offers' },
               { metric: '100%', label: 'Automated franchisee outlet clearing' },
             ].map((s) => (
-              <div key={s.label} className="p-6 rounded-2xl bg-white border border-[#E2D3B5] text-center">
-                <div className="font-display font-bold text-2xl sm:text-3xl text-[#8E5B13]">{s.metric}</div>
-                <p className="text-xs text-[#5B534C] mt-1.5">{s.label}</p>
+              <div key={s.label} className="p-6 rounded-2xl bg-white border border-[#EADBC6] text-center">
+                <div className="font-display font-bold text-2xl sm:text-3xl text-[#BC3908]">{s.metric}</div>
+                <p className="text-xs text-[#563E37] mt-1.5">{s.label}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 sm:py-20 bg-white border-b border-[#E2D3B5] font-body">
+      <section className="py-16 sm:py-20 bg-white border-b border-[#EADBC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="max-w-2xl mb-10">
-            <span className="font-body text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+            <span className="font-body text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
               HOSPITALITY PLAYBOOKS
             </span>
-            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#14100B]">
+            <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#220901]">
               Turn First-Time Diners into Regulars Across Every Outlet
             </h2>
           </div>
@@ -113,13 +113,13 @@ export const SolutionsHospitalityPage: React.FC = () => {
             {playbooks.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="p-7 rounded-3xl bg-[#FCF8F2] border border-[#E2D3B5] flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#E2D3B5] flex items-center justify-center text-[#8E5B13] shrink-0">
+                <div key={item.title} className="p-7 rounded-3xl bg-[#FDFBF7] border border-[#EADBC6] flex items-start gap-4">
+                  <div className="w-11 h-11 rounded-2xl bg-white border border-[#EADBC6] flex items-center justify-center text-[#BC3908] shrink-0">
                     <Icon size={20} />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-display font-bold text-lg text-[#14100B]">{item.title}</h3>
-                    <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">{item.desc}</p>
+                    <h3 className="font-display font-bold text-lg text-[#220901]">{item.title}</h3>
+                    <p className="text-xs sm:text-sm text-[#563E37] leading-relaxed">{item.desc}</p>
                   </div>
                 </div>
               );

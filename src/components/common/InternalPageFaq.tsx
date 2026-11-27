@@ -48,7 +48,7 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
   helpDescription = 'Build smarter with AI-powered software, web, mobile, and enterprise solutions tailored to your business.',
   helpButtonText = 'Contact',
   helpButtonHref = '/contact',
-  className = 'w-full py-16 sm:py-24 bg-[#FFFDF9] border-t border-[#E2D3B5] font-body',
+  className = 'w-full py-16 sm:py-24 bg-[#FDFBF7] border-t border-[#EADBC6] font-body',
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
@@ -63,14 +63,14 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
         {(title || eyebrow) && (
           <div className="text-center mb-10 sm:mb-14">
             {eyebrow && (
-              <span className="font-mono text-[11px] font-bold text-[#8E5B13] tracking-[0.2em] uppercase block mb-2">
+              <span className="font-mono text-[11px] font-bold text-[#BC3908] tracking-[0.2em] uppercase block mb-2">
                 {eyebrow}
               </span>
             )}
             {title && (
               <h2
                 id="internal-faq-title"
-                className="font-display font-normal text-3xl sm:text-4xl text-[#14100B] tracking-tight"
+                className="font-display font-normal text-3xl sm:text-4xl text-[#220901] tracking-tight"
               >
                 {title}
               </h2>
@@ -83,17 +83,13 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
           {/* Left Dark Card with signature brown ambient glow */}
           <div className="lg:col-span-4 w-full">
             <div
-              className="rounded-3xl overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-cover bg-bottom border border-[#3E2413]/40 min-h-[380px]"
-              style={{
-                backgroundImage: "url('/images/faq-card-bg.jpg')",
-                backgroundColor: '#17120D',
-              }}
+              className="rounded-3xl overflow-hidden p-7 sm:p-8 flex flex-col justify-between text-white shadow-xl relative bg-gradient-to-br from-[#220901] via-[#4A1106] to-[#621708] border border-[#621708] min-h-[380px]"
             >
               {/* Top brand header & text */}
               <div>
                 {/* Brand Logo Pill */}
                 <div className="flex items-center gap-2.5">
-                  <div className="w-7 h-7 rounded-full bg-[#8E5B13] flex items-center justify-center font-display font-bold text-white text-sm shadow-xs">
+                  <div className="w-7 h-7 rounded-full bg-[#BC3908] flex items-center justify-center font-display font-bold text-white text-sm shadow-xs">
                     P
                   </div>
                   <span className="font-display italic font-semibold text-white text-base tracking-tight">
@@ -116,12 +112,12 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
               <div className="pt-8">
                 <a
                   href={helpButtonHref}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-[#14100B] font-body font-medium text-xs sm:text-sm hover:bg-[#F4ECDC] transition-all shadow-md group cursor-pointer"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white text-[#220901] font-body font-medium text-xs sm:text-sm hover:bg-[#F6EFE2] transition-all shadow-md group cursor-pointer"
                 >
                   <span>{helpButtonText}</span>
                   <ArrowRightIcon
                     size={14}
-                    className="text-[#14100B] group-hover:translate-x-0.5 transition-transform"
+                    className="text-[#220901] group-hover:translate-x-0.5 transition-transform"
                   />
                 </a>
               </div>
@@ -129,7 +125,7 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
           </div>
 
           {/* Right Column: Clean Accordion Rows with Border Dividers */}
-          <div className="lg:col-span-8 flex flex-col divide-y divide-[#E2D3B5] border-y border-[#E2D3B5]">
+          <div className="lg:col-span-8 flex flex-col divide-y divide-[#EADBC6] border-y border-[#EADBC6]">
             {faqs.map((faq, idx) => {
               const isOpen = openIndex === idx;
               const question = faq.q || faq.question || '';
@@ -143,14 +139,14 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
                     className="w-full flex items-center justify-between text-left gap-4 cursor-pointer group"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-body font-semibold text-base sm:text-lg text-[#14100B] group-hover:text-[#8E5B13] transition-colors leading-snug">
+                    <span className="font-body font-semibold text-base sm:text-lg text-[#220901] group-hover:text-[#BC3908] transition-colors leading-snug">
                       {question}
                     </span>
-                    <span className="shrink-0 w-7 h-7 rounded-full bg-[#FAF6F0] border border-[#E2D3B5] flex items-center justify-center text-[#14100B] group-hover:border-[#8E5B13]/40 transition-all">
+                    <span className="shrink-0 w-7 h-7 rounded-full bg-[#FDFBF7] border border-[#EADBC6] flex items-center justify-center text-[#220901] group-hover:border-[#BC3908]/40 transition-all">
                       <ChevronDownIcon
                         size={15}
                         className={`transition-transform duration-300 ease-in-out ${
-                          isOpen ? 'rotate-180 text-[#8E5B13]' : 'text-[#847C75]'
+                          isOpen ? 'rotate-180 text-[#BC3908]' : 'text-[#826B63]'
                         }`}
                       />
                     </span>
@@ -165,7 +161,7 @@ export const InternalPageFaq: React.FC<InternalPageFaqProps> = ({
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="text-xs sm:text-[13.5px] text-[#5B534C] leading-relaxed pr-6 font-body">
+                      <p className="text-xs sm:text-[13.5px] text-[#563E37] leading-relaxed pr-6 font-body">
                         {answer}
                       </p>
                     </div>

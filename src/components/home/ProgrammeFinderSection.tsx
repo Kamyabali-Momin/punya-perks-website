@@ -97,15 +97,16 @@ export const ProgrammeFinderSection: React.FC = () => {
 
   return (
     <section
-      className="relative w-full py-16 sm:py-24 bg-[#14100B] overflow-hidden border-b border-[#8E5B13]/40 font-body"
+      className="relative w-full py-16 sm:py-24 bg-gradient-to-br from-[#220901] via-[#4A1106] to-[#621708] overflow-hidden border-b border-[#621708] font-body"
       id="programme-finder"
     >
+      <div className="absolute -top-24 right-0 w-96 h-96 bg-[#F6AA1C]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Narrative Column */}
           <div className="lg:col-span-6 space-y-4 reveal-on-scroll">
-            <span className="font-mono text-[11px] font-bold text-[#D4A147] tracking-[0.2em] uppercase block">
+            <span className="font-mono text-[11px] font-bold text-[#F6AA1C] tracking-[0.2em] uppercase block">
               PROGRAMME FINDER
             </span>
 
@@ -121,10 +122,10 @@ export const ProgrammeFinderSection: React.FC = () => {
 
           {/* Right Form Card matching user reference image */}
           <div className="lg:col-span-6 flex justify-center lg:justify-end reveal-on-scroll delay-100">
-            <div className="w-full max-w-[480px] rounded-[28px] bg-white text-[#14100B] p-6 sm:p-8 shadow-2xl border border-white/20 space-y-4">
+            <div className="w-full max-w-[480px] rounded-[28px] bg-white text-[#220901] p-6 sm:p-8 shadow-2xl border border-white/20 space-y-4">
               {/* Field 1: Industry */}
               <div>
-                <label className="block font-mono text-[10px] font-bold text-[#847C75] tracking-wider uppercase mb-1.5">
+                <label className="block font-mono text-[10px] font-bold text-[#826B63] tracking-wider uppercase mb-1.5">
                   WHAT IS YOUR INDUSTRY?
                 </label>
                 <div className="relative">
@@ -134,7 +135,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                       setIndustry(e.target.value);
                       setShowResult(false);
                     }}
-                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#E2D3B5] px-4 pr-10 text-xs sm:text-sm text-[#14100B] font-semibold focus:ring-2 focus:ring-[#8E5B13]/20 focus:border-[#8E5B13] outline-none cursor-pointer transition-all hover:border-[#8E5B13]/60"
+                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#EADBC6] px-4 pr-10 text-xs sm:text-sm text-[#220901] font-semibold focus:ring-2 focus:ring-[#BC3908]/20 focus:border-[#BC3908] outline-none cursor-pointer transition-all hover:border-[#BC3908]/60"
                   >
                     <option value="Retail & fashion">Retail & fashion</option>
                     <option value="Banks & fintech">Banks & fintech</option>
@@ -144,14 +145,14 @@ export const ProgrammeFinderSection: React.FC = () => {
                   </select>
                   <ChevronDownIcon
                     size={16}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#847C75]"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#826B63]"
                   />
                 </div>
               </div>
 
               {/* Field 2: Objective */}
               <div>
-                <label className="block font-mono text-[10px] font-bold text-[#847C75] tracking-wider uppercase mb-1.5">
+                <label className="block font-mono text-[10px] font-bold text-[#826B63] tracking-wider uppercase mb-1.5">
                   WHAT DO YOU WANT TO IMPROVE?
                 </label>
                 <div className="relative">
@@ -161,7 +162,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                       setGoal(e.target.value);
                       setShowResult(false);
                     }}
-                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#E2D3B5] px-4 pr-10 text-xs sm:text-sm text-[#14100B] font-semibold focus:ring-2 focus:ring-[#8E5B13]/20 focus:border-[#8E5B13] outline-none cursor-pointer transition-all hover:border-[#8E5B13]/60"
+                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#EADBC6] px-4 pr-10 text-xs sm:text-sm text-[#220901] font-semibold focus:ring-2 focus:ring-[#BC3908]/20 focus:border-[#BC3908] outline-none cursor-pointer transition-all hover:border-[#BC3908]/60"
                   >
                     <option value="Repeat purchase">Repeat purchase</option>
                     <option value="Average order value">Average order value (AOV)</option>
@@ -170,14 +171,14 @@ export const ProgrammeFinderSection: React.FC = () => {
                   </select>
                   <ChevronDownIcon
                     size={16}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#847C75]"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#826B63]"
                   />
                 </div>
               </div>
 
               {/* Field 3: Market */}
               <div>
-                <label className="block font-mono text-[10px] font-bold text-[#847C75] tracking-wider uppercase mb-1.5">
+                <label className="block font-mono text-[10px] font-bold text-[#826B63] tracking-wider uppercase mb-1.5">
                   MARKET
                 </label>
                 <div className="relative">
@@ -187,7 +188,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                       setMarket(e.target.value);
                       setShowResult(false);
                     }}
-                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#E2D3B5] px-4 pr-10 text-xs sm:text-sm text-[#14100B] font-semibold focus:ring-2 focus:ring-[#8E5B13]/20 focus:border-[#8E5B13] outline-none cursor-pointer transition-all hover:border-[#8E5B13]/60"
+                    className="w-full h-12 appearance-none rounded-xl bg-white border border-[#EADBC6] px-4 pr-10 text-xs sm:text-sm text-[#220901] font-semibold focus:ring-2 focus:ring-[#BC3908]/20 focus:border-[#BC3908] outline-none cursor-pointer transition-all hover:border-[#BC3908]/60"
                   >
                     <option value="India">India</option>
                     <option value="Australia">Australia</option>
@@ -195,7 +196,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                   </select>
                   <ChevronDownIcon
                     size={16}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#847C75]"
+                    className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#826B63]"
                   />
                 </div>
               </div>
@@ -204,7 +205,7 @@ export const ProgrammeFinderSection: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setShowResult(true)}
-                className="w-full h-12 rounded-xl bg-[#8E5B13] hover:bg-[#6E440B] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 mt-2 group"
+                className="w-full h-12 rounded-xl bg-[#BC3908] hover:bg-[#941B0C] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md hover:scale-[1.01] active:scale-[0.99] cursor-pointer flex items-center justify-center gap-2 mt-2 group"
               >
                 <span>Show my template</span>
                 <ArrowRightIcon size={15} className="group-hover:translate-x-1 transition-transform" />
@@ -212,25 +213,25 @@ export const ProgrammeFinderSection: React.FC = () => {
 
               {/* Instant Output Blueprint Drawer */}
               {showResult && (
-                <div className="pt-4 border-t border-[#E2D3B5] space-y-3.5 animate-fade-in">
+                <div className="pt-4 border-t border-[#EADBC6] space-y-3.5 animate-fade-in">
                   <div className="flex items-center justify-between">
-                    <span className="font-display font-normal text-base text-[#14100B]">
+                    <span className="font-display font-normal text-base text-[#220901]">
                       {currentTemplate.name}
                     </span>
-                    <span className="bg-[#F4E9D2] text-[#8E5B13] border border-[#F6DECA] px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold">
+                    <span className="bg-[#F6EFE2] text-[#BC3908] border border-[#F4D89C] px-2.5 py-0.5 rounded-full text-[11px] font-mono font-bold">
                       {currentTemplate.plan}
                     </span>
                   </div>
 
                   {/* Mechanisms Grid */}
                   <div className="space-y-1.5">
-                    <div className="text-[10px] font-mono uppercase font-bold text-[#847C75]">
+                    <div className="text-[10px] font-mono uppercase font-bold text-[#826B63]">
                       RECOMMENDED MECHANISMS:
                     </div>
                     <div className="grid grid-cols-1 gap-1.5">
                       {currentTemplate.mechanisms.map((m, idx) => (
-                        <div key={idx} className="flex items-start gap-2 text-xs text-[#14100B]/85">
-                          <CheckCircle2Icon size={14} className="text-[#8E5B13] shrink-0 mt-0.5" />
+                        <div key={idx} className="flex items-start gap-2 text-xs text-[#220901]/85">
+                          <CheckCircle2Icon size={14} className="text-[#BC3908] shrink-0 mt-0.5" />
                           <span>{m}</span>
                         </div>
                       ))}
@@ -238,13 +239,13 @@ export const ProgrammeFinderSection: React.FC = () => {
                   </div>
 
                   {/* Compliance & Timeline Box */}
-                  <div className="p-3 rounded-[10px] bg-[#FAF6F0] border border-[#E2D3B5] space-y-1 text-xs">
-                    <div className="text-[#14100B]">
-                      <strong className="font-semibold text-[#8E5B13]">Compliance:</strong>{' '}
+                  <div className="p-3 rounded-[10px] bg-[#FDFBF7] border border-[#EADBC6] space-y-1 text-xs">
+                    <div className="text-[#220901]">
+                      <strong className="font-semibold text-[#BC3908]">Compliance:</strong>{' '}
                       {currentTemplate.compliance}
                     </div>
-                    <div className="text-[#5A5248]">
-                      <strong className="font-semibold text-[#14100B]">Estimated Go-Live:</strong>{' '}
+                    <div className="text-[#563E37]">
+                      <strong className="font-semibold text-[#220901]">Estimated Go-Live:</strong>{' '}
                       {currentTemplate.timeline}
                     </div>
                   </div>
@@ -252,7 +253,7 @@ export const ProgrammeFinderSection: React.FC = () => {
                   {/* Direct Sandbox CTA */}
                   <a
                     href="/start"
-                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-[#14100B] hover:bg-black text-[#FFFDF9] text-xs font-semibold transition-colors"
+                    className="inline-flex items-center justify-center gap-2 w-full py-2.5 px-3 rounded-xl bg-[#220901] hover:bg-black text-[#FDFBF7] text-xs font-semibold transition-colors"
                   >
                     <span>Start Sandbox with this Playbook</span>
                     <ArrowRightIcon size={13} />

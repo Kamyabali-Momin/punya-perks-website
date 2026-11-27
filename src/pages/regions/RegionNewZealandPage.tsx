@@ -13,19 +13,19 @@ export const RegionNewZealandPage: React.FC = () => {
         breadcrumbs={[{ label: 'Regions' }, { label: 'New Zealand' }]}
       />
 
-      <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#E2D3B5]">
+      <section className="py-16 sm:py-20 bg-[#F6EFE2] border-b border-[#EADBC6]">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3">
-            <h3 className="font-display font-bold text-xl text-[#1F1A17]">Privacy Act 2020 Compliance</h3>
-            <p className="text-xs sm:text-sm text-[#1F1A17]/75">Information privacy principles and mandatory breach reporting frameworks built in.</p>
+          <div className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3">
+            <h3 className="font-display font-bold text-xl text-[#220901]">Privacy Act 2020 Compliance</h3>
+            <p className="text-xs sm:text-sm text-[#220901]/75">Information privacy principles and mandatory breach reporting frameworks built in.</p>
           </div>
-          <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3">
-            <h3 className="font-display font-bold text-xl text-[#1F1A17]">NZ Retail POS Connectors</h3>
-            <p className="text-xs sm:text-sm text-[#1F1A17]/75">Pre-built integrations for Vend by Lightspeed, Shopify POS, and local payments.</p>
+          <div className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3">
+            <h3 className="font-display font-bold text-xl text-[#220901]">NZ Retail POS Connectors</h3>
+            <p className="text-xs sm:text-sm text-[#220901]/75">Pre-built integrations for Vend by Lightspeed, Shopify POS, and local payments.</p>
           </div>
-          <div className="rounded-[28px] bg-white p-8 border border-[#E2D3B5] space-y-3">
-            <h3 className="font-display font-bold text-xl text-[#1F1A17]">NZD Native Settlement</h3>
-            <p className="text-xs sm:text-sm text-[#1F1A17]/75">No currency conversion loss: pricing, points liability, and invoicing in New Zealand Dollars.</p>
+          <div className="rounded-[28px] bg-white p-8 border border-[#EADBC6] space-y-3">
+            <h3 className="font-display font-bold text-xl text-[#220901]">NZD Native Settlement</h3>
+            <p className="text-xs sm:text-sm text-[#220901]/75">No currency conversion loss: pricing, points liability, and invoicing in New Zealand Dollars.</p>
           </div>
         </div>
       </section>

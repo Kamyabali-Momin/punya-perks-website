@@ -80,66 +80,66 @@ export const ContactPage: React.FC = () => {
     <MainLayout>
       {/* 1. Hero & Inquiry Form Split Section with Inner Hero Background */}
       <section
-        className="relative w-full border-b border-[#E2D3B5] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body overflow-hidden text-[#14100B]"
+        className="relative w-full border-b border-[#EADBC6] pt-10 pb-16 lg:pt-14 lg:pb-24 font-body overflow-hidden text-[#220901]"
         style={{
-          backgroundImage: "linear-gradient(to right, rgba(142, 91, 19, 0.045) 1px, transparent 1px), linear-gradient(to bottom, rgba(142, 91, 19, 0.045) 1px, transparent 1px)",
-          backgroundColor: "#F7F1E4", backgroundSize: "56px 56px",
+          backgroundImage: "radial-gradient(ellipse 65% 55% at 15% 15%, rgba(246, 170, 28, 0.14), transparent 70%), radial-gradient(ellipse 55% 50% at 85% 80%, rgba(188, 57, 8, 0.09), transparent 70%), linear-gradient(135deg, #FDFBF7 0%, #F6EFE2 100%)",
+          backgroundColor: "#F6EFE2",
         }}
       >
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12 relative z-10">
           {/* Breadcrumb Navigation */}
-          <div className="text-xs text-[#847C75] font-medium flex items-center gap-2 mb-6">
-            <Link to="/" className="hover:text-[#8E5B13] transition-colors">
+          <div className="text-xs text-[#826B63] font-medium flex items-center gap-2 mb-6">
+            <Link to="/" className="hover:text-[#BC3908] transition-colors">
               Home
             </Link>
-            <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#847C75]">Company</span>
-            <span className="text-[#847C75]/60">/</span>
-            <span className="text-[#14100B] font-bold">Contact Us</span>
+            <span className="text-[#826B63]/60">/</span>
+            <span className="text-[#826B63]">Company</span>
+            <span className="text-[#826B63]/60">/</span>
+            <span className="text-[#220901] font-bold">Contact Us</span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             {/* Left Content Column */}
             <div className="lg:col-span-5 min-w-0 max-w-full">
-              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3">
+              <div className="text-xs font-mono font-bold uppercase tracking-wider text-[#BC3908] mb-3">
                 ENTERPRISE SALES & SUPPORT
               </div>
-              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#14100B] mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl lg:text-5xl font-normal tracking-tight leading-[1.2] text-[#220901] mb-6">
                 Talk to our team.{' '}
-                <span className="text-[#8E5B13] italic">We reply within 4 hours.</span>
+                <span className="text-[#BC3908] italic">We reply within 4 hours.</span>
               </h1>
-              <p className="font-body text-base sm:text-lg text-[#5B534C] leading-relaxed mb-6">
+              <p className="font-body text-base sm:text-lg text-[#563E37] leading-relaxed mb-6">
                 Have questions about enterprise loyalty deployment, custom SLAs, volume pricing, or security compliance? Our solutions architects are ready to assist.
               </p>
 
               {/* Direct Contacts Row */}
-              <div className="flex flex-wrap items-center gap-4 text-xs text-[#5B534C] mb-8 pt-1">
+              <div className="flex flex-wrap items-center gap-4 text-xs text-[#563E37] mb-8 pt-1">
                 <a
                   href="mailto:sales@punyaperks.com"
-                  className="flex items-center gap-1.5 hover:text-[#8E5B13] transition-colors font-medium"
+                  className="flex items-center gap-1.5 hover:text-[#BC3908] transition-colors font-medium"
                 >
-                  <Mail className="w-4 h-4 text-[#8E5B13]" />
+                  <Mail className="w-4 h-4 text-[#BC3908]" />
                   <span>sales@punyaperks.com</span>
                 </a>
-                <span className="text-[#E2D3B5]">·</span>
+                <span className="text-[#EADBC6]">·</span>
                 <a
                   href="mailto:security@punyaperks.com"
-                  className="flex items-center gap-1.5 hover:text-[#8E5B13] transition-colors font-medium"
+                  className="flex items-center gap-1.5 hover:text-[#BC3908] transition-colors font-medium"
                 >
-                  <ShieldCheck className="w-4 h-4 text-[#8E5B13]" />
+                  <ShieldCheck className="w-4 h-4 text-[#BC3908]" />
                   <span>security@punyaperks.com</span>
                 </a>
               </div>
 
               {/* Global Presence & Regional Support Quick Grid */}
-              <div className="pt-6 border-t border-[#E2D3B5]">
-                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#8E5B13] mb-3.5">
+              <div className="pt-6 border-t border-[#EADBC6]">
+                <p className="text-[11px] font-mono font-bold uppercase tracking-wider text-[#BC3908] mb-3.5">
                   GLOBAL PRESENCE & REGIONAL SUPPORT
                 </p>
-                <div className="grid grid-cols-2 gap-3 text-xs text-[#5B534C]">
+                <div className="grid grid-cols-2 gap-3 text-xs text-[#563E37]">
                   {locations.map((loc) => (
                     <div key={loc.city} className="flex items-center gap-2">
-                      <MapPin className="w-3.5 h-3.5 text-[#8E5B13] shrink-0" />
+                      <MapPin className="w-3.5 h-3.5 text-[#BC3908] shrink-0" />
                       <span className="truncate">{loc.city}</span>
                     </div>
                   ))}
@@ -149,26 +149,26 @@ export const ContactPage: React.FC = () => {
 
             {/* Right Inquiry Form Card */}
             <div className="lg:col-span-7 min-w-0 max-w-full w-full">
-              <div className="w-full rounded-2xl border border-[#E2D3B5]/80 bg-white shadow-2xl overflow-hidden text-[#14100B]">
+              <div className="w-full rounded-2xl border border-[#EADBC6]/80 bg-white shadow-2xl overflow-hidden text-[#220901]">
                 <div className="p-6 sm:p-8 md:p-10 bg-white">
                   {submitted ? (
                     <div className="text-center py-10 space-y-4">
-                      <div className="w-14 h-14 rounded-full bg-[#F4E9D2] text-[#8E5B13] flex items-center justify-center mx-auto shadow-sm">
+                      <div className="w-14 h-14 rounded-full bg-[#F6EFE2] text-[#BC3908] flex items-center justify-center mx-auto shadow-sm">
                         <CheckCircle2 className="w-8 h-8" />
                       </div>
-                      <h3 className="font-display font-bold text-2xl text-[#14100B]">
+                      <h3 className="font-display font-bold text-2xl text-[#220901]">
                         Message Received!
                       </h3>
-                      <p className="text-xs sm:text-sm text-[#5B534C] max-w-md mx-auto leading-relaxed">
+                      <p className="text-xs sm:text-sm text-[#563E37] max-w-md mx-auto leading-relaxed">
                         Thank you, <strong>{formData.name}</strong>. Our enterprise solutions squad has received your inquiry regarding <strong>{formData.inquiryType}</strong> and will reply to <strong>{formData.email}</strong> within 4 business hours.
                       </p>
                       <div className="pt-4 flex items-center justify-center gap-4 text-xs">
-                        <Link to="/" className="inline-flex items-center gap-1 font-bold text-[#8E5B13] hover:underline">
+                        <Link to="/" className="inline-flex items-center gap-1 font-bold text-[#BC3908] hover:underline">
                           <span>Return to home page</span>
                           <ArrowRight size={13} />
                         </Link>
                         <span className="text-slate-300">·</span>
-                        <Link to="/demo" className="font-semibold text-[#847C75] hover:text-[#14100B]">
+                        <Link to="/demo" className="font-semibold text-[#826B63] hover:text-[#220901]">
                           Book live demo instead
                         </Link>
                       </div>
@@ -176,10 +176,10 @@ export const ContactPage: React.FC = () => {
                   ) : (
                     <form onSubmit={handleSubmit} className="space-y-4 text-left">
                       <div className="mb-2">
-                        <h3 className="font-display font-bold text-xl text-[#14100B]">
+                        <h3 className="font-display font-bold text-xl text-[#220901]">
                           Send us a message
                         </h3>
-                        <p className="text-xs text-[#847C75] mt-0.5">
+                        <p className="text-xs text-[#826B63] mt-0.5">
                           Fill out the details below and we will route you to the appropriate specialist.
                         </p>
                       </div>
@@ -196,7 +196,7 @@ export const ContactPage: React.FC = () => {
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                             placeholder="Keyur Mehta"
-                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#E2D3B5] bg-[#FAF6F0] text-[#14100B] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/10"
+                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#EADBC6] bg-[#FDFBF7] text-[#220901] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#BC3908] focus:ring-2 focus:ring-[#BC3908]/10"
                           />
                         </div>
                         <div>
@@ -209,7 +209,7 @@ export const ContactPage: React.FC = () => {
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                             placeholder="keyur@enterprise.com"
-                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#E2D3B5] bg-[#FAF6F0] text-[#14100B] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/10"
+                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#EADBC6] bg-[#FDFBF7] text-[#220901] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#BC3908] focus:ring-2 focus:ring-[#BC3908]/10"
                           />
                         </div>
                       </div>
@@ -226,7 +226,7 @@ export const ContactPage: React.FC = () => {
                             value={formData.company}
                             onChange={(e) => setFormData({ ...formData, company: e.target.value })}
                             placeholder="Retail Conglomerate Ltd"
-                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#E2D3B5] bg-[#FAF6F0] text-[#14100B] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/10"
+                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#EADBC6] bg-[#FDFBF7] text-[#220901] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#BC3908] focus:ring-2 focus:ring-[#BC3908]/10"
                           />
                         </div>
                         <div>
@@ -236,7 +236,7 @@ export const ContactPage: React.FC = () => {
                           <select
                             value={formData.teamSize}
                             onChange={(e) => setFormData({ ...formData, teamSize: e.target.value })}
-                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#E2D3B5] bg-[#FAF6F0] text-[#14100B] focus:bg-white focus:outline-none focus:border-[#8E5B13]"
+                            className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#EADBC6] bg-[#FDFBF7] text-[#220901] focus:bg-white focus:outline-none focus:border-[#BC3908]"
                           >
                             <option value="10,000–50,000 members">10,000–50,000 members</option>
                             <option value="50,001–200,000 members">50,001–200,000 members</option>
@@ -254,7 +254,7 @@ export const ContactPage: React.FC = () => {
                         <select
                           value={formData.inquiryType}
                           onChange={(e) => setFormData({ ...formData, inquiryType: e.target.value })}
-                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#E2D3B5] bg-[#FAF6F0] text-[#14100B] focus:bg-white focus:outline-none focus:border-[#8E5B13]"
+                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#EADBC6] bg-[#FDFBF7] text-[#220901] focus:bg-white focus:outline-none focus:border-[#BC3908]"
                         >
                           <option value="Enterprise Deployment & Custom SLA">Enterprise Deployment & Custom SLA</option>
                           <option value="Pricing & Volume Discount Inquiry">Pricing & Volume Discount Inquiry</option>
@@ -275,14 +275,14 @@ export const ContactPage: React.FC = () => {
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                           placeholder="Tell us about your loyalty setup, retail POS timeline, or specific compliance requirements..."
-                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#E2D3B5] bg-[#FAF6F0] text-[#14100B] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#8E5B13] focus:ring-2 focus:ring-[#8E5B13]/10 resize-none"
+                          className="w-full px-3.5 py-2.5 text-xs rounded-xl border border-[#EADBC6] bg-[#FDFBF7] text-[#220901] placeholder-slate-400 focus:bg-white focus:outline-none focus:border-[#BC3908] focus:ring-2 focus:ring-[#BC3908]/10 resize-none"
                         />
                       </div>
 
                       {/* Submit Button */}
                       <button
                         type="submit"
-                        className="w-full py-3.5 rounded-xl bg-[#8E5B13] hover:bg-[#6E440B] text-white font-bold text-xs transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-2 cursor-pointer"
+                        className="w-full py-3.5 rounded-xl bg-[#BC3908] hover:bg-[#941B0C] text-white font-bold text-xs transition-all shadow-md hover:shadow-lg flex items-center justify-center gap-2 mt-2 cursor-pointer"
                       >
                         <Send className="w-3.5 h-3.5" />
                         <span>Send Message →</span>
@@ -290,7 +290,7 @@ export const ContactPage: React.FC = () => {
 
                       <p className="text-[11px] text-slate-500 text-center pt-1">
                         By submitting you agree to our{' '}
-                        <Link to="/legal/privacy" className="underline hover:text-[#14100B]">
+                        <Link to="/legal/privacy" className="underline hover:text-[#220901]">
                           Privacy Policy
                         </Link>
                         . We never share customer data with third parties.
@@ -305,16 +305,16 @@ export const ContactPage: React.FC = () => {
       </section>
 
       {/* 2. Direct Locations / Regional Hubs Section (Deskmerit Direct Locations Pattern) */}
-      <section className="w-full py-16 lg:py-24 border-b border-[#E2D3B5] bg-white font-body">
+      <section className="w-full py-16 lg:py-24 border-b border-[#EADBC6] bg-white font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#8E5B13]">
+          <span className="text-xs font-mono font-bold uppercase tracking-wider text-[#BC3908]">
             DIRECT LOCATIONS
           </span>
-          <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#14100B] mt-1.5">
+          <h2 className="font-display font-medium text-2xl sm:text-3xl text-[#220901] mt-1.5">
             Our regional hubs & local support
           </h2>
-          <p className="text-sm text-[#5B534C] mt-2">
+          <p className="text-sm text-[#563E37] mt-2">
             Reach out directly to your local desk for regional billing, statutory currency invoicing, and support SLAs.
           </p>
         </div>
@@ -323,28 +323,28 @@ export const ContactPage: React.FC = () => {
           {locations.map((loc) => (
             <div
               key={loc.city}
-              className="group rounded-2xl bg-white border border-[#E2D3B5] p-6 shadow-xs hover:border-[#8E5B13] hover:shadow-md transition-all flex flex-col justify-between"
+              className="group rounded-2xl bg-white border border-[#EADBC6] p-6 shadow-xs hover:border-[#BC3908] hover:shadow-md transition-all flex flex-col justify-between"
             >
               <div>
-                <div className="w-10 h-10 rounded-xl bg-[#FAF5ED] text-[#14100B] group-hover:bg-[#8E5B13] group-hover:text-white flex items-center justify-center transition-colors mb-4 border border-[#E2D3B5]/60">
+                <div className="w-10 h-10 rounded-xl bg-[#F6EFE2] text-[#220901] group-hover:bg-[#BC3908] group-hover:text-white flex items-center justify-center transition-colors mb-4 border border-[#EADBC6]/60">
                   <Building2 className="w-5 h-5 stroke-[1.8]" />
                 </div>
-                <h3 className="font-display font-bold text-base text-[#14100B] group-hover:text-[#8E5B13] transition-colors">
+                <h3 className="font-display font-bold text-base text-[#220901] group-hover:text-[#BC3908] transition-colors">
                   {loc.city}
                 </h3>
-                <p className="text-xs text-[#5B534C] mt-1 leading-relaxed">
+                <p className="text-xs text-[#563E37] mt-1 leading-relaxed">
                   {loc.address}
                 </p>
               </div>
 
-              <div className="pt-4 mt-4 border-t border-[#E2D3B5]/70 space-y-1.5">
-                <div className="text-[11px] text-[#847C75] flex items-center gap-1.5 font-mono">
-                  <Clock className="w-3.5 h-3.5 text-[#8E5B13]" />
+              <div className="pt-4 mt-4 border-t border-[#EADBC6]/70 space-y-1.5">
+                <div className="text-[11px] text-[#826B63] flex items-center gap-1.5 font-mono">
+                  <Clock className="w-3.5 h-3.5 text-[#BC3908]" />
                   <span>{loc.hours}</span>
                 </div>
                 <a
                   href={`mailto:${loc.email}`}
-                  className="text-xs font-bold text-[#8E5B13] hover:underline block"
+                  className="text-xs font-bold text-[#BC3908] hover:underline block"
                 >
                   {loc.email}
                 </a>
