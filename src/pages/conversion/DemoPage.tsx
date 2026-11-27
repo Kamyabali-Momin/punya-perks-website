@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { PageHeader } from '../../components/layout/PageHeader';
-import { CheckCircle2Icon } from 'lucide-react';
+import { ArrowRightIcon, CheckCircle2Icon, ChevronDownIcon } from 'lucide-react';
 
 export const DemoPage: React.FC = () => {
   const [booked, setBooked] = useState(false);
@@ -68,19 +68,23 @@ export const DemoPage: React.FC = () => {
                     <input required placeholder="Acme Retail" className="w-full rounded-[14px] bg-[#F6EFE2] border border-[#EADBC6] px-4 py-2.5 text-xs sm:text-sm text-[#220901] outline-none focus:border-[#BC3908]" />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold uppercase tracking-wider text-[#220901]/70 mb-1">Industry</label>
-                    <select className="w-full rounded-[14px] bg-[#F6EFE2] border border-[#EADBC6] px-4 py-2.5 text-xs sm:text-sm text-[#220901] outline-none focus:border-[#BC3908]">
-                      <option>Retail & Fashion</option>
-                      <option>Banks & Fintech</option>
-                      <option>Hospitality & QSR</option>
-                      <option>E-commerce & D2C</option>
-                      <option>Coalition & Enterprise</option>
-                    </select>
+                    <label className="block font-mono text-[10px] font-bold uppercase tracking-wider text-[#826B63] mb-1.5">Industry</label>
+                    <div className="relative">
+                      <select className="w-full h-11 appearance-none rounded-xl bg-[#FDFBF7] border border-[#EADBC6] px-4 pr-10 text-xs sm:text-sm text-[#220901] font-medium outline-none focus:ring-2 focus:ring-[#BC3908]/20 focus:border-[#BC3908] cursor-pointer">
+                        <option>Retail & Fashion</option>
+                        <option>Banks & Fintech</option>
+                        <option>Hospitality & QSR</option>
+                        <option>E-commerce & D2C</option>
+                        <option>Coalition & Enterprise</option>
+                      </select>
+                      <ChevronDownIcon size={16} className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-[#826B63]" />
+                    </div>
                   </div>
                 </div>
 
-                <button type="submit" className="w-full py-3.5 px-6 rounded-full bg-[#F6AA1C] text-white font-display font-semibold text-xs sm:text-sm hover:bg-[#BC3908] transition-all cursor-pointer">
-                  Schedule My 45-Minute Walkthrough
+                <button type="submit" className="w-full h-12 px-6 rounded-xl bg-[#BC3908] hover:bg-[#941B0C] text-white font-body font-semibold text-xs sm:text-sm transition-all shadow-md cursor-pointer flex items-center justify-center gap-2 group">
+                  <span>Schedule My 45-Minute Walkthrough</span>
+                  <ArrowRightIcon size={15} className="group-hover:translate-x-0.5 transition-transform" />
                 </button>
               </form>
             )}
