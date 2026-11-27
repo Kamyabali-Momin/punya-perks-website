@@ -32,17 +32,21 @@ import { RegionNewZealandPage } from './pages/regions/RegionNewZealandPage';
 import { PlatformPage } from './pages/platform/PlatformPage';
 import { SecurityPage } from './pages/platform/SecurityPage';
 import { DevelopersPage } from './pages/platform/DevelopersPage';
+import { DeveloperSpecDetailPage } from './pages/platform/DeveloperSpecDetailPage';
 import { StatusPage } from './pages/platform/StatusPage';
 import { PricingPage } from './pages/pricing/PricingPage';
 import { PricingComparePage } from './pages/pricing/PricingComparePage';
 
 // Resources Pages
 import { ResourcesPage } from './pages/resources/ResourcesPage';
+import { ResourceDetailPage } from './pages/resources/ResourceDetailPage';
 import { BlogPage } from './pages/resources/BlogPage';
+import { BlogPostDetailPage } from './pages/resources/BlogPostDetailPage';
 import { WebinarsEventsPage } from './pages/resources/WebinarsEventsPage';
 import { ComplianceArticlePage } from './pages/resources/ComplianceArticlePage';
 import { CustomersPage } from './pages/resources/CustomersPage';
 import { RetailCaseStudyPage } from './pages/resources/RetailCaseStudyPage';
+import { CustomerStoryDetailPage } from './pages/resources/CustomerStoryDetailPage';
 import { ChangelogPage } from './pages/resources/ChangelogPage';
 import { GlossaryPage } from './pages/resources/GlossaryPage';
 import { HelpCenterPage } from './pages/resources/HelpCenterPage';
@@ -100,7 +104,9 @@ export const App: React.FC = () => {
         <Route path="/platform/security" element={<SecurityPage />} />
         <Route path="/platform/connectors" element={<ProductIntegrationsPage />} />
         <Route path="/platform/developers" element={<DevelopersPage />} />
+        <Route path="/platform/developers/:slug" element={<DeveloperSpecDetailPage />} />
         <Route path="/developers" element={<DevelopersPage />} />
+        <Route path="/developers/:slug" element={<DeveloperSpecDetailPage />} />
         <Route path="/status" element={<StatusPage />} />
         <Route path="/trust-centre" element={<SecurityPage />} />
         <Route path="/trust" element={<SecurityPage />} />
@@ -114,14 +120,15 @@ export const App: React.FC = () => {
         <Route path="/resources/guides" element={<ResourcesPage />} />
         <Route path="/resources/hub" element={<ResourcesPage />} />
         <Route path="/resources/india-compliance-checklist" element={<ComplianceArticlePage />} />
-        <Route path="/resources/:slug" element={<BlogPage />} />
+        <Route path="/resources/:slug" element={<ResourceDetailPage />} />
         <Route path="/customers" element={<CustomersPage />} />
         <Route path="/customers/retail-national" element={<RetailCaseStudyPage />} />
+        <Route path="/customers/:slug" element={<CustomerStoryDetailPage />} />
         <Route path="/changelog" element={<ChangelogPage />} />
         <Route path="/glossary" element={<GlossaryPage />} />
         <Route path="/help" element={<HelpCenterPage />} />
         <Route path="/blog" element={<BlogPage />} />
-        <Route path="/blog/:slug" element={<BlogPage />} />
+        <Route path="/blog/:slug" element={<BlogPostDetailPage />} />
         <Route path="/guides" element={<ResourcesPage />} />
         <Route path="/benchmarks" element={<ResourcesPage />} />
         <Route path="/comparisons" element={<ResourcesPage />} />

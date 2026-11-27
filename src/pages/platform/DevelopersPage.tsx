@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { PageHeader } from '../../components/layout/PageHeader';
 import { PageCta } from '../../components/common/PageCta';
@@ -8,41 +9,42 @@ import {
   Webhook,
   Zap,
   FileCode2,
-  Terminal,
-  Code2,
   Check,
   Copy,
   ExternalLink,
-  ShieldCheck,
-  Server,
-  Database,
   ArrowRight,
 } from 'lucide-react';
 
+type DevTab = 'overview' | 'api' | 'webhooks' | 'sdks';
+
 export const DevelopersPage: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'api' | 'webhooks' | 'sdks'>('overview');
+  const [activeTab, setActiveTab] = useState<DevTab>('overview');
   const [copiedSnippet, setCopiedSnippet] = useState(false);
 
   const pillars = [
     {
+      slug: 'scoped-access-tokens',
       icon: Key,
       title: 'Scoped Personal Access Tokens',
       desc: 'Generate granular API keys with least-privilege permissions: read-only ledger events, POS transaction emission, or full campaign administration.',
       badge: 'AUTH & RBAC',
     },
     {
+      slug: 'deterministic-signed-webhooks',
       icon: Webhook,
       title: 'Deterministic Signed Webhooks',
       desc: 'Receive HMAC-SHA256 signed payloads with replay protection, timestamp verification, and 5 automated exponential backoff retries.',
       badge: 'REAL-TIME',
     },
     {
+      slug: 'sub-120ms-throughput-engine',
       icon: Zap,
       title: 'Sub-120ms High Throughput Engine',
       desc: 'Engineered for retail scale with 2,500 requests/minute default limits, automated backoff headers, and 99.95% API uptime SLA.',
       badge: 'PERFORMANCE',
     },
     {
+      slug: 'typescript-python-sdks',
       icon: FileCode2,
       title: 'Idiomatic TypeScript & Python SDKs',
       desc: 'First-party typed client libraries with automatic rate-limit handling, idempotency key injections, and complete type definitions.',
@@ -67,9 +69,9 @@ export const DevelopersPage: React.FC = () => {
     },
     {
       method: 'POST',
-      path: '/v1/redemptions/issue-voucher',
-      title: 'Redeem Reward Voucher',
-      desc: 'Debits member points atomically, issues a unique single-use barcode/QR voucher, and dispatches an instant WhatsApp confirmation.',
+      path: '/v1/redemptions/quote',
+      title: 'Reserve Checkout Redemption Quote',
+      desc: 'Locks member points cleanly for 15 minutes prior to UPI/Card payment capture without orphaned debits.',
       auth: 'Bearer token',
     },
     {
@@ -81,11 +83,71 @@ export const DevelopersPage: React.FC = () => {
     },
   ];
 
-  const codeExample = `// TypeScript: Commit offline retail transaction with automatic multiplier
+  const webhookEvents = [
+    {
+      method: 'EVENT',
+      path: 'ledger.transaction.committed',
+      title: 'Ledger Credit / Reversal Settled',
+      desc: 'Emitted synchronously after store POS earn, online capture unlock, or partial SKU return reversal.',
+      auth: 'HMAC-SHA256',
+    },
+    {
+      method: 'EVENT',
+      path: 'redemption.committed',
+      title: 'Two-Phase Redemption Completed',
+      desc: 'Carries voucher issuance barcode, debited FIFO point lots, and updated net available balance.',
+      auth: 'HMAC-SHA256',
+    },
+    {
+      method: 'EVENT',
+      path: 'tier.upgraded',
+      title: 'Member Promoted to Gold / Platinum',
+      desc: 'Triggers automated Apple Wallet card restyling, WhatsApp welcome notes, and VIP concierge sync.',
+      auth: 'HMAC-SHA256',
+    },
+    {
+      method: 'EVENT',
+      path: 'fraud.velocity.quarantined',
+      title: 'Store Terminal Anomaly Flagged',
+      desc: 'Notifies security & loss-prevention SIEM endpoints when collusive scan caps trigger.',
+      auth: 'HMAC-SHA256',
+    },
+  ];
+
+  const sdkGuides = [
+    {
+      method: 'NPM',
+      path: '@punyaperks/sdk (v2.4.3)',
+      title: 'TypeScript / Node.js & Edge Client',
+      desc: 'Zero-dependency typed SDK supporting Node 18+, Cloudflare Workers, and Deno with automatic Idempotency-Key generation.',
+      auth: 'MIT License',
+    },
+    {
+      method: 'PYPI',
+      path: 'punyaperks (v2.4.1)',
+      title: 'Python Async & Sync Client',
+      desc: 'Built on httpx and Pydantic v2 with first-class FastAPI/Django HMAC webhook middleware.',
+      auth: 'MIT License',
+    },
+    {
+      method: 'POS EDGE',
+      path: 'punyaperks/pos-edge-relay:2.2',
+      title: 'Store LAN Offline Relay Container',
+      desc: 'Lightweight Linux/Windows sidecar keeping cash register lookups under 90ms during ISP outages.',
+      auth: 'Docker / Binary',
+    },
+  ];
+
+  const tabSnippets: Record<DevTab, { filename: string; code: string; footerLabel: string; footerHref: string }> = {
+    overview: {
+      filename: 'transaction-commit.ts',
+      footerLabel: 'Punya Perks TypeScript SDK v2.4',
+      footerHref: '/platform/developers/typescript-python-sdks',
+      code: `// TypeScript: Commit offline retail transaction with automatic multiplier
 import { PunyaPerksClient } from '@punyaperks/sdk';
 
 const perks = new PunyaPerksClient({
-  apiKey: process.env.PUNYA_API_KEY,
+  apiKey: process.env.PUNYA_API_KEY!,
   environment: 'production',
 });
 
@@ -95,19 +157,69 @@ const result = await perks.transactions.commit({
   currency: 'INR',
   totalSpend: 4850,
   eligibleSpend: 4112,
-  items: [
-    { sku: 'SHIRT-L-BLUE', price: 2499, category: 'apparel' },
-    { sku: 'BELT-LEATHER', price: 1613, category: 'accessories' },
-  ],
   idempotencyKey: 'tx_pos_20261125_84920_14',
   channel: 'pos',
 });
 
-console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTier})\`);
-// SLA Response Time: 42ms`;
+console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTier})\`);`,
+    },
+    api: {
+      filename: 'quote-and-commit.sh',
+      footerLabel: 'REST Engine <120ms Spec',
+      footerHref: '/platform/developers/sub-120ms-throughput-engine',
+      code: `# Step 1: Reserve points before opening UPI / Card payment sheet
+curl -X POST https://api.in.punyaperks.com/v1/redemptions/quote \\
+  -H "Authorization: Bearer pp_live_..." \\
+  -d '{ "memberId": "PP-84920", "points": 500, "orderRef": "ORD-8821" }'
+
+# Step 2: Finalize atomically after payment capture webhook
+curl -X POST https://api.in.punyaperks.com/v1/redemptions/commit \\
+  -H "Authorization: Bearer pp_live_..." \\
+  -H "Idempotency-Key: pay_ord_8821" \\
+  -d '{ "quoteId": "qt_71b9c" }'`,
+    },
+    webhooks: {
+      filename: 'verify-webhook.ts',
+      footerLabel: 'Webhook Signature Spec',
+      footerHref: '/platform/developers/deterministic-signed-webhooks',
+      code: `import crypto from 'crypto';
+
+export function verifySignature(rawBody: string, sig: string, ts: string, secret: string) {
+  const expected = crypto
+    .createHmac('sha256', secret)
+    .update(\`\${ts}.\${rawBody}\`)
+    .digest('hex');
+
+  return crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expected));
+}
+// Replay protection rejects timestamps older than 300 seconds`,
+    },
+    sdks: {
+      filename: 'quickstart_sdk.py',
+      footerLabel: 'TypeScript & Python SDK Docs',
+      footerHref: '/platform/developers/typescript-python-sdks',
+      code: `# pip install punyaperks
+from punyaperks import PunyaPerksClient
+
+client = PunyaPerksClient(
+    api_key="pp_live_...",
+    region="in",
+    max_retries=3,
+)
+
+ledger = client.members.get_ledger("PP-84920")
+print(f"Available: {ledger.available_points}, Pending: {ledger.pending_points}")`,
+    },
+  };
+
+  const activeItems =
+    activeTab === 'webhooks' ? webhookEvents : activeTab === 'sdks' ? sdkGuides : apiEndpoints;
+  const activeConsole = tabSnippets[activeTab];
 
   const copyCode = () => {
-    navigator.clipboard.writeText(codeExample);
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(activeConsole.code).catch(() => {});
+    }
     setCopiedSnippet(true);
     setTimeout(() => setCopiedSnippet(false), 2000);
   };
@@ -141,12 +253,12 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         primaryCtaText="Start in sandbox"
         primaryCtaHref="/start"
         secondaryCtaText="View API reference"
-        secondaryCtaHref="/start"
+        secondaryCtaHref="#api-reference"
         image="/images/products/user-web-earn.png"
         imageAlt="Punya Perks Developer & Member API Portal"
       />
 
-      {/* Tabs Navigation (Deskmerit Style - Static, not sticky) */}
+      {/* Tabs Navigation */}
       <section className="bg-white border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="flex items-center gap-2 overflow-x-auto py-3 no-scrollbar">
@@ -158,7 +270,8 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
             ].map((tab) => (
               <button
                 key={tab.id}
-                onClick={() => setActiveTab(tab.id as any)}
+                type="button"
+                onClick={() => setActiveTab(tab.id as DevTab)}
                 className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all whitespace-nowrap cursor-pointer ${
                   activeTab === tab.id
                     ? 'bg-[#B5651A] text-white shadow-xs'
@@ -172,7 +285,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         </div>
       </section>
 
-      {/* 4 Architectural Pillars */}
+      {/* 4 Architectural Pillars (Each card links to dedicated internal specification page) */}
       <section className="py-16 sm:py-20 bg-[#FAF5ED] border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="mb-12">
@@ -188,9 +301,10 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
             {pillars.map((item) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={item.title}
-                  className="rounded-2xl bg-white p-7 border border-[#EBDFC6] shadow-xs hover:shadow-md transition-all flex flex-col justify-between group"
+                <Link
+                  key={item.slug}
+                  to={`/platform/developers/${item.slug}`}
+                  className="rounded-2xl bg-white p-7 border border-[#EBDFC6] hover:border-[#B5651A] shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all flex flex-col justify-between group"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-xl bg-[#FAF5ED] text-[#B5651A] flex items-center justify-center mb-5 group-hover:bg-[#B5651A] group-hover:text-white transition-colors">
@@ -199,7 +313,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
                     <span className="font-body text-[10px] font-bold text-[#B5651A] bg-[#FBE9D6] px-2.5 py-0.5 rounded-full border border-[#B5651A]/20 uppercase">
                       {item.badge}
                     </span>
-                    <h3 className="font-display font-bold text-xl text-[#17140F] mt-3 mb-2">
+                    <h3 className="font-display font-bold text-xl text-[#17140F] group-hover:text-[#B5651A] transition-colors mt-3 mb-2">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#5B534C] leading-relaxed">
@@ -207,41 +321,46 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
                     </p>
                   </div>
                   <div className="pt-5 mt-5 border-t border-[#EBDFC6]/60">
-                    <a
-                      href="/start"
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] hover:text-[#9a5413] transition-colors"
-                    >
+                    <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#B5651A] group-hover:text-[#9a5413] transition-colors">
                       <span>Read specification</span>
                       <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </span>
                   </div>
-                </div>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* Code Showcase & REST Endpoints Grid */}
-      <section className="py-16 sm:py-24 bg-white border-b border-[#EBDFC6] font-body">
+      {/* Interactive Workbench & REST Endpoints Grid */}
+      <section id="api-reference" className="py-16 sm:py-24 bg-white border-b border-[#EBDFC6] font-body">
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-8 xl:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
-            {/* Left: Interactive API Catalog */}
+            {/* Left: Filtered Catalog based on activeTab */}
             <div className="lg:col-span-7 space-y-6">
               <div>
                 <span className="font-body text-[11px] font-bold text-[#B5651A] tracking-[0.16em] uppercase block mb-2">
-                  REST ENDPOINTS
+                  {activeTab === 'webhooks'
+                    ? 'SIGNED EVENT STREAM'
+                    : activeTab === 'sdks'
+                    ? 'OFFICIAL CLIENT LIBRARIES'
+                    : 'REST ENDPOINTS'}
                 </span>
                 <h2 className="font-display font-extrabold text-2xl sm:text-3xl text-[#17140F]">
-                  Deterministic endpoints for every loyalty event
+                  {activeTab === 'webhooks'
+                    ? 'Deterministic webhooks for every state change'
+                    : activeTab === 'sdks'
+                    ? 'Typed SDKs for TypeScript, Python & Store Edge'
+                    : 'Deterministic endpoints for every loyalty event'}
                 </h2>
                 <p className="text-sm text-[#5B534C] mt-2">
-                  Predictable resource-oriented URLs, form-encoded requests, JSON-encoded responses, and standard HTTP response codes.
+                  Predictable resource-oriented URLs, JSON payloads, strict OpenAPI schemas, and idempotent retries.
                 </p>
               </div>
 
               <div className="space-y-4">
-                {apiEndpoints.map((ep, idx) => (
+                {activeItems.map((ep, idx) => (
                   <div
                     key={idx}
                     className="rounded-2xl border border-[#EBDFC6] bg-[#FAF5ED]/50 p-5 hover:bg-[#FAF5ED] transition-colors"
@@ -250,7 +369,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
                       <div className="flex items-center gap-2.5">
                         <span
                           className={`font-mono text-[11px] font-bold px-2.5 py-1 rounded-md uppercase ${
-                            ep.method === 'POST'
+                            ep.method === 'POST' || ep.method === 'NPM'
                               ? 'bg-[#B5651A] text-white'
                               : 'bg-[#17140F] text-[#EBDFC6]'
                           }`}
@@ -276,7 +395,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
               </div>
             </div>
 
-            {/* Right: Code Sample Console (Deskmerit style) */}
+            {/* Right: Code Sample Console */}
             <div className="lg:col-span-5 w-full">
               <div className="rounded-2xl bg-[#17140F] text-white p-6 shadow-2xl border border-[#3E2C20] relative">
                 <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
@@ -284,9 +403,12 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
                     <div className="w-3 h-3 rounded-full bg-red-500/80" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                     <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                    <span className="font-mono text-xs text-[#EBDFC6]/70 ml-2">transaction-commit.ts</span>
+                    <span className="font-mono text-xs text-[#EBDFC6]/70 ml-2">
+                      {activeConsole.filename}
+                    </span>
                   </div>
                   <button
+                    type="button"
                     onClick={copyCode}
                     className="flex items-center gap-1.5 text-xs text-[#EBDFC6] hover:text-white transition-colors cursor-pointer"
                   >
@@ -295,14 +417,17 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
                   </button>
                 </div>
                 <pre className="font-mono text-[11px] sm:text-xs text-[#EBDFC6] leading-relaxed overflow-x-auto p-2 bg-[#120F0B] rounded-xl border border-white/5">
-                  <code>{codeExample}</code>
+                  <code>{activeConsole.code}</code>
                 </pre>
                 <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-[#847C75]">
-                  <span>Punya Perks TypeScript SDK v2.4</span>
-                  <a href="/start" className="text-[#B5651A] hover:underline flex items-center gap-1">
-                    <span>View on NPM</span>
+                  <span>{activeConsole.footerLabel}</span>
+                  <Link
+                    to={activeConsole.footerHref}
+                    className="text-[#F5B06B] hover:underline flex items-center gap-1"
+                  >
+                    <span>Open Full Spec</span>
                     <ExternalLink size={12} />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -310,7 +435,6 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         </div>
       </section>
 
-      {/* Split FAQ Section */}
       <InternalPageFaq
         title="Developer & API architecture questions"
         eyebrow="DEVELOPER FAQ"
@@ -321,7 +445,6 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         helpButtonHref="/demo"
       />
 
-      {/* Modern Dark Gradient CTA Band */}
       <PageCta
         title="Ready to build on an append-only loyalty engine?"
         subtitle="INTERACTIVE SANDBOX ENVIRONMENT"
@@ -329,7 +452,7 @@ console.log(\`Points Awarded: \${result.pointsAwarded} (Tier: \${result.memberTi
         buttonText="Get sandbox API key"
         buttonHref="/start"
         secondaryText="View API documentation"
-        secondaryHref="/start"
+        secondaryHref="/platform/developers/scoped-access-tokens"
       />
     </MainLayout>
   );

@@ -1,17 +1,84 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MainLayout } from '../../components/layout/MainLayout';
 import { PageHeader } from '../../components/layout/PageHeader';
+import { InternalPageFaq } from '../../components/common/InternalPageFaq';
 import { PageCta } from '../../components/common/PageCta';
-import { CheckCircle2Icon, SlidersIcon, ShieldAlertIcon, RefreshCwIcon, TerminalIcon } from 'lucide-react';
+import { CheckCircle2Icon } from 'lucide-react';
+
+interface RulePreset {
+  id: string;
+  label: string;
+  basket: string;
+  exclusion: string;
+  eligible: string;
+  multiplier: string;
+  capNote: string;
+  pointsIssued: string;
+  ledgerRef: string;
+}
+
+const RULE_PRESETS: RulePreset[] = [
+  {
+    id: 'retail',
+    label: 'Apparel Retail POS',
+    basket: '₹4,850.00',
+    exclusion: 'excluded_tax (GST 18%): -₹738.00',
+    eligible: '₹4,112.00',
+    multiplier: 'tier_multiplier (GOLD 1.5x) + Flash +20 pts',
+    capNote: 'max_daily_cap_check: PASS (Under 2,000 pts/day)',
+    pointsIssued: '82 pts',
+    ledgerRef: 'Ledger #L-48190 · Rule v4.2',
+  },
+  {
+    id: 'qsr',
+    label: 'Quick Service Café',
+    basket: '₹640.00',
+    exclusion: 'excluded_packaging & tax: -₹92.00',
+    eligible: '₹548.00',
+    multiplier: 'coffee_streak_bonus (Visit #3): +45 pts',
+    capNote: 'anti_collusion_velocity: PASS (1st scan today)',
+    pointsIssued: '67 pts',
+    ledgerRef: 'Ledger #L-48214 · Rule v2.8',
+  },
+  {
+    id: 'd2c',
+    label: 'D2C Online Checkout',
+    basket: '₹3,200.00',
+    exclusion: 'gift_card_sku_exclusion: -₹500.00',
+    eligible: '₹2,700.00',
+    multiplier: 'tier_multiplier (PLATINUM 2.0x)',
+    capNote: 'escrow_state: PENDING (Unlocks after 7d return window)',
+    pointsIssued: '108 pts (Pending)',
+    ledgerRef: 'Ledger #L-48259 · Rule v5.1',
+  },
+];
+
+const EARN_FAQS = [
+  {
+    q: 'Can we exclude discounted clearance SKUs, GST, or gift cards from earning points?',
+    a: 'Yes. Line-item SKU tags, category exclusions, payment-method filters, and tax deductions apply before points calculation—ensuring margin protection on clearance items.',
+  },
+  {
+    q: 'What happens to earned points if a shopper returns two items from a five-item online order?',
+    a: 'Partial return webhooks calculate exact pro-rata earned points for the returned SKUs and post a compensating reversal debit cleanly without touching unrelated orders.',
+  },
+  {
+    q: 'How are rule edits safely rolled out without breaking mid-day store transactions?',
+    a: 'Every earn policy is versioned immutably. Edits go through Maker-Checker preview first, and historical reversals always reference the exact rule version stamped on the original purchase.',
+  },
+];
 
 export const ProductEarnPage: React.FC = () => {
+  const [presetId, setPresetId] = useState<string>('retail');
+  const activePreset = RULE_PRESETS.find((p) => p.id === presetId) || RULE_PRESETS[0];
+
   const mechanisms = [
     { title: 'In-Store POS Purchases', desc: 'Barcode scans at checkout counter with line-item tax exclusions and eligible basket spend filtering.' },
-    { title: 'E-commerce Checkout', desc: 'Real-time cart webhooks evaluate tier multipliers before invoice generation.' },
-    { title: 'Two-Sided Referrals', desc: 'Credit both the referring member and the new friend after first qualifying purchase verification.' },
+    { title: 'E-commerce Checkout', desc: 'Real-time cart webhooks evaluate tier multipliers before invoice generation and hold during return windows.' },
+    { title: 'Two-Sided Referrals', desc: 'Credit both the referring member and the new friend only after qualifying first-order delivery.' },
     { title: 'Card-Linked Offers', desc: 'Direct bank transaction feed ingestion with Merchant Category Code (MCC) automated matching.' },
-    { title: 'Receipt OCR Scanning', desc: 'Photo upload for FMCG and off-premise purchases with duplicate receipt prevention.' },
-    { title: 'Milestones & Challenges', desc: 'Gamified streaks, birthday bonuses, review submissions, and seasonal community quests.' },
+    { title: 'Receipt OCR Scanning', desc: 'Photo upload for FMCG and off-premise purchases with duplicate invoice perceptual-hash checks.' },
+    { title: 'Milestones & Challenges', desc: 'Gamified streaks, birthday bonuses, product reviews, and weekend store check-in quests.' },
   ];
 
   return (
@@ -36,10 +103,28 @@ export const ProductEarnPage: React.FC = () => {
                 Deterministic stacking. Zero reconciliation surprises.
               </h2>
               <p className="text-sm sm:text-base text-[#5B534C] leading-relaxed">
-                Rules execute in an explicit mathematical order: Base Earn → Category Multiplier → Tier Bonus → Active Campaign Boost → Basket Exclusion Cap. Every transaction logs which rule version was applied.
+                Rules execute in an explicit mathematical order: Base Earn → Category Multiplier → Tier Bonus → Active Campaign Boost → Basket Exclusion Cap. Switch scenarios below to inspect live evaluation.
               </p>
 
-              <div className="space-y-3 pt-2">
+              {/* Interactive Scenario Switcher */}
+              <div className="flex flex-wrap gap-2">
+                {RULE_PRESETS.map((p) => (
+                  <button
+                    key={p.id}
+                    type="button"
+                    onClick={() => setPresetId(p.id)}
+                    className={`px-4 py-2 rounded-full text-xs font-semibold transition-all cursor-pointer ${
+                      presetId === p.id
+                        ? 'bg-[#B5651A] text-white shadow-xs'
+                        : 'bg-white border border-[#EBDFC6] text-[#17140F] hover:border-[#B5651A]'
+                    }`}
+                  >
+                    {p.label}
+                  </button>
+                ))}
+              </div>
+
+              <div className="space-y-3 pt-1">
                 {[
                   'Version-controlled rule sets with historical rollback capability',
                   'Sub-120ms execution time even during peak Diwali and Black Friday traffic',
@@ -55,7 +140,6 @@ export const ProductEarnPage: React.FC = () => {
 
             <div className="lg:col-span-6">
               <div className="rounded-[24px] bg-[#17140F] text-white overflow-hidden shadow-2xl border border-[#3E2C20]">
-                {/* IDE Window Title Bar */}
                 <div className="px-5 py-3.5 bg-[#1F1A17] border-b border-white/10 flex items-center justify-between gap-3">
                   <div className="flex items-center gap-3 min-w-0">
                     <div className="flex items-center gap-1.5 shrink-0">
@@ -63,46 +147,45 @@ export const ProductEarnPage: React.FC = () => {
                       <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]/80" />
                       <span className="w-2.5 h-2.5 rounded-full bg-[#27C93F]/80" />
                     </div>
-                    <span className="font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-xs text-white/75 truncate">
+                    <span className="font-mono text-xs text-white/75 truncate">
                       rule_evaluation_engine.ts
                     </span>
                   </div>
-                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-[11px] font-semibold shrink-0">
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 font-mono text-[11px] font-semibold shrink-0">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                     EXEC_OK · 84ms
                   </span>
                 </div>
 
-                {/* Code Body */}
-                <div className="p-5 sm:p-7 font-[ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace] text-xs sm:text-[13px] space-y-4">
+                <div className="p-5 sm:p-7 font-mono text-xs sm:text-[13px] space-y-4">
                   <div className="text-[#E59846] font-semibold">
-                    // Evaluation sequence for POS basket #TXN-9182
+                    // Evaluation trace: {activePreset.label}
                   </div>
                   <div className="space-y-2 text-white/85 leading-relaxed">
                     <div className="flex gap-3">
                       <span className="text-white/30 select-none">01</span>
-                      <span>gross_basket: <span className="text-[#F3E5CF] font-semibold">₹4,850.00</span></span>
+                      <span>gross_basket: <span className="text-[#F3E5CF] font-semibold">{activePreset.basket}</span></span>
                     </div>
                     <div className="flex gap-3">
                       <span className="text-white/30 select-none">02</span>
-                      <span>excluded_tax (GST 18%): <span className="text-rose-300">-₹738.00</span></span>
+                      <span className="text-rose-300">{activePreset.exclusion}</span>
                     </div>
                     <div className="flex gap-3">
                       <span className="text-white/30 select-none">03</span>
-                      <span>eligible_base_spend: <span className="text-[#F3E5CF] font-semibold">₹4,112.00</span></span>
+                      <span>eligible_base_spend: <span className="text-[#F3E5CF] font-semibold">{activePreset.eligible}</span></span>
                     </div>
                     <div className="flex gap-3">
                       <span className="text-white/30 select-none">04</span>
-                      <span>tier_multiplier (GOLD): <span className="text-[#E59846] font-semibold">1.5x</span></span>
+                      <span className="text-[#E59846]">{activePreset.multiplier}</span>
                     </div>
                     <div className="flex gap-3">
                       <span className="text-white/30 select-none">05</span>
-                      <span>active_flash_campaign: <span className="text-amber-300">+20 bonus pts</span></span>
+                      <span className="text-amber-300">{activePreset.capNote}</span>
                     </div>
                   </div>
                   <div className="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-emerald-300 font-semibold">
-                    <span>→ points_issued: 82 pts</span>
-                    <span className="text-[11px] text-white/55">Ledger Entry #L-48190 · Rule v4.2</span>
+                    <span>→ points_issued: {activePreset.pointsIssued}</span>
+                    <span className="text-[11px] text-white/55">{activePreset.ledgerRef}</span>
                   </div>
                 </div>
               </div>
@@ -133,6 +216,16 @@ export const ProductEarnPage: React.FC = () => {
           </div>
         </div>
       </section>
+
+      <InternalPageFaq
+        eyebrow="EARN & RULES FAQ"
+        title="Frequently Asked Questions"
+        faqs={EARN_FAQS}
+        helpTitle="Want to Test Complex Stacking Caps Live?"
+        helpDescription="Spin up a sandbox tenant with synthetic SKUs, tier multipliers, and sample POS receipts in minutes."
+        helpButtonText="Start Free Sandbox"
+        helpButtonHref="/start"
+      />
 
       <PageCta />
     </MainLayout>
